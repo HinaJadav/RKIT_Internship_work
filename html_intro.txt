@@ -1,0 +1,28 @@
+- HTML is the standard markup language for creating Web pages.
+- HTML stands for Hyper Text Markup language.
+- It describes basic structure for web page.
+- It tell the browser how to display the contact.
+
+- current version : HTML5
+
+- HTML Structure:
+    <!DOCTYPE html> --> defines that this document is an HTML5 document
+        <html> --> root element of HTML page
+            <head> --> contains metadat information about HTML page
+                <title>Page Title</title> specifies a title of HTML page
+            </head>
+            <body> --> defines document's body
+
+                <h1>My First Heading</h1> --> for heading 
+                <p>My first paragraph.</p> --> for paragraph
+
+            </body>
+        </html>
+
+
+Q. What id Metadata or which type contant include into <head> tag part?
+=> Metadata in HTML provides essential information about the document for:
+    Search engines: Improve search rankings, display better snippets, or control how the page is indexed.
+    Browsers: Helps manage layout, character encoding, and compatibility settings.
+    Social Media: Control how content appears when shared on platforms like Facebook or Twitter.
+    Developers: Provide information like authorship and set rules for the handling of the page.
