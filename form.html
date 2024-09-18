@@ -3,23 +3,33 @@
 
 <head>
     <title>Registration Form</title>
+    <!-- Meta tags for keywords, author, and responsive design -->
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="DeadPool">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive web design -->
 </head>
 
 <body>
-    <h1>Student Registration Form</h1>
+    <h1>Student Registration Form - <a href="https://www.ddu.ac.in" target="_blank">DDU</a></h1>
+
+    <!-- Form section with action, target, method, and other attributes -->
     <form action="/home.html" target="_black" method="post" accept-charset="UTF-8" autocomplete="on">
 
+        <!-- Personal Information Section -->
         <fieldset>
             <legend>Personal Information</legend>
-            
+
+            <!-- Input field for name with autofocus and required attributes -->
             <label for="name">Name: </label>
             <input type="text" id="nameInput" name="name" required autofocus>
             <br><br>
 
+            <!-- Input field for email with validation -->
             <label for="email">Email: </label>
             <input type="email" id="emailInput" name="email" required>
             <br><br>
 
+            <!-- Radio buttons for gender selection -->
             <label for="gender">Gender: </label>
             <input type="radio" id="male" name="gender">
             <label for="male"> Male</label>
@@ -27,10 +37,12 @@
             <label for="female"> Female</label>
             <br><br>
 
+            <!-- Input for age with min and max values -->
             <label for="Age">Age: </label>
             <input type="number" id="age" min="18" max="100" required>
             <br><br>
 
+            <!-- Checkbox options for sports -->
             <label for="sports">Sports: </label>
             <input type="checkbox" id="football" name="sports">
             <label for="football"> Football </label>
@@ -40,38 +52,40 @@
             <label for="basketball"> Basketball </label>
             <br><br>
 
+            <!-- Input field for color selection -->
             <label for="foodColor">Food Choice: </label>
             <input type="color" id="foodColor" value="#00ff6e">
-            <!-- for test input attribute : disable -->
-            <!-- <input type="color" id="foodColor" value="#00ff6e" disabled>  -->
-            <label for="forFoodColorInfo"> (select green for VEG and red for NON-VEG)</label>
+            <label for="forFoodColorInfo"> (Select green for VEG and red for NON-VEG)</label>
             <br><br>
 
+            <!-- Input for birthdate with max age restriction -->
             <label for="birthdate">Birthdate: </label>
             <input type="date" id="birthdate" name="birthdate" max="2005-12-31" required>
-            <label for="forAgeLimit"> (Your age should be more than 18 year.)</label>
+            <label for="forAgeLimit"> (Your age should be more than 18 years.)</label>
             <br><br>
 
+            <!-- Textarea for address input -->
             <label for="address">Address: </label>
             <textarea id="address" rows="3" cols="50" placeholder="Enter your current address."></textarea>
             <br><br>
 
+            <!-- Input for contact number with pattern for 10-digit validation -->
             <label for="contactNo">Contact No.: </label>
             <input type="text" id="contactNo" pattern="[0-9]{10}" required>
             <br><br>
 
-            <input type="image" id="profileImg" src="/profile.jpg" alt="Profile Image" width="100" height="100">
+            <!-- Display profile image -->
+            <img src="/profile.jpg" alt="Profile Image" width="100" height="100">
             <br><br>
-
         </fieldset>
-
         <br><br>
 
-
+        <!-- Professional Information Section -->
         <fieldset>
             <legend>Professional Information</legend>
 
-            <label for="educationInfo"> Education: </label>
+            <!-- Dropdown for education selection -->
+            <label for="educationInfo">Education: </label>
             <select id="educationInfo" size="3" required>
                 <option value="S.S.C.">S.S.C.</option>
                 <option value="H.S.C.">H.S.C.</option>
@@ -81,22 +95,27 @@
             </select>
             <br><br>
 
-            <label for="codeRating">Rate yourSelf in coding (Between 0 and 10): </label>
+            <!-- Range input for coding skill rating -->
+            <label for="codeRating">Rate yourself in coding (Between 0 and 10): </label>
             <input type="range" id="codeRating" min="0" max="10">
             <br><br>
 
+            <!-- Input for LinkedIn profile URL -->
             <label for="linkedIn">LinkedIn ID: </label>
             <input type="url" id="linkedIn" placeholder="Enter your LinkedIn user profile URL." required>
             <br><br>
 
+            <!-- File upload for resume -->
             <label for="resume">Enter your resume: </label>
             <input type="file" id="resume" accept=".pdf" required>
-            <br><Br>
+            <br><br>
 
-            <label for="intershipMonth"> Enter your availabel month for internship: </label>
+            <!-- Month selection for internship availability -->
+            <label for="intershipMonth">Enter your available month for internship: </label>
             <input type="month" id="intershipMonth">
             <br><br>
 
+            <!-- Job role input with a predefined list of options -->
             <label for="jobRole">Select interested job role: </label>
             <input list="jobRole" required>
             <datalist id="jobRole">
@@ -105,24 +124,26 @@
                 <option value="FullStack Developer"></option>
                 <option value="Data Analysis Developer"></option>
             </datalist>
-
         </fieldset>
         <br><br>
 
-
+        <!-- Password input fields -->
         <label for="newPassword">New password: </label>
         <input type="password" id="newPassword" maxlength="8" required>
         <br><br>
 
-        <label for="conformPassword">Conform Password: </label>
+        <label for="conformPassword">Confirm Password: </label>
         <input type="password" id="conformPassword" maxlength="8" required>
         <br><br>
 
+        <!-- Button with an alert onclick event -->
         <button type="button" onclick="alert('Check all inserted values once again!')">Click Me!</button>
         <br><br>
 
+        <!-- Reset and Submit buttons -->
         <input type="reset" id="reset">
         <input type="submit" id="submit">
+
     </form>
 </body>
 
