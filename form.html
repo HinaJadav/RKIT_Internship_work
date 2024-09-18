@@ -1,33 +1,129 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Registration Form</title>
-    </head>
-    <body>
-        <h1>Student Registration Form</h1>
-        <form>
-            <lable for="name">Name: </lable>
-            <input type="text" id="nameInput">
+
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="/home.html" target="_black" method="post" accept-charset="UTF-8" autocomplete="on">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="name">Name: </label>
+            <input type="text" id="nameInput" name="name" required autofocus>
             <br><br>
-            <lable for="email">Email: </lable>
-            <input type="text" id="emailInput">
+
+            <label for="email">Email: </label>
+            <input type="email" id="emailInput" name="email" required>
             <br><br>
-            <lable for="gender">Gender: </lable>
+
+            <label for="gender">Gender: </label>
             <input type="radio" id="male" name="gender">
-            <lable for="male"> Male</lable>
+            <label for="male"> Male</label>
             <input type="radio" id="female" name="gender">
-            <lable for="female"> Female</lable>
+            <label for="female"> Female</label>
             <br><br>
+
+            <label for="Age">Age: </label>
+            <input type="number" id="age" min="18" max="100" required>
+            <br><br>
+
             <label for="sports">Sports: </label>
             <input type="checkbox" id="football" name="sports">
             <label for="football"> Football </label>
             <input type="checkbox" id="chess" name="sports">
-            <lable for="chess"> Chess </lable>
+            <label for="chess"> Chess </label>
             <input type="checkbox" id="basketball" name="sports">
             <label for="basketball"> Basketball </label>
             <br><br>
-            <input type="button" id="reset" value="Reset">
-            <input type="submit" id="submit">
-        </form>
-    </body>
+
+            <label for="foodColor">Food Choice: </label>
+            <input type="color" id="foodColor" value="#00ff6e">
+            <!-- for test input attribute : disable -->
+            <!-- <input type="color" id="foodColor" value="#00ff6e" disabled>  -->
+            <label for="forFoodColorInfo"> (select green for VEG and red for NON-VEG)</label>
+            <br><br>
+
+            <label for="birthdate">Birthdate: </label>
+            <input type="date" id="birthdate" name="birthdate" max="2005-12-31" required>
+            <label for="forAgeLimit"> (Your age should be more than 18 year.)</label>
+            <br><br>
+
+            <label for="address">Address: </label>
+            <textarea id="address" rows="3" cols="50" placeholder="Enter your current address."></textarea>
+            <br><br>
+
+            <label for="contactNo">Contact No.: </label>
+            <input type="text" id="contactNo" pattern="[0-9]{10}" required>
+            <br><br>
+
+            <input type="image" id="profileImg" src="/profile.jpg" alt="Profile Image" width="100" height="100">
+            <br><br>
+
+        </fieldset>
+
+        <br><br>
+
+
+        <fieldset>
+            <legend>Professional Information</legend>
+
+            <label for="educationInfo"> Education: </label>
+            <select id="educationInfo" size="3" required>
+                <option value="S.S.C.">S.S.C.</option>
+                <option value="H.S.C.">H.S.C.</option>
+                <option value="Graduate" selected>Graduate</option>
+                <option value="Post-graduate">Post-graduate</option>
+                <option value="PHD">PHD</option>
+            </select>
+            <br><br>
+
+            <label for="codeRating">Rate yourSelf in coding (Between 0 and 10): </label>
+            <input type="range" id="codeRating" min="0" max="10">
+            <br><br>
+
+            <label for="linkedIn">LinkedIn ID: </label>
+            <input type="url" id="linkedIn" placeholder="Enter your LinkedIn user profile URL." required>
+            <br><br>
+
+            <label for="resume">Enter your resume: </label>
+            <input type="file" id="resume" accept=".pdf" required>
+            <br><Br>
+
+            <label for="intershipMonth"> Enter your availabel month for internship: </label>
+            <input type="month" id="intershipMonth">
+            <br><br>
+
+            <label for="jobRole">Select interested job role: </label>
+            <input list="jobRole" required>
+            <datalist id="jobRole">
+                <option value="Frontend Developer"></option>
+                <option value="Backend Developer"></option>
+                <option value="FullStack Developer"></option>
+                <option value="Data Analysis Developer"></option>
+            </datalist>
+
+        </fieldset>
+        <br><br>
+
+
+        <label for="newPassword">New password: </label>
+        <input type="password" id="newPassword" maxlength="8" required>
+        <br><br>
+
+        <label for="conformPassword">Conform Password: </label>
+        <input type="password" id="conformPassword" maxlength="8" required>
+        <br><br>
+
+        <button type="button" onclick="alert('Check all inserted values once again!')">Click Me!</button>
+        <br><br>
+
+        <input type="reset" id="reset">
+        <input type="submit" id="submit">
+    </form>
+</body>
+
 </html>
