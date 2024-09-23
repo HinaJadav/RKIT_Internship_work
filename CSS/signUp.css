@@ -118,19 +118,6 @@ h2 {
     box-shadow: 0 0 6px rgba(0, 123, 255, 0.8);
 }
 
-/* Forgot password link styles */
-.forgotPassword {
-    color: #007bff;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* Add underline to forgot password link on hover */
-.forgotPassword:hover {
-    color: #0056b3;
-}
-
 /* Media queries for responsiveness */
 /* screen : use for computer screens, tablet, smart-phones etc */
 @media screen and (max-width: 600px) {
