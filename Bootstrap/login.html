@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form class="loginForm">
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="emailInput" data-placeholder="Email"></div>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="Password" data-placeholder="Password"></div>
+            </div>
+
+            <a href="#" target="_blank" class="forgotPassword">Forgot Password?</a>
+
+            <div class="submitButton">
+                <div id="login">Login</div>
+                <div id="signUp">SignUp</div>
+            </div>
+
+            <script>
+                // Get the submit button by its ID
+                document.getElementById('login').onclick = function() {
+                    // Redirect to the desired page 
+                    window.location.href = 'home.html';
+                };
+                // Get the submit button by its ID
+                document.getElementById('signUp').onclick = function() {
+                    // Redirect to the desired page 
+                    window.location.href = 'signUp.html';
+                };
+            </script>
+        </form>
+    </div>
+</body>
+</html>
