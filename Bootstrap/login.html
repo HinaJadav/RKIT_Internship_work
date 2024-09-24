@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form class="loginForm">
+        <form class="loginForm" method="post">
             <div class="inputGroup">
                 <div class="inputDiv" contenteditable="true" id="emailInput" data-placeholder="Email"></div>
             </div>
@@ -27,12 +29,12 @@
 
             <script>
                 // Get the submit button by its ID
-                document.getElementById('login').onclick = function() {
+                document.getElementById('login').onclick = function () {
                     // Redirect to the desired page 
                     window.location.href = 'home.html';
                 };
                 // Get the submit button by its ID
-                document.getElementById('signUp').onclick = function() {
+                document.getElementById('signUp').onclick = function () {
                     // Redirect to the desired page 
                     window.location.href = 'signUp.html';
                 };
@@ -40,4 +42,5 @@
         </form>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form class="loginForm" method="post">
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="emailInput" data-placeholder="Email"></div>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="password" data-placeholder="Password"></div>
+            </div>
+
+            <a href="#" target="_blank" class="forgotPassword">Forgot Password?</a>
+
+            <div class="submitButton">
+                <div id="login">Login</div>
+                <div id="signUp">SignUp</div>
+            </div>
+
+            <script>
+                document.getElementById('login').onclick = function () {
+
+                    let email = document.getElementById('emailInput').textContent.trim();
+                    let password = document.getElementById('password').textContent.trim();
+
+                    let errorMessages = [];
+
+                    if (email) {
+                        localStorage.setItem('email', email);
+                    } else {
+                        errorMessages.push('Please enter email.');
+                    }
+
+                    if (password) {
+                        localStorage.setItem('password', password);
+                    } else {
+                        errorMessages.push('Please enter new password.');
+                    }
+
+                    // If there are any error messages, show them and redirect
+                    if (errorMessages.length > 0) {
+                        alert(errorMessages.join('\n')); // Show all error messages
+                        window.location.href = 'login.html'; // Redirect to the login page
+                        return;
+                    }
+
+                    // If all validations are successful, redirect to home.html
+                    alert('Successful login! ' + email);
+                    window.location.href = 'home.html'; // Redirect to home page
+                };
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>
