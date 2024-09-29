@@ -47,5 +47,34 @@ console.log(massage3); // I am fine
 
 // -----------------------------------------------------------------------------------------------
 
-// JS is Dynamically typed langusge
-// How to decide that language is dynamically typed or statically typed?
+// JS is Dynamically typed langusge : Because in JS type checking for variable value, function's argumrnts and return type is checked at Runtime and also here no need to declare variable with specific datatype.
+
+// -----------------------------------------------------------------------------------------------
+
+// Non-primitive datatypes:
+// => all this type pf datatypes, typeof output = object in case of function it returns function which means function object
+
+// Array:
+
+const names = ["Hema", "Nahii", "Raha"];
+
+console.log(typeof names); // object
+
+// Object:
+
+const car = {
+  name: "BMW",
+  color: "black",
+};
+
+console.log(typeof car); // object
+
+// function(variable type declaration)
+
+const printHello = function () {
+  console.log("Hello");
+};
+
+printHello(); // Hello
+
+console.log(typeof printHello); // function (function object)
