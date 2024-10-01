@@ -6,35 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signUp.css">
+    <script src="/JS/signUp.js"></script>
 
 </head>
 
 <body>
     <div class="container">
         <h2>Sign Up</h2>
-        <form class="signUpForm" method="post">
+        <form id="signUpForm" class="signUpForm" method="post">
             <div class="inputGroup">
                 <div class="inputDiv" contenteditable="true" id="nameInput" data-placeholder="Username"></div>
+                <span id="nameError" class="errorDiv"></span>
             </div>
 
             <div class="inputGroup">
                 <div class="inputDiv" contenteditable="true" id="emailInput" data-placeholder="Email"></div>
+                <span id="emailError" class="errorDiv"></span>
             </div>
 
             <div class="inputGroup">
                 <div class="inputDiv" contenteditable="true" id="newPassword" data-placeholder="New Password"></div>
+                <span id="newPasswordError" class="errorDiv"></span>
             </div>
 
             <div class="inputGroup">
                 <div class="inputDiv" contenteditable="true" id="confirmPassword" data-placeholder="ConfirmPassword">
                 </div>
+                <span id="confirmPasswordError" class="errorDiv"></span>
+                <span id="correctConfirmPasswordError" class="errorDiv"></span>
             </div>
 
             <div class="submitButton">
                 <div id="submit">Sign Up</div>
             </div>
 
-            <script>
+            <!-- <script>
 
                 // Get the submit button by its ID
                 document.getElementById('submit').onclick = function () {
@@ -100,7 +106,7 @@
 
 
 
-            </script>
+            </script> -->
         </form>
     </div>
 </body>

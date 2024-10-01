@@ -46,6 +46,7 @@ h2 {
     /* element is positioned relative to it's normal position */
     position: relative;
     margin-bottom: 1.5rem;
+    margin-bottom: 15px;
 }
 
 .inputDiv {
@@ -88,6 +89,26 @@ h2 {
     color: #333;
 }
 
+.errorDiv {
+    color: red;
+    /* Red text color */
+    border: 1px solid red;
+    /* Red border around the error */
+    padding: 5px;
+    /* Padding inside the box for better appearance */
+    margin-top: 5px;
+    /* Add some space above the error message */
+    background-color: #ffe6e6;
+    /* Light red background for error */
+    display: none;
+    /* Hidden by default */
+    border-radius: 5px;
+    /* Rounded corners for the error box */
+    font-size: 0.9em;
+    /* Adjust the font size for the error text */
+}
+
+
 /* Submit Button Styling */
 .submitButton {
     text-align: center;
@@ -117,6 +138,8 @@ h2 {
     outline: none;
     box-shadow: 0 0 6px rgba(0, 123, 255, 0.8);
 }
+
+
 
 /* Media queries for responsiveness */
 /* screen : use for computer screens, tablet, smart-phones etc */
