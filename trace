@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signUp.css">
+    <script src="signUp.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signUpForm" class="signUpForm" method="post">
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="nameInput" data-placeholder="Username"></div>
+                <span id="nameError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="emailInput" data-placeholder="Email"></div>
+                <span id="emailError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="newPassword" data-placeholder="New Password"></div>
+                <span id="newPasswordError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="confirmPassword" data-placeholder="ConfirmPassword">
+                </div>
+                <span id="confirmPasswordError" class="errorDiv"></span>
+                <span id="correctConfirmPasswordError" class="errorDiv"></span>
+            </div>
+
+            <div class="submitButton">
+                <div type="submit" id="submit">Sign Up</div>
+            </div>
+
+            <!-- <script>
+
+                // Get the submit button by its ID
+                document.getElementById('submit').onclick = function () {
+                    // Get the username input
+                    let userName = document.getElementById('nameInput').textContent.trim();
+
+                    // Get the email input
+                    let email = document.getElementById('emailInput').textContent.trim();
+
+                    // Get the new password input
+                    let newPassword = document.getElementById('newPassword').textContent.trim();
+
+                    // Get the confirm password input
+                    let confirmPassword = document.getElementById('confirmPassword').textContent.trim();
+
+                    // Initialize an array to collect error messages
+                    let errorMessages = [];
+
+                    // Check if each textContent exists and store it in localStorage
+                    if (userName) {
+                        localStorage.setItem('userName', userName);
+                    } else {
+                        errorMessages.push('Please enter username.');
+                    }
+
+                    if (email) {
+                        localStorage.setItem('email', email);
+                    } else {
+                        errorMessages.push('Please enter email.');
+                    }
+
+                    if (newPassword) {
+                        localStorage.setItem('newPassword', newPassword);
+                    } else {
+                        errorMessages.push('Please enter new password.');
+                    }
+
+                    if (confirmPassword) {
+                        localStorage.setItem('confirmPassword', confirmPassword);
+                    } else {
+                        errorMessages.push('Please enter confirm password.');
+                    }
+
+                    // If there are any error messages, show them and redirect
+                    if (errorMessages.length > 0) {
+                        alert(errorMessages.join('\n')); // Show all error messages
+                        window.location.href = 'signUp.html'; // Redirect to the signup page
+                        return;
+                    }
+
+                    // Check if newPassword and confirmPassword match
+                    if (newPassword !== confirmPassword) {
+                        alert('Please enter the correct confirmation password.');
+                        window.location.href = 'signUp.html';
+                        return;
+                    }
+
+                    // If all validations are successful, redirect to home.html
+                    alert('Welcome! ' + userName);
+                    window.location.href = 'home.html'; // Redirect to home page
+                };
+
+
+
+
+            </script> -->
+        </form>
+    </div>
+</body>
+
+</html>
+
