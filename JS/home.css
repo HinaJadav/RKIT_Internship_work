@@ -1,6 +1,6 @@
 .custom-navbar {
     background-color: rgb(41, 61, 67);
-    /* Your custom color */
+
 }
 
 .custom-navbar .nav-link,
@@ -12,51 +12,34 @@
     color: #f0f0f0;
 }
 
-/* Style for the wrapper to center content */
 .centered-container {
     display: flex;
-    /* Use flexbox */
     flex-direction: column;
-    /* Stack children vertically */
     justify-content: center;
-    /* Center vertically */
     align-items: center;
-    /* Center horizontally */
     height: 100vh;
-    /* Full viewport height */
     margin: 0;
-    /* Remove default margin */
 }
 
-/* Style for the h1 tag */
 h1 {
     font-size: 2em;
-    /* Font size */
     margin-bottom: 10px;
-    /* Space below */
 }
 
-/* General button styling */
 button {
     padding: 10px 20px;
-    /* Padding */
     font-size: 16px;
-    /* Font size */
     border: none;
-    /* Remove border */
     border-radius: 5px;
-    /* Rounded corners */
     margin: 10px 0;
-    /* Vertical margin */
     cursor: pointer;
-    /* Pointer on hover */
+
     transition: all 0.3s ease;
-    /* Smooth transition */
+
     width: 200px;
-    /* Set button width */
+
 }
 
-/* Individual button styles */
 .click-btn {
     background-color: lightblue;
 }
@@ -85,7 +68,6 @@ button {
     background-color: lightgray;
 }
 
-/* Hover effect for all buttons */
 button:hover {
     transform: scale(1.1);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -93,17 +75,17 @@ button:hover {
 
 .custom-btn {
     border-color: white;
-    /* White border */
+
     color: white;
-    /* White text */
+
     margin-left: 10px;
 }
 
 .custom-btn:hover {
     background-color: lightgray;
-    /* Optional hover effect */
+
     color: black;
-    /* Optional hover text color */
+
 }
 
 .custon-icon {
