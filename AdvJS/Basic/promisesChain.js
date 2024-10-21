@@ -58,7 +58,7 @@ checkAlive(true)
   .then((message) => console.log(message)) // Once identify resolves, log the message
   .catch((error) => console.error("Error:", error)); // Handle any errors
 
-// o/p:
+//  o/p:
 // It’s alive!
 // Touched the object...
 // It moved!
