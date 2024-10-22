@@ -1,3 +1,5 @@
+// JS is synchronous single thrreaded language
+
 // 3 dufferent type of declare variable: var, let, const
 
 // 1) const
