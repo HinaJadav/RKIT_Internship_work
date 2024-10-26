@@ -9,20 +9,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Validation for email
     const email = document.getElementById("emailInput");
     const emailError = document.getElementById("emailError");
+    const userInfo = localStorage.getItem(email.value); // Assuming email is used as the key
 
     if (email.value === "" || email.value == null) {
       emailError.innerHTML = "Email is required!";
       isValid = false;
+    } else if (userInfo === null) {
+      alert("User is not registered!");
+      window.location.href = "signUp.html";
     } else {
       emailError.innerHTML = "";
     }
 
-    // Validation for password
+    // Validation for password (Based on localStorage store values of user)
     const password = document.getElementById("password");
     const passwordError = document.getElementById("passwordError");
 
     if (password.value === "" || password.value == null) {
       passwordError.innerHTML = "Password is required!";
+      isValid = false;
+    } else if (JSON.parse(userInfo).password !== password.value) {
+      // Correctly comparing password value
+      passwordError.innerHTML = "Password is incorrect!";
       isValid = false;
     } else {
       passwordError.innerHTML = "";

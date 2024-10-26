@@ -14,9 +14,6 @@ $(document).ready(function () {
     if (userName.value === "" || userName.value == null) {
       userNameError.innerHTML = "User name is required!";
       isValid = false;
-    } else if (localStorage.getItem(userName.value) !== null) {
-      userNameError.innerHTML = "User already exists!";
-      isValid = false;
     } else {
       userNameError.innerHTML = "";
     }
@@ -31,6 +28,11 @@ $(document).ready(function () {
     } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email.value)) {
       emailError.innerHTML = "Please enter a valid email address!";
       isValid = false;
+    } else if (localStorage.getItem(email.value) !== null) {
+      alert("User is already registered!");
+      window.location.href = "login.html";
+      // emailError.innerHTML = "User is already exists!";
+      // isValid = false;
     } else {
       emailError.innerHTML = "";
     }
@@ -115,7 +117,7 @@ $(document).ready(function () {
         password: newPassword.value,
       };
 
-      localStorage.setItem(userName.value, JSON.stringify(userInfo));
+      localStorage.setItem(email.value, JSON.stringify(userInfo));
       console.log(userInfo);
 
       // Form submission and redirect
