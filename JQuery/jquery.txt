@@ -1,0 +1,13 @@
+JQuery : JS library (WRITE LESS DO MORE)
+
+npm install jquery (for install jquery using node env) 
+Other than this we can also install jquery using "CDN" 
+
+syntax: $('selector').action()
+where, 
+selector = html element on which if we click we want to perform some action.
+action() = write logic or code which we want to execute after click on that selected html element 
+
+we can trigger JQuery action on existing html element direct from browser cansole 
+
+AJex: 
