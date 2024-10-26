@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
+  // Validation logic
   const signUpForm = document.getElementById("signUpForm");
 
   signUpForm.addEventListener("submit", (event) => {
@@ -12,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (userName.value === "" || userName.value == null) {
       userNameError.innerHTML = "User name is required!";
+      isValid = false;
+    } else if (localStorage.getItem(userName.value) !== null) {
+      userNameError.innerHTML = "User already exists!";
       isValid = false;
     } else {
       userNameError.innerHTML = "";
@@ -31,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       emailError.innerHTML = "";
     }
 
+    // * JS Validators:
     // Validation for password
     const newPassword = document.getElementById("newPassword");
     const newPasswordError = document.getElementById("newPasswordError");
@@ -39,18 +44,57 @@ document.addEventListener("DOMContentLoaded", function () {
       "confirmPasswordError"
     );
 
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/;
+    // * ReGex:
+    // Password requirements:
+    const hasLowercase = /[a-z]/;
+    const hasUppercase = /[A-Z]/;
+    const hasDigit = /[0-9]/;
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+
+    function validatePassword(password) {
+      const errors = [];
+
+      if (!hasLowercase.test(password)) {
+        errors.push("Password must contain at least one lowercase letter.");
+      }
+
+      if (!hasUppercase.test(password)) {
+        errors.push("Password must contain at least one uppercase letter.");
+      }
+
+      if (!hasDigit.test(password)) {
+        errors.push("Password must contain at least one digit.");
+      }
+
+      if (!hasSpecialChar.test(password)) {
+        errors.push("Password must contain at least one special character.");
+      }
+
+      // length validator
+      if (password.length < 8) {
+        errors.push("Password must be at least 8 characters long.");
+      }
+
+      return errors;
+    }
+
+    const validationErrors = validatePassword(newPassword.value);
+
+    // Clear any previous errors
+    newPasswordError.innerHTML = "";
 
     if (newPassword.value === "" || newPassword.value == null) {
       newPasswordError.innerHTML = "New password is required!";
       isValid = false;
-    } else if (!passwordRegex.test(newPassword.value)) {
-      newPasswordError.innerHTML =
-        "Password must be at least 8 characters long, and include an uppercase letter, a lowercase letter, a number, and a special character!";
+    } else if (validationErrors.length !== 0) {
+      // * foreach loop
+      // Display each error in a new line
+      validationErrors.forEach((error) => {
+        newPasswordError.innerHTML += `<p>${error}</p>`;
+      });
       isValid = false;
     } else {
-      newPasswordError.innerHTML = "";
+      newPasswordError.innerHTML = ""; // Clear if no errors
     }
 
     // Validate confirm password matches new password
@@ -61,15 +105,26 @@ document.addEventListener("DOMContentLoaded", function () {
       confirmPasswordError.innerHTML = "";
     }
 
-    // If all validations pass, submit the form
+    // * LocalStorage:
     if (isValid) {
-      signUpForm.submit();
       alert("SignUp successfully done.");
+
+      const userInfo = {
+        userName: userName.value,
+        email: email.value,
+        password: newPassword.value,
+      };
+
+      localStorage.setItem(userName.value, JSON.stringify(userInfo));
+      console.log(userInfo);
+
+      // Form submission and redirect
+      signUpForm.submit();
       window.location.href = "login.html";
     }
   });
-});
-$(document).ready(function () {
+  //});
+
   // Generic function to toggle password visibility
   function togglePasswordVisibility(passwordInputId, iconId) {
     const passwordInput = $(`#${passwordInputId}`);

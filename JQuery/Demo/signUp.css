@@ -60,7 +60,6 @@ input[type="password"]:focus {
 }
 
 .errorDiv {
-    display: none;
     color: red;
     font-size: 13px;
     margin-top: 5px;

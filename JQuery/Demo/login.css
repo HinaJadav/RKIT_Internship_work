@@ -49,8 +49,6 @@ input[type="text"]:focus {
 }
 
 .errorDiv {
-    display: none;
-    /* Initially hidden */
     color: red;
     font-size: 13px;
     margin-top: 5px;
