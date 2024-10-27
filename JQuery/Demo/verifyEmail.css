@@ -26,30 +26,16 @@ header {
 .infoText {
     text-align: center;
     color: gray;
+    margin-bottom: 30px;
 }
 
 .inputGroup {
-
-    margin-bottom: 18px;
+    margin-bottom: 30px;
     margin-left: 25px;
     position: relative;
     width: 300px;
 }
 
-input[type="email"]{
-    width: 100%;
-    padding: 25px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 15px;
-    font-family: sans-serif;
-    transition: border-color 0.3s;
-}
-
-input[type="email"]:focus {
-    border-color: #007bff;
-    outline: none;
-}
 
 .errorDiv {
     color: red;
@@ -57,28 +43,37 @@ input[type="email"]:focus {
     margin-top: 5px;
 }
 
-#togglePassword {
-    position: absolute;
-    left: 250px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    opacity: 0.5;
+
+/* OTP Input Styling */
+.otpGroup {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
 
-#togglePassword img {
-    width: 25px;
-    height: 25px;
+.otpInput {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.otpInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .submitButton {
     text-align: center;
     margin-top: 10px;
     margin-left: 20px;
-}
-
-#signUpButton {
-    margin-left: 30px;
 }
 
 button {
