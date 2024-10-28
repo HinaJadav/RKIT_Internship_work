@@ -23,6 +23,7 @@ $(document).ready(function () {
     let otp = "";
     let isValid = true;
 
+    // * Get Content (JQuery) : val()
     $(".otpInput").each(function () {
       otp += $(this).val();
       if ($(this).val() === "") isValid = false;

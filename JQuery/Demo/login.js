@@ -67,7 +67,9 @@ $(document).ready(function () {
     //      - To set multiple attributes: .attr({ '<attr1>': '<value1>', '<attr2>': '<value2>', ... })
     //    Example: $('#element').attr({ src: 'new-image.png', alt: 'New Image Description' });
 
+    // * Get Attribute (JQuery) : attr()
     if (passwordInput.attr("type") === "password") {
+      // * Set Attribute (JQuery) : attr()
       passwordInput.attr("type", "text");
       toggleIcon.attr("src", "show.png"); // Use "show" icon when password is visible
     } else {

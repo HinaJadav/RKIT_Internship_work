@@ -21,11 +21,20 @@
             // Animate the text to fade in and move up
             $("#welcomeText").animate(
                 {
-                    opacity: 1,       
-                    top: "35%"         
+                    opacity: 1,
+                    top: "35%"
                 },
-                3000                 
+                3000
             );
+
+            // * css with JQuery
+            setTimeout(function () {
+                $('body').css({
+                    "background-image": "none",
+                    "background-color": "lightgrey"
+                });
+
+            }, 3000);
         });
 
     </script>

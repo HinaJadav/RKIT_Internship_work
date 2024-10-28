@@ -69,9 +69,29 @@ slideToggle()
 $(selector).slideDown(speed,callback);
 
 4) Animations: used to create custom animations.
+animate()
+stop()
 
+--------------------------
+Get Content - text(), html(), and val()
 
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields
 
+Get Attributes - attr()
+
+* same for Set Content
+
+--------------------------------
+
+jQuery Manipulating CSS
+jQuery has several methods for CSS manipulation. We will look at the following methods:
+
+addClass() - Adds one or more classes to the selected elements
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() - Sets or returns the style attribute
 
 
 
