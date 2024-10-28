@@ -93,6 +93,21 @@ removeClass() - Removes one or more classes from the selected elements
 toggleClass() - Toggles between adding/removing classes from the selected elements
 css() - Sets or returns the style attribute
 
+--------------------------------
+jQuery Dimension Methods
+jQuery has several important methods for working with dimensions:
+
+width()
+height()
+innerWidth()
+innerHeight()
+outerWidth()
+outerHeight()
+
+--------------------------------
+
+AJAX = Asynchronous JavaScript and XML.
+
 
 
 
