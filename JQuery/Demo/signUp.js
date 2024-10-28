@@ -128,25 +128,39 @@ $(document).ready(function () {
   //});
 
   // Generic function to toggle password visibility
-  function togglePasswordVisibility(passwordInputId, iconId) {
+  function togglePasswordVisibility(passwordInputId, showIconId, hideIconId) {
     const passwordInput = $(`#${passwordInputId}`);
-    const toggleIcon = $(`#${iconId}`);
+    const showIcon = $(`#${showIconId}`);
+    const hideIcon = $(`#${hideIconId}`);
 
     if (passwordInput.attr("type") === "password") {
       passwordInput.attr("type", "text");
-      toggleIcon.attr("src", "show.png"); // Show icon when password is visible
+      showIcon.show();
+      hideIcon.hide();
     } else {
       passwordInput.attr("type", "password");
-      toggleIcon.attr("src", "hide.png"); // Hide icon when password is hidden
+      hideIcon.show();
+      showIcon.hide();
     }
   }
 
   // Event listeners for each toggle button
-  $("#toggleNewPassword").on("click", function () {
-    togglePasswordVisibility("newPassword", "newPasswordIcon");
+  $("#newPasswordShowIcon, #newPasswordHideIcon").on("click", function () {
+    togglePasswordVisibility(
+      "newPassword",
+      "newPasswordShowIcon",
+      "newPasswordHideIcon"
+    );
   });
 
-  $("#toggleConfirmPassword").on("click", function () {
-    togglePasswordVisibility("confirmPassword", "confirmPasswordIcon");
-  });
+  $("#confirmPasswordShowIcon, #confirmPasswordHideIcon").on(
+    "click",
+    function () {
+      togglePasswordVisibility(
+        "confirmPassword",
+        "confirmPasswordShowIcon",
+        "confirmPasswordHideIcon"
+      );
+    }
+  );
 });

@@ -26,7 +26,9 @@
             <div class="inputGroup">
                 <input type="password" id="newPassword" placeholder="New Password" />
                 <span class="togglePassword" id="toggleNewPassword">
-                    <img src="hide.png" id="newPasswordIcon" alt="Show/Hide Password">
+                    <img id="newPasswordShowIcon" src="show.png" style="display: none; cursor: pointer;">
+                    <img id="newPasswordHideIcon" src="hide.png" style="cursor: pointer;">
+
                 </span>
                 <span id="newPasswordError" class="errorDiv"></span>
             </div>
@@ -34,9 +36,9 @@
             <div class="inputGroup">
                 <input type="password" id="confirmPassword" placeholder="Confirm Password" />
                 <span class="togglePassword" id="toggleConfirmPassword">
-                    <img src="hide.png" id="confirmPasswordIcon" alt="Show/Hide Password">
-                </span>
-                <span id="confirmPasswordError" class="errorDiv"></span>
+                    <img id="confirmPasswordShowIcon" src="show.png" style="display: none; cursor: pointer;">
+                    <img id="confirmPasswordHideIcon" src="hide.png" style=" cursor: pointer;">
+                    <span id="confirmPasswordError" class="errorDiv"></span>
             </div>
 
             <div class="submitButton">

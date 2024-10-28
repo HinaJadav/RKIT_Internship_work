@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  // jquery event: mouse hover
+  $(":button").hover(
+    function () {
+      $(this).css("background-color", "#0056b3");
+    },
+    function () {
+      $(this).css("background-color", "#007bff");
+    }
+  );
+
   function togglePasswordVisibility(passwordInputId, iconId) {
     const passwordInput = $(`#${passwordInputId}`);
     const toggleIcon = $(`#${iconId}`);
