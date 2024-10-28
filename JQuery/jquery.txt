@@ -46,6 +46,38 @@ mouse events: enter, leave, down, up, hover(enter + leave), focus(effect show wh
 
 on() : attaches one or more event handlers for the selected elements.
 
+* jQuery Effects:
+1) Hide and Show:
+$(selector).hide(speed,callback);
+$(selector).show(speed,callback);
+
+$(selector).toggle(speed,callback);
+
+2) Fading: fade elements in and out of visibility.
+fadeIn()
+fadeOut()
+fadeToggle()
+$(selector).fadeIn(speed,callback);
+
+fadeTo()
+$(selector).fadeTo(speed,opacity,callback);
+
+3) Sliding: slide elements up and down.
+slideDown()
+slideUp()
+slideToggle()
+$(selector).slideDown(speed,callback);
+
+4) Animations: used to create custom animations.
+
+
+
+
+
+
+
+
+
 
 
 AJex: 

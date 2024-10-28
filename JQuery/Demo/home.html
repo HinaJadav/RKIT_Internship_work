@@ -16,35 +16,19 @@
     <script src="/JQuery/node_modules/jquery/dist/jquery.min.js"></script>
 
 
-    <!-- <script>
-        function onClickEvent() {
-            alert("On Click Event")
-        }
+    <script>
+        $(document).ready(function () {
+            // Animate the text to fade in and move up
+            $("#welcomeText").animate(
+                {
+                    opacity: 1,       
+                    top: "35%"         
+                },
+                3000                 
+            );
+        });
 
-        function onMouseOverEvent() {
-            alert("On Mouse Over Event")
-        }
-
-        function onMouseEnterEvent() {
-            alert("On Mouse Enter Event")
-        }
-
-        function onMouseOutEvent() {
-            alert("On Mouse Out Event")
-        }
-
-        function onKeyDown() {
-            alert("On Key Down")
-        }
-
-        function onKeyPress() {
-            alert("On Key Press")
-        }
-
-        function onKeyUp() {
-            alert("On Key Up")
-        }
-    </script> -->
+    </script>
 </head>
 
 <body>
@@ -148,9 +132,12 @@
     </div> -->
 
     <!-- Backgoud image with text effect using JQuery -->
-    <div class="homePage">
-        <button type="button" id="jQueryEventsBtn">JQueryEvents</button>
-    </div>
+    <!-- <div class="homePage">
+        <button type="button" id="">JQueryEvents</button>
+    </div> -->
+
+    <div id="welcomeText">Discover, Connect, and Grow With LearnCode.</div>
+
 
     <script src="home.js"></script>
 

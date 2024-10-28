@@ -22,13 +22,29 @@
 }
 
 body {
-    background-color: darkslategrey;
+    background-image: url("/JQuery/Demo/homeBg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-h1 {
+#welcomeText {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: rgb(41, 61, 67);
+    opacity: 0;
+    /* Start hidden for animation */
+    text-align: center;
+}
+
+/* h1 {
     font-size: 2em;
     margin-bottom: 10px;
-}
+} */
 
 button {
     padding: 10px 20px;
