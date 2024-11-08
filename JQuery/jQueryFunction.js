@@ -1,15 +1,15 @@
 $(document).ready(function () {
-  // Square array
-  $("#sortBtn").click(function (event) {
+  // Double array
+  $("#doubleBtn").click(function (event) {
     event.preventDefault();
     const input = $("#arrayInput").val();
     const numbersArray = input.split(",").map(Number); // Convert each item to a number
 
-    const squareArray = $.map(numbersArray, function (num) {
-      return num * num;
+    const DoubleArray = $.map(numbersArray, function (num) {
+      return num * 2;
     });
 
-    $("#result").text("Squared Array: " + squareArray.join(", "));
+    $("#result").text("Doubled Array: " + DoubleArray.join(", "));
   });
 
   // Find even numbers
@@ -54,4 +54,6 @@ $(document).ready(function () {
       $("#resultConcate").text("Please enter values in both input fields.");
     }
   });
+
+  
 });

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.extend demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <div id="extendFun"></div>
+
+    <script>
+
+
+        // jQuery.extend() : Merge the contents of two or more objects together into the first object.
+
+        // syntax: jQuery.extend( [deep], target, object1 [, objectN] )
+
+        // [deep] value:
+        // "true" : the merge becomes recursive(deep copy)
+        // "false" : not supported
+
+        // target value: The object to extend. It will receive the new properties.
+
+        // object1 value: An object containing additional properties to merge in.
+
+        // objectN : Additional objects.
+
+        // The target object (first argument) will be modified, and will also be returned from $.extend().
+
+        // For preserve both of the original objects: Pass empty({}) object as the target object.
+
+        // => Undefined properties are not copied.
+
+        //------------------------------------------------------
+
+        // Merge two objects recursively, modifying the first:
+
+        let userPersonalInfo = { name: "Priyank", surname: "Jadav" };
+        let userEducationInfo = { std: "10th" };
+
+        // Merge userEducationInfo into userPersonalInfo
+        $.extend(userPersonalInfo, userEducationInfo);
+
+        $("#extendFun").append("<div><b>Merge userEducationInfo into userPersonalInfo: </b></div>");
+
+        $("#extendFun").append(JSON.stringify(userPersonalInfo));
+
+        //------------------------------------------------------
+
+        // Merge defaults and options, without modifying defaults
+
+        let user = $.extend({}, userPersonalInfo, userEducationInfo);
+
+
+        $("#extendFun").append("<div><b> Merge defaults and options, without modifying defaults: </b></div>");
+
+        $("#extendFun").append("<div><b>userPersonalInfo: </b>" + JSON.stringify(userPersonalInfo) + "</div>");
+        $("#extendFun").append("<div><b>userEducationInfo: </b>" + JSON.stringify(userEducationInfo) + "</div>");
+        $("#extendFun").append("<div><b>user: </b>" + JSON.stringify(user) + "</div>");
+
+    </script>
+
+</body>
+
+</html>
