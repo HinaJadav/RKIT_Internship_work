@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example with JSON Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <h2>User Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+    <button id="saveUser">Save User</button>
+    <button id="getUser">Get User Data</button>
+
+    <h3>Stored User Data:</h3>
+    <pre id="userData"></pre>
+
+    <script>
+        $(document).ready(function () {
+            let fakeStorage = {};
+
+            // Save user data
+            $('#saveUser').click(function () {
+                let name = $('#name').val();
+                let email = $('#email').val();
+
+                if (name && email) {
+                    fakeStorage = { name: name, email: email };
+
+                    $('#userData').text('User data saved!');
+                } else {
+                    alert('Please enter both name and email.');
+                }
+            });
+
+            // Retrieve user data and display it as JSON
+            $('#getUser').click(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/fake-url',
+                    dataType: 'json',
+                    success: function () {
+                        $('#userData').text(JSON.stringify(fakeStorage, null, 2));
+                    },
+                    error: function () {
+                        $('#userData').text(JSON.stringify(fakeStorage, null, 2));
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
