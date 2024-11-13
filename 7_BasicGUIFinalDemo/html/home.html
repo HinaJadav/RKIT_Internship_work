@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -61,26 +62,32 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="help.html">Help</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#addContestModal">Add
+                            Contest</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="help.html">Help</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link active text-muted" aria-current="page" href="contact.html">Contact</a>
                     </li>
+
                 </ul>
                 <!-- Todo Icon -->
                 <a class="position-relative me-3" href="#" id="todo-icon" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class="fas fa-tasks" style="font-size: 24px;"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                        id="todo-count">0</span>
+                        id="todoCount">0</span>
                 </a>
                 <!-- Todo List Dropdown -->
-                <ul class="dropdown-menu dropdown-menu-end" id="todo-dropdown">
+                <ul class="dropdown-menu dropdown-menu-end" id="todoDropdown">
                     <li>
                         <h6 class="dropdown-header">Your Todo List</h6>
                     </li>
                     <li>
-                        <div id="todo-list"></div> <!-- JavaScript will fill this section -->
+                        <div id="todoList"></div>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
@@ -99,101 +106,122 @@
         </div>
     </nav>
 
-    <!-- Card Section -->
-    <div class="container my-4">
-        <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="/7_BasicGUIFinalDemo/assets/images/cc-logo.svg" class="card-img-top" alt="CodeChef">
+    <<!-- Add Contest Modal -->
+        <div class="modal fade" id="addContestModal" tabindex="-1" aria-labelledby="addContestLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addContestLabel">Add New Contest</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">CodeChef</h5>
-                        <p class="card-text"><a href="https://www.codechef.com/">Learn more</a></p>
-                        <button class="btn btn-primary add-to-todo" data-title="CodeChef">Add</button>
-                        <!-- <button class="btn btn-secondary">Remove</button> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="/7_BasicGUIFinalDemo/assets/images/codeforces-sponsored-by-ton.webp"
-                            class="card-img-top" alt="CodeForces">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">CodeForces</h5>
-                        <p class="card-text"><a href="https://codeforces.com/">Learn more</a></p>
-                        <button class="btn btn-primary add-to-todo" data-title="CodeForces">Add</button>
-                        <!-- <button class="btn btn-secondary">Remove</button> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="/7_BasicGUIFinalDemo/assets/images/LeetCode_logo_rvs.png" class="card-img-top"
-                            alt="LeetCode">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">LeetCode</h5>
-                        <p class="card-text"><a href="https://leetcode.com/">Learn more</a></p>
-                        <button class="btn btn-primary add-to-todo" data-title="LeetCode">Add</button>
-                        <!-- <button class="btn btn-secondary">Remove</button> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Card 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="/7_BasicGUIFinalDemo/assets/images/hackerrank_logo.png" class="card-img-top"
-                            alt="HackerRank">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">HackerRank</h5>
-                        <p class="card-text"><a href="https://www.hackerrank.com/">Learn more</a></p>
-                        <button class="btn btn-primary add-to-todo" data-title="HackerRank">Add</button>
-                        <!-- <button class="btn btn-secondary">Remove</button> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="/7_BasicGUIFinalDemo/assets/images/new_cn_logo-29829.svg" class="card-img-top"
-                            alt="CodingNinjas">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">CodingNinjas</h5>
-                        <p class="card-text"><a href="https://www.codingninjas.com/">Learn more</a></p>
-                        <button class="btn btn-primary add-to-todo" data-title="CodingNinjas">Add</button>
-                        <!-- <button class="btn btn-secondary">Remove</button> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="image-container">
-                        <img src="/7_BasicGUIFinalDemo/assets/images/gfg-gg-logo.svg" class="card-img-top" alt="GFG">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">GFG</h5>
-                        <p class="card-text"><a href="https://www.geeksforgeeks.org/">Learn more</a></p>
-                        <button class="btn btn-primary add-to-todo" data-title="GFG">Add</button>
-                        <!-- <button class="btn btn-secondary">Remove</button> -->
+                    <div class="modal-body">
+                        <form id="addContestForm">
+                            <div class="mb-3">
+                                <label for="platformName" class="form-label">Platform Name</label>
+                                <input type="text" class="form-control" id="platformName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contestLink" class="form-label">Contest Link</label>
+                                <input type="url" class="form-control" id="contestLink" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contestImage" class="form-label">Contest Image</label>
+                                <input type="file" class="form-control" id="contestImage" accept="image/*" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Contest</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="/7_BasicGUIFinalDemo/js/home.js"></script>
+        <div class="container my-4">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="/7_BasicGUIFinalDemo/assets/images/cc-logo.svg" class="card-img-top"
+                                alt="CodeChef">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">CodeChef</h5>
+                            <p class="card-text"><a href="https://www.codechef.com/">Learn more</a></p>
+                            <button class="btn btn-primary addToTodo" data-title="CodeChef">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="/7_BasicGUIFinalDemo/assets/images/codeforces-sponsored-by-ton.webp"
+                                class="card-img-top" alt="CodeForces">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">CodeForces</h5>
+                            <p class="card-text"><a href="https://codeforces.com/">Learn more</a></p>
+                            <button class="btn btn-primary addToTodo" data-title="CodeForces">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="/7_BasicGUIFinalDemo/assets/images/LeetCode_logo_rvs.png" class="card-img-top"
+                                alt="LeetCode">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">LeetCode</h5>
+                            <p class="card-text"><a href="https://leetcode.com/">Learn more</a></p>
+                            <button class="btn btn-primary addToTodo" data-title="LeetCode">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="/7_BasicGUIFinalDemo/assets/images/hackerrank_logo.png" class="card-img-top"
+                                alt="HackerRank">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">HackerRank</h5>
+                            <p class="card-text"><a href="https://www.hackerrank.com/">Learn more</a></p>
+                            <button class="btn btn-primary addToTodo" data-title="HackerRank">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="/7_BasicGUIFinalDemo/assets/images/new_cn_logo-29829.svg" class="card-img-top"
+                                alt="CodingNinjas">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">CodingNinjas</h5>
+                            <p class="card-text"><a href="https://www.codingninjas.com/">Learn more</a></p>
+                            <button class="btn btn-primary addToTodo" data-title="CodingNinjas">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="/7_BasicGUIFinalDemo/assets/images/gfg-gg-logo.svg" class="card-img-top"
+                                alt="GFG">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">GFG</h5>
+                            <p class="card-text"><a href="https://www.geeksforgeeks.org/">Learn more</a></p>
+                            <button class="btn btn-primary addToTodo" data-title="GFG">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/7_BasicGUIFinalDemo/js/home.js"></script>
 </body>
 
 </html>

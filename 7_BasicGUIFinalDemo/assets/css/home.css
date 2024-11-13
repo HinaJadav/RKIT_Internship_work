@@ -28,7 +28,7 @@
     margin: 0;
 }
 
-#todo-dropdown {
+#todoDropdown {
     position: absolute;
     /* width: 400px; */
     top: 80px;
@@ -39,7 +39,7 @@
     padding: 10px;
 }
 
-#todo-list .dropdown-item {
+#todoList .dropdown-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@
 }
 
 /* Badge styling for Todo Count */
-#todo-count {
+#todoCount {
     font-size: 0.9rem;
     padding: 5px 8px;
 }
@@ -105,38 +105,6 @@ button {
 
 }
 
-/* .click-btn {
-    background-color: lightblue;
-}
-
-.mouseover-btn {
-    background-color: lightgreen;
-}
-
-.mouseenter-btn {
-    background-color: lightcoral;
-}
-
-.mouseout-btn {
-    background-color: lightgoldenrodyellow;
-}
-
-.keydown-btn {
-    background-color: lightpink;
-}
-
-.keyup-btn {
-    background-color: lightseagreen;
-}
-
-.keypress-btn {
-    background-color: lightgray;
-}
-
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-} */
 
 .custom-btn {
     border-color: white;
@@ -152,13 +120,13 @@ button:hover {
 }
 
 .custon-icon,
-#todo-icon {
+#todoIcon {
     color: white;
     size: 5rem;
 }
 
 .custon-icon:hover,
-#todo-icon {
+#todoIcon {
     color: lightgray;
 }
 

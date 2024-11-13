@@ -1,82 +1,97 @@
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("loginForm");
 
-  loginForm.addEventListener("submit", (event) => {
+  loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    let isValid = true; // Track whether the form is valid
+    const emailInput = document.getElementById("emailInput");
+    const passwordInput = document.getElementById("password");
 
-    // Validation for email
-    const email = document.getElementById("emailInput");
+    // Perform validation
+    const isEmailValid = validateEmail(emailInput);
+    const isPasswordValid = await validatePassword(
+      passwordInput,
+      emailInput.value
+    );
 
-    const emailError = document.getElementById("emailError");
-    const userInfo = localStorage.getItem(email.value); // Assuming email is used as the key
-
-    if (email.value === "" || email.value == null) {
-      emailError.innerHTML = "Email is required!";
-      isValid = false;
-    } else if (userInfo === null) {
-      alert("User is not registered!");
-      window.location.href = "signUp.html";
-    } else {
-      emailError.innerHTML = "";
+    if (isEmailValid && isPasswordValid) {
+      handleSuccessfulLogin(emailInput.value);
     }
+  });
+});
 
-    // Validation for password (Based on localStorage store values of user)
-    const password = document.getElementById("password");
-    const passwordError = document.getElementById("passwordError");
+// Validation function for email
+function validateEmail(emailInput) {
+  const emailError = document.getElementById("emailError");
+  const userInfo = localStorage.getItem(emailInput.value);
 
-    if (password.value === "" || password.value == null) {
-      passwordError.innerHTML = "Password is required!";
-      isValid = false;
-    } else if (JSON.parse(userInfo).password !== password.value) {
-      // Correctly comparing password value
+  if (!emailInput.value) {
+    emailError.innerHTML = "Email is required!";
+    return false;
+  } else if (userInfo === null) {
+    alert("User is not registered!");
+    window.location.href = "signUp.html";
+    return false;
+  } else {
+    emailError.innerHTML = "";
+    return true;
+  }
+}
+
+// Validation function for password
+async function validatePassword(passwordInput, email) {
+  const passwordError = document.getElementById("passwordError");
+  const userInfo = localStorage.getItem(email);
+
+  if (!passwordInput.value) {
+    passwordError.innerHTML = "Password is required!";
+    return false;
+  } else {
+    const enteredPasswordHash = await hashPassword(passwordInput.value);
+    const storedPasswordHash = JSON.parse(userInfo).password;
+
+    if (enteredPasswordHash !== storedPasswordHash) {
       passwordError.innerHTML = "Password is incorrect!";
-      isValid = false;
+      return false;
     } else {
       passwordError.innerHTML = "";
+      return true;
     }
+  }
+}
 
-    if (isValid) {
-      loginForm.submit();
-      localStorage.setItem("currentUserEmail", email.value);
-      alert("Welcome, Learn code with LearnCode.");
-      window.location.href = "home.html";
-    }
-  });
-});
+// Function to hash the password using SHA-256
+async function hashPassword(password) {
+  const msgBuffer = new TextEncoder().encode(password);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+// Handle successful login
+function handleSuccessfulLogin(email) {
+  localStorage.setItem("currentUserEmail", email);
+  alert("Welcome, Learn code with LearnCode.");
+  window.location.href = "home.html";
+}
 
 $(document).ready(function () {
-  // .on():
-  // Used to attach event handlers to elements. It provides a flexible way to listen to events like clicks, mouseover, keypress, etc., and execute functions in response.
-  // Syntax: $(selector).on(event, [selector], [data], function)
-
-  // Parameters:
-  // 1) event: The event type(s) to listen for, e.g., 'click', 'mouseenter', 'keydown', or multiple events like 'click keydown'.
-  // 2) selector (optional): A child element selector within the main selector where the event will be triggered. Useful for dynamically added elements.
-  // 3) data (optional): Data to be passed to the event handler function when the event occurs.
-  // 4) function: The function to execute when the event occurs.
-
+  // Toggle password visibility
   $("#togglePassword").on("click", function () {
-    const passwordInput = $("#password");
-    const toggleIcon = $("#toggleIcon");
-
-    // .attr():
-    // 1) To retrieve the value of any attribute from an HTML element, use .attr('<attribute name>').
-    //    Example: $('#element').attr('src') retrieves the 'src' attribute of the element.
-    // 2) To set or update one or more attributes, pass the attribute name and value as arguments:
-    //      - To set a single attribute: .attr('<attribute name>', '<new value>')
-    //      - To set multiple attributes: .attr({ '<attr1>': '<value1>', '<attr2>': '<value2>', ... })
-    //    Example: $('#element').attr({ src: 'new-image.png', alt: 'New Image Description' });
-
-    // * Get Attribute (JQuery) : attr()
-    if (passwordInput.attr("type") === "password") {
-      // * Set Attribute (JQuery) : attr()
-      passwordInput.attr("type", "text");
-      toggleIcon.attr("src", "/7_BasicGUIFinalDemo/assets/images/show.png"); // Use "show" icon when password is visible
-    } else {
-      passwordInput.attr("type", "password");
-      toggleIcon.attr("src", "/7_BasicGUIFinalDemo/assets/images/hide.png"); // Use "hide" icon when password is hidden
-    }
+    togglePasswordVisibility();
   });
 });
+
+// Function to toggle password visibility
+function togglePasswordVisibility() {
+  const passwordInput = $("#password");
+  const toggleIcon = $("#toggleIcon");
+
+  if (passwordInput.attr("type") === "password") {
+    passwordInput.attr("type", "text");
+    toggleIcon.attr("src", "/7_BasicGUIFinalDemo/assets/images/show.png");
+  } else {
+    passwordInput.attr("type", "password");
+    toggleIcon.attr("src", "/7_BasicGUIFinalDemo/assets/images/hide.png");
+  }
+}
