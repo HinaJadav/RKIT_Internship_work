@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form class="signUpForm" method="post">
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="nameInput" data-placeholder="Username"></div>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="emailInput" data-placeholder="Email"></div>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="newPassword" data-placeholder="New Password"></div>
+            </div>
+
+            <div class="inputGroup">
+                <div class="inputDiv" contenteditable="true" id="confirmPassword" data-placeholder="Confirm Password">
+                </div>
+            </div>
+
+            <div class="submitButton">
+                <div id="submit">Sign Up</div>
+            </div>
+
+            <script>
+                // Get the submit button by its ID
+                document.getElementById('submit').onclick = function () {
+                    // Redirect to the desired page 
+                    window.location.href = 'home.html';
+                };
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

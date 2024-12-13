@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\Functions\bin\Debug\Functions.exe.config
+D:\RKIT\work\8_C#\Functions\bin\Debug\Functions.exe
+D:\RKIT\work\8_C#\Functions\bin\Debug\Functions.pdb
+D:\RKIT\work\8_C#\Functions\obj\Debug\Functions.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\Functions\obj\Debug\Functions.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\Functions\obj\Debug\Functions.exe
+D:\RKIT\work\8_C#\Functions\obj\Debug\Functions.pdb

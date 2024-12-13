@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\StringClass\bin\Debug\StringClass.exe.config
+D:\RKIT\work\8_C#\StringClass\bin\Debug\StringClass.exe
+D:\RKIT\work\8_C#\StringClass\bin\Debug\StringClass.pdb
+D:\RKIT\work\8_C#\StringClass\obj\Debug\StringClass.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\StringClass\obj\Debug\StringClass.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\StringClass\obj\Debug\StringClass.exe
+D:\RKIT\work\8_C#\StringClass\obj\Debug\StringClass.pdb

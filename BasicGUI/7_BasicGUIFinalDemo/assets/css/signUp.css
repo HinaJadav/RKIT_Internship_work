@@ -1,0 +1,167 @@
+/* Container styling */
+.container {
+    max-width: 350px;
+    margin: 40px auto;
+    margin-top: 50px;
+    padding: 80px;
+    padding-right: 120px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    color: #333;
+    font-family: sans-serif;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: sans-serif;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Add focus styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: rgb(41, 61, 67);
+    outline: none;
+}
+
+/* Styling for the experience level dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    /* Space for custom arrow */
+    background: url('/7_BasicGUIFinalDemo/assets/images/dropdown-arrow.png') no-repeat right 10px center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Toggle password visibility icon */
+.togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.togglePassword img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Error message styling */
+.errorDiv {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Submit button styling */
+.submitButton {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(41, 61, 67);
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 45px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(63, 72, 75);
+}
+
+/* Login link styling */
+.login {
+    color: rgb(41, 61, 67);
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 10px;
+}
+
+.login:hover {
+    color: rgb(63, 72, 75);
+}
+
+/* Base style for the input fields */
+.inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative;
+}
+
+/* Error and success styles */
+.inputGroup.error input {
+    border-color: red;
+}
+
+.inputGroup.success input {
+    border-color: green;
+}
+
+/* Icons for error and success */
+.inputGroup .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: none;
+    /* Hide by default */
+}
+
+.inputGroup.error .errorIcon {
+    display: inline;
+    color: red;
+}
+
+.inputGroup.success .successIcon {
+    display: inline;
+    color: green;
+}
+
+
+/* Responsive styling */
+@media (max-width: 500px) {
+    .container {
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

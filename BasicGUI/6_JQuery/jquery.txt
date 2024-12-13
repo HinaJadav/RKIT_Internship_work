@@ -1,0 +1,118 @@
+JQuery : JS library (WRITE LESS DO MORE)
+most extendable
+simplifies a lot of the complicated things from JavaScript
+
+How to add JQuery:
+1) Download
+npm install jquery (for install jquery using node env) 
+Other than this we can also install jquery using "CDN" 
+2) Include jQuery from a CDN
+
+syntax: $('selector').action()
+where, 
+selector = html element on which if we click we want to perform some action.
+action() = write logic or code which we want to execute after click on that selected html element 
+
+we can trigger JQuery action on existing html element direct from browser cansole 
+
+"Document ready event" : Using this first we load our entire document and then start to execute JQuery part.
+why? : actions that can fail if methods are run before the document is fully loaded
+ex: Trying to hide an element that is not created yet
+
+* jQuery Selectors:
+The element Selector
+The #id Selector
+The .class Selector
+
+
+$("*")	Selects all elements	
+$(this)	Selects the current HTML element	
+$("p.intro")	Selects all <p> elements with class="intro"	
+$("p:first")	Selects the first <p> element	
+$("ul li:first")	Selects the first <li> element of the first <ul>	
+$("ul li:first-child")	Selects the first <li> element of every <ul>	
+$("[href]")	Selects all elements with an href attribute	
+$("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"	
+$("a[target!='_blank']")	Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+$(":button")	Selects all <button> elements and <input> elements of type="button"	
+$("tr:even")	Selects all even <tr> elements	
+$("tr:odd")	Selects all odd <tr> elements
+
+
+* JQuery Events:
+click()
+dblclick()
+mouse events: enter, leave, down, up, hover(enter + leave), focus(effect show when user entering input) & blur(effect showed after input feild has input.), 
+
+on() : attaches one or more event handlers for the selected elements.
+
+* jQuery Effects:
+1) Hide and Show:
+$(selector).hide(speed,callback);
+$(selector).show(speed,callback);
+
+$(selector).toggle(speed,callback);
+
+2) Fading: fade elements in and out of visibility.
+fadeIn()
+fadeOut()
+fadeToggle()
+$(selector).fadeIn(speed,callback);
+
+fadeTo()
+$(selector).fadeTo(speed,opacity,callback);
+
+3) Sliding: slide elements up and down.
+slideDown()
+slideUp()
+slideToggle()
+$(selector).slideDown(speed,callback);
+
+4) Animations: used to create custom animations.
+animate()
+stop()
+
+--------------------------
+Get Content - text(), html(), and val()
+
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields
+
+Get Attributes - attr()
+
+* same for Set Content
+
+--------------------------------
+
+jQuery Manipulating CSS
+jQuery has several methods for CSS manipulation. We will look at the following methods:
+
+addClass() - Adds one or more classes to the selected elements
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() - Sets or returns the style attribute
+
+--------------------------------
+jQuery Dimension Methods
+jQuery has several important methods for working with dimensions:
+
+width()
+height()
+innerWidth()
+innerHeight()
+outerWidth()
+outerHeight()
+
+--------------------------------
+
+AJAX = Asynchronous JavaScript and XML.
+
+
+
+
+
+
+
+
+AJex: 

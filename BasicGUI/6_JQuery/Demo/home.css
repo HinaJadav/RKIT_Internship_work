@@ -1,0 +1,117 @@
+.custom-navbar {
+    background-color: rgb(41, 61, 67);
+
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+    color: white;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #f0f0f0;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    background-image: url("/JQuery/Demo/homeBg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#welcomeText {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: rgb(41, 61, 67);
+    opacity: 0;
+    /* Start hidden for animation */
+    text-align: center;
+}
+
+/* h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+} */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    width: 200px;
+
+}
+
+.click-btn {
+    background-color: lightblue;
+}
+
+.mouseover-btn {
+    background-color: lightgreen;
+}
+
+.mouseenter-btn {
+    background-color: lightcoral;
+}
+
+.mouseout-btn {
+    background-color: lightgoldenrodyellow;
+}
+
+.keydown-btn {
+    background-color: lightpink;
+}
+
+.keyup-btn {
+    background-color: lightseagreen;
+}
+
+.keypress-btn {
+    background-color: lightgray;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn {
+    border-color: white;
+
+    color: white;
+
+    margin-left: 10px;
+}
+
+.custom-btn:hover {
+    background-color: lightgray;
+
+    color: black;
+
+}
+
+.custon-icon {
+    color: white;
+}
+
+.custon-icon:hover {
+    color: lightgray;
+}

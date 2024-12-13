@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\ExceptionHandling\bin\Debug\ExceptionHandling.exe.config
+D:\RKIT\work\8_C#\ExceptionHandling\bin\Debug\ExceptionHandling.exe
+D:\RKIT\work\8_C#\ExceptionHandling\bin\Debug\ExceptionHandling.pdb
+D:\RKIT\work\8_C#\ExceptionHandling\obj\Debug\ExceptionHandling.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\ExceptionHandling\obj\Debug\ExceptionHandling.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\ExceptionHandling\obj\Debug\ExceptionHandling.exe
+D:\RKIT\work\8_C#\ExceptionHandling\obj\Debug\ExceptionHandling.pdb

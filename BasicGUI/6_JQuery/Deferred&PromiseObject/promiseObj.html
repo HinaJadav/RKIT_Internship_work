@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Promise and Deferred Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #status {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="startProcess">Start Process</button>
+    <div id="status"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#startProcess').click(function () {
+                $('#status').text('Processing...');
+
+                // Create Deferred objects
+                let task1 = jQuery.Deferred();
+                let task2 = jQuery.Deferred();
+
+                // Simulating some asynchronous tasks
+                setTimeout(function () {
+                    task1.resolve('Task 1 completed');
+                }, 1000);  // Simulating Task 1 with a 1-second delay
+
+                setTimeout(function () {
+                    task2.resolve('Task 2 completed');
+                }, 2000);  // Simulating Task 2 with a 2-second delay
+
+                // Using jQuery when() to handle multiple promises
+                jQuery.when(task1, task2).done(function (message1, message2) {
+                    $('#status').text(message1 + ' --&-- ' + message2);
+                }).fail(function () {
+                    $('#status').text('An error occurred.');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

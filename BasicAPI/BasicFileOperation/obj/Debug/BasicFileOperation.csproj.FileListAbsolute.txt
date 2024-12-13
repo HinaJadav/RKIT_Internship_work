@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\BasicFileOperation\bin\Debug\BasicFileOperation.exe.config
+D:\RKIT\work\8_C#\BasicFileOperation\bin\Debug\BasicFileOperation.exe
+D:\RKIT\work\8_C#\BasicFileOperation\bin\Debug\BasicFileOperation.pdb
+D:\RKIT\work\8_C#\BasicFileOperation\obj\Debug\BasicFileOperation.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\BasicFileOperation\obj\Debug\BasicFileOperation.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\BasicFileOperation\obj\Debug\BasicFileOperation.exe
+D:\RKIT\work\8_C#\BasicFileOperation\obj\Debug\BasicFileOperation.pdb

@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\Arrays\obj\Debug\Arrays.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\Arrays\bin\Debug\Arrays.exe.config
+D:\RKIT\work\8_C#\Arrays\bin\Debug\Arrays.exe
+D:\RKIT\work\8_C#\Arrays\bin\Debug\Arrays.pdb
+D:\RKIT\work\8_C#\Arrays\obj\Debug\Arrays.exe
+D:\RKIT\work\8_C#\Arrays\obj\Debug\Arrays.pdb

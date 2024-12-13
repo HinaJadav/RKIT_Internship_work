@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery functions</title>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+    <form id="functionForm">
+        <label for="arrayInput">Enter numbers separated by commas:</label>
+        <input type="text" id="arrayInput" placeholder="e.g., 1, 2, 3, 4">
+        <button type="button" id="doubleBtn">Square Array: </button>
+        <br />
+        <button type="button" id="findEvenBtn">Find Even Numbers: </button>
+
+        <br />
+        <button type="button" id="findOddBtn">Find Odd Numbers: </button>
+        <br />
+        <label for="arrayInput1">Enter first array (comma-separated):</label>
+        <input type="text" id="arrayInput1" placeholder="e.g., 1, 2, 3">
+        <br />
+        <label for="arrayInput2">Enter second array (comma-separated):</label>
+        <input type="text" id="arrayInput2" placeholder="e.g., 4, 5, 6">
+        <br />
+        <button type="button" id="concateBtn">Concatenate Arrays</button>
+
+    </form>
+    <div id="result"></div>
+    <div id="resultConcate"></div>
+    <script src="jQueryFunction.js"></script>
+</body>
+
+</html>

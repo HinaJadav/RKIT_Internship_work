@@ -1,0 +1,141 @@
+/* General styles for body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    /* for adjust form place on window : in center from top to top and bottom*/
+    display: flex;
+    /* justify contant alongs to axis(horizontal or vertical) */
+    justify-content: center;
+    /* keep item in centers of cross axis */
+    align-items: center;
+    /* 100vh means full height of view point */
+    height: 100vh;
+}
+
+/* Styles for the form container */
+.container {
+    background-color: #fff;
+    /* padding: use to add space between an element's contant and it's border. */
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    /* use for responsive webside, it allows element to expands untile it's value of width */
+    max-width: 450px;
+    width: 100%;
+    /* for increase use experience at the time of achiving responsiveness */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect to enhance user experience */
+.container:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header (h2) styles */
+/* rem = root em : more flexible and consistent with document size */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Input Group Styling */
+.inputGroup {
+    /* element is positioned relative to it's normal position */
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.inputDiv {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    color: #333;
+    min-height: 50px;
+    /* use to remove focus outline which provide by default by browser */
+    outline: none;
+    /* Flexbox to vertically center content inside the input field */
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Change border and background on focus */
+.inputDiv:focus {
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+/* Placeholder styling for empty, contenteditable input */
+.inputDiv[contenteditable="true"]:empty:before {
+    /* for hide placeholder value when input is inserted */
+    content: attr(data-placeholder);
+    color: #999;
+    font-size: 0.95rem;
+    font-style: italic;
+    display: block;
+}
+
+/* Specific style for empty input field */
+/* :empty = it checks that there is no userinput is present */
+/* it is use for appling specific style to empty element. */
+.inputDiv:empty {
+    color: #333;
+}
+
+/* Submit Button Styling */
+.submitButton {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#submit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+/* Hover effect for submit button */
+#submit:hover {
+    background-color: #0056b3;
+}
+
+/* Focus state for submit button */
+#submit:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.8);
+}
+
+/* Media queries for responsiveness */
+/* screen : use for computer screens, tablet, smart-phones etc */
+@media screen and (max-width: 600px) {
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .inputDiv {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #submit {
+        padding: 10px 25px;
+    }
+}

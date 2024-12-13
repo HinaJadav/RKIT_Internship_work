@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\OOP\bin\Debug\OOP.exe.config
+D:\RKIT\work\8_C#\OOP\bin\Debug\OOP.exe
+D:\RKIT\work\8_C#\OOP\bin\Debug\OOP.pdb
+D:\RKIT\work\8_C#\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\OOP\obj\Debug\OOP.exe
+D:\RKIT\work\8_C#\OOP\obj\Debug\OOP.pdb

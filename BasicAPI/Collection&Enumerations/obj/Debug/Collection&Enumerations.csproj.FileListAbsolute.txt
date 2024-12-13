@@ -1,0 +1,7 @@
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\bin\Debug\Collection&Enumerations.exe.config
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\bin\Debug\Collection&Enumerations.exe
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\bin\Debug\Collection&Enumerations.pdb
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\obj\Debug\Collection&Enumerations.csproj.AssemblyReference.cache
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\obj\Debug\Collection&Enumerations.csproj.CoreCompileInputs.cache
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\obj\Debug\Collection&Enumerations.exe
+D:\RKITInternshipWork\BasicAPI\Collection&Enumerations\obj\Debug\Collection&Enumerations.pdb

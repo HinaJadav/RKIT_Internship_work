@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\DateTimeClass\bin\Debug\DateTimeClass.exe.config
+D:\RKIT\work\8_C#\DateTimeClass\bin\Debug\DateTimeClass.exe
+D:\RKIT\work\8_C#\DateTimeClass\bin\Debug\DateTimeClass.pdb
+D:\RKIT\work\8_C#\DateTimeClass\obj\Debug\DateTimeClass.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\DateTimeClass\obj\Debug\DateTimeClass.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\DateTimeClass\obj\Debug\DateTimeClass.exe
+D:\RKIT\work\8_C#\DateTimeClass\obj\Debug\DateTimeClass.pdb

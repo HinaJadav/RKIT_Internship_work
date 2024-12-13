@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\DataTable1\bin\Debug\DataTable1.exe.config
+D:\RKIT\work\8_C#\DataTable1\bin\Debug\DataTable1.exe
+D:\RKIT\work\8_C#\DataTable1\bin\Debug\DataTable1.pdb
+D:\RKIT\work\8_C#\DataTable1\obj\Debug\DataTable1.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\DataTable1\obj\Debug\DataTable1.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\DataTable1\obj\Debug\DataTable1.exe
+D:\RKIT\work\8_C#\DataTable1\obj\Debug\DataTable1.pdb

@@ -1,0 +1,7 @@
+D:\RKIT\work\8_C#\Basic_C#\obj\Debug\Basic_C#.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\Basic_C#\obj\Debug\Basic_C#.csproj.CoreCompileInputs.cache
+D:\RKIT\work\8_C#\Basic_C#\bin\Debug\Basic_C#.exe.config
+D:\RKIT\work\8_C#\Basic_C#\bin\Debug\Basic_C#.exe
+D:\RKIT\work\8_C#\Basic_C#\bin\Debug\Basic_C#.pdb
+D:\RKIT\work\8_C#\Basic_C#\obj\Debug\Basic_C#.exe
+D:\RKIT\work\8_C#\Basic_C#\obj\Debug\Basic_C#.pdb

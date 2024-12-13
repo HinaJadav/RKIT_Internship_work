@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="verifyEmail.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>Verify Your Email</header>
+        <form id="verifyEmailForm" target="_self" method="post">
+            <div class="infoText">Please enter the 4-digit code sent to your email address.</div>
+
+            <div class="otpGroup">
+                <input type="text" maxlength="1" class="otpInput" />
+                <input type="text" maxlength="1" class="otpInput" />
+                <input type="text" maxlength="1" class="otpInput" />
+                <input type="text" maxlength="1" class="otpInput" />
+            </div>
+
+            <span id="otpError" class="errorDiv"></span>
+
+            <div id="popupMessage1" class="popup">OTP is verified.</div>
+            <div id="popupMessage2" class="popup">OTP has been resend to your email address.</div>
+
+            <div class="submitButton">
+                <button type="submit" id="verifyBtn">Verify</button>
+                <button type="button" id="resendOTPBtn">Resend</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/JQuery/Demo/verifyEmail.js"></script>
+</body>
+
+</html>

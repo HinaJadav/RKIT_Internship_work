@@ -1,0 +1,2 @@
+D:\RKIT\work\8_C#\Arrays\obj\Release\Arrays.csproj.AssemblyReference.cache
+D:\RKIT\work\8_C#\Arrays\obj\Release\Arrays.csproj.CoreCompileInputs.cache

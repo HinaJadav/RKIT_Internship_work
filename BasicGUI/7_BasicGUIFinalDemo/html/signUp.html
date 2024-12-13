@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/7_BasicGUIFinalDemo/assets/css/signUp.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>Sign Up</header>
+        <form class="signUpForm" id="signUpForm" method="post">
+            <div class="inputGroup">
+                <input type="text" id="userNameInput" placeholder="Username" />
+                <span id="userNameError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <input type="email" id="emailInput" placeholder="Email" />
+                <span id="emailError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <input type="password" id="newPassword" placeholder="New Password" />
+                <span class="togglePassword" id="toggleNewPassword">
+                    <img id="newPasswordShowIcon" src="/7_BasicGUIFinalDemo/assets/images/show.png"
+                        style="display: none; cursor: pointer;">
+                    <img id="newPasswordHideIcon" src="/7_BasicGUIFinalDemo/assets/images/hide.png"
+                        style="cursor: pointer;">
+                </span>
+                <!-- <span class="icon errorIcon">✘</span>
+                <span class="icon successIcon">✔️</span> -->
+                <span id="newPasswordError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+                <span class="togglePassword" id="toggleConfirmPassword">
+                    <img id="confirmPasswordShowIcon" src="/7_BasicGUIFinalDemo/assets/images/show.png"
+                        style="display: none; cursor: pointer;">
+                    <img id="confirmPasswordHideIcon" src="/7_BasicGUIFinalDemo/assets/images/hide.png"
+                        style="cursor: pointer;">
+                </span>
+                <!-- <span class="icon errorIcon">✘</span>
+                <span class="icon successIcon">✔️</span> -->
+                <span id="confirmPasswordError" class="errorDiv"></span>
+            </div>
+
+            <!-- New fields for students and coders -->
+            <div class="inputGroup">
+                <input type="text" id="schoolCollegeInput" placeholder="School/College Name" />
+                <span id="schoolCollegeError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" id="courseInput" placeholder="Course/Major (e.g., Computer Science)" />
+                <span id="courseError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <input type="text" id="codingSkillsInput" placeholder="Coding Skills (e.g., Python, JavaScript)" />
+                <span id="codingSkillsError" class="errorDiv"></span>
+            </div>
+
+            <div class="inputGroup">
+                <select id="experienceLevel" placeholder="Experience Level">
+                    <option value="" disabled selected>Experience Level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <span id="experienceError" class="errorDiv"></span>
+            </div>
+
+            <a href="/7_BasicGUIFinalDemo/html/login.html" target="_self" class="login">Already have an Account?
+                Login</a>
+            <div class="submitButton">
+                <button type="submit" id="signUpButton">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/7_BasicGUIFinalDemo/js/signUp.js"></script>
+</body>
+
+</html>

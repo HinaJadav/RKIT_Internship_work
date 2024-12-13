@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- the responsive viewport meta tag  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/7_BasicGUIFinalDemo/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#welcomeText").animate(
+                {
+                    opacity: 1,
+                    top: "50%"
+                },
+                3000
+            );
+        });
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LearnCode</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown"></li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Platforms
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">Leetcode</a></li>
+                        <li><a class="dropdown-item" href="#">CodeChef</a></li>
+                        <li><a class="dropdown-item" href="#">Codeforces</a></li>
+                        <li><a class="dropdown-item" href="#">HackerRank</a></li>
+                        <li><a class="dropdown-item" href="#">GeeksforGeeks</a></li>
+                        <li><a class="dropdown-item" href="#">AtCoder</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="nav-item dropdown"></li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Languages
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">C</a></li>
+                        <li><a class="dropdown-item" href="#">C++</a></li>
+                        <li><a class="dropdown-item" href="#">JAVA</a></li>
+                        <li><a class="dropdown-item" href="#">Python</a></li>
+                        <li><a class="dropdown-item" href="#">C#</a></li>
+                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="help.html">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex align-items-center">
+                    <a class="btn custom-btn" href="/7_BasicGUIFinalDemo/html/login.html">Login</a>
+                    <a class="btn custom-btn" href="/7_BasicGUIFinalDemo/html/signUp.html">SignUp</a>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-start my-5">
+        <div class="d-flex flex-column align-items-start">
+
+
+            <div class="mx-2 text1">
+                From
+            </div>
+
+            <div class="mx-1">
+                <img src="/7_BasicGUIFinalDemo/assets/images/weak.png" alt="Weak Coder" class="coder-image">
+            </div>
+
+            <div class="mx-3 text1">
+                To
+            </div>
+
+            <div class="mx-1">
+                <img src="/7_BasicGUIFinalDemo/assets/images/stronge.png" alt="Strong Coder" class="coder-image">
+            </div>
+
+            <div class="mx-2 text1">
+                In Your Coding.
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="welcomeText">Give Your Contest with LernCode.
+        <div class="text-center mt-3">
+            <a href="/7_BasicGUIFinalDemo/html/signUp.html" id="arrowButton" class="btn">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

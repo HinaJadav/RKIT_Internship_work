@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- the responsive viewport meta tag  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+        function onClickEvent() {
+            alert("On Click Event")
+        }
+
+        function onMouseOverEvent() {
+            alert("On Mouse Over Event")
+        }
+
+        function onMouseEnterEvent() {
+            alert("On Mouse Enter Event")
+        }
+
+        function onMouseOutEvent() {
+            alert("On Mouse Out Event")
+        }
+
+        function onKeyDown() {
+            alert("On Key Down")
+        }
+
+        function onKeyPress() {
+            alert("On Key Press")
+        }
+
+        function onKeyUp() {
+            alert("On Key Up")
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <!-- class="container" use for wrap a navbar into the center of the page -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LearnCode</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown"></li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Platforms
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">Leetcode</a></li>
+                        <li><a class="dropdown-item" href="#">CodeChef</a></li>
+                        <li><a class="dropdown-item" href="#">Codeforces</a></li>
+                        <li><a class="dropdown-item" href="#">HackerRank</a></li>
+                        <li><a class="dropdown-item" href="#">GeeksforGeeks</a></li>
+                        <li><a class="dropdown-item" href="#">AtCoder</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="nav-item dropdown"></li>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Languages
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">C</a></li>
+                        <li><a class="dropdown-item" href="#">C++</a></li>
+                        <li><a class="dropdown-item" href="#">JAVA</a></li>
+                        <li><a class="dropdown-item" href="#">Python</a></li>
+                        <li><a class="dropdown-item" href="#">C#</a></li>
+                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="help.html">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-muted" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex align-items-center">
+                    <a class="custon-icon" href="profile.html">
+                        <i class="fas fa-user-circle" style="font-size: 40px;"></i>
+                    </a>
+                    <a class="btn custom-btn" href="login.html">Logout</a>
+                    <a class="btn custom-btn" href="signUp.html">SignUp</a>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- ------------------------------------------------ -->
+    <div class="centered-container">
+        <h1>JS Events</h1>
+        <button type="button" id="button1" class="click-btn" onclick="onClickEvent()">Click me</button>
+        <br><br>
+
+        <button type="button" id="button2" class="mouseover-btn" onmouseover="onMouseOverEvent()">Mouse Over</button>
+        <br><br>
+
+        <button type="button" id="button3" class="mouseenter-btn" onmouseenter="onMouseEnterEvent()">Mouse
+            Enter</button>
+        <br><br>
+
+        <button type="button" id="button4" class="mouseout-btn" onmouseout="onMouseOutEvent()">Mouse Out</button>
+        <br><br>
+
+        <button type="button" id="button5" class="keydown-btn" onkeydown="onKeyDown()">On Key Down</button>
+        <br><br>
+
+        <button type="button" id="button6" class="keyup-btn" onkeyup="onKeyUp()">On Key Up</button>
+        <br><br>
+
+        <button type="button" id="button7" class="keypress-btn" onkeypress="onKeyPress()">On Key Press</button>
+        <br><br>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

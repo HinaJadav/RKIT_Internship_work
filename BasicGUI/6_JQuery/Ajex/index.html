@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example with JSON Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>User Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+    <button id="saveUser">Save User</button>
+    <button id="getUser">Get User Data</button>
+
+    <h3>Stored User Data:</h3>
+    <pre id="userData"></pre>
+
+    <script>
+        $(document).ready(function () {
+            let fakeStorage = {}; // Simulated storage for user data
+
+            // Save user data
+            $('#saveUser').click(function () {
+                let name = $('#name').val();
+                let email = $('#email').val();
+
+                if (name && email) {
+                    fakeStorage = { name: name, email: email };
+                    $('#userData').text('User data saved!');
+                } else {
+                    alert('Please enter both name and email.');
+                }
+            });
+
+            // Retrieve user data using AJAX
+            $('#getUser').click(async function () {
+                try {
+                    const response = await $.ajax({
+                        type: 'GET',
+                        url: '/fake-url', // Simulated API URL
+                        headers: {
+                            Authorization: 'Bearer sample-token', // Example header
+                        },
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        xhr: function () {
+                            const myXhr = $.ajaxSettings.xhr();
+                            if (myXhr.upload) {
+                                myXhr.upload.addEventListener('progress', function (e) {
+                                    if (e.lengthComputable) {
+                                        const percentComplete = (e.loaded / e.total) * 100;
+                                        console.log(`Progress: ${percentComplete.toFixed(2)}%`);
+                                    }
+                                });
+                            }
+                            return myXhr;
+                        },
+                        data: JSON.stringify({ action: 'getUserData' }), // Example data payload
+                    });
+
+                    // Display retrieved user data
+                    $('#userData').text(JSON.stringify(fakeStorage, null, 2));
+                } catch (error) {
+                    console.error('Error retrieving data:', error);
+                    $('#userData').text('Failed to fetch data. Displaying fakeStorage:');
+                    $('#userData').append('\n' + JSON.stringify(fakeStorage, null, 2));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+// * see ss wp

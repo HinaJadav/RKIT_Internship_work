@@ -1,0 +1,106 @@
+body {
+    background: whitesmoke;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #68A8E8;
+}
+
+.profile-button {
+    background: rgb(39, 120, 199);
+    box-shadow: none;
+    border: none;
+}
+
+.profile-button:hover {
+    background: #276ABF;
+}
+
+.profile-button:focus {
+    background: #276ABF;
+    box-shadow: none;
+}
+
+.profile-button:active {
+    background: #276ABF;
+    box-shadow: none;
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+.back:hover {
+    color: #276ABF;
+    cursor: pointer;
+}
+
+.labels {
+    font-size: 11px;
+}
+
+#moreMeText {
+    display: none;
+}
+
+/* Profile Image Container */
+.profile-image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+}
+
+.rounded-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* Ensures the image is round */
+    border: 1px solid black;
+    /* Adds a black border with width of 3px */
+    object-fit: cover;
+    /* Ensures the image fits well within the circle */
+}
+
+/* Profile Image */
+#profileImage {
+    border-radius: 50%;
+}
+
+/* Profile Image Edit Icon */
+#editIcon {
+    position: absolute;
+    bottom: 5px;
+    /* Adjust as needed */
+    right: 5px;
+    /* Adjust as needed */
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* .add-experience:hover {
+    background: #68A8E8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #68A8E8;
+} */
