@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 
-
 namespace OOP
 {
     /// <summary>
@@ -16,6 +15,9 @@ namespace OOP
     ///    `Dictionary<TKey, TValue>`: A collection of strongly-typed key-value pairs.
     /// 3. Specialized Collections:
     ///    `StringCollection`: A collection specifically designed for storing strings.
+    ///    `Queue<T>` and `Stack<T>`: Examples of specialized generic collections.
+    /// 4. Nested Collections:
+    ///    `List<Dictionary<TKey, TValue>>` and `Dictionary<TKey, List<T>>` examples.
     /// </summary>
     public class Collection
     {
@@ -33,7 +35,6 @@ namespace OOP
             Hard,
             Expert
         }
-
 
         // Represents file access permissions with bitwise support
         [Flags]
@@ -110,6 +111,30 @@ namespace OOP
                 Console.WriteLine(item);
             }
 
+            // Queue<T>
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue("First");
+            queue.Enqueue("Second");
+            queue.Enqueue("Third");
+
+            Console.WriteLine("Queue elements:");
+            while (queue.Count > 0)
+            {
+                Console.WriteLine(queue.Dequeue());
+            }
+
+            // Stack<T>
+            Stack<int> stack = new Stack<int>();
+            stack.Push(10);
+            stack.Push(20);
+            stack.Push(30);
+
+            Console.WriteLine("Stack elements:");
+            while (stack.Count > 0)
+            {
+                Console.WriteLine(stack.Pop());
+            }
+
             // Using a simple enum
             GameLevel currentLevel = GameLevel.Easy;
             Console.WriteLine($"\nCurrent Level is: {currentLevel}");
@@ -117,6 +142,39 @@ namespace OOP
             // Using a Flags enum with bitwise operations
             FileAccess access = FileAccess.Read | FileAccess.Write;
             Console.WriteLine($"File access permissions: {access}");
+
+            // Nested Collections: List of Dictionaries
+            List<Dictionary<string, int>> listOfDictionaries = new List<Dictionary<string, int>>
+            {
+                new Dictionary<string, int> { { "One", 1 }, { "Two", 2 } },
+                new Dictionary<string, int> { { "Three", 3 }, { "Four", 4 } }
+            };
+
+            Console.WriteLine("List of Dictionaries:");
+            foreach (var dict in listOfDictionaries)
+            {
+                foreach (var pair in dict)
+                {
+                    Console.WriteLine($"{pair.Key}: {pair.Value}");
+                }
+            }
+
+            // Nested Collections: Dictionary of Lists
+            Dictionary<string, List<string>> dictionaryOfLists = new Dictionary<string, List<string>>
+            {
+                { "Fruits", new List<string> { "Apple", "Banana" } },
+                { "Vegetables", new List<string> { "Carrot", "Broccoli" } }
+            };
+
+            Console.WriteLine("Dictionary of Lists:");
+            foreach (var kvp in dictionaryOfLists)
+            {
+                Console.WriteLine($"{kvp.Key}:");
+                foreach (var value in kvp.Value)
+                {
+                    Console.WriteLine($"- {value}");
+                }
+            }
 
             Console.ReadLine();
         }

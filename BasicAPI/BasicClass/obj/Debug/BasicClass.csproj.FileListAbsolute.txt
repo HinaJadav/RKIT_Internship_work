@@ -1,0 +1,7 @@
+D:\RKITInternshipWork\BasicAPI\BasicClass\obj\Debug\BasicClass.csproj.AssemblyReference.cache
+D:\RKITInternshipWork\BasicAPI\BasicClass\obj\Debug\BasicClass.csproj.CoreCompileInputs.cache
+D:\RKITInternshipWork\BasicAPI\BasicClass\bin\Debug\BasicClass.exe.config
+D:\RKITInternshipWork\BasicAPI\BasicClass\bin\Debug\BasicClass.exe
+D:\RKITInternshipWork\BasicAPI\BasicClass\bin\Debug\BasicClass.pdb
+D:\RKITInternshipWork\BasicAPI\BasicClass\obj\Debug\BasicClass.exe
+D:\RKITInternshipWork\BasicAPI\BasicClass\obj\Debug\BasicClass.pdb

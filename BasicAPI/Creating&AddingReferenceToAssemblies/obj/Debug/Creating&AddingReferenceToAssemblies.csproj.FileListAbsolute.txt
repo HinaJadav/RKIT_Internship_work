@@ -1,0 +1,7 @@
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\obj\Debug\Creating&AddingReferenceToAssemblies.csproj.AssemblyReference.cache
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\obj\Debug\Creating&AddingReferenceToAssemblies.csproj.CoreCompileInputs.cache
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\bin\Debug\Creating&AddingReferenceToAssemblies.exe.config
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\bin\Debug\Creating&AddingReferenceToAssemblies.exe
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\bin\Debug\Creating&AddingReferenceToAssemblies.pdb
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\obj\Debug\Creating&AddingReferenceToAssemblies.exe
+D:\RKITInternshipWork\BasicAPI\Creating&AddingReferenceToAssemblies\obj\Debug\Creating&AddingReferenceToAssemblies.pdb

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OOP
 {
@@ -51,7 +52,10 @@ namespace OOP
         /// <param name="lastName">The last name of the person.</param>
         /// <param name="age">The age of the person.</param>
         /// <param name="address">The address (country, state, city) of the person.</param>
-        public Person(string firstName, string lastName, int age, string address)
+        /// 
+
+        // Optional parameter into constructor
+        public Person(string firstName, string lastName, int age = 18, string address = "India")
         {
             FirstName = firstName;
             LastName = lastName;
@@ -93,7 +97,7 @@ namespace OOP
         /// <param name="name">The full name of the person to welcome.</param>
         public void WelcomeMessage(string name)
         {
-            Console.WriteLine($"Welcome, {name}, into the basic information form.\n");
+            Console.WriteLine($"\nWelcome, {name}, into the basic information form.\n");
         }
 
         #endregion
@@ -123,6 +127,17 @@ namespace OOP
             Console.WriteLine($"Name: {personName}");
             Console.WriteLine($"Age: {person.Age}");
             Console.WriteLine($"Address: {person.Address}");
+
+            // object using optional parameters
+            Person person1 = new Person("Aryan", "Jadav");
+
+            personName = $"{person1.FirstName} {person1.LastName}";
+
+            person1.WelcomeMessage(personName);
+
+            Console.WriteLine($"Name: {personName}");
+            Console.WriteLine($"Age: {person1.Age}");
+            Console.WriteLine($"Address: {person1.Address}");
 
             // Keep the console open.
             Console.ReadLine();

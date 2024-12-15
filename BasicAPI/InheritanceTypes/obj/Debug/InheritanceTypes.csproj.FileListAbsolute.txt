@@ -1,0 +1,7 @@
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\bin\Debug\InheritanceTypes.exe.config
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\bin\Debug\InheritanceTypes.exe
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\bin\Debug\InheritanceTypes.pdb
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\obj\Debug\InheritanceTypes.csproj.AssemblyReference.cache
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\obj\Debug\InheritanceTypes.csproj.CoreCompileInputs.cache
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\obj\Debug\InheritanceTypes.exe
+D:\RKITInternshipWork\BasicAPI\InheritanceTypes\obj\Debug\InheritanceTypes.pdb

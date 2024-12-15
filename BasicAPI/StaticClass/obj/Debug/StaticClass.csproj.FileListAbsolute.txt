@@ -1,0 +1,7 @@
+D:\RKITInternshipWork\BasicAPI\StaticClass\bin\Debug\StaticClass.exe.config
+D:\RKITInternshipWork\BasicAPI\StaticClass\bin\Debug\StaticClass.exe
+D:\RKITInternshipWork\BasicAPI\StaticClass\bin\Debug\StaticClass.pdb
+D:\RKITInternshipWork\BasicAPI\StaticClass\obj\Debug\StaticClass.csproj.AssemblyReference.cache
+D:\RKITInternshipWork\BasicAPI\StaticClass\obj\Debug\StaticClass.csproj.CoreCompileInputs.cache
+D:\RKITInternshipWork\BasicAPI\StaticClass\obj\Debug\StaticClass.exe
+D:\RKITInternshipWork\BasicAPI\StaticClass\obj\Debug\StaticClass.pdb

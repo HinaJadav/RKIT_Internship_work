@@ -146,8 +146,6 @@ namespace OOP
             IWorkable workableEmployee = new Employee("Ali", "Software Developer", 5000);
             workableEmployee.Work();
 
-
-
             Console.ReadLine();
         }
     }

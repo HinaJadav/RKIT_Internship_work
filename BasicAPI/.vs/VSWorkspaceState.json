@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Arrays",
-    "\\Basic_C#",
-    "\\Basic_C#_2",
-    "\\Functions"
+    "\\BasicClass",
+    "\\BasicFileOperation",
+    "\\Collection\u0026Enumerations",
+    "\\Creating\u0026AddingReferenceToAssemblies"
   ],
-  "SelectedNode": "\\Arrays\\Arrays.sln",
+  "SelectedNode": "\\Collection\u0026Enumerations\\Collection\u0026Enumerations.sln",
   "PreviewInSolutionExplorer": false
 }

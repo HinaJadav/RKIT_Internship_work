@@ -99,6 +99,8 @@ namespace StringClass
             bool containsWord = userDescription.Contains("student");
             Console.WriteLine($"Description contains 'student': {containsWord}");
 
+            //string temp = "1,22";--> contains 2 --> false
+
             /// <summary>
             /// Compare user name with a string (case insensitive).
             /// </summary>
