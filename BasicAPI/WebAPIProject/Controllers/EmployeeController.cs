@@ -41,6 +41,9 @@ namespace WebAPIProject.Controllers
         /// <summary>
         /// Saves the current list of employees to the JSON file.
         /// </summary>
+
+        // JsonSerializer.Serialize(): It converts data into effective and more readable format = JSON
+        // JsonSerializerOptions { WriteIndented = true }: It ensures the JSON output is formatted with indentation, making it easier to read. 
         private void SaveEmployees()
         {
             var json = JsonSerializer.Serialize(_employees, new JsonSerializerOptions { WriteIndented = true });
@@ -59,6 +62,7 @@ namespace WebAPIProject.Controllers
                 var json = File.ReadAllText(FilePath);
 
                 // Deserialize the JSON content to a list of employees
+                // ?? : It ensures the method always returns list and avoids returning null(lead to runtime error)
                 return JsonSerializer.Deserialize<List<EmployeeModel>>(json) ?? new List<EmployeeModel>();
             }
             return new List<EmployeeModel>(); // Return an empty list if file does not exist
