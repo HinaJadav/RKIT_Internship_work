@@ -1,0 +1,10 @@
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\bin\Debug\EmployeeManagementSystemBasicC#Demo.exe.config
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\bin\Debug\EmployeeManagementSystemBasicC#Demo.exe
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\bin\Debug\EmployeeManagementSystemBasicC#Demo.pdb
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\bin\Debug\Newtonsoft.Json.dll
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\bin\Debug\Newtonsoft.Json.xml
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\obj\Debug\EmployeeManagementSystemBasicC#Demo.csproj.AssemblyReference.cache
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\obj\Debug\EmployeeManagementSystemBasicC#Demo.csproj.CoreCompileInputs.cache
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\obj\Debug\Employee.E67E73EB.Up2Date
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\obj\Debug\EmployeeManagementSystemBasicC#Demo.exe
+D:\RKITInternshipWork\BasicAPI\EmployeeManagementSystemBasicC#Demo\obj\Debug\EmployeeManagementSystemBasicC#Demo.pdb

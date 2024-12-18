@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Name": "Priyank",
+    "Email": "priyank@gmail.com",
+    "Description": "Manager",
+    "Salary": 50000
+  },
+  {
+    "Id": 2,
+    "Name": "Madhu",
+    "Email": "madhu@gmail.com",
+    "Description": "HR",
+    "Salary": 80000
+  },
+  {
+    "Id": 3,
+    "Name": "Anjali",
+    "Email": "anu@gmail.com",
+    "Description": "Developer",
+    "Salary": 67000
+  },
+  {
+    "Id": 4,
+    "Name": "Nahi",
+    "Email": "nahi@gmail.com",
+    "Description": "Developer",
+    "Salary": 46000
+  },
+  {
+    "Id": 5,
+    "Name": "Suresh",
+    "Email": "suresh@gmail.com",
+    "Description": "Senior Developer",
+    "Salary": 90000
+  }
+]
