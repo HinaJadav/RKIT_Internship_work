@@ -14,13 +14,6 @@
     "Salary": 80000
   },
   {
-    "Id": 3,
-    "Name": "Anjali",
-    "Email": "anu@gmail.com",
-    "Description": "Developer",
-    "Salary": 67000
-  },
-  {
     "Id": 4,
     "Name": "Nahi",
     "Email": "nahi@gmail.com",
@@ -33,5 +26,12 @@
     "Email": "suresh@gmail.com",
     "Description": "Senior Developer",
     "Salary": 90000
+  },
+  {
+    "Id": 6,
+    "Name": "a",
+    "Email": "a",
+    "Description": "g",
+    "Salary": 3
   }
 ]

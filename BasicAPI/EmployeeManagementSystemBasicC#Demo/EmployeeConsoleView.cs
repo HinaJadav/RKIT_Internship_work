@@ -184,8 +184,8 @@ namespace EmployeeManagementView.Views
                 employee.Salary = newSalary;
             }
 
-            _controller.UpdateEmployee(id, employee);
-            Console.WriteLine("Employee updated successfully.");
+            bool isUpdated = _controller.UpdateEmployee(id, employee);
+            Console.WriteLine(isUpdated ? "Employee updated successfully." : "Employee is not found.");
         }
 
         /// <summary>

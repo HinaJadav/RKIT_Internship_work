@@ -49,7 +49,7 @@ namespace WebAPIFrameworkDemo
         {
             new Employee { Id = 1, Name = "Priyank Jadav", Description = "Manager", Salary = 60000 },
             new Employee { Id = 2, Name = "Madhu Koria", Description = "HR", Salary = 45000 },
-            new Employee { Id = 3, Name = "Suresh Shah", Description = "Manager", Salary = 60000 },
+            new Employee { Id = 3, Name = "Suresh Shah", Description = "manager", Salary = 60000 },
             new Employee { Id = 4, Name = "Anjali Bharadava", Description = "Developer", Salary = 55000 },
             new Employee { Id = 5, Name = "Nahii Jadav", Description = "Developer", Salary = 66000 },
             new Employee { Id = 6, Name = "Nishant Jain", Description = "Developer", Salary = 46000 }
