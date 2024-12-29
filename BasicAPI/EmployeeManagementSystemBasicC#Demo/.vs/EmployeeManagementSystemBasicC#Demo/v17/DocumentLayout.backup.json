@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|solutionrelative:employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|d:\\rkitinternshipwork\\basicapi\\employeemanagementsystembasicc#demo\\employeeconsoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|solutionrelative:employeeconsoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\employeeconsoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|solutionrelative:employeeconsoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|solutionrelative:employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|solutionrelative:employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|d:\\rkitinternshipwork\\basicapi\\employeemanagementsystembasicc#demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32326B29-454C-41EC-98C9-B32E670CC25E}|EmployeeManagementSystemBasicC#Demo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,6 +45,14 @@
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
@@ -54,8 +62,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T20:20:38.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T20:20:38.235Z"
             },
             {
               "$type": "Document",
@@ -65,40 +72,36 @@
               "RelativeDocumentMoniker": "EmployeeModel.cs",
               "ToolTip": "D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\EmployeeModel.cs",
               "RelativeToolTip": "EmployeeModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAIwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T20:20:32.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\EmployeeController.cs",
               "RelativeDocumentMoniker": "EmployeeController.cs",
               "ToolTip": "D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\EmployeeController.cs",
               "RelativeToolTip": "EmployeeController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwG0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T20:20:24.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmployeeConsoleView.cs",
               "DocumentMoniker": "D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\EmployeeConsoleView.cs",
               "RelativeDocumentMoniker": "EmployeeConsoleView.cs",
               "ToolTip": "D:\\RKITInternshipWork\\BasicAPI\\EmployeeManagementSystemBasicC#Demo\\EmployeeConsoleView.cs",
               "RelativeToolTip": "EmployeeConsoleView.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwM4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowGQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T20:16:20.919Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

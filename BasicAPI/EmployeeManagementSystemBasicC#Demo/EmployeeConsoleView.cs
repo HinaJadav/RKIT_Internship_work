@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using EmployeeManagementModel.Models;
+using System.Data;
 using EmployeeManagementController.Controllers;
 
 namespace EmployeeManagementView.Views
@@ -11,7 +10,7 @@ namespace EmployeeManagementView.Views
     /// </summary>
     public class EmployeeView
     {
-        #region Private Feilds 
+        #region Private Fields 
 
         /// <summary>
         /// Controller to handle employee operations.
@@ -49,7 +48,7 @@ namespace EmployeeManagementView.Views
                 Console.WriteLine("3. Update Employee");
                 Console.WriteLine("4. Delete Employee");
                 Console.WriteLine("5. Exit");
-                Console.WriteLine("Enter your choice: ");
+                Console.Write("Enter your choice: ");
 
                 if (!int.TryParse(Console.ReadLine(), out int choice))
                 {
@@ -63,13 +62,13 @@ namespace EmployeeManagementView.Views
                         ViewAllEmployees();
                         break;
                     case 2:
-                        AddEmployees();
+                        AddEmployee();
                         break;
                     case 3:
-                        UpdateEmployees();
+                        UpdateEmployee();
                         break;
                     case 4:
-                        DeleteEmployees();
+                        DeleteEmployee();
                         break;
                     case 5:
                         running = false;
@@ -87,24 +86,24 @@ namespace EmployeeManagementView.Views
         #region Private Methods
 
         /// <summary>
-        /// Views all employees in the system.
+        /// Displays all employees in the system.
         /// </summary>
         private void ViewAllEmployees()
         {
-            List<EmployeeModel> employees = _controller.GetAllEmployee();
+            DataTable employees = _controller.GetAllEmployees();
 
             Console.WriteLine("\n---EMPLOYEE LIST---");
 
-            foreach (EmployeeModel employee in employees)
+            foreach (DataRow row in employees.Rows)
             {
-                Console.WriteLine($"Id: {employee.Id}   Name: {employee.Name}   Email: {employee.Email}   Description: {employee.Description}   Salary: {employee.Salary}");
+                Console.WriteLine($"Id: {row["Id"]}, Name: {row["Name"]}, Email: {row["Email"]}, Description: {row["Description"]}, Salary: {row["Salary"]}, Joining Date: {row["JoiningDate"]}");
             }
         }
 
         /// <summary>
         /// Adds a new employee to the system.
         /// </summary>
-        private void AddEmployees()
+        private void AddEmployee()
         {
             Console.Write("Enter name: ");
             string name = Console.ReadLine();
@@ -122,18 +121,21 @@ namespace EmployeeManagementView.Views
                 return;
             }
 
-            EmployeeModel employee = new EmployeeModel(0, name, email, description, salary);
+            Console.Write("Enter joining date (yyyy-MM-dd): ");
+            if (!DateTime.TryParse(Console.ReadLine(), out DateTime joiningDate))
+            {
+                Console.WriteLine("Invalid input. Enter a valid date.");
+                return;
+            }
 
-            _controller.AddEmployee(employee);
-
+            _controller.AddEmployee(name, email, description, salary, joiningDate);
             Console.WriteLine("Employee added successfully.");
         }
 
         /// <summary>
         /// Updates an existing employee's details.
-        /// If the user presses Enter without entering any value, the current value is retained.
         /// </summary>
-        private void UpdateEmployees()
+        private void UpdateEmployee()
         {
             Console.Write("Enter the ID of the employee you want to update: ");
             if (!int.TryParse(Console.ReadLine(), out int id))
@@ -142,56 +144,39 @@ namespace EmployeeManagementView.Views
                 return;
             }
 
-            // Call the GetEmployeeById method to retrieve the existing employee
-            var employee = _controller.GetEmployeeById(id);
+            Console.Write("Enter new Name (or press Enter to keep existing): ");
+            string name = Console.ReadLine();
 
-            if (employee == null)
+            Console.Write("Enter new Email (or press Enter to keep existing): ");
+            string email = Console.ReadLine();
+
+            Console.Write("Enter new Description (or press Enter to keep existing): ");
+            string description = Console.ReadLine();
+
+            Console.Write("Enter new Salary (or press Enter to keep existing): ");
+            string salaryInput = Console.ReadLine();
+            int salary = 0; 
+            if (!string.IsNullOrWhiteSpace(salaryInput) && int.TryParse(salaryInput, out int parsedSalary))
             {
-                Console.WriteLine("Employee not found.");
-                return;
+                salary = parsedSalary;
             }
 
-            // Display current details and prompt for updates
-            Console.WriteLine($"Current Name: {employee.Name}");
-            Console.Write("Enter new Name (or press Enter to keep it): ");
-            string newName = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(newName))
+            Console.Write("Enter new Joining Date (yyyy-MM-dd, or press Enter to keep existing): ");
+            string dateInput = Console.ReadLine();
+            DateTime joiningDate = new DateTime();
+            if (!string.IsNullOrWhiteSpace(dateInput) && DateTime.TryParse(dateInput, out DateTime parsedDate))
             {
-                employee.Name = newName;
+                joiningDate = parsedDate;
             }
 
-            Console.WriteLine($"Current Email: {employee.Email}");
-            Console.Write("Enter new Email (or press Enter to keep it): ");
-            string newEmail = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(newEmail))
-            {
-                employee.Email = newEmail;
-            }
-
-            Console.WriteLine($"Current Description: {employee.Description}");
-            Console.Write("Enter new Description (or press Enter to keep it): ");
-            string newDescription = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(newDescription))
-            {
-                employee.Description = newDescription;
-            }
-
-            Console.WriteLine($"Current Salary: {employee.Salary}");
-            Console.Write("Enter new Salary (or press Enter to keep it): ");
-            string newSalaryInput = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(newSalaryInput) && int.TryParse(newSalaryInput, out int newSalary))
-            {
-                employee.Salary = newSalary;
-            }
-
-            bool isUpdated = _controller.UpdateEmployee(id, employee);
-            Console.WriteLine(isUpdated ? "Employee updated successfully." : "Employee is not found.");
+            bool isUpdated = _controller.UpdateEmployee(id, name, email, description, salary, joiningDate);
+            Console.WriteLine(isUpdated ? "Employee updated successfully." : "Employee not found.");
         }
 
         /// <summary>
         /// Deletes an employee based on the provided ID.
         /// </summary>
-        private void DeleteEmployees()
+        private void DeleteEmployee()
         {
             Console.Write("Enter the employee ID to delete: ");
             if (!int.TryParse(Console.ReadLine(), out int id))
