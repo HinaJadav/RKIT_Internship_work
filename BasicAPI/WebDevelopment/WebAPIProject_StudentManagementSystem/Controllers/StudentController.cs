@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using WebAPIProject_StudentManagementSystem.Models;
 
@@ -10,8 +8,8 @@ namespace WebAPIProject_StudentManagementSystem.Controllers
 {
     public class StudentController : ApiController
     {
-        Student[] students = new Student[]
-{
+        private List<Student> students = new List<Student>
+        {
             new Student { EnrollmentID = 1, Name = "Aarav Sharma", Email = "aarav.sharma@example.com", ContactInformation = 9876543210, DateOfBirth = new DateTime(2000, 6, 15), Gender = "Male", Address = "12 MG Road, Bengaluru", YearOfGraduation = 2024, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 1, IsActive = 1 },
             new Student { EnrollmentID = 2, Name = "Ananya Iyer", Email = "ananya.iyer@example.com", ContactInformation = 9123456789, DateOfBirth = new DateTime(1999, 9, 20), Gender = "Female", Address = "56 Residency Road, Chennai", YearOfGraduation = 2023, StudentSeatType = "Self-Financed", FeesStatus = "UNPAID", DepartmentID = 2, IsActive = 1 },
             new Student { EnrollmentID = 3, Name = "Rohan Gupta", Email = "rohan.gupta@example.com", ContactInformation = 9123456783, DateOfBirth = new DateTime(2001, 3, 25), Gender = "Male", Address = "123 Nehru Nagar, Mumbai", YearOfGraduation = 2025, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 3, IsActive = 1 },
@@ -24,7 +22,7 @@ namespace WebAPIProject_StudentManagementSystem.Controllers
             new Student { EnrollmentID = 10, Name = "Priya Desai", Email = "priya.desai@example.com", ContactInformation = 9877896543, DateOfBirth = new DateTime(2004, 4, 18), Gender = "Female", Address = "67 Koregaon Park, Pune", YearOfGraduation = 2027, StudentSeatType = "Self-Financed", FeesStatus = "UNPAID", DepartmentID = 2, IsActive = 1 },
         };
 
-        // Get API
+        // Get all students
         [HttpGet]
         [Route("api/students/all")]
         public IEnumerable<Student> GetAllStudents()
@@ -32,30 +30,23 @@ namespace WebAPIProject_StudentManagementSystem.Controllers
             return students;
         }
 
-        // Get perticuler student by their enrollment ID
+        // Get student by EnrollmentID
         [HttpGet]
         [Route("api/students/{id}")]
         public IHttpActionResult GetStudentByEnrollmentID(int enrollmentID)
         {
-            // Retrieve the student by EnrollmentID
             Student student = students.FirstOrDefault(student1 => student1.EnrollmentID == enrollmentID);
-
-            // If the student is not found, return a 404 Not Found
             if (student == null)
             {
                 return NotFound();
             }
-
-            // Return the found student with a 200 OK status
             return Ok(student);
         }
 
-
-        // Post api
+        // Post a new student
         [HttpPost]
         public IHttpActionResult AddNewStudent(Student newStudent)
         {
-            // Validate the input
             if (newStudent == null)
             {
                 return BadRequest("Invalid student data.");
@@ -63,15 +54,56 @@ namespace WebAPIProject_StudentManagementSystem.Controllers
 
             if (students.Any(s => s.EnrollmentID == newStudent.EnrollmentID))
             {
-                return BadRequest("A student with same enrollmentID is already exist.");
+                return BadRequest("A student with the same enrollment ID already exists.");
             }
 
-            // Add the student into memory-list
             students.Add(newStudent);
-
             return Created($"api/students/{newStudent.EnrollmentID}", newStudent);
         }
 
+        // PUT method to update an existing student
+        [HttpPut]
+        [Route("api/students/{id}")]
+        public IHttpActionResult UpdateStudent(int id, Student updatedStudent)
+        {
+            // Check if the student exists
+            Student existingStudent = students.FirstOrDefault(s => s.EnrollmentID == id);
+            if (existingStudent == null)
+            {
+                return NotFound();
+            }
 
+            // Update the student's details
+            existingStudent.Name = updatedStudent.Name;
+            existingStudent.Email = updatedStudent.Email;
+            existingStudent.ContactInformation = updatedStudent.ContactInformation;
+            existingStudent.DateOfBirth = updatedStudent.DateOfBirth;
+            existingStudent.Gender = updatedStudent.Gender;
+            existingStudent.Address = updatedStudent.Address;
+            existingStudent.YearOfGraduation = updatedStudent.YearOfGraduation;
+            existingStudent.StudentSeatType = updatedStudent.StudentSeatType;
+            existingStudent.FeesStatus = updatedStudent.FeesStatus;
+            existingStudent.DepartmentID = updatedStudent.DepartmentID;
+            existingStudent.IsActive = updatedStudent.IsActive;
+
+            return Ok(existingStudent);
+        }
+
+        // DELETE method to delete a student by EnrollmentID
+        [HttpDelete]
+        [Route("api/students/{id}")]
+        public IHttpActionResult DeleteStudent(int id)
+        {
+            // Find the student to delete
+            Student studentToDelete = students.FirstOrDefault(s => s.EnrollmentID == id);
+            if (studentToDelete == null)
+            {
+                return NotFound();
+            }
+
+            // Remove the student from the list
+            students.Remove(studentToDelete);
+            return Ok($"Student with EnrollmentID {id} has been deleted.");
+        }
     }
 }
