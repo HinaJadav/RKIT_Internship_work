@@ -1,0 +1,2 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\obj\Debug\SecurityInWebAPI.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\obj\Debug\SecurityInWebAPI.csproj.CoreCompileInputs.cache
