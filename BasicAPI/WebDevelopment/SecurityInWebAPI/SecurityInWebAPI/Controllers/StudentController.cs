@@ -1,58 +1,115 @@
-﻿using SecurityInWebAPI.Models;
-using System.Collections.Generic;
-using System.Web.Http;
-using System;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Web.Http;
+using Newtonsoft.Json;
+using System;
+using SecurityInWebAPI.Models;
 
 namespace SecurityInWebAPI.Controllers
 {
+    /// <summary>
+    /// API controller for managing student data.
+    /// Provides methods to retrieve, add, and delete student information.
+    /// Data is persisted in a JSON file for storage.
+    /// </summary>
     [RoutePrefix("api/students")]
+    [AllowAnonymous]
     public class StudentController : ApiController
     {
-        private List<Student> students = new List<Student>
-        {
-            new Student { EnrollmentID = 1, Name = "Aarav Sharma", Email = "aarav.sharma@example.com", ContactInformation = 9876543210, DateOfBirth = new DateTime(2000, 6, 15), Gender = "Male", Address = "12 MG Road, Bengaluru", YearOfGraduation = 2024, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 1, IsActive = 1 },
-            new Student { EnrollmentID = 2, Name = "Ananya Iyer", Email = "ananya.iyer@example.com", ContactInformation = 9123456789, DateOfBirth = new DateTime(1999, 9, 20), Gender = "Female", Address = "56 Residency Road, Chennai", YearOfGraduation = 2023, StudentSeatType = "Self-Financed", FeesStatus = "UNPAID", DepartmentID = 2, IsActive = 1 },
-            new Student { EnrollmentID = 3, Name = "Rohan Gupta", Email = "rohan.gupta@example.com", ContactInformation = 9123456783, DateOfBirth = new DateTime(2001, 3, 25), Gender = "Male", Address = "123 Nehru Nagar, Mumbai", YearOfGraduation = 2025, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 3, IsActive = 1 },
-            new Student { EnrollmentID = 4, Name = "Ishita Roy", Email = "ishita.roy@example.com", ContactInformation = 9988776655, DateOfBirth = new DateTime(2000, 2, 10), Gender = "Female", Address = "45 Salt Lake, Kolkata", YearOfGraduation = 2024, StudentSeatType = "Management", FeesStatus = "UNPAID", DepartmentID = 4, IsActive = 1 },
-            new Student { EnrollmentID = 5, Name = "Aryan Verma", Email = "aryan.verma@example.com", ContactInformation = 9871234567, DateOfBirth = new DateTime(1998, 11, 15), Gender = "Male", Address = "23 Civil Lines, Lucknow", YearOfGraduation = 2022, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 5, IsActive = 1 },
-            new Student { EnrollmentID = 6, Name = "Sanya Mehta", Email = "sanya.mehta@example.com", ContactInformation = 8765432190, DateOfBirth = new DateTime(1997, 5, 5), Gender = "Female", Address = "78 Lajpat Nagar, Delhi", YearOfGraduation = 2021, StudentSeatType = "Self-Financed", FeesStatus = "UNPAID", DepartmentID = 1, IsActive = 1 },
-            new Student { EnrollmentID = 7, Name = "Kabir Singh", Email = "kabir.singh@example.com", ContactInformation = 9123496789, DateOfBirth = new DateTime(1999, 7, 7), Gender = "Male", Address = null, YearOfGraduation = 2023, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 5, IsActive = 1 },
-            new Student { EnrollmentID = 8, Name = "Aditi Rao", Email = "aditi.rao@example.com", ContactInformation = 7654321987, DateOfBirth = null, Gender = "Female", Address = "34 Banjara Hills, Hyderabad", YearOfGraduation = 2025, StudentSeatType = "Management", FeesStatus = "UNPAID", DepartmentID = 4, IsActive = 1 },
-            new Student { EnrollmentID = 9, Name = "Vihan Nair", Email = "vihan.nair@example.com", ContactInformation = 8765123498, DateOfBirth = new DateTime(2003, 12, 31), Gender = "Male", Address = "12 Model Town, Chandigarh", YearOfGraduation = 2026, StudentSeatType = "GIA", FeesStatus = "PAID", DepartmentID = 3, IsActive = 1 },
-            new Student { EnrollmentID = 10, Name = "Priya Desai", Email = "priya.desai@example.com", ContactInformation = 9877896543, DateOfBirth = new DateTime(2004, 4, 18), Gender = "Female", Address = "67 Koregaon Park, Pune", YearOfGraduation = 2027, StudentSeatType = "Self-Financed", FeesStatus = "UNPAID", DepartmentID = 2, IsActive = 1 },
-        };
+        private readonly string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "students.json");
 
+        /// <summary>
+        /// Loads student data from the JSON file.
+        /// If the file does not exist, initializes it with an empty list.
+        /// </summary>
+        /// <returns>A list of students.</returns>
+        private List<Student> LoadStudentsFromFile()
+        {
+            if (!File.Exists(filePath))
+            {
+                File.WriteAllText(filePath, "[]"); // Initialize with an empty list if file doesn't exist
+            }
+
+            var json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<List<Student>>(json) ?? new List<Student>();
+        }
+
+        /// <summary>
+        /// Saves the student data to the JSON file.
+        /// </summary>
+        /// <param name="students">The list of students to save.</param>
+        private void SaveStudentsToFile(List<Student> students)
+        {
+            var json = JsonConvert.SerializeObject(students, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
+
+        /// <summary>
+        /// Retrieves all students from the JSON file.
+        /// </summary>
+        /// <returns>A collection of all students.</returns>
         [HttpGet]
         [Route("all")]
-        public IEnumerable<Student> GetAllStudents() => students;
+        public IEnumerable<Student> GetAllStudents()
+        {
+            return LoadStudentsFromFile();
+        }
 
+        /// <summary>
+        /// Retrieves a specific student by their enrollment ID.
+        /// </summary>
+        /// <param name="id">The enrollment ID of the student.</param>
+        /// <returns>The student with the specified enrollment ID or a NotFound response if not found.</returns>
         [HttpGet]
+        [Authorize]
         [Route("{id:int}")]
         public IHttpActionResult GetStudentByEnrollmentID(int id)
         {
+            var students = LoadStudentsFromFile();
             var student = students.FirstOrDefault(s => s.EnrollmentID == id);
             if (student == null) return NotFound();
             return Ok(student);
         }
 
+        /// <summary>
+        /// Adds a new student to the JSON file.
+        /// </summary>
+        /// <param name="newStudent">The new student to add.</param>
+        /// <returns>A Created response with the added student or a BadRequest response for invalid data.</returns>
         [HttpPost]
+        [Authorize(Users = "Nahi")]
         [Route("")]
         public IHttpActionResult AddNewStudent(Student newStudent)
         {
+            var students = LoadStudentsFromFile();
+
             if (newStudent == null || students.Any(s => s.EnrollmentID == newStudent.EnrollmentID))
                 return BadRequest("Invalid or duplicate student data.");
+
             students.Add(newStudent);
+            SaveStudentsToFile(students);
+
             return Created($"api/students/{newStudent.EnrollmentID}", newStudent);
         }
 
+        /// <summary>
+        /// Deletes a student by their enrollment ID from the JSON file.
+        /// </summary>
+        /// <param name="id">The enrollment ID of the student to delete.</param>
+        /// <returns>A response indicating success or failure of the deletion.</returns>
         [HttpDelete]
+        [Authorize(Roles = "Admin")]
         [Route("{id:int}")]
         public IHttpActionResult DeleteStudent(int id)
         {
+            var students = LoadStudentsFromFile();
             var student = students.FirstOrDefault(s => s.EnrollmentID == id);
             if (student == null) return NotFound();
+
             students.Remove(student);
+            SaveStudentsToFile(students);
+
             return Ok($"Deleted student with ID {id}.");
         }
     }
