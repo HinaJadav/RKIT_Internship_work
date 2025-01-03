@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPCachongInWebAPI", "HTTPCachongInWebAPI\HTTPCachongInWebAPI.csproj", "{AD8FDCCE-1767-48A2-94A7-820D8722546E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIVersioning_In_WebAPI", "..\APIVersioning_In_WebAPI\APIVersioning_In_WebAPI.csproj", "{A3FEF2D6-F58D-4B6B-9297-EB5F14AC73B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AD8FDCCE-1767-48A2-94A7-820D8722546E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8FDCCE-1767-48A2-94A7-820D8722546E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD8FDCCE-1767-48A2-94A7-820D8722546E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3FEF2D6-F58D-4B6B-9297-EB5F14AC73B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3FEF2D6-F58D-4B6B-9297-EB5F14AC73B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3FEF2D6-F58D-4B6B-9297-EB5F14AC73B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3FEF2D6-F58D-4B6B-9297-EB5F14AC73B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
