@@ -121,3 +121,9 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\Securi
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\obj\Debug\SecurityInWebAPI.csproj.CopyComplete
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\obj\Debug\SecurityInWebAPI.dll
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\obj\Debug\SecurityInWebAPI.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\bin\System.Web.Http.Owin.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\SecurityInWebAPI\SecurityInWebAPI\bin\System.Web.Http.Owin.xml

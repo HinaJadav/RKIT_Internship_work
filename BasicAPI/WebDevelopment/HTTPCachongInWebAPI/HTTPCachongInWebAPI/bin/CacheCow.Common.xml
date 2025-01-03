@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CacheCow.Common</name>
+    </assembly>
+    <members>
+        <member name="M:CacheCow.Common.CacheKey.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            constructor for CacheKey
+            </summary>
+            <param name="resourceUri">URI of the resource</param>
+            <param name="headerValues">value of the headers as in the request. Only those values whose named defined in VaryByHeader
+            must be passed
+            </param>
+        </member>
+        <member name="T:CacheCow.Common.CacheValidationStatus">
+            <summary>
+            Status of cache validation required for a request
+            </summary>
+        </member>
+        <member name="M:CacheCow.Common.Helpers.HttpHeadersExtensions.Parse(System.Net.Http.Headers.HttpHeaders,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="httpHeaders">Headers</param>
+            <param name="headers">CR-LF separated headers as specified in HTTP spec</param>
+        </member>
+        <member name="M:CacheCow.Common.Helpers.HttpHeadersExtensions.ExtractHeadersValues(System.Net.Http.Headers.HttpRequestHeaders,System.String[])">
+            <summary>
+            Extracts all headers provided. Does a case-insensitive selection.
+            </summary>
+            <param name="headers">this parameter</param>
+            <param name="headerNames">Name of the headers</param>
+            <returns></returns>
+        </member>
+        <member name="M:CacheCow.Common.ICacheStore.GetValueAsync(CacheCow.Common.CacheKey)">
+            <summary>
+            Gets the cached HTTP-Response from this storage
+            </summary>
+            <returns>The ResponseMessage if the key was found; null otherwise</returns>
+        </member>
+        <member name="M:CacheCow.Common.ICacheStore.AddOrUpdateAsync(CacheCow.Common.CacheKey,System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Adds the given response to the chachestore. If the key is already present, the old value is overwrittn
+            </summary>
+        </member>
+        <member name="M:CacheCow.Common.ICacheStore.TryRemoveAsync(CacheCow.Common.CacheKey)">
+            <summary>
+            (Tries to) remove the cached response correspondig with this key from the cache.
+            </summary>
+            <param name="key"></param>
+            <returns>True if deletion was successfull, False if not (e.g. the key was not in the store to begin with)</returns>
+        </member>
+        <member name="M:CacheCow.Common.ICacheStore.ClearAsync">
+            <summary>
+            Nuke the cache
+            </summary>
+        </member>
+        <member name="T:CacheCow.Common.ConfigurationValueProvider">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:CacheCow.Common.ConfigurationValueProvider.GetValue(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:CacheCow.Common.IConfigurationValueProvider">
+            <summary>
+            Abstraction on top of configuration
+            </summary>
+        </member>
+        <member name="M:CacheCow.Common.IConfigurationValueProvider.GetValue(System.String)">
+            <summary>
+            Returns a config value or null if it does not find the key
+            </summary>
+            <param name="key">the key</param>
+            <returns>value</returns>
+        </member>
+    </members>
+</doc>

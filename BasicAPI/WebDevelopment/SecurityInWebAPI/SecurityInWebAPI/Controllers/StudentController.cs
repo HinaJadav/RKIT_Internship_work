@@ -5,6 +5,7 @@ using System.Web.Http;
 using Newtonsoft.Json;
 using System;
 using SecurityInWebAPI.Models;
+using SecurityInWebAPI.Handlers;
 
 namespace SecurityInWebAPI.Controllers
 {
@@ -14,7 +15,7 @@ namespace SecurityInWebAPI.Controllers
     /// Data is persisted in a JSON file for storage.
     /// </summary>
     [RoutePrefix("api/students")]
-    [AllowAnonymous]
+   
     public class StudentController : ApiController
     {
         private readonly string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "students.json");
@@ -43,6 +44,20 @@ namespace SecurityInWebAPI.Controllers
         {
             var json = JsonConvert.SerializeObject(students, Formatting.Indented);
             File.WriteAllText(filePath, json);
+        }
+
+        // Add a Login method to authenticate users and return a JWT token
+        [HttpPost]
+        [Route("login")]
+        public IHttpActionResult Authenticate(LoginModel loginModel)
+        {
+            // Replace this with actual user authentication logic (e.g., database lookup)
+            if (loginModel.Username == "admin" && loginModel.Password == "password")  // Dummy check
+            {
+                var token = JwtTokenManager.GenerateToken(loginModel.Username);
+                return Ok(new { Token = token });
+            }
+            return Unauthorized();
         }
 
         /// <summary>
