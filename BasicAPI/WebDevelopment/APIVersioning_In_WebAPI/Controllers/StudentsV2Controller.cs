@@ -8,7 +8,7 @@ namespace APIVersioning_In_WebAPI.Controllers
     /// <summary>
     /// Controller for managing student data for version 2 of the API.
     /// </summary>
-    // [RoutePrefix("api/v2/students")]
+    [RoutePrefix("api/v2/students")]
     public class StudentsV2Controller : ApiController
     {
         #region In-Memory Data
@@ -31,7 +31,7 @@ namespace APIVersioning_In_WebAPI.Controllers
         /// </summary>
         /// <returns>A list of all students.</returns>
         [HttpGet]
-        // [Route("")]
+        [Route("")]
         public IHttpActionResult GetAll()
         {
             return Ok(students);
@@ -43,7 +43,7 @@ namespace APIVersioning_In_WebAPI.Controllers
         /// <param name="id">The unique identifier of the student.</param>
         /// <returns>The student with the given ID, or not found.</returns>
         [HttpGet]
-        // [Route("{id:int}")]
+        [Route("{id:int}")]
         public IHttpActionResult GetById(int id)
         {
             var student = students.FirstOrDefault(s => s.Id == id);

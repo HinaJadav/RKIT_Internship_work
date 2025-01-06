@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace APIVersioning_In_WebAPI
+namespace HTTPCachongInWebAPI
 {
     public static class WebApiConfig
     {
