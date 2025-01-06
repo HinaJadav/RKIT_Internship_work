@@ -83,3 +83,5 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\APIVer
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\APIVersioning\APIVersioning\obj\Debug\APIVersioning.csproj.CopyComplete
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\APIVersioning\APIVersioning\obj\Debug\APIVersioning.dll
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\APIVersioning\APIVersioning\obj\Debug\APIVersioning.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\APIVersioning\APIVersioning\bin\Swashbuckle.Core.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\APIVersioning\APIVersioning\bin\WebActivatorEx.dll
