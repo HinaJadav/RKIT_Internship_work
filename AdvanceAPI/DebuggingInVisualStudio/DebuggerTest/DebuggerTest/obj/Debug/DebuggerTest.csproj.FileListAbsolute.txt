@@ -1,0 +1,8 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\bin\Debug\DebuggerTest.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\bin\Debug\DebuggerTest.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\bin\Debug\DebuggerTest.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\obj\Debug\DebuggerTest.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\obj\Debug\DebuggerTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\obj\Debug\DebuggerTest.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\obj\Debug\DebuggerTest.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\DebuggerTest\DebuggerTest\obj\Debug\DebuggerTest.pdb
