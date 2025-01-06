@@ -24,6 +24,8 @@ namespace DebuggerTest
 
             // Hit count example inside loop
             LoopExample();
+
+            Console.ReadLine();
         }
 
         /// <summary>
@@ -89,5 +91,7 @@ namespace DebuggerTest
                 }
             }
         }
+
+        
     }
 }

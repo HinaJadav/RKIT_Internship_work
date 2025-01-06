@@ -1,0 +1,8 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\bin\Debug\ConditionalCompilation.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\bin\Debug\ConditionalCompilation.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\bin\Debug\ConditionalCompilation.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\obj\Debug\ConditionalCompilation.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\obj\Debug\ConditionalCompilation.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\obj\Debug\ConditionalCompilation.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\obj\Debug\ConditionalCompilation.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\DebuggingInVisualStudio\ConditionalCompilation\ConditionalCompilation\obj\Debug\ConditionalCompilation.pdb
