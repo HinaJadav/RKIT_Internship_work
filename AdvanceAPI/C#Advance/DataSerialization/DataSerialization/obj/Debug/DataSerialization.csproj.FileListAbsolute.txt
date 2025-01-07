@@ -1,0 +1,11 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\bin\Debug\DataSerialization.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\bin\Debug\DataSerialization.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\bin\Debug\DataSerialization.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\obj\Debug\DataSerialization.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\obj\Debug\DataSerialization.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\obj\Debug\DataSerialization.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\obj\Debug\DataSerialization.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\obj\Debug\DataSerialization.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DataSerialization\DataSerialization\obj\Debug\DataSerialization.csproj.CopyComplete
