@@ -1,0 +1,8 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\bin\Debug\FileSystemInAdvance.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\bin\Debug\FileSystemInAdvance.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\bin\Debug\FileSystemInAdvance.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.pdb
