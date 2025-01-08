@@ -4,7 +4,7 @@
 
 
 -- Create database for college management system
-create database collegemanagementsystem;
+-- create database collegemanagementsystem;
 
 -- Use collegemanagementsystem database for further operation
 use collegemanagementsystem;

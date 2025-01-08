@@ -1,0 +1,8 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\bin\Debug\BaseLibrary.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\bin\Debug\BaseLibrary.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\bin\Debug\BaseLibrary.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\obj\Debug\BaseLibrary.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\obj\Debug\BaseLibrary.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\obj\Debug\BaseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\obj\Debug\BaseLibrary.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\BaseLibrary\BaseLibrary\obj\Debug\BaseLibrary.pdb
