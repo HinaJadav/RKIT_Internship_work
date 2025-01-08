@@ -1,0 +1,1 @@
+<ArrayOfUser xmlns="http://schemas.datacontract.org/2004/07/DataSerialization" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><User><Email>anu@gmail.com</Email><Name>Anjali</Name><Password>anu$123</Password></User><User><Email>nahi@gmail.com</Email><Name>Nahi</Name><Password>Nahi123@</Password></User></ArrayOfUser>
