@@ -37,12 +37,12 @@ insert into departments values (2, "Marketing", 10);
 insert into departments values (3, "Management", 5);
 
 -- Insert data into employee table
-insert into employee (ID, Name, Description, Salary, Email, Age) values (1,"Priyank", "Manager", 50000, "pu@gmail.com", 20);
-insert into employee (ID, Name, Description, Salary, Email, Age) values (2,"Madhu", "HR", 55000, "madhu@gmail.com", 21);
-insert into employee (ID, Name, Description, Salary, Email, Age) values (3,"Suresh", "Developer", 50000, "suresh@gmail.com", 23);
-insert into employee (ID, Name, Description, Salary, Email, Age) values (4,"Anjali", "Developer", 45000, "anjali@gmail.com", 22);
-insert into employee (ID, Name, Description, Salary, Email, Age) values (5,"Nishant", "Developer", 45000, "nishant@gmail.com", 20);
-insert into employee (ID, Name, Description, Salary, Email, Age) values (6,"Nahi", "Developer", 65000, "nahi@gmail.com", 21);
+insert into employee (ID, Name, Description, Salary, Email, DepartmentID, Age) values (1,"Priyank", "Manager", 50000, "pu@gmail.com", 3, 20);
+insert into employee (ID, Name, Description, Salary, Email, DepartmentID, Age) values (2,"Madhu", "HR", 55000, "madhu@gmail.com", 3, 21);
+insert into employee (ID, Name, Description, Salary, Email, DepartmentID, Age) values (3,"Suresh", "Developer", 50000, "suresh@gmail.com", 1, 23);
+insert into employee (ID, Name, Description, Salary, Email, DepartmentID, Age) values (4,"Anjali", "Developer", 45000, "anjali@gmail.com", 1, 22);
+insert into employee (ID, Name, Description, Salary, Email, DepartmentID, Age) values (5,"Nishant", "Developer", 45000, "nishant@gmail.com", 1, 20);
+insert into employee (ID, Name, Description, Salary, Email, DepartmentID, Age) values (6,"Nahi", "Developer", 65000, "nahi@gmail.com", 1, 21);
 
 
 -- UPDATE

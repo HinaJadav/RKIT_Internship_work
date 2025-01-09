@@ -1,0 +1,8 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\bin\Debug\LINQToObject.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\bin\Debug\LINQToObject.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\bin\Debug\LINQToObject.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\obj\Debug\LINQToObject.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\obj\Debug\LINQToObject.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\obj\Debug\LINQToObject.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\obj\Debug\LINQToObject.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToObject\LINQToObject\obj\Debug\LINQToObject.pdb

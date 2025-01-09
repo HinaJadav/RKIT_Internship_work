@@ -65,6 +65,7 @@ WHERE
     e1.Salary = e2.Salary AND e1.ID != e2.ID;
 
 -- Union: Combine the result sets of two or more SELECT statements.
+-- Duplicate Removal
 -- Example: Combine job descriptions from employees and department names
 SELECT 
     Description
@@ -75,3 +76,16 @@ SELECT
     DepartmentName
 FROM
     departments;
+    
+-- Union all: 
+-- Not remove duplicate show all result 
+SELECT 
+    Description
+FROM
+    employee
+UNION ALL
+SELECT 
+    DepartmentName
+FROM
+    departments;
+
