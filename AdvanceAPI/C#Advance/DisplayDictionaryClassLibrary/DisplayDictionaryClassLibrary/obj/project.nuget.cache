@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2AgQGInYWVBoVxjZVBb++7JcJmGDmPRbEhOGR/I2gW1+hUv5XwmYv+Z2w7QF8qnhOZs/emrrgrfmCkwMbMH7Ww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\DisplayDictionaryClassLibrary\\DisplayDictionaryClassLibrary\\DisplayDictionaryClassLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hina.j\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\hina.j\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\hina.j\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

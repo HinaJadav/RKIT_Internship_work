@@ -1,0 +1,5 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DisplayDictionaryClassLibrary\DisplayDictionaryClassLibrary\obj\Debug\net5.0\DisplayDictionaryClassLibrary.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DisplayDictionaryClassLibrary\DisplayDictionaryClassLibrary\obj\Debug\net5.0\DisplayDictionaryClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DisplayDictionaryClassLibrary\DisplayDictionaryClassLibrary\obj\Debug\net5.0\DisplayDictionaryClassLibrary.AssemblyInfoInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DisplayDictionaryClassLibrary\DisplayDictionaryClassLibrary\obj\Debug\net5.0\DisplayDictionaryClassLibrary.AssemblyInfo.cs
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DisplayDictionaryClassLibrary\DisplayDictionaryClassLibrary\obj\Debug\net5.0\DisplayDictionaryClassLibrary.csproj.CoreCompileInputs.cache
