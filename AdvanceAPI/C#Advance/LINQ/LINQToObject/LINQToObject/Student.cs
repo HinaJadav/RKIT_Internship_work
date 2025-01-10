@@ -40,7 +40,7 @@ namespace LINQToObject
         /// <summary>
         /// Gets or sets a value indicating whether the student is placed.
         /// </summary>
-        public bool isPlace { get; set; }
+        public bool isPlaced { get; set; }
 
         /// <summary>
         /// Gets or sets the gender of the student.
@@ -60,17 +60,17 @@ namespace LINQToObject
         /// <param name="cpi">The Cumulative Performance Index of the student.</param>
         /// <param name="fees">The fees paid by the student.</param>
         /// <param name="package">The placement package offered to the student.</param>
-        /// <param name="isPlace">Indicates whether the student is placed.</param>
+        /// <param name="isPlaced">Indicates whether the student is placed.</param>
         /// <param name="gender">The gender of the student.</param>
         /// <param name="departmentID">The department ID associated with the student.</param>
-        public Student(int id, string name, double cpi, int fees, double package, bool isPlace, string gender, int departmentID)
+        public Student(int id, string name, double cpi, int fees, double package, bool isPlaced, string gender, int departmentID)
         {
             Id = id;
             Name = name;
             CPI = cpi;
             Fees = fees;
             Package = package;
-            this.isPlace = isPlace;
+            this.isPlaced = isPlaced;
             Gender = gender;
             DepartmentID = departmentID;
         }
