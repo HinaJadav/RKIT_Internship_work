@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace LINQToDataSets
 {
@@ -13,7 +8,9 @@ namespace LINQToDataSets
     {
         static void Main(string[] args)
         {
-            // Students dataTable
+            /// <summary>
+            /// Initialize the Students DataTable with columns for student details.
+            /// </summary>
             DataTable students = new DataTable();
             students.Columns.Add("Id", typeof(int));
             students.Columns.Add("Name", typeof(string));
@@ -24,7 +21,9 @@ namespace LINQToDataSets
             students.Columns.Add("Gender", typeof(string));
             students.Columns.Add("DepartmentId", typeof(int));
 
-            // Insert data into students dataTable
+            /// <summary>
+            /// Insert sample student records into the Students DataTable.
+            /// </summary>
             students.Rows.Add(1, "Aarav Sharma", 8.5, 120000, 600000, true, "Male", 1);
             students.Rows.Add(2, "Ishita Verma", 9.2, 110000, 750000, true, "Female", 2);
             students.Rows.Add(3, "Rohan Singh", 7.8, 115000, 550000, true, "Male", 3);
@@ -36,33 +35,42 @@ namespace LINQToDataSets
             students.Rows.Add(9, "Aditya Roy", 9.1, 116000, 780000, true, "Male", 3);
             students.Rows.Add(10, "Riya Jain", 10.0, 122000, 0, false, "Female", 1);
 
-            // Printing the student data from the DataTable
+            /// <summary>
+            /// Display student data for verification of records in the Students DataTable.
+            /// </summary>
             Console.WriteLine("Students Data:");
             foreach (DataRow student in students.Rows)
             {
                 Console.WriteLine($"Id: {student["Id"]}, Name: {student["Name"]}, DepartmentId: {student["DepartmentId"]}, CPI: {student["CPI"]}, Fees: {student["Fees"]}, Package: {student["Package"]}, Placed: {student["isPlaced"]}, Gender: {student["Gender"]}");
             }
 
-            // Department dataTable
+            /// <summary>
+            /// Initialize the Departments DataTable with columns for department details.
+            /// </summary>
             DataTable departments = new DataTable();
             departments.Columns.Add("DepartmentId", typeof(int));
             departments.Columns.Add("DepartmentName", typeof(string));
 
-            // Insert data into department dataTable
+            /// <summary>
+            /// Insert sample department records into the Departments DataTable.
+            /// </summary>
             departments.Rows.Add(1, "Computer Engineering");
             departments.Rows.Add(2, "Electronic Engineering");
             departments.Rows.Add(3, "Information & technology");
 
-            // print entire dataTable data
+            /// <summary>
+            /// Display department data for verification of records in the Departments DataTable.
+            /// </summary>
             Console.WriteLine("\nDepartment Data:");
             foreach (DataRow department in departments.Rows)
             {
                 Console.WriteLine($"DepartmentId: {department["DepartmentId"]}, DepartmentName: {department["DepartmentName"]}");
             }
 
-            // Joins
-            // GroupJoin()
-            // 1) Find list of students name within each department 
+            /// <summary>
+            /// Group the students by their department name using GroupJoin().
+            /// This shows the students belonging to each department.
+            /// </summary>
             var departmentWiseStudentName = from dept in departments.AsEnumerable()
                                             join stut in students.AsEnumerable()
                                             on dept.Field<int>("DepartmentId") equals stut.Field<int>("DepartmentId") into studentGroup
@@ -72,7 +80,9 @@ namespace LINQToDataSets
                                                 StudentsList = studentGroup.Select(student => student.Field<string>("Name")).ToList()  // Collecting the list of student names
                                             };
 
-            // Display results
+            /// <summary>
+            /// Display the list of students grouped by department name.
+            /// </summary>
             Console.WriteLine("\nList of students name within each department:");
             foreach (var item in departmentWiseStudentName)
             {
@@ -83,31 +93,32 @@ namespace LINQToDataSets
                 }
             }
 
-            // AsEnumerable(): This method converts DataTable to an IEnumerable<DataRow>, allowing LINQ to operate on DataTable
-
-
-            // InnerJoin()
-            // 2) Print all students' names with their department names
+            /// <summary>
+            /// Perform an inner join to list all students' names along with their department names.
+            /// </summary>
             var studentWithDepartmentnames = from stut in students.AsEnumerable()
                                              join dept in departments.AsEnumerable()
                                              on stut.Field<int>("DepartmentId") equals dept.Field<int>("DepartmentId")
                                              select new
                                              {
-                                                 StudentName = stut.Field<string>("Name"), // Access Name field using Field<>
-                                                 DepartmentName = dept.Field<string>("DepartmentName") // Access DepartmentName field using Field<>
+                                                 StudentName = stut.Field<string>("Name"),
+                                                 DepartmentName = dept.Field<string>("DepartmentName")
                                              };
 
-            // Display the results
+            /// <summary>
+            /// Display student names with their department names.
+            /// </summary>
             Console.WriteLine("\nList of students name with their department names: ");
             foreach (var item in studentWithDepartmentnames)
             {
                 Console.WriteLine($"Student: {item.StudentName}, Department: {item.DepartmentName}");
             }
 
-            // select()
-            // Find placed students
+            /// <summary>
+            /// Filter placed students and display their Id, Name, and Package details.
+            /// </summary>
             var placedStudentsView = from stut in students.AsEnumerable()
-                                     where stut.Field<bool>("isPlaced") == true  
+                                     where stut.Field<bool>("isPlaced") == true
                                      select new
                                      {
                                          Id = stut.Field<int>("Id"),
@@ -115,13 +126,30 @@ namespace LINQToDataSets
                                          Package = stut.Field<int>("Package")
                                      };
 
-            // Display the results
+            /// <summary>
+            /// Display placed students with basic information (Id, Name, Package).
+            /// </summary>
             Console.WriteLine("\nView of placed students with basic information:");
             foreach (var student in placedStudentsView)
             {
                 Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Package: {student.Package}");
             }
 
+            /// <summary>
+            /// Find placed students grouped by their gender using GroupBy().
+            /// </summary>
+            var placedStudentsGroupedByGender = from stut in students.AsEnumerable()
+                                                where stut.Field<bool>("isPlaced") == true
+                                                group stut by stut.Field<string>("Gender") into genderGroup
+                                                select new
+                                                {
+                                                    Gender = genderGroup.Key,
+                                                    Students = genderGroup.Select(s => new
+                                                    {
+                                                        Name = s.Field<string>("Name"),
+                                                        Package = s.Field<int>("Package")
+                                                    }).ToList()
+                                                };
 
             Console.ReadKey();
         }
