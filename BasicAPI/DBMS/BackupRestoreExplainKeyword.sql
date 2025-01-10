@@ -37,3 +37,13 @@ drop table employee_copy;
 EXPLAIN SELECT Name, Age
 FROM employee
 WHERE Description = 'HR';
+-- id: The unique identifier for each step in the execution plan.
+-- select_type: Describes the type of query (e.g., SIMPLE, PRIMARY, UNION, etc.).
+-- table: The name of the table being accessed in that step.
+-- type: The join type used for this operation (e.g., ALL, INDEX, RANGE, etc.).
+-- possible_keys: A list of indexes that could be used for the query.
+-- key: The index actually used for the query.
+-- key_len: The length of the key used (in bytes).
+-- ref: Shows which columns or constants are being compared to the key.
+-- rows: The estimated number of rows that will be processed for that step.
+-- Extra: Additional information about the query execution, such as whether filesort or temporary tables are being used.

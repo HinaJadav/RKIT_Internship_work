@@ -158,46 +158,45 @@ VALUES
 -- Insert data into table yme01
 INSERT INTO `collegemanagementsystem`.`yme01` (`e01f02`, `e01f03`, `e01f04`, `e01f05`)
 VALUES
-(30, 1, '2024-01-10', 'Active'),
-(31, 2, '2024-02-15', 'Active'),
-(32, 3, '2024-03-20', 'Completed'),
-(33, 4, '2024-04-05', 'Active'),
-(34, 5, '2024-05-12', 'Dropped'),
-(35, 6, '2024-06-08', 'Active'),
-(36, 7, '2024-07-19', 'Completed'),
-(37, 8, '2024-08-22', 'Dropped'),
-(38, 9, '2024-09-11', 'Active'),
-(39, 10, '2024-10-14', 'Active'),
-(40, 1, '2024-01-18', 'Active'),
-(41, 2, '2024-02-25', 'Completed'),
-(42, 3, '2024-03-30', 'Dropped'),
-(43, 4, '2024-04-17', 'Active'),
-(44, 5, '2024-05-22', 'Active'),
-(45, 6, '2024-06-25', 'Dropped'),
-(46, 7, '2024-07-05', 'Completed'),
-(47, 8, '2024-08-15', 'Active'),
-(48, 9, '2024-09-20', 'Completed'),
-(49, 10, '2024-10-25', 'Dropped'),
-(50, 1, '2024-01-30', 'Active'),
-(51, 2, '2024-02-12', 'Active'),
-(52, 3, '2024-03-05', 'Completed'),
-(53, 4, '2024-04-08', 'Active'),
-(54, 5, '2024-05-10', 'Dropped'),
-(55, 6, '2024-06-14', 'Active'),
-(56, 7, '2024-07-20', 'Completed'),
-(57, 8, '2024-08-25', 'Dropped'),
-(58, 9, '2024-09-02', 'Active');
+(1, 2, '2024-02-15', 'Active'),
+(2, 3, '2024-03-20', 'Completed'),
+(3, 4, '2024-04-05', 'Active'),
+(4, 5, '2024-05-12', 'Dropped'),
+(5, 6, '2024-06-08', 'Active'),
+(6, 7, '2024-07-19', 'Completed'),
+(7, 8, '2024-08-22', 'Dropped'),
+(8, 9, '2024-09-11', 'Active'),
+(9, 10, '2024-10-14', 'Active'),
+(10, 1, '2024-01-18', 'Active'),
+(11, 2, '2024-02-25', 'Completed'),
+(12, 3, '2024-03-30', 'Dropped'),
+(13, 4, '2024-04-17', 'Active'),
+(14, 5, '2024-05-22', 'Active'),
+(15, 6, '2024-06-25', 'Dropped'),
+(16, 7, '2024-07-05', 'Completed'),
+(17, 8, '2024-08-15', 'Active'),
+(18, 9, '2024-09-20', 'Completed'),
+(19, 10, '2024-10-25', 'Dropped'),
+(20, 1, '2024-01-30', 'Active'),
+(21, 2, '2024-02-12', 'Active'),
+(22, 3, '2024-03-05', 'Completed'),
+(23, 4, '2024-04-08', 'Active'),
+(24, 5, '2024-05-10', 'Dropped'),
+(25, 6, '2024-06-14', 'Active'),
+(26, 7, '2024-07-20', 'Completed'),
+(27, 8, '2024-08-25', 'Dropped'),
+(28, 9, '2024-09-02', 'Active');
 
 -- Basic SQL:
 -- List all students in the Computer Engineering department.
 SELECT 
-    s.s01f01 AS StudentID, s.s01f02 AS Name, s.s01f03 AS Email
+    s01.s01f01 AS StudentID, s01.s01f02 AS Name, s01.s01f03 AS Email
 FROM
-    yms01 s
+    yms01 s01
         JOIN
-    ymd01 d ON s.s01f11 = d.d01f01
+    ymd01 d01 ON s01.s01f11 = d01.d01f01
 WHERE
-    d.d01f02 = 'Computer Engineering';
+    d01.d01f02 = 'Computer Engineering';
     
 -- Find students whose fees are unpaid.
 SELECT 
@@ -213,16 +212,18 @@ WHERE
 -- Data Sorting: 
 -- List students sorted by their department and then by their names
 SELECT 
-    s.s01f01 AS StudentID,
-    s.s01f02 AS StudentName,
-    d.d01f02 AS DepartmentName
+    s01.s01f01 AS StudentID,
+    s01.s01f02 AS StudentName,
+    d01.d01f02 AS DepartmentName
 FROM
-    yms01 s
+    yms01 s01
         JOIN
-    ymd01 d
+    ymd01 d01
 WHERE
-    s.s01f11 = d.d01f01
-ORDER BY d.d01f02 ASC , s.s01f02 ASC;
+    s01.s01f11 = d01.d01f01
+ORDER BY d01.d01f02 ASC , s01.s01f02 ASC;
+
+-- first order alpply on d01f02 and data sort by that and after that into same value of d01f02 all rows data sort by s01f02
 
 -- Null Values:
 -- Find all courses that have no assigned department
@@ -240,13 +241,13 @@ ADD COLUMN s01f13 INT;
 
 -- DML:
 -- Update a student's department based on their student id (safe update)
-UPDATE yms01 SET s01f11 = (SELECT d01f01 FROM ymd01 WHERE d01f02 = 'Computer Engineering') WHERE s01f01 = 31;
+UPDATE yms01 SET s01f11 = (SELECT d01f01 FROM ymd01 WHERE d01f02 = 'Computer Engineering') WHERE s01f01 = 1;
 SELECT 
     *
 FROM
     yms01
 WHERE
-    s01f01 = 31;
+    s01f01 = 1;
 
 -- TCL:
 -- Transaction for fee payment updates
@@ -256,7 +257,7 @@ UPDATE yms01
 SET 
     s01f10 = 'PAID'
 WHERE
-    s01f01 = 31;
+    s01f01 = 1;
     
 COMMIT;
 
@@ -265,17 +266,17 @@ SELECT
 FROM
     yms01
 WHERE
-    s01f01 = 31;
+    s01f01 = 1;
     
 -- Aggregate Functions: 
 -- Calculate the total number of students per department 
 SELECT 
-    d.d01f02 AS DepartmentName, COUNT(s.s01f01) AS TotalStudents
+    d01.d01f02 AS DepartmentName, COUNT(s01.s01f01) AS TotalStudents
 FROM
-    yms01 s
+    yms01 s01
         JOIN
-    ymd01 d ON s.s01f11 = d.d01f01
-GROUP BY d.d01f02;
+    ymd01 d01 ON s01.s01f11 = d01.d01f01
+GROUP BY d01.d01f02;
 
 -- Sub-Queries: 
 -- Find the courses taken by students in the 'Computer Science' department
@@ -303,33 +304,33 @@ LIMIT 3 , 10;
 -- Joins:
 -- Fetch students' names, their department name, and enrolled courses, even if the student is not enrolled in any course (LEFT JOIN)
 SELECT 
-    s.s01f01 AS StudentID,
-    s.s01f02 AS StudentName,
-    d.d01f02 AS DepartmentName,
-    c.c01f02 AS CourseName
+    s01.s01f01 AS StudentID,
+    s01.s01f02 AS StudentName,
+    d01.d01f02 AS DepartmentName,
+    c01.c01f02 AS CourseName
 FROM
-    yms01 s
+    yms01 s01
         LEFT JOIN
-    ymd01 d ON s.s01f11 = d.d01f01
+    ymd01 d01 ON s01.s01f11 = d01.d01f01
         LEFT JOIN
-    yme01 e ON s.s01f01 = e.e01f02
+    yme01 e01 ON s01.s01f01 = e01.e01f02
         LEFT JOIN
-    ymc01 c ON e.e01f03 = c.c01f01
+    ymc01 c01 ON e01.e01f03 = c01.c01f01
 LIMIT 0 , 1000;
 
 -- Identify students who have not enrolled in any course.
 SELECT 
-    s.s01f01 AS StudentID,
-    s.s01f02 AS StudentName,
-    d.d01f02 AS DepartmentName
+    s01.s01f01 AS StudentID,
+    s01.s01f02 AS StudentName,
+    d01.d01f02 AS DepartmentName
 FROM
-    yms01 s
+    yms01 s01
         LEFT JOIN
-    yme01 e ON s.s01f01 = e.e01f02
+    yme01 e01 ON s01.s01f01 = e01.e01f02
         LEFT JOIN
-    ymd01 d ON s.s01f11 = d.d01f01
+    ymd01 d01 ON s01.s01f11 = d01.d01f01
 WHERE
-    e.e01f02 IS NULL;
+    e01.e01f02 IS NULL;
 
 -- Unions: 
 -- Combine lists of all departments and unique student names
@@ -345,20 +346,20 @@ CREATE INDEX idx_student_email ON yms01(s01f03);
 -- Create a View for Students Enrolled in 'Data Structures' Courses
 CREATE VIEW DataStructuresStudents AS
     SELECT 
-        s.s01f01 AS StudentID,
-        s.s01f02 AS StudentName,
-        d.d01f02 AS DepartmentName,
-        c.c01f02 AS CourseName
+        s01.s01f01 AS StudentID,
+        s01.s01f02 AS StudentName,
+        d01.d01f02 AS DepartmentName,
+        c01.c01f02 AS CourseName
     FROM
-        yms01 s
+        yms01 s01
             INNER JOIN
-        yme01 e ON s.s01f01 = e.e01f02
+        yme01 e01 ON s01.s01f01 = e01.e01f02
             INNER JOIN
-        ymc01 c ON e.e01f03 = c.c01f01
+        ymc01 c01 ON e01.e01f03 = c01.c01f01
             INNER JOIN
-        ymd01 d ON s.s01f11 = d.d01f01
+        ymd01 d01 ON s01.s01f11 = d01.d01f01
     WHERE
-        c.c01f02 = 'Data Structures';
+        c01.c01f02 = 'Data Structures';
 
 -- Retrieve Data from the View
 SELECT * FROM DataStructuresStudents;
@@ -370,7 +371,8 @@ DROP VIEW DataStructuresStudents;
 -- Explain Keyword: 
 -- Analyze a query for performance
 EXPLAIN
-SELECT s.s01f02 AS StudentName, d.d01f02 AS Department
-FROM yms01 s
-JOIN ymd01 d ON s.s01f11 = d.d01f01;
+SELECT s01.s01f02 AS StudentName, d01.d01f02 AS Department
+FROM yms01 s01
+JOIN ymd01 d01 ON s01.s01f11 = d01.d01f01;
+
 

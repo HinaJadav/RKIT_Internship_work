@@ -12,3 +12,7 @@ CREATE UNIQUE INDEX emailIndex ON employee (Email);
 -- Drop the index named 'nameIndex' from the 'employee' table.
 -- This is typically done to remove an unused or unnecessary index to optimize performance.
 ALTER TABLE employee DROP INDEX nameIndex;
+
+-- Custom Index: A user-defined index tailored to improve the performance of specific queries by indexing relevant columns.
+
+-- Forced Index: A hint given to the database to explicitly use a specified index, overriding the database's automatic index selection.

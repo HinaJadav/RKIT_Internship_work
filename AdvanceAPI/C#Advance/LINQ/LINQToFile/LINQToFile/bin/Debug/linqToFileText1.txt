@@ -1,0 +1,1 @@
+Hello world! Welcome to LINQ file processing. LINQ makes data queries simple and powerful. With LINQ, you can work with collections, files, databases, and more. 
