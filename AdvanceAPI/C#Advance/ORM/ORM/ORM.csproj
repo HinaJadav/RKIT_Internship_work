@@ -115,6 +115,8 @@
     <Compile Include="Data\DbConnection.cs" />
     <Compile Include="Model\DTO\DTOGAM01.cs" />
     <Compile Include="Model\DTO\DTOPLA01.cs" />
+    <Compile Include="Model\Enum\ModelType.cs" />
+    <Compile Include="Model\Enum\OperationType.cs" />
     <Compile Include="Model\POCO\GAM01.cs" />
     <Compile Include="Model\POCO\PLA01.cs" />
     <Compile Include="Program.cs" />

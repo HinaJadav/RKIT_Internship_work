@@ -1,5 +1,6 @@
 ﻿using ORM.POCO;
 using ServiceStack.OrmLite;
+using System;
 using System.Configuration;
 using System.Data;
 
@@ -8,27 +9,62 @@ namespace ORM.Data
     public class DbConnection
     {
         /// <summary>
-        /// stores actual db connection 
+        /// Stores the actual database connection.
         /// </summary>
         public static IDbConnection _db;
 
+        /// <summary>
+        /// Opens a connection to the database and creates necessary tables if they do not exist.
+        /// </summary>
+        /// <returns>
+        /// Returns the established database connection.
+        /// </returns>
         public static IDbConnection OpenConnection()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
+            try
+            {
+                // Fetch the connection string from the configuration file (App.Config)
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
 
-            var dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
+                // Create a new ORM Lite connection factory with the provided connection string and MySQL dialect
+                var dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
 
-            _db = dbFactory.OpenDbConnection();
+                // Open a connection using the factory
+                _db = dbFactory.Open();
 
-            CreateTables();
+                // Create the tables if they do not exist
+                CreateTables();
 
-            return _db;
+                // Return the established connection
+                return _db;
+            }
+            catch (Exception ex)
+            {
+                // Log the error and rethrow the exception to halt execution
+                Console.WriteLine($"Error opening DB connection: {ex.Message}");
+                throw;
+            }
         }
 
+        /// <summary>
+        /// Creates the necessary tables in the database if they do not already exist.
+        /// </summary>
         private static void CreateTables()
         {
-            _db.CreateTableIfNotExists<PLA01>();
-            _db.CreateTableIfNotExists<GAM01>();
+            try
+            {
+                // Create the GAM01 table if it does not exist
+                _db.CreateTableIfNotExists<GAM01>();
+
+                // Create the PLA01 table if it does not exist
+                _db.CreateTableIfNotExists<PLA01>();
+            }
+            catch (Exception ex)
+            {
+                // Log the error and rethrow the exception to halt execution
+                Console.WriteLine($"Error creating tables: {ex.Message}");
+                throw;
+            }
         }
     }
 }
