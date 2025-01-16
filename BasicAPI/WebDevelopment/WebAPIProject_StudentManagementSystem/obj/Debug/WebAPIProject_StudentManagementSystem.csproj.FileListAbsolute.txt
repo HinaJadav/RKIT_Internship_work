@@ -83,3 +83,5 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\WebAPI
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\WebAPIProject_StudentManagementSystem\obj\Debug\WebAPIProject_StudentManagementSystem.csproj.CopyComplete
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\WebAPIProject_StudentManagementSystem\obj\Debug\WebAPIProject_StudentManagementSystem.dll
 C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\WebAPIProject_StudentManagementSystem\obj\Debug\WebAPIProject_StudentManagementSystem.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\WebAPIProject_StudentManagementSystem\bin\Swashbuckle.Core.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\BasicAPI\WebDevelopment\WebAPIProject_StudentManagementSystem\bin\WebActivatorEx.dll
