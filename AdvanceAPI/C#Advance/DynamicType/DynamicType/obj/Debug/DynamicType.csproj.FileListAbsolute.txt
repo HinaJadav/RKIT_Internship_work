@@ -1,0 +1,8 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\bin\Debug\DynamicType.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\bin\Debug\DynamicType.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\bin\Debug\DynamicType.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\obj\Debug\DynamicType.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\obj\Debug\DynamicType.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\obj\Debug\DynamicType.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\obj\Debug\DynamicType.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\DynamicType\DynamicType\obj\Debug\DynamicType.pdb
