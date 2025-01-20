@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security&Cryptography", "Security&Cryptography\Security&Cryptography.csproj", "{255C62C2-641A-4A66-9D19-5789C1C07EE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security&Cryptography", "Security&Cryptography\Security&Cryptography.csproj", "{69E58296-510D-4411-A7E0-D8E797F55682}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{255C62C2-641A-4A66-9D19-5789C1C07EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{255C62C2-641A-4A66-9D19-5789C1C07EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{255C62C2-641A-4A66-9D19-5789C1C07EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{255C62C2-641A-4A66-9D19-5789C1C07EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E58296-510D-4411-A7E0-D8E797F55682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E58296-510D-4411-A7E0-D8E797F55682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E58296-510D-4411-A7E0-D8E797F55682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E58296-510D-4411-A7E0-D8E797F55682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E35B1271-B067-4C5B-B657-143B2AE31865}
+		SolutionGuid = {2D81CBB6-32E5-4F8F-B196-3A9D2D4D1CD9}
 	EndGlobalSection
 EndGlobal
