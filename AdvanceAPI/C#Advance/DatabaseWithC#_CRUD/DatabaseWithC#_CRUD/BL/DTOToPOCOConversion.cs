@@ -3,9 +3,16 @@ using DatabaseWithC__CRUD.Models.POCO;
 
 namespace DatabaseWithC__CRUD.BL
 {
-    // manual mapping
+    /// <summary>
+    /// Provides manual mapping functionality between DTO and POCO objects.
+    /// </summary>
     public class DTOToPOCOConversion
     {
+        /// <summary>
+        /// Converts a DTOYMT01 object to a YMT01 POCO object.
+        /// </summary>
+        /// <param name="dtoymt01">The DTOYMT01 object to convert.</param>
+        /// <returns>A corresponding YMT01 POCO object.</returns>
         public static YMT01 dtoToPocoConvert(DTOYMT01 dtoymt01)
         {
             return new YMT01

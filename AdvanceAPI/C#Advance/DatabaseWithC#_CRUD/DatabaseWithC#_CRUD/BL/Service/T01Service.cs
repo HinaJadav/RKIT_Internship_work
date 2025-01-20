@@ -7,16 +7,28 @@ using System.Collections.Generic;
 
 namespace DatabaseWithC__CRUD.BL.Service
 {
+    /// <summary>
+    /// Provides methods for managing teams (Add, Read, Update, Delete).
+    /// </summary>
     public class T01Service
     {
         private readonly DBConnection _dbConnection;
-        // initialize Database connection 
+
+        /// <summary>
+        /// Initializes a new instance of the T01Service class.
+        /// </summary>
         public T01Service()
         {
             _dbConnection = new DBConnection();
         }
 
         // Create 
+
+        /// <summary>
+        /// Adds a new team to the database.
+        /// </summary>
+        /// <param name="dtoymt01">The DTO containing team data to be added.</param>
+        /// <returns>True if the team was added successfully; otherwise, false.</returns>
         public bool AddTeam(DTOYMT01 dtoymt01)
         {
             try
@@ -41,15 +53,20 @@ namespace DatabaseWithC__CRUD.BL.Service
 
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 // Log or handle the exception as needed (optional)
                 throw new Exception("Error retrieving teams: " + ex.Message);
             }
-            
+
         }
 
         // Read 
+
+        /// <summary>
+        /// Retrieves all teams from the database.
+        /// </summary>
+        /// <returns>A list of all teams.</returns>
         public List<YMT01> GetAllTeams()
         {
             try
@@ -81,6 +98,11 @@ namespace DatabaseWithC__CRUD.BL.Service
             }
         }
 
+        /// <summary>
+        /// Retrieves a team by its ID from the database.
+        /// </summary>
+        /// <param name="teamId">The ID of the team to retrieve.</param>
+        /// <returns>The team corresponding to the provided ID.</returns>
         public YMT01 GetTeamById(int teamId)
         {
             try
@@ -117,6 +139,12 @@ namespace DatabaseWithC__CRUD.BL.Service
 
 
         // Update 
+
+        /// <summary>
+        /// Updates an existing team in the database.
+        /// </summary>
+        /// <param name="dtoymt01">The DTO containing updated team data.</param>
+        /// <returns>True if the team was updated successfully; otherwise, false.</returns>
         public bool UpdateTeam(DTOYMT01 dtoymt01)
         {
             try
@@ -141,7 +169,7 @@ namespace DatabaseWithC__CRUD.BL.Service
 
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 // handle the exception part
                 throw new System.Exception($"Error updating team: {ex.Message}");
@@ -150,8 +178,13 @@ namespace DatabaseWithC__CRUD.BL.Service
 
         // Delete
 
+        /// <summary>
+        /// Deletes a team from the database.
+        /// </summary>
+        /// <param name="teamId">The ID of the team to delete.</param>
+        /// <returns>True if the team was deleted successfully; otherwise, false.</returns>
         public bool DeleteTeam(int teamId)
-        {     
+        {
             try
             {
                 string query = "DELETE FROM YMT01 WHERE T01F01 = @T01F01;";

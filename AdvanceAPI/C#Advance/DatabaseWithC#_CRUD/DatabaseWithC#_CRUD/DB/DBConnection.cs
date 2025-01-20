@@ -1,24 +1,40 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Configuration;
 using System.Web;
 
 namespace DatabaseWithC__CRUD.DB
-{
+{ 
+     /// <summary>
+     /// Provides methods for database connection and query execution.
+     /// </summary>
     public class DBConnection
     {
         private string _connectionString;
 
+        /// <summary>
+        /// Initializes the DBConnection with the connection string from the configuration.
+        /// </summary>
         public DBConnection()
         {
-            _connectionString = HttpContext.Current.Application["ConnectionString"] as string;
+            _connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         }
 
-        // method to create a new connection
+        /// <summary>
+        /// Creates and returns a new MySqlConnection using the connection string.
+        /// </summary>
+        /// <returns>A new instance of MySqlConnection.</returns>
         public MySqlConnection CreateConnection()
         {
             return new MySqlConnection(_connectionString);
         }
 
+        /// <summary>
+        /// Executes a SQL query that returns a data reader.
+        /// </summary>
+        /// <param name="query">The SQL query to execute.</param>
+        /// <param name="queryParameters">A delegate for adding parameters to the SQL command.</param>
+        /// <returns>A MySqlDataReader to read the result set.</returns>
         public MySqlDataReader ExecuteReader(string query, Action<MySqlCommand> queryParameters)
         {
             // create connection
@@ -49,8 +65,11 @@ namespace DatabaseWithC__CRUD.DB
             return reader;
         }
 
-        // ExecuteNonQuery method : It is used to execute SQL statements that do not return any data(like INSERT, UPDATE, DELETE)
-
+        /// <summary>
+        /// Executes a SQL query that does not return data (e.g., INSERT, UPDATE, DELETE).
+        /// </summary>
+        /// <param name="query">The SQL query to execute.</param>
+        /// <param name="queryParameters">A delegate for adding parameters to the SQL command.</param>
         public void ExecuteNonQuery(string query, Action<MySqlCommand> queryParameters)
         {
             // use "using" clause here 

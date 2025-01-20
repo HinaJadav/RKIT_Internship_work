@@ -223,7 +223,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DTO\DTOYMT01.cs" />
-    <Compile Include="Models\Enum\OperationType.cs" />
     <Compile Include="Models\POCO\YMT01.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
