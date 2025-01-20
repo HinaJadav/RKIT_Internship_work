@@ -1,13 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Configuration;
-using System.Web;
 
 namespace DatabaseWithC__CRUD.DB
-{ 
-     /// <summary>
-     /// Provides methods for database connection and query execution.
-     /// </summary>
+{
+    /// <summary>
+    /// Provides methods for database connection and query execution.
+    /// </summary>
     public class DBConnection
     {
         private string _connectionString;
