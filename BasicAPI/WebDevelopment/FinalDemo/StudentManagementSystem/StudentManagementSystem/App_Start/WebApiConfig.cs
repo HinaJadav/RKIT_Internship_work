@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.Web.Http.Versioning;
+using Microsoft.Web.Http;
 using System.Web.Http;
 
 namespace StudentManagementSystem
@@ -9,16 +8,25 @@ namespace StudentManagementSystem
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            // Enable API versioning
+            config.AddApiVersioning(options =>
+            {
+                options.ApiVersionReader = new QueryStringApiVersionReader("version");
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.ReportApiVersions = true;
+            });
 
-            // Web API routes
+            // Map attribute-based routes
             config.MapHttpAttributeRoutes();
 
+            // Optional: Default route as a fallback
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+
     }
 }
