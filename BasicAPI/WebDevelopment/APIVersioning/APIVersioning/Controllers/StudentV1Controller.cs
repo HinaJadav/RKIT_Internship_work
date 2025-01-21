@@ -31,7 +31,7 @@ namespace APIVersioning.Controllers
         /// </summary>
         /// <returns>A list of all students.</returns>
         [HttpGet]
-        [Route("")]
+        
         public IHttpActionResult GetAll()
         {
             return Ok(students);

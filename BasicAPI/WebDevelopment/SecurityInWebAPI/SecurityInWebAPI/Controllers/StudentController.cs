@@ -52,7 +52,7 @@ namespace SecurityInWebAPI.Controllers
         public IHttpActionResult Authenticate(LoginModel loginModel)
         {
             // Replace this with actual user authentication logic (e.g., database lookup)
-            if (loginModel.Username == "admin" && loginModel.Password == "password")  // Dummy check
+            if (loginModel.Username == "admin" && loginModel.Password == "password")  
             {
                 var token = JwtTokenManager.GenerateToken(loginModel.Username);
                 return Ok(new { Token = token });

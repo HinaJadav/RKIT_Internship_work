@@ -375,4 +375,24 @@ SELECT s01.s01f02 AS StudentName, d01.d01f02 AS Department
 FROM yms01 s01
 JOIN ymd01 d01 ON s01.s01f11 = d01.d01f01;
 
+-- cte:
+WITH HighAttendance AS (
+    SELECT s01f02, s01f13
+    FROM yms01
+    WHERE s01f13 > 80
+)
+SELECT * FROM HighAttendance;
+
+-------
+SELECT s01f02 AS StudentName, s01f13 AS Attendance
+FROM yms01
+ORDER BY s01f13 DESC
+LIMIT 3, 10
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/students_attendance.csv'
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+
+
 

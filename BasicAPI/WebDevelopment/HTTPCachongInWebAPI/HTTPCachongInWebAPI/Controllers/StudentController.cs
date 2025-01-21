@@ -1,8 +1,8 @@
-﻿using HTTPCachongInWebAPI;
+﻿using HTTPCachingInWebAPI;
 using System;
 using System.Web.Http;
 
-namespace HTTPCachongInWebAPI.Controllers
+namespace HTTPCachingInWebAPI.Controllers
 {
     /// <summary>
     /// Controller responsible for managing student-related operations.

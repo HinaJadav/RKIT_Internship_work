@@ -1,8 +1,6 @@
 ﻿using APIVersioning.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Http;
 
 namespace APIVersioning.Controllers
@@ -19,12 +17,12 @@ namespace APIVersioning.Controllers
 
             // In-memory list of students with first and last names, and contact info
             private static List<StudentV2Model> students = new List<StudentV2Model>
-        {
-            new StudentV2Model { Id = 1, FirstName = "Amit", LastName = "Sharma", Marks = 85, ContactInfo = "amit.sharma@gmail.com" },
-            new StudentV2Model { Id = 2, FirstName = "Priya", LastName = "Patel", Marks = 92, ContactInfo = "priya.patel@yahoo.com" },
-            new StudentV2Model { Id = 3, FirstName = "Ravi", LastName = "Kumar", Marks = 78, ContactInfo = "ravi.kumar@outlook.com" },
-            new StudentV2Model { Id = 4, FirstName = "Sneha", LastName = "Reddy", Marks = 88, ContactInfo = "sneha.reddy@hotmail.com" }
-        };
+            {
+                new StudentV2Model { Id = 1, FirstName = "Amit", LastName = "Sharma", Marks = 85, ContactInfo = "amit.sharma@gmail.com" },
+                new StudentV2Model { Id = 2, FirstName = "Priya", LastName = "Patel", Marks = 92, ContactInfo = "priya.patel@yahoo.com" },
+                new StudentV2Model { Id = 3, FirstName = "Ravi", LastName = "Kumar", Marks = 78, ContactInfo = "ravi.kumar@outlook.com" },
+                new StudentV2Model { Id = 4, FirstName = "Sneha", LastName = "Reddy", Marks = 88, ContactInfo = "sneha.reddy@hotmail.com" }
+            };
 
             #endregion
 
@@ -35,7 +33,6 @@ namespace APIVersioning.Controllers
             /// </summary>
             /// <returns>A list of all students.</returns>
             [HttpGet]
-            [Route("")]
             public IHttpActionResult GetAll()
             {
                 return Ok(students);
