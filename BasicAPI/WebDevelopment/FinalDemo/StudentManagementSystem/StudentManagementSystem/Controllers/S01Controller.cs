@@ -22,6 +22,7 @@ namespace StudentManagementSystem.Controllers
         }
 
         [HttpPost]
+        [ApiVersion("1.0")]
         [Route("login")]
         public IHttpActionResult Login([FromBody] User userModel)
         {
@@ -124,7 +125,7 @@ namespace StudentManagementSystem.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Route("addAll")]
         [ApiVersion("1.0")]
         public IHttpActionResult AddStudent([FromBody] YMS01 newStudent)
         {

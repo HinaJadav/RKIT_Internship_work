@@ -23,8 +23,7 @@ namespace StudentManagementSystem.Utilities
             };
 
             var token = new JwtSecurityToken(
-                issuer: "https://localhost:44304",
-                audience: "https://localhost:44304",
+               
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: credentials);
