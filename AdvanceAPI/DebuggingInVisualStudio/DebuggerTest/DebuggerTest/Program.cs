@@ -10,6 +10,7 @@ namespace DebuggerTest
         static void Main(string[] args)
         {
             // Simple Breakpoint - Put a breakpoint on this line to pause and inspect the flow.
+            
             int result = Sum(10, 20); // Example function where you can set a breakpoint
             Console.WriteLine("Result: " + result);
 
