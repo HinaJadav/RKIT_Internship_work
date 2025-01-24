@@ -10,14 +10,15 @@ namespace DebuggerTest
         static void Main(string[] args)
         {
             // Simple Breakpoint - Put a breakpoint on this line to pause and inspect the flow.
-            
-            int result = Sum(10, 20); // Example function where you can set a breakpoint
+           
+            int result = Sum(0, 20); // Example function where you can set a breakpoint
             Console.WriteLine("Result: " + result);
 
             // Simulating method that needs debugging
+            // Conditional break point + When change
             CheckResults(result);
 
-            // Example of logging with Tracepoint
+            //Dependant break point
             LogAction("Program execution started.");
 
             // Temporary breakpoint example
@@ -59,13 +60,13 @@ namespace DebuggerTest
         }
 
         /// <summary>
-        /// Logs actions to the output window using Tracepoint (logs without halting execution).
+        /// Logs actions for dependant breakpoin
         /// </summary>
         /// <param name="action">Action description to log</param>
         static void LogAction(string action)
         {
-            // Tracepoint: Output to debug window
-            System.Diagnostics.Debug.WriteLine($"Tracepoint: {action}");
+     
+            System.Diagnostics.Debug.WriteLine($"log action");
         }
 
         /// <summary>
@@ -84,8 +85,8 @@ namespace DebuggerTest
         {
             for (int i = 0; i < 10; i++)
             {
-                // Set a Hit Count breakpoint at this point in the loop (e.g., at i == 5)
-                if (i == 5) // Hit count set for i == 5
+                
+                if (i == 5) // trace point
                 {
                     // Inspect value of i when breakpoint hits
                     Console.WriteLine("Hit Count Breakpoint: i=" + i);
