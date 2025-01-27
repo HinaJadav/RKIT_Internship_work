@@ -89,6 +89,22 @@ namespace ClassTypes
             Console.Write("Field of Study: ");
             user.FieldOfStudy = Console.ReadLine();
 
+            Console.WriteLine("\nPlease enter your address details:");
+
+            user.Address = new User.AddressDetails();  
+
+            Console.Write("Street: ");
+            user.Address.Street = Console.ReadLine();
+
+            Console.Write("City: ");
+            user.Address.City = Console.ReadLine();
+
+            Console.Write("State: ");
+            user.Address.State = Console.ReadLine();
+
+            Console.Write("Postal Code: ");
+            user.Address.PostalCode = Console.ReadLine();
+
             return user;
         }
 

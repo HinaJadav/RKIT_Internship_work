@@ -2,6 +2,8 @@
 
 namespace ClassTypes.Models
 {
+    // Static class
+    
     /// <summary>
     /// Provides utility methods for common operations, such as email validation 
     /// and streak calculation, used across the application.

@@ -5,7 +5,7 @@ namespace ClassTypes.Models
     /// <summary>
     /// Represents a habit that a user is tracking.
     /// Includes information about the habit's name, category, frequency, and start/end dates.
-    /// Inherits from the BaseModel class for shared properties and behavior.
+    /// Inherits from the BaseModel class for shared properties and methods.
     /// </summary>
     public class Habit : BaseModel
     {
