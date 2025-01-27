@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "0YQoPwCGjNxRavWVDTTAGtzMRjwsmn/tsf3fxKrAG0w=",
+  "Source": "BasicDemo",
+  "BasePath": "_content/BasicDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BasicDemo\\wwwroot",
+      "Source": "BasicDemo",
+      "ContentRoot": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\",
+      "BasePath": "_content/BasicDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\css\\style.css",
+      "SourceId": "BasicDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\",
+      "BasePath": "_content/BasicDemo",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\html\\home.html",
+      "SourceId": "BasicDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\",
+      "BasePath": "_content/BasicDemo",
+      "RelativePath": "html/home.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\home.html"
+    }
+  ]
+}
