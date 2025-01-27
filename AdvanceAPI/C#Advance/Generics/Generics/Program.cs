@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace Generics
 {
+    // generic interface
+
     /// <summary>
     /// A generic interface for displaying descriptions of items.
     /// </summary>
@@ -63,6 +65,8 @@ namespace Generics
 
     public class Program
     {
+        //generic method
+
         /// <summary>
         /// A generic method that calculates and prints the total sum of integer values in a collection.
         /// </summary>
@@ -81,7 +85,7 @@ namespace Generics
             Console.WriteLine("Your total amount = " + total);
         }
 
-       
+
         static void Main(string[] args)
         {
             /// <summary>
@@ -89,7 +93,7 @@ namespace Generics
             /// </summary>
 
             Dictionary<int, Items> itemsDictionary = new Dictionary<int, Items>();
-           
+
             // Prompt the user to enter their daily expenses
             Console.WriteLine("Enter your daily expense amounts with item name to calculate the total:");
 
@@ -98,7 +102,7 @@ namespace Generics
             string input;
             string processStart = "Open";
             // Used as the key for the dictionary
-            int index = 1; 
+            int index = 1;
 
             // Loop to read expenses until 'Close' is entered
             while (processStart != "Close")
@@ -121,8 +125,8 @@ namespace Generics
 
                     try
                     {
-                       // Attempt to parse the price
-                       int price = int.Parse(priceInput);
+                        // Attempt to parse the price
+                        int price = int.Parse(priceInput);
 
                         // Add the item to the dictionary with a unique index as the key
                         Items newItem = new Items(input, price);

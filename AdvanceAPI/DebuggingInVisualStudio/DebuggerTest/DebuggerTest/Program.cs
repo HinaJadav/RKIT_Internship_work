@@ -60,7 +60,7 @@ namespace DebuggerTest
         }
 
         /// <summary>
-        /// Logs actions for dependant breakpoin
+        /// Logs actions for dependant breakpoint
         /// </summary>
         /// <param name="action">Action description to log</param>
         static void LogAction(string action)
@@ -84,7 +84,7 @@ namespace DebuggerTest
         static void LoopExample()
         {
             for (int i = 0; i < 10; i++)
-            {
+            { // hit count
                 
                 if (i == 5) // trace point
                 {
