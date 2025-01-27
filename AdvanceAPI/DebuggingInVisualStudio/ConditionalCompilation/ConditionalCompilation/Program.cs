@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConditionalCompilation
+namespace ConditionalCompilationExample
 {
     public class Program
     {
@@ -8,15 +8,15 @@ namespace ConditionalCompilation
         {
             Console.WriteLine("Application started.");
 
+            // Conditional compilation for Debug or Release mode
 #if DEBUG
-            Console.WriteLine("DEBUG mode: Detailed logging enabled.");
+            Console.WriteLine("DEBUG Mode: Detailed logging enabled.");
             DebugModeSpecificCode();
+#elif RELEASE
+            Console.WriteLine("RELEASE Mode: Optimized for production.");
 #endif
 
-#if RELEASE
-            Console.WriteLine("RELEASE mode: Optimized for production.");
-#endif
-
+            // Feature toggle using custom symbols (FEATURE_X)
 #if FEATURE_X
             Console.WriteLine("Feature X is enabled.");
 #else
@@ -24,18 +24,15 @@ namespace ConditionalCompilation
 #endif
 
             Console.WriteLine("Application finished.");
-
             Console.ReadLine();
         }
 
-        // Method specific to Debug mode
+        // Debug-specific method
 #if DEBUG
         static void DebugModeSpecificCode()
         {
             Console.WriteLine("Executing debug-specific code...");
         }
 #endif
-
-        
     }
 }
