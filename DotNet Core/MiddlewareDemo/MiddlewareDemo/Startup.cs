@@ -31,7 +31,7 @@ namespace MiddlewareDemo
         /// Configures the middleware pipeline that handles HTTP requests and responses.
         /// </summary>
         /// <param name="app">The application builder for configuring middleware.</param>
-        /// <param name="env">The hosting environment providing environment-specific details.</param>
+        /// <param name="env">The hosting environment providing enviro nment-specific details.</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // Built-in middleware
