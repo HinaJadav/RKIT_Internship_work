@@ -1,0 +1,6 @@
+﻿urls
+
+html page: https://localhost:7299/html/home.html
+
+getname api: https://localhost:7299/basicDemo/GetName
+getRollNo api: https://localhost:7299/basicDemo/GetRollNo

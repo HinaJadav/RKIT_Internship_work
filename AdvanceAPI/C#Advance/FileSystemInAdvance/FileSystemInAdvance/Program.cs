@@ -4,6 +4,12 @@ using System.Text;
 
 namespace FileSystemInDepth
 {
+    /// <summary>
+    /// Topics:
+    /// FileStream
+    /// StringReader & StringWriter
+    /// ByteReader & ByteWriter
+    /// </summary>
     public class Program
     {
         static void Main(string[] args)
@@ -70,7 +76,7 @@ namespace FileSystemInDepth
                         Console.WriteLine($"Drive {userSelectedDrive} is not ready.");
                     }
                 }
-                catch (UnauthorizedAccessException ex)
+                catch (UnauthorizedAccessException ex) // This exception occurs when some times some drive has not some access like read or write for security etc.
                 {
                     Console.WriteLine($"Access to the drive is denied. Error: {ex.Message}");
                 }
@@ -153,6 +159,8 @@ namespace FileSystemInDepth
             try
             {
                 // Write data to the file using FileStream
+                // FileMode.Create: Creates a new file or overwrites if it exists.
+                // 
                 using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
                 {
                     byte[] dataBytes = Encoding.Default.GetBytes(dataToWrite);

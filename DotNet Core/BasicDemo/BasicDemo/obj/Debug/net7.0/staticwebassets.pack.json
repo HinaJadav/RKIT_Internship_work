@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\BasicDemo\\BasicDemo\\wwwroot\\html\\home.html",
+      "PackagePath": "staticwebassets\\html\\home.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BasicDemo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BasicDemo.props",
+      "PackagePath": "build\\BasicDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BasicDemo.props",
+      "PackagePath": "buildMultiTargeting\\BasicDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BasicDemo.props",
+      "PackagePath": "buildTransitive\\BasicDemo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

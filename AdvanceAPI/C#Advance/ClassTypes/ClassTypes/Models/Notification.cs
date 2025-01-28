@@ -2,9 +2,11 @@
 
 namespace ClassTypes.Models
 {
+    //Sealed class
+
     /// <summary>
     /// Represents a notification sent to a user regarding their habit.
-    /// This class is sealed because we do not expect it to be inherited.
+    /// Do not expect it to be inherited.
     /// </summary>
     public sealed class Notification
     {

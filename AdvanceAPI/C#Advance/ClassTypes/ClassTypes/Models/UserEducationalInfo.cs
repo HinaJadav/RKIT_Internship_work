@@ -1,8 +1,9 @@
 ﻿namespace ClassTypes.Models
 {
+    // Partial class
+
     /// <summary>
     /// Represents the user's educational information.
-    /// This is part of the partial User class.
     /// </summary>
     public partial class User
     {
