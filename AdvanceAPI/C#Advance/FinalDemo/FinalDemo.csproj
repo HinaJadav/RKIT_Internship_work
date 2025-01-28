@@ -160,6 +160,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DTO\DTOYMM01.cs" />
+    <Compile Include="Models\DTO\DTOYMR01.cs" />
+    <Compile Include="Models\DTO\DTOYMT01.cs" />
     <Compile Include="Models\POCO\YMM01.cs" />
     <Compile Include="Models\POCO\YMR01.cs" />
     <Compile Include="Models\POCO\YMT01.cs" />
@@ -236,7 +239,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="BL\" />
     <Folder Include="Extention\" />
-    <Folder Include="Models\DTO\" />
     <Folder Include="Models\Enums\" />
     <Folder Include="Security\" />
   </ItemGroup>

@@ -16,6 +16,6 @@ namespace FinalDemo.Models.POCO
         public DateTime T01F03 { get; set; } = DateTime.Now; // Team created Date
 
         [ForeignKey("YMM01")]
-        public int T01F04 { get; set; } // momber ID who created team
+        public int T01F04 { get; set; } // member ID who created team
     }
 }

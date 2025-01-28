@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace FinalDemo.Models.DTO
+{
+    public class DTOYMM01
+    {
+        public int M01101 { get; set; } // id 
+        public string M01102 { get; set; } // member full name (fn + ln)
+        
+        public string M01103 { get; set; } // email
+        public string M01104 { get; set; } // contact number
+        public int M01105 { get; set; } // role id / name as per logic will be wrriten on POCOToDTO conversion
+        public int M01106 { get; set; } // team id / name
+        public DateTime M01107 { get; set; } // joining date
+        public int M01108 { get; set; } // isActive member or not
+    }
+}
