@@ -85,6 +85,19 @@ namespace Generics
             Console.WriteLine("Your total amount = " + total);
         }
 
+        /// <summary>
+        /// A generic method that returns the item and its description as a tuple.
+        /// </summary>
+        /// <typeparam name="T">The type of the item (e.g., string).</typeparam>
+        /// <typeparam name="U">The type of the description (e.g., string).</typeparam>
+        /// <param name="item">The item to be described.</param>
+        /// <param name="description">The description of the item.</param>
+        /// <returns>A tuple containing the item and its description.</returns>
+        public static (T item, U description) GetItemInfo<T, U>(T item, U description)
+        {
+            return (item, description);
+        }
+
 
         static void Main(string[] args)
         {
@@ -134,6 +147,14 @@ namespace Generics
 
                         // Use a description related to the item name instead of repeating price
                         newItem.DisplayItemDescription("This is a fresh and premium quality product.");
+
+                        string itemName = "Laptop";
+                        string itemDescription = "A high-end gaming laptop.";
+
+                        var itemInfo = GetItemInfo(itemName, itemDescription);
+                        Console.WriteLine($"Item: {itemInfo.item}, Description: {itemInfo.description}");
+                        
+                        
 
                         index++;
                     }

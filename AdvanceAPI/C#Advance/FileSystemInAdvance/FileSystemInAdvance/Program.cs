@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 
 namespace FileSystemInDepth
 {
@@ -122,6 +123,9 @@ namespace FileSystemInDepth
                     // BinaryWriter and BinaryReader functionality (small addition)
                     WriteAndReadBinaryFile();
 
+                    // File Locking Scenario
+                    PerformFileLockingScenario(subDirectoryPath);
+
                 }
                 catch (UnauthorizedAccessException ex)
                 {
@@ -142,6 +146,22 @@ namespace FileSystemInDepth
                 // General exception handling
                 Console.WriteLine($"An unexpected error occurred: {ex.Message}");
             }
+
+
+            // file access scenario
+            string filePath = @"F:\AAA\BBB\lockedFile.txt";
+            try
+            {
+                using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                {
+                    Console.WriteLine("File opened successfully!");
+                }
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"File is locked: {ex.Message}");
+            }
+
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
@@ -188,11 +208,36 @@ namespace FileSystemInDepth
         }
 
         /// <summary>
+        /// Demonstrates file locking by creating and locking a file.
+        /// Prevents other processes from accessing the file while in use.
+        /// </summary>
+        /// <param name="directoryPath">The directory path where the locked file will be created.</param>
+        private static void PerformFileLockingScenario(string directoryPath)
+        {
+            string filePath = Path.Combine(directoryPath, "file.txt");
+            try
+            {
+                // Open a file with exclusive access, preventing other processes from using it.
+                using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite, FileShare.None))
+                {
+                    Console.WriteLine("File is locked and being accessed by this process.");
+                    Thread.Sleep(10000);
+                }
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"IOException: Another process is using the file. Error: {ex.Message}");
+            }
+        }
+
+        /// <summary>
         /// Demonstrates writing and reading data using BinaryWriter and BinaryReader.
         /// </summary>
         private static void WriteAndReadBinaryFile()
         {
             string filePath = @"F:/AAA/BBB/binaryDataFile.txt";
+
+            
 
             // Writing data using BinaryWriter
             using (BinaryWriter writer = new BinaryWriter(File.Open(filePath, FileMode.Create)))
