@@ -1,10 +1,8 @@
-﻿using System;
-using ORM.DTO;
+﻿using ORM.DTO;
 using ORM.Model.Enum;
 using ORM.POCO;
 using ORM.ServiceLayer;
-using System.Data;
-using ORM.Data;
+using System;
 
 namespace ORM
 {
