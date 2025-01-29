@@ -1,4 +1,9 @@
-﻿namespace FilterDemo
+﻿
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+
+namespace FilterDemo
 {
     public class Startup
     {
@@ -16,6 +21,17 @@
         {
             services.AddControllers();
 
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+                };
+            });
             // Add Swagger services
             services.AddSwaggerGen();
         }

@@ -6,3 +6,7 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSyste
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.csproj.CoreCompileInputs.cache
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.exe
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\bin\Debug\FileSystemInAdvance.exe.manifest
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\bin\Debug\FileSystemInAdvance.application
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.exe.manifest
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FileSystemInAdvance\FileSystemInAdvance\obj\Debug\FileSystemInAdvance.application

@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExtensionMethods
 {
     public class DisplayDictionary
     {
-        
+
         /// <summary>
         /// This method extends the functionality to display the contents of a dictionary.
         /// </summary>
