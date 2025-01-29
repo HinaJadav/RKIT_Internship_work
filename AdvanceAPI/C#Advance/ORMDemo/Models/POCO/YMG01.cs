@@ -4,11 +4,9 @@ namespace ORMDemo.Models.POCO
 {
     public class YMG01
     {
-        // <summary>
-        /// Represents the GAM01 entity.
-        /// </summary>
-        public class GAM01
-        {
+        
+
+       
             /// <summary>
             /// Gets or sets the primary key with auto-increment.
             /// </summary>
@@ -26,6 +24,6 @@ namespace ORMDemo.Models.POCO
             /// </summary>
             [Range(0, 20)]
             public int G01F03 { get; set; }
-        }
+        
     }
 }

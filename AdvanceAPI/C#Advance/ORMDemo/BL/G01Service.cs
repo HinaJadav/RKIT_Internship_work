@@ -1,6 +1,8 @@
-﻿using ORMDemo.Models;
+﻿using ORMDemo.DB;
+using ORMDemo.Models;
 using ORMDemo.Models.DTO;
 using ORMDemo.Models.POCO;
+using ServiceStack.OrmLite;
 using System;
 
 namespace ORMDemo.BL
@@ -14,10 +16,10 @@ namespace ORMDemo.BL
         public YMG01 PreSaveGame(DTOYMG01 dtoGame)
         {
             // Create a new instance of GAM01 POCO and map DTO values
-            var game = new YMG01
+            YMG01 game = new YMG01
             {
-                0102 = dtoGame.M01102,  // Mapping DTO field to POCO property
-                M01F03 = dtoGame.M01103   // Mapping DTO field to POCO property
+                G01F02 = dtoGame.G01102,  // Mapping DTO field to POCO property
+                G01F03 = dtoGame.G01103   // Mapping DTO field to POCO property
             };
 
             return game;  // Return the mapped POCO object
@@ -27,14 +29,14 @@ namespace ORMDemo.BL
         /// <summary>
         /// Validates the Game POCO to ensure it is valid before saving to the database.
         /// </summary>
-        public (bool IsValid, string Message) ValidateOnSaveGame(GAM01 game)
+        public (bool IsValid, string Message) ValidateOnSaveGame(YMG01 game)
         {
             // Check if the game name is empty
-            if (string.IsNullOrEmpty(game.M01F02))
+            if (string.IsNullOrEmpty(game.G01F02))
                 return (false, "Game name cannot be empty.");
 
             // Check if the number of players is greater than zero
-            if (game.M01F03 <= 0)
+            if (game.G01F03 <= 0)
                 return (false, "Number of player in team must be greater than zero.");
 
             // If both conditions are satisfied, return success message
@@ -45,14 +47,14 @@ namespace ORMDemo.BL
         /// <summary>
         /// Saves the Game POCO to the database and returns a response with the result.
         /// </summary>
-        public Response SaveGame(GAM01 game)
+        public Response SaveGame(YMG01 game)
         {
             Response response = new Response();
 
             try
             {
                 // Open a database connection and start a transaction
-                using (var db = DbConnection.OpenConnection())
+                using (var db = DBConnection.OpenConnection())
                 using (var trans = db.OpenTransaction())
                 {
                     // Save the game, if it exists it will update, otherwise insert a new record
@@ -61,7 +63,7 @@ namespace ORMDemo.BL
                 }
 
                 // Set the success message in the response
-                response.Message = $"Successfully saved game {game.M02F02}.";
+                response.Message = $"Successfully saved game {game.G01F02}.";
             }
             catch (Exception ex)
             {
@@ -77,12 +79,12 @@ namespace ORMDemo.BL
         /// <summary>
         /// Prepares the Game record by fetching it before deletion.
         /// </summary>
-        public GAM01 preDeleteGame(int id)
+        public YMG01 preDeleteGame(int id)
         {
-            using (var db = DbConnection.OpenConnection())
+            using (var db = DBConnection.OpenConnection())
             {
                 // Fetch the game record by its ID
-                return db.SingleById<GAM01>(id);
+                return db.SingleById<YMG01>(id);
             }
         }
 
@@ -90,7 +92,7 @@ namespace ORMDemo.BL
         /// <summary>
         /// Validates if the Game record can be deleted.
         /// </summary>
-        public (bool IsValid, string Message) ValidateOnDeleteGame(GAM01 game)
+        public (bool IsValid, string Message) ValidateOnDeleteGame(YMG01 game)
         {
             // If the game is null, it means it can't be deleted
             if (game == null)
@@ -110,18 +112,18 @@ namespace ORMDemo.BL
 
             try
             {
-                using (var db = DbConnection.OpenConnection())
+                using (var db = DBConnection.OpenConnection())
                 using (var trans = db.OpenTransaction())
                 {
                     // Fetch the game record by ID
-                    var game = db.SingleById<GAM01>(id);
+                    var game = db.SingleById<YMG01>(id);
                     if (game != null)
                     {
                         // If game exists, delete it from the database
                         db.Delete(game);
                         trans.Commit();  // Commit the transaction to save changes
                         // Set the success message
-                        response.Message = $"Game {game.M02F02} successfully deleted.";
+                        response.Message = $"Game {game.G01F02} successfully deleted.";
                     }
                     else
                     {
