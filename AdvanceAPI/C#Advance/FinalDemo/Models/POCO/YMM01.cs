@@ -21,9 +21,7 @@ namespace FinalDemo.Models.POCO
         [DecimalLength(10, 0)] // Precision 10, Scale 0 (whole numbers)
         public decimal M01F04 { get; set; } // contact number
 
-        [ForeignKey(typeof(YMR01))] // Removed quotes
-        public int M01F05 { get; set; } // role id
-
+        
         [ForeignKey(typeof(YMT01))] // Removed quotes
         public int M01F06 { get; set; } // team id
 
@@ -31,5 +29,8 @@ namespace FinalDemo.Models.POCO
         public DateTime M01F07 { get; set; } // joining date
 
         public bool M01F08 { get; set; } // isActive member or not 
+
+        [Required]
+        public string M01F09 { get; set; } // member password
     }
 }

@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\bl\\g01service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:bl\\g01service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\controllers\\g01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:controllers\\g01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|d:\\rkit\\rkit_internship_work\\advanceapi\\c#advance\\ormdemo\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ORMDemo||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ORMDemo||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -30,10 +38,6 @@
       "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:controllers\\p01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\controllers\\g01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:controllers\\g01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\models\\dto\\dtoymp01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:models\\dto\\dtoymp01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -48,10 +52,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\bl\\p01service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:bl\\p01service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\bl\\g01service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|solutionrelative:bl\\g01service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C62A68C-D584-4CD9-A5C2-246A8B6E52A2}|ORMDemo.csproj|D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\models\\poco\\ymg01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -84,7 +84,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,55 +107,21 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
               "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Web.config",
               "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-01-29T18:40:18.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "G01Controller.cs",
-              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Controllers\\G01Controller.cs",
-              "RelativeDocumentMoniker": "Controllers\\G01Controller.cs",
-              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Controllers\\G01Controller.cs",
-              "RelativeToolTip": "Controllers\\G01Controller.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:04:59.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SwaggerConfig.cs",
-              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\App_Start\\SwaggerConfig.cs",
-              "RelativeDocumentMoniker": "App_Start\\SwaggerConfig.cs",
-              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\App_Start\\SwaggerConfig.cs",
-              "RelativeToolTip": "App_Start\\SwaggerConfig.cs",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAQwPoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T19:16:17.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Views\\Web.config",
               "RelativeDocumentMoniker": "Views\\Web.config",
@@ -163,12 +129,11 @@
               "RelativeToolTip": "Views\\Web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-01-29T19:18:50.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T19:18:50.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "WebApiConfig.cs",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\App_Start\\WebApiConfig.cs",
               "RelativeDocumentMoniker": "App_Start\\WebApiConfig.cs",
@@ -176,12 +141,11 @@
               "RelativeToolTip": "App_Start\\WebApiConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:40:25.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T18:40:25.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Global.asax.cs",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Global.asax.cs",
               "RelativeDocumentMoniker": "Global.asax.cs",
@@ -189,12 +153,11 @@
               "RelativeToolTip": "Global.asax.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:57:27.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T18:57:27.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "P01Service.cs",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\BL\\P01Service.cs",
               "RelativeDocumentMoniker": "BL\\P01Service.cs",
@@ -202,38 +165,11 @@
               "RelativeToolTip": "BL\\P01Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:51:16.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:51:16.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\DB\\DBConnection.cs",
-              "RelativeDocumentMoniker": "DB\\DBConnection.cs",
-              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\DB\\DBConnection.cs",
-              "RelativeToolTip": "DB\\DBConnection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:46:43.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DTOYMP01.cs",
-              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Models\\DTO\\DTOYMP01.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\DTOYMP01.cs",
-              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Models\\DTO\\DTOYMP01.cs",
-              "RelativeToolTip": "Models\\DTO\\DTOYMP01.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:25:05.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ORMDemo",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\ORMDemo.csproj",
               "RelativeDocumentMoniker": "ORMDemo.csproj",
@@ -245,7 +181,77 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "G01Service.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\BL\\G01Service.cs",
+              "RelativeDocumentMoniker": "BL\\G01Service.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\BL\\G01Service.cs",
+              "RelativeToolTip": "BL\\G01Service.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwBEAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T03:51:30.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "G01Controller.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Controllers\\G01Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\G01Controller.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Controllers\\G01Controller.cs",
+              "RelativeToolTip": "Controllers\\G01Controller.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T18:04:59.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "SwaggerConfig.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\App_Start\\SwaggerConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\SwaggerConfig.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\App_Start\\SwaggerConfig.cs",
+              "RelativeToolTip": "App_Start\\SwaggerConfig.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAQwPoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T19:16:17.234Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\DB\\DBConnection.cs",
+              "RelativeDocumentMoniker": "DB\\DBConnection.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\DB\\DBConnection.cs",
+              "RelativeToolTip": "DB\\DBConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T03:46:43.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DTOYMP01.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Models\\DTO\\DTOYMP01.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\DTOYMP01.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Models\\DTO\\DTOYMP01.cs",
+              "RelativeToolTip": "Models\\DTO\\DTOYMP01.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T03:25:05.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "P01Controller.cs",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Controllers\\P01Controller.cs",
               "RelativeDocumentMoniker": "Controllers\\P01Controller.cs",
@@ -253,21 +259,7 @@
               "RelativeToolTip": "Controllers\\P01Controller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T18:05:17.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "G01Service.cs",
-              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\BL\\G01Service.cs",
-              "RelativeDocumentMoniker": "BL\\G01Service.cs",
-              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\BL\\G01Service.cs",
-              "RelativeToolTip": "BL\\G01Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:51:30.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T18:05:17.984Z"
             },
             {
               "$type": "Document",
@@ -279,12 +271,11 @@
               "RelativeToolTip": "Models\\POCO\\YMG01.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:23:22.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:23:22.518Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "DTOYMG01.cs",
               "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\AdvanceAPI\\C#Advance\\ORMDemo\\Models\\DTO\\DTOYMG01.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\DTOYMG01.cs",
@@ -292,8 +283,7 @@
               "RelativeToolTip": "Models\\DTO\\DTOYMG01.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:24:38.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:24:38.496Z"
             },
             {
               "$type": "Document",
@@ -305,8 +295,7 @@
               "RelativeToolTip": "Models\\POCO\\YMP01.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:23:36.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:23:36.643Z"
             },
             {
               "$type": "Document",
@@ -318,8 +307,7 @@
               "RelativeToolTip": "Models\\Enums\\OperationType.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwBMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:25:49.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:25:49.381Z"
             },
             {
               "$type": "Document",
@@ -331,8 +319,7 @@
               "RelativeToolTip": "Models\\Enums\\ModelType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:25:25.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:25:25.733Z"
             },
             {
               "$type": "Document",
@@ -344,8 +331,7 @@
               "RelativeToolTip": "Models\\Response.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T03:22:37.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T03:22:37.872Z"
             }
           ]
         }

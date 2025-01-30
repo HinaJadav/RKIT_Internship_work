@@ -1,0 +1,2 @@
+D:\RKIT\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.csproj.AssemblyReference.cache
+D:\RKIT\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.csproj.CoreCompileInputs.cache
