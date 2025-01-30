@@ -1,11 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ServiceStack.DataAnnotations;
 
 namespace FinalDemo.Models.POCO
 {
     // role entities 
     public class YMR01
     {
-        [Key]
+        [PrimaryKey]
         public int R01F01 { get; set; } // Role ID
 
         [Required]
