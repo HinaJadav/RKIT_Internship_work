@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Security&Cryptography")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e77995be41b37adc86f2d939581369fa6701689e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31874acfd5ee345504510bfd192c4a0771e27c1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Security&Cryptography")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Security&Cryptography")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

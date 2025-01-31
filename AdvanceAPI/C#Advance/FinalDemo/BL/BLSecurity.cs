@@ -6,14 +6,15 @@ using FinalDemo.Models.POCO;
 using FinalDemo.Security;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace FinalDemo.BL
 {
     public class BLSecurity
     {
-        private static readonly byte[] key = Convert.FromBase64String("U2VjcmV0S2V5MTIzNDU2Nzg5MDEyMw=="); // Base64 encoded 256-bit key
-        private static readonly byte[] iv = Convert.FromBase64String("Q3RjY3BvMTIzNDU2Nzg5MDEyMw==");   // Base64 encoded 128-bit IV
-        private static readonly int blockSize = 128; // Common block size for Rijndael
+        private static readonly byte[] key = Convert.FromBase64String("U2VjcmV0S2V5MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA=="); // 256-bit key (32 bytes)
+        private static readonly byte[] iv = Convert.FromBase64String("Q3RjY3BvMTIzNDU2Nzg5MDEyMw==");  // 128-bit IV (16 bytes)
+        //private static readonly int blockSize = 128; // Block size for Rijndael
 
         public YMM01 GetMemberByEmail(string email)
         {
@@ -27,10 +28,13 @@ namespace FinalDemo.BL
 
         public bool ValidatePassword(string plainPassword, string encryptedPassword)
         {
-            // Decrypt and compare password
-            var decryptedPassword = RijndaelSecurity.Decrypt(Convert.FromBase64String(encryptedPassword), key, iv, blockSize);
+            // Decrypt the stored encrypted password
+            string decryptedPassword = RijndaelSecurity.Decrypt(encryptedPassword);
+
+            // Compare the decrypted password with the plain text password
             return plainPassword == decryptedPassword;
         }
+
 
         public Response Login(DTOLogin loginDto)
         {

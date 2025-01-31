@@ -6,6 +6,8 @@ using FinalDemo.Security;
 using ServiceStack.OrmLite;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using static Mysqlx.Expect.Open.Types.Condition.Types;
 
 namespace FinalDemo.BL
 {
@@ -23,7 +25,7 @@ namespace FinalDemo.BL
                 M01F02 = dtoMember.M01102,
                 M01F03 = dtoMember.M01103,
                 M01F04 = decimal.Parse(dtoMember.M01104),
-                M01F06 = dtoMember.M01106,
+                
                 M01F07 = dtoMember.M01107,
                 M01F08 = dtoMember.M01108 == 1,
                 M01F09 = encryptedPassword // Store encrypted password
@@ -67,17 +69,13 @@ namespace FinalDemo.BL
         // Encrypt password using Rijndael encryption
         private string EncryptPassword(string password)
         {
-            // Specify the encryption key and IV (In real-world scenarios, ensure these are stored securely)
-            byte[] key = Convert.FromBase64String("your-256-bit-key-here"); // Example key
-            byte[] iv = Convert.FromBase64String("your-128-bit-iv-here");  // Example IV
-            int blockSize = 128;
+            // Encrypt password using RijndaelSecurity
+            string encryptedPassword = RijndaelSecurity.Encrypt(password);
 
-            // Use Rijndael encryption to encrypt the password
-            byte[] encryptedBytes = RijndaelSecurity.Encrypt(password, key, iv, blockSize);
-
-            // Convert encrypted byte array to a Base64 string for storage
-            return Convert.ToBase64String(encryptedBytes);
+            return encryptedPassword;
         }
+
+
 
 
 
@@ -148,7 +146,7 @@ namespace FinalDemo.BL
                         M01102 = m.M01F02,  // Full name
                         M01103 = m.M01F03,  // Email
                         M01104 = m.M01F04.ToString(),  // Contact number as string
-                        M01106 = m.M01F06,  // Team ID
+                       
                         M01107 = m.M01F07,  // Joining date
                         M01108 = m.M01F08 ? 1 : 0,  // Active status (converted to 1/0)
                         M01109 = m.M01F09  // Password (encrypted, not recommended to expose)

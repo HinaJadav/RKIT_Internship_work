@@ -53,9 +53,7 @@ namespace FinalDemo.DB
         {
             try
             {
-                // Create the GAM01 table if it does not exist
-                _db.CreateTableIfNotExists<YMT01>();
-
+               
                 // Create the PLA01 table if it does not exist
                 _db.CreateTableIfNotExists<YMM01>();
             }

@@ -21,9 +21,7 @@ namespace FinalDemo.Models.POCO
         [DecimalLength(10, 0)] // Precision 10, Scale 0 (whole numbers)
         public decimal M01F04 { get; set; } // contact number
 
-        
-        [ForeignKey(typeof(YMT01))] // Removed quotes
-        public int M01F06 { get; set; } // team id
+      
 
         [IgnoreOnUpdate]
         public DateTime M01F07 { get; set; } // joining date

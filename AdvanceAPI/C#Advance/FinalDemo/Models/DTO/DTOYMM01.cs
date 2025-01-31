@@ -9,7 +9,7 @@ namespace FinalDemo.Models.DTO
         
         public string M01103 { get; set; } // email
         public string M01104 { get; set; } // contact number
-        public int M01106 { get; set; } // team id / name
+        
         public DateTime M01107 { get; set; } // joining date
         public int M01108 { get; set; } // isActive member or not
 

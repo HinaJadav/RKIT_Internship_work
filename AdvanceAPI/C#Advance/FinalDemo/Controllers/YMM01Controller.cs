@@ -64,7 +64,7 @@ namespace FinalDemo.Controllers
                 editMemberModel.M01F02 = memberDto.M01102;
                 editMemberModel.M01F03 = memberDto.M01103;
                 editMemberModel.M01F04 = decimal.Parse(memberDto.M01104);
-                editMemberModel.M01F06 = memberDto.M01106;
+                
                 editMemberModel.M01F08 = memberDto.M01108 == 1;
 
                 var (isValidUpdateMember, updateMemberValidationMessage) = memberService.ValidateOnSaveMember(editMemberModel);
