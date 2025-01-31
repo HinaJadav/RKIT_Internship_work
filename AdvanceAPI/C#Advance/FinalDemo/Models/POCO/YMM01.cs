@@ -1,37 +1,34 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ServiceStack.DataAnnotations;
+using System;
 
 namespace FinalDemo.Models.POCO
 {
     // member entities
     public class YMM01
     {
-        [Key]
+        [PrimaryKey]
+        [AutoIncrement]
         public int M01F01 { get; set; } // id
 
         [Required]
         [StringLength(50)]
-        public string M01F02 { get; set; } // first name
+        public string M01F02 { get; set; } // full name
+
+
+        [Unique]
+        public string M01F03 { get; set; } // email
+
+        [DecimalLength(10, 0)] // Precision 10, Scale 0 (whole numbers)
+        public decimal M01F04 { get; set; } // contact number
+
+      
+
+        [IgnoreOnUpdate]
+        public DateTime M01F07 { get; set; } // joining date
+
+        public bool M01F08 { get; set; } // isActive member or not 
 
         [Required]
-        [StringLength(50)]
-        public string M01F03 { get; set; } // last name
-
-        [EmailAddress]
-        public string M01F04 { get; set; } // email
-
-        [MaxLength(10)]
-        public int M01F05 { get; set; } // contact number
-
-        [ForeignKey("YMR01")]
-        public int M01F06 { get; set; } // role id
-
-        [ForeignKey("YMT01")]
-        public int M01F07 { get; set; } // team id
-
-        public DateTime M01F08 { get; set; } // joining date
-
-        public bool M01F09 { get; set; } // isActive member or not 
+        public string M01F09 { get; set; } // member password
     }
 }

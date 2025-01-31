@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Web.Mvc;
 
 namespace FinalDemo.BL
 {
@@ -131,6 +132,8 @@ namespace FinalDemo.BL
             WriteData(data);
             return true;
         }
-        // delete by id 
+       
+
+        
     }
 }
