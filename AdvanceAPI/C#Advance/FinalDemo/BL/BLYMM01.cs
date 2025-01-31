@@ -163,6 +163,7 @@ namespace FinalDemo.BL
             using (var db = DBConnection.OpenConnection())
             {
                 // Select all YMM01 records
+                // Data comes into json format
                 var members = db.Select<YMM01>();  // Select all rows of YMM01
 
                 // Manually map the results from YMM01 to DTOYMM01

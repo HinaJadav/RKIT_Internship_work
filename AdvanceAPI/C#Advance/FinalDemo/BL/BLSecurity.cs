@@ -15,9 +15,6 @@ namespace FinalDemo.BL
     /// </summary>
     public class BLSecurity
     {
-        private static readonly byte[] key = Convert.FromBase64String("U2VjcmV0S2V5MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA=="); // 256-bit key (32 bytes)
-        private static readonly byte[] iv = Convert.FromBase64String("Q3RjY3BvMTIzNDU2Nzg5MDEyMw==");  // 128-bit IV (16 bytes)
-
         /// <summary>
         /// Retrieves a member by their email address.
         /// </summary>
