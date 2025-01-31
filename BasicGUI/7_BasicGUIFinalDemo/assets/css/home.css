@@ -73,7 +73,6 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: url("/7_BasicGUIFinalDemo/assets/images/bg.jpeg") center 50px / cover no-repeat fixed; */
     opacity: 0.7;
     /* Set desired opacity */
     pointer-events: none;

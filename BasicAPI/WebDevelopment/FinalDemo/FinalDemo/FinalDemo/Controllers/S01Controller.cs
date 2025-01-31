@@ -3,13 +3,8 @@ using FinalDemo.Models;
 using Microsoft.Web.Http;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net.Http.Headers;
-using System.Net.Http;
-using System.Net;
 using System.Runtime.Caching;
-using System.Web;
 using System.Web.Http;
 
 namespace FinalDemo.Controllers
@@ -187,6 +182,6 @@ namespace FinalDemo.Controllers
             return Ok("Student deleted successfully.");
         }
 
-       
+
     }
 }

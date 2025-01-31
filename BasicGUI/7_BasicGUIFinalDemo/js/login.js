@@ -90,9 +90,9 @@ function togglePasswordVisibility() {
 
   if (passwordInput.attr("type") === "password") {
     passwordInput.attr("type", "text");
-    toggleIcon.attr("src", "/7_BasicGUIFinalDemo/assets/images/show.png");
+    toggleIcon.attr("src", "/assets/images/show.png");
   } else {
     passwordInput.attr("type", "password");
-    toggleIcon.attr("src", "/7_BasicGUIFinalDemo/assets/images/hide.png");
+    toggleIcon.attr("src", "/assets/images/hide.png");
   }
 }

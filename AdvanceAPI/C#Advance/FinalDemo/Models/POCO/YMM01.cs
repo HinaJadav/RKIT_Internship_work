@@ -18,7 +18,7 @@ namespace FinalDemo.Models.POCO
         /// <summary>
         /// Full name of the member.
         /// </summary>
-        [Required]
+        [Required] // add into dto 
         [StringLength(50)]
         public string M01F02 { get; set; }
 
