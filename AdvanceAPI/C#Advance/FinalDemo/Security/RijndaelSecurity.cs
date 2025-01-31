@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 namespace FinalDemo.Security
 {
     /// <summary>
-    /// Provides methods for encrypting and decrypting data using the Rijndael encryption algorithm.
+    /// Provides methods for encrypting and decrypting data using the Rijndael encryption algorithm (AES-256).
     /// </summary>
     public static class RijndaelSecurity
     {

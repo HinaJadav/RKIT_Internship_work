@@ -9,9 +9,18 @@ using System.Collections.Generic;
 
 namespace FinalDemo.BL
 {
+    /// <summary>
+    /// Business Logic for managing YMM01 (Member) entities.
+    /// Includes methods for validating, saving, deleting, and fetching member data.
+    /// </summary>
     public class BLYMM01
     {
-        // Convert DTO to POCO for saving
+        /// <summary>
+        /// Converts DTO (Data Transfer Object) to POCO (Plain Old CLR Object) for saving.
+        /// Encrypts the password before storing it.
+        /// </summary>
+        /// <param name="dtoMember">The DTO containing member data.</param>
+        /// <returns>A POCO (YMM01) object populated with the data from the DTO.</returns>
         public YMM01 PreSaveMember(DTOYMM01 dtoMember)
         {
             // Encrypt the password before storing it
@@ -23,14 +32,17 @@ namespace FinalDemo.BL
                 M01F02 = dtoMember.M01102,
                 M01F03 = dtoMember.M01103,
                 M01F04 = decimal.Parse(dtoMember.M01104),
-
                 M01F07 = dtoMember.M01107,
                 M01F08 = dtoMember.M01108 == 1,
                 M01F09 = encryptedPassword // Store encrypted password
             };
         }
 
-        // Validate POCO before saving
+        /// <summary>
+        /// Validates member data before saving it to the database.
+        /// </summary>
+        /// <param name="member">The member object to validate.</param>
+        /// <returns>A tuple containing a boolean indicating validity and a message.</returns>
         public (bool IsValid, string Message) ValidateOnSaveMember(YMM01 member)
         {
             if (string.IsNullOrEmpty(member.M01F02))
@@ -42,7 +54,11 @@ namespace FinalDemo.BL
             return (true, "Member data validation passed.");
         }
 
-        // Save Member to Database
+        /// <summary>
+        /// Saves a member to the database.
+        /// </summary>
+        /// <param name="member">The member object to save.</param>
+        /// <returns>A response indicating the result of the save operation.</returns>
         public Response SaveMember(YMM01 member)
         {
             Response response = new Response();
@@ -64,7 +80,11 @@ namespace FinalDemo.BL
             return response;
         }
 
-        // Encrypt password using Rijndael encryption
+        /// <summary>
+        /// Encrypts the password using Rijndael encryption.
+        /// </summary>
+        /// <param name="password">The plain password to encrypt.</param>
+        /// <returns>The encrypted password.</returns>
         private string EncryptPassword(string password)
         {
             // Encrypt password using RijndaelSecurity
@@ -73,11 +93,11 @@ namespace FinalDemo.BL
             return encryptedPassword;
         }
 
-
-
-
-
-        // Fetch Member before deletion
+        /// <summary>
+        /// Fetches a member from the database before deletion.
+        /// </summary>
+        /// <param name="id">The ID of the member to fetch.</param>
+        /// <returns>The member to be deleted.</returns>
         public YMM01 PreDeleteMember(int id)
         {
             using (var db = DBConnection.OpenConnection())
@@ -86,7 +106,11 @@ namespace FinalDemo.BL
             }
         }
 
-        // Validate Member before deletion
+        /// <summary>
+        /// Validates a member before deletion.
+        /// </summary>
+        /// <param name="member">The member object to validate.</param>
+        /// <returns>A tuple indicating whether the deletion is valid and a message.</returns>
         public (bool IsValid, string Message) ValidateOnDeleteMember(YMM01 member)
         {
             if (member == null)
@@ -94,7 +118,11 @@ namespace FinalDemo.BL
             return (true, "Member can be deleted.");
         }
 
-        // Delete Member from Database
+        /// <summary>
+        /// Deletes a member from the database.
+        /// </summary>
+        /// <param name="id">The ID of the member to delete.</param>
+        /// <returns>A response indicating the result of the delete operation.</returns>
         public Response DeleteMember(int id)
         {
             Response response = new Response();
@@ -125,6 +153,10 @@ namespace FinalDemo.BL
             return response;
         }
 
+        /// <summary>
+        /// Fetches all members from the database.
+        /// </summary>
+        /// <returns>A list of DTOYMM01 objects representing all members.</returns>
         public List<DTOYMM01> GetAllMembers()
         {
             // Fetching all member data from the database
@@ -144,7 +176,6 @@ namespace FinalDemo.BL
                         M01102 = m.M01F02,  // Full name
                         M01103 = m.M01F03,  // Email
                         M01104 = m.M01F04.ToString(),  // Contact number as string
-
                         M01107 = m.M01F07,  // Joining date
                         M01108 = m.M01F08 ? 1 : 0,  // Active status (converted to 1/0)
                         M01109 = m.M01F09  // Password (encrypted, not recommended to expose)
@@ -155,9 +186,5 @@ namespace FinalDemo.BL
                 return memberDtos;
             }
         }
-
-
-
-
     }
 }

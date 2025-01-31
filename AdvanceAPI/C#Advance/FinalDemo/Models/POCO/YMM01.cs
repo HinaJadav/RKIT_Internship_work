@@ -3,32 +3,52 @@ using System;
 
 namespace FinalDemo.Models.POCO
 {
-    // member entities
+    /// <summary>
+    /// Represents a member entity with personal and account details.
+    /// </summary>
     public class YMM01
     {
+        /// <summary>
+        /// Primary key - Unique member ID.
+        /// </summary>
         [PrimaryKey]
         [AutoIncrement]
-        public int M01F01 { get; set; } // id
+        public int M01F01 { get; set; }
 
+        /// <summary>
+        /// Full name of the member.
+        /// </summary>
         [Required]
         [StringLength(50)]
-        public string M01F02 { get; set; } // full name
+        public string M01F02 { get; set; }
 
-
+        /// <summary>
+        /// Unique email address of the member.
+        /// </summary>
         [Unique]
-        public string M01F03 { get; set; } // email
+        public string M01F03 { get; set; }
 
-        [DecimalLength(10, 0)] // Precision 10, Scale 0 (whole numbers)
-        public decimal M01F04 { get; set; } // contact number
+        /// <summary>
+        /// Contact number with a precision of 10 digits.
+        /// </summary>
+        [DecimalLength(10, 0)]
+        public decimal M01F04 { get; set; }
 
-      
-
+        /// <summary>
+        /// Date when the member joined. Cannot be updated.
+        /// </summary>
         [IgnoreOnUpdate]
-        public DateTime M01F07 { get; set; } // joining date
+        public DateTime M01F07 { get; set; }
 
-        public bool M01F08 { get; set; } // isActive member or not 
+        /// <summary>
+        /// Indicates if the member is active.
+        /// </summary>
+        public bool M01F08 { get; set; }
 
+        /// <summary>
+        /// Member's password (Required).
+        /// </summary>
         [Required]
-        public string M01F09 { get; set; } // member password
+        public string M01F09 { get; set; }
     }
 }

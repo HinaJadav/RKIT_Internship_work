@@ -18,12 +18,16 @@ namespace FinalDemo.Controllers
         private readonly BLYMM01 memberService;
         private readonly BLSecurity loginService;
 
+        // Constructor to initialize services
         public YMM01Controller()
         {
             memberService = new BLYMM01();
             loginService = new BLSecurity();
         }
 
+        /// <summary>
+        /// Handles user login requests.
+        /// </summary>
         [HttpPost]
         [Route("login")]
         public IHttpActionResult Login(DTOLogin loginDto)
@@ -35,8 +39,9 @@ namespace FinalDemo.Controllers
             return Ok(response.Message);
         }
 
-
-        // Add Member
+        /// <summary>
+        /// Adds a new member to the system.
+        /// </summary>
         [HttpPost]
         [Route("add")] // POST api/member/add
         public IHttpActionResult AddMember(DTOYMM01 memberDto)
@@ -53,7 +58,9 @@ namespace FinalDemo.Controllers
             return BadRequest(memberValidationMessage);
         }
 
-        // Update Member
+        /// <summary>
+        /// Updates an existing member's information.
+        /// </summary>
         [HttpPut]
         [Route("update/{id}")] // PUT api/member/update/{id}
         public IHttpActionResult UpdateMember(int id, DTOYMM01 memberDto)
@@ -64,7 +71,6 @@ namespace FinalDemo.Controllers
                 editMemberModel.M01F02 = memberDto.M01102;
                 editMemberModel.M01F03 = memberDto.M01103;
                 editMemberModel.M01F04 = decimal.Parse(memberDto.M01104);
-                
                 editMemberModel.M01F08 = memberDto.M01108 == 1;
 
                 var (isValidUpdateMember, updateMemberValidationMessage) = memberService.ValidateOnSaveMember(editMemberModel);
@@ -81,7 +87,9 @@ namespace FinalDemo.Controllers
             return NotFound();
         }
 
-        // Delete Member
+        /// <summary>
+        /// Deletes an existing member from the system.
+        /// </summary>
         [HttpDelete]
         [Route("delete/{id}")] // DELETE api/member/delete/{id}
         public IHttpActionResult DeleteMember(int id)
@@ -98,6 +106,9 @@ namespace FinalDemo.Controllers
             return BadRequest(deleteMemberValidationMessage);
         }
 
+        /// <summary>
+        /// Downloads all member data as a JSON file.
+        /// </summary>
         [HttpGet]
         [Route("download-data")]
         public IHttpActionResult DownloadData()
@@ -105,7 +116,7 @@ namespace FinalDemo.Controllers
             try
             {
                 // Fetch all the data
-                List<DTOYMM01> allMembers = memberService.GetAllMembers();  // Fetches all member data
+                List<DTOYMM01> allMembers = memberService.GetAllMembers();
 
                 // Serialize the data to JSON format
                 string serializedData = JsonConvert.SerializeObject(allMembers);
@@ -126,13 +137,12 @@ namespace FinalDemo.Controllers
 
                 // Return the URL of the file for downloading
                 var fileUrl = Url.Content("~/App_Data/" + fileName);
-                return Ok(new { fileUrl });  // Returning the URL so the user can download the file
+                return Ok(new { fileUrl });
             }
             catch (Exception ex)
             {
                 return InternalServerError(ex);  // Return error details
             }
         }
-
     }
 }
