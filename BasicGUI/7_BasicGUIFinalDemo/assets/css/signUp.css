@@ -54,7 +54,7 @@ select {
     -moz-appearance: none;
     padding-right: 30px;
     /* Space for custom arrow */
-    background: url('/7_BasicGUIFinalDemo/assets/images/dropdown-arrow.png') no-repeat right 10px center;
+    background: url('/assets/images/dropdown-arrow.png') no-repeat right 10px center;
     background-color: #f9f9f9;
     cursor: pointer;
 }

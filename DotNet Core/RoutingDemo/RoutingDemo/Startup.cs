@@ -36,11 +36,25 @@
             // Enable Swagger UI middleware
             app.UseSwaggerUI();
 
+            
             app.UseRouting();
+
+            // Conventional routing : 
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                // Default route
+                // http://localhost:25800/
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                // Custom route for 'About' section
+                // http://localhost:25800/about-us
+                endpoints.MapControllerRoute(
+                    name: "aboutRoute",
+                    pattern: "about-us",
+                    defaults: new { controller = "Home", action = "About" });
             });
         }
     }

@@ -1,6 +1,6 @@
-﻿using Microsoft.Web.Http;
-using FinalDemo.BL;
+﻿using FinalDemo.BL;
 using FinalDemo.Models;
+using Microsoft.Web.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,10 @@ namespace FinalDemo.Controllers
         public S01Controller()
         {
             _service = new S01Service();
+
         }
+
+
 
         /// <summary>
         /// Allows a user to sign in by validating their username and password. 
@@ -178,5 +181,7 @@ namespace FinalDemo.Controllers
 
             return Ok("Student deleted successfully.");
         }
+
+
     }
 }

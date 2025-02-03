@@ -17,7 +17,7 @@ namespace FinalDemo.BL
         public static string GenerateToken(string username)
         {
             // Secret key for signing the JWT token 
-            var secretKey = "9c1a19a1bc0ed85788a01293fa94d483ba05c882020fe1bef6a7ab0e1911bd2d!"; 
+            var secretKey = "9c1a19a1bc0ed85788a01293fa94d483ba05c882020fe1bef6a7ab0e1911bd2d!";
 
             // Convert the secret key into a SymmetricSecurityKey
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));

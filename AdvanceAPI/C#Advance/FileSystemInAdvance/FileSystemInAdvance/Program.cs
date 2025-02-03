@@ -2,6 +2,8 @@
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Text.Json;
+using System.Collections.Generic;
 
 namespace FileSystemInDepth
 {
@@ -126,6 +128,12 @@ namespace FileSystemInDepth
                     // File Locking Scenario
                     PerformFileLockingScenario(subDirectoryPath);
 
+                    // For read and write JSON data
+                    WriteAndReadJsonFile();
+
+                    // For read and write dictionary format data
+                    WriteAndReadKeyValueJsonFile();
+
                 }
                 catch (UnauthorizedAccessException ex)
                 {
@@ -168,6 +176,90 @@ namespace FileSystemInDepth
         }
 
         /// <summary>
+        /// User model for JSON serialization.
+        /// </summary>
+        public class User
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string Email { get; set; }
+        }
+
+        // A
+
+        /// <summary>
+        /// Demonstrates writing and reading JSON data using file operations.
+        /// </summary>
+        private static void WriteAndReadJsonFile()
+        {
+            string filePath = @"F:/AAA/BBB/userData.json";
+
+            // Create a sample object
+            var user = new User
+            {
+                Id = 1,
+                Name = "Priyank Shah",
+                Email = "priyank.shah@example.com"
+            };
+
+            // Writing JSON data to a file
+            string jsonData = JsonSerializer.Serialize(user, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(filePath, jsonData);
+            Console.WriteLine("\nJSON data written to file 'userData.json'");
+
+            // Reading JSON data from a file
+            string jsonFromFile = File.ReadAllText(filePath);
+            User userRead = JsonSerializer.Deserialize<User>(jsonFromFile);
+
+            // Displaying the data read from the file
+            Console.WriteLine("\nJSON data read from file 'userData.json':");
+            Console.WriteLine($"ID: {userRead.Id}");
+            Console.WriteLine($"Name: {userRead.Name}");
+            Console.WriteLine($"Email: {userRead.Email}");
+        }
+
+        // A
+
+        /// <summary>
+        /// Demonstrates writing and reading JSON data with key-value pairs using file operations.
+        /// </summary>
+        private static void WriteAndReadKeyValueJsonFile()
+        {
+            string filePath = @"F:/AAA/BBB/keyValueData.json";
+
+            try
+            {
+                // Creating a dictionary with key-value pairs
+                var keyValueData = new List<KeyValuePair<int, string>>()
+                {
+                    new KeyValuePair<int, string>(1, "Anu Shah"),
+                    new KeyValuePair<int, string>(2, "Nahii Shah"),
+                    new KeyValuePair<int, string>(3, "Suresh Jadav")
+                };
+
+                // Writing JSON data to a file
+                string jsonData = JsonSerializer.Serialize(keyValueData, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(filePath, jsonData);
+                Console.WriteLine("\nKey-Value JSON data written to file 'keyValueData.json'");
+
+                // Reading JSON data from the file
+                string jsonFromFile = File.ReadAllText(filePath);
+                var keyValueRead = JsonSerializer.Deserialize<List<KeyValuePair<int, string>>>(jsonFromFile);
+
+                // Displaying the data read from the file
+                Console.WriteLine("\nKey-Value JSON data read from file 'keyValueData.json':");
+                foreach (var item in keyValueRead)
+                {
+                    Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
+        /// <summary>
         /// Demonstrates FileStream operations: writing data to a file and reading it back.
         /// </summary>
         /// <param name="directoryPath">The directory path where the file will be created.</param>
@@ -206,6 +298,8 @@ namespace FileSystemInDepth
                 Console.WriteLine($"I/O error occurred during FileStream operations. Error: {ex.Message}");
             }
         }
+
+        // A
 
         /// <summary>
         /// Demonstrates file locking by creating and locking a file.

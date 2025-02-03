@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\routingdemo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\routingdemo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\controllers\\routingconstraintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\controllers\\routingconstraintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|d:\\rkit\\rkit_internship_work\\dotnet core\\routingdemo\\routingdemo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4ABAF54F-9130-49F1-AA3A-E51B4927182E}|RoutingDemo\\RoutingDemo.csproj|solutionrelative:routingdemo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoutingDemo",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\RoutingDemo.csproj",
+              "RelativeDocumentMoniker": "RoutingDemo\\RoutingDemo.csproj",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\RoutingDemo.csproj",
+              "RelativeToolTip": "RoutingDemo\\RoutingDemo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-03T19:11:05.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "RoutingDemo\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "RoutingDemo\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T19:08:37.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoutingConstraintsController.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Controllers\\RoutingConstraintsController.cs",
+              "RelativeDocumentMoniker": "RoutingDemo\\Controllers\\RoutingConstraintsController.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Controllers\\RoutingConstraintsController.cs",
+              "RelativeToolTip": "RoutingDemo\\Controllers\\RoutingConstraintsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwv1IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:55:32.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RoutingDemo\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RoutingDemo\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-03T17:55:33.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Program.cs",
+              "RelativeDocumentMoniker": "RoutingDemo\\Program.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Program.cs",
+              "RelativeToolTip": "RoutingDemo\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:55:33.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Startup.cs",
+              "RelativeDocumentMoniker": "RoutingDemo\\Startup.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Startup.cs",
+              "RelativeToolTip": "RoutingDemo\\Startup.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:55:33.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "RoutingDemo\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "RoutingDemo\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:55:33.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "RoutingDemo\\appsettings.Development.json",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\appsettings.Development.json",
+              "RelativeToolTip": "RoutingDemo\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-03T17:55:33.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "RoutingDemo\\Models\\Student.cs",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\Models\\Student.cs",
+              "RelativeToolTip": "RoutingDemo\\Models\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T17:55:33.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\appsettings.json",
+              "RelativeDocumentMoniker": "RoutingDemo\\appsettings.json",
+              "ToolTip": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\appsettings.json",
+              "RelativeToolTip": "RoutingDemo\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-03T17:55:33.27Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

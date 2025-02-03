@@ -131,6 +131,8 @@ namespace FinalDemo.BL
             WriteData(data);
             return true;
         }
-        // delete by id 
+
+
+
     }
 }

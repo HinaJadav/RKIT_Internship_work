@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Amit Sharma",
+    "Password": "password123"
+  },
+  {
+    "Id": 2,
+    "Name": "Priya Verma",
+    "Password": "securePass@123"
+  },
+  {
+    "Id": 3,
+    "Name": "Rahul Mehta",
+    "Password": "Rahul@987"
+  },
+  {
+    "Id": 4,
+    "Name": "Sneha Patil",
+    "Password": "Sneha123"
+  },
+  {
+    "Id": 5,
+    "Name": "Vikram Singh",
+    "Password": "VikramPass!"
+  },
+  {
+    "Id": 6,
+    "Name": "Neha Joshi",
+    "Password": "Neha@456"
+  }
+]

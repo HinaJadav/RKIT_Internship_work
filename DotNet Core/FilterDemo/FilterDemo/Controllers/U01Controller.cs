@@ -1,27 +1,41 @@
-﻿using FilterDemo.Filters;
+﻿using FilterDemo.BL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using FilterDemo.Models;
+using FilterDemo.Filters;
 
 namespace FilterDemo.Controllers
 {
-    public class U01Controller : Controller
+    [ApiController]
+    [Route("u01api")]
+    public class U01Controller : ControllerBase
     {
-        [Route("api/secure")]
-        [ApiController]
-        public class SecureController : ControllerBase
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] YMU01 user)
         {
-            [HttpGet("admin")]
-            [AuthorizationFilter("Admin")]
-            public IActionResult AdminEndpoint()
+            if (user == null)
             {
-                return Ok("Hello, Admin! You have access.");
+                return BadRequest();
             }
 
-            [HttpGet("manager")]
-            [AuthorizationFilter("Manager")]
-            public IActionResult ManagerEndpoint()
+            if (user.U01F01 == "admin" && user.U01F02 == "password")
             {
-                return Ok("Hello, Manager! You have access.");
+                // Generate the token using JwtHelper
+                var token = JwtHelper.GenerateToken(user.U01F01);
+                return Ok(new { Token = token });
             }
+
+            return Unauthorized();
+        }
+
+        [HttpGet("secure-data")]
+        [JwtAuthorization]  // Custom JWT Authorization Filter
+        [CustomAuthorizationFilter] // Requires Admin role
+        [ServiceFilter(typeof(CustomResourceFilter))] // Custom Resource Filter
+        [ServiceFilter(typeof(CustomActionFilter))] // Custom Action Filter
+        public IActionResult SecureEndpoint()
+        {
+            return Ok("This is secured data for Admins.");
         }
     }
 }

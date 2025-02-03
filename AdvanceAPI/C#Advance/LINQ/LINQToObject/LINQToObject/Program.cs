@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Xml.Schema;
 
+// linq to link of objects
 namespace LINQToObject
 {
     public class Program
@@ -14,14 +17,18 @@ namespace LINQToObject
                 new Student(1, "Aarav Sharma", 8.5, 120000, 600000, true, "Male", 1),
                 new Student(2, "Ishita Verma", 9.2, 110000, 750000, true, "Female", 2),
                 new Student(3, "Rohan Singh", 7.8, 115000, 550000, true, "Male", 3),
-                new Student(4, "Ananya Gupta", 8.1, 118000, 0, false, "Female", 1),
+                new Student(4, "Ananya Gupta", 9.2, 118000, 0, false, "Female", 1),
                 new Student(5, "Vivaan Patel", 9.0, 112000, 800000, true, "Male", 2),
                 new Student(6, "Sanya Joshi", 7.5, 125000, 0, false, "Female", 3),
                 new Student(7, "Kabir Kumar", 8.8, 119000, 720000, true, "Male", 1),
                 new Student(8, "Priya Mehta", 8.3, 121000, 0, false, "Female", 2),
                 new Student(9, "Aditya Roy", 9.1, 116000, 780000, true, "Male", 3),
-                new Student(10, "Riya Jain", 10.0, 122000, 0, false, "Female", 1)
+                new Student(10, "Riya Jain", 6.0, 122000, 0, false, "Female", 1)
             };
+            // cpi highest, 
+            Student ans = students.Where(stu => stu.Gender == "Female").OrderByDescending(stu => stu.CPI).ThenByDescending(stu => stu.Package).FirstOrDefault();
+
+            Console.WriteLine(ans.Name);
 
             // Print all student information 
             foreach (var student in students)

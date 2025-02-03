@@ -199,19 +199,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hina.j\\.nuget\\packages\\": {}
+    "C:\\Users\\hina2\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\RoutingDemo.csproj",
+      "projectUniqueName": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\RoutingDemo.csproj",
       "projectName": "RoutingDemo",
-      "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\RoutingDemo.csproj",
-      "packagesPath": "C:\\Users\\hina.j\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\obj\\",
+      "projectPath": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\RoutingDemo.csproj",
+      "packagesPath": "C:\\Users\\hina2\\.nuget\\packages\\",
+      "outputPath": "D:\\RKIT\\RKIT_Internship_work\\DotNet Core\\RoutingDemo\\RoutingDemo\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\hina.j\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hina2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -231,7 +236,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net7.0": {
@@ -269,7 +280,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
