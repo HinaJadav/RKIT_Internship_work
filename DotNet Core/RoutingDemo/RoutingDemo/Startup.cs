@@ -39,11 +39,15 @@
             
             app.UseRouting();
 
-            // Conventional routing : 
+            // Routing : 
 
             app.UseEndpoints(endpoints =>
             {
-                // Default route
+                // 1) Conventional routing 
+                // # Enable comments for Conventional routing  
+
+
+                /*// Default route
                 // http://localhost:25800/
                 endpoints.MapControllerRoute(
                     name: "default",
@@ -54,7 +58,13 @@
                 endpoints.MapControllerRoute(
                     name: "aboutRoute",
                     pattern: "about-us",
-                    defaults: new { controller = "Home", action = "About" });
+                    defaults: new { controller = "Home", action = "About" });*/
+
+
+                // # Disable below line during Conventional routing
+
+                // 2) Attribute routing 
+                endpoints.MapControllers();
             });
         }
     }

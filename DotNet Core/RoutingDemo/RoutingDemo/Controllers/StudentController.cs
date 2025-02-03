@@ -59,15 +59,18 @@ namespace RoutingDemo.Controllers
             new Student { Id = 2, FirstName = "Jane", LastName = "Smith", EducationInfo = "BA Economics" }
         };
 
+        // Route name: use to generate a URL based on a specific route
+  
         ///<summary>
         /// Simple route that returns a welcome message.
         /// Accessed via: GET api/handle-routes/welcome
         /// </summary>
-        [HttpGet("welcome")]
+        [HttpGet("welcome", Name = "GetWelcomeMessage")]
         public IActionResult WelcomeMessage()
         {
             return Ok("Welcome to the Student Management System!");
         }
+
 
         ///<summary>
         /// Routing with one variable for student ID.
