@@ -6,3 +6,11 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQ
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataSets\LINQToDataSets\obj\Debug\LINQToDataSets.csproj.CoreCompileInputs.cache
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataSets\LINQToDataSets\obj\Debug\LINQToDataSets.exe
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataSets\LINQToDataSets\obj\Debug\LINQToDataSets.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\bin\Debug\LINQToDataSets.exe.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\bin\Debug\LINQToDataSets.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\bin\Debug\LINQToDataSets.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\obj\Debug\LINQToDataSets.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\obj\Debug\LINQToDataSets.csproj.SuggestedBindingRedirects.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\obj\Debug\LINQToDataSets.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\obj\Debug\LINQToDataSets.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\LINQ\LINQToDataTable\LINQToDataSets\obj\Debug\LINQToDataSets.pdb

@@ -9,6 +9,8 @@ namespace FileDownload
         {
             // Call the method to simulate file download
             DownloadFile();
+
+            
         }
 
         /// <summary>

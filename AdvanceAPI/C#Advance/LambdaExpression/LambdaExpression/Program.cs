@@ -115,6 +115,17 @@ namespace LambdaExpression
                 Console.WriteLine($"Name: {user.Name}, Email: {user.Email}, Password: {user.Password}");
             }
 
+            // A
+
+            /// <summary>
+            /// Using the 'new' keyword to create a new object (anonymous type) inside the lambda expression.
+            /// </summary>
+            var person = new { Name = "Anu", Email = "annu@gmail.com", Password = "anu@123" };
+
+            Console.WriteLine("\nName: " + person.Name);
+            Console.WriteLine("Email: " + person.Email);
+            Console.WriteLine("Password: " + person.Password);
+
             Console.ReadKey();
         }
     }
