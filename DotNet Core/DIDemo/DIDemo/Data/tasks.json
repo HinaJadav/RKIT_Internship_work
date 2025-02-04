@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Title": "Study for Math Exam",
+    "Description": "Review chapters 1 to 5 and practice problems.",
+    "IsCompleted": false
+  },
+  {
+    "Id": 2,
+    "Title": "Read History Chapter 3",
+    "Description": "Read the assigned chapter and make notes for the upcoming quiz.",
+    "IsCompleted": true
+  },
+  {
+    "Id": 3,
+    "Title": "Write English Essay",
+    "Description": "Write a 1000-word essay on the topic 'The Role of Technology'.",
+    "IsCompleted": false
+  },
+  {
+    "Id": 4,
+    "Title": "Prepare for Science Lab",
+    "Description": "Go through the lab manual and prepare the materials for the experiment.",
+    "IsCompleted": true
+  },
+  {
+    "Id": 5,
+    "Title": "Revise Programming Notes",
+    "Description": "Go over the notes from the last programming class and do practice coding exercises.",
+    "IsCompleted": false
+  }
+]

@@ -100,7 +100,7 @@ namespace ActionMethodDemo.Controllers
         }
 
 
-        /// <summary>
+       /* /// <summary>
         /// Provides an API endpoint to return a filtered list of products based on query parameters.
         /// Supports filtering by name, price range, sorting, and pagination.
         /// https://localhost:7202/Product/GetProducts/products?search=phone&sortBy=Price&sortOrder=desc&page=1&pageSize=5
@@ -147,6 +147,6 @@ namespace ActionMethodDemo.Controllers
                 PageSize = pageSize,
                 Products = pagedResult
             });
-        }
+        }*/
     }
 }
