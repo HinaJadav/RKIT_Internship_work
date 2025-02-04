@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EaIYXWX143bDq/nqi6iqqmtMmrZLwUpD7hwYZvrIJ7pLb4QB2kelI8g/NPuxGtDjcSb3IH2pn8AYi0qgDhm9JQ==",
+  "dgSpecHash": "3LJabb8PbRzanJX7oYV335lM+jdcqOKRRPdbI0oiWy+KgQwSFUBkPT3eWFKkxuy2p9rjmEzU6H6DZsnd/IDuDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem\\UserManagementSystem\\ControllerInitializationDemo.csproj",
+  "projectFilePath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem_ControllerInitiallizerDemo\\UserManagementSystem\\ControllerInitializationDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hina.j\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
     "C:\\Users\\hina.j\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

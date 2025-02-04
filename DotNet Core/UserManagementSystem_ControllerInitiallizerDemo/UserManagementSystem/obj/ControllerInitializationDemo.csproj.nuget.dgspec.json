@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem\\UserManagementSystem\\ControllerInitializationDemo.csproj": {}
+    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem_ControllerInitiallizerDemo\\UserManagementSystem\\ControllerInitializationDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem\\UserManagementSystem\\ControllerInitializationDemo.csproj": {
+    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem_ControllerInitiallizerDemo\\UserManagementSystem\\ControllerInitializationDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem\\UserManagementSystem\\ControllerInitializationDemo.csproj",
+        "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem_ControllerInitiallizerDemo\\UserManagementSystem\\ControllerInitializationDemo.csproj",
         "projectName": "ControllerInitializationDemo",
-        "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem\\UserManagementSystem\\ControllerInitializationDemo.csproj",
+        "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem_ControllerInitiallizerDemo\\UserManagementSystem\\ControllerInitializationDemo.csproj",
         "packagesPath": "C:\\Users\\hina.j\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem\\UserManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\UserManagementSystem_ControllerInitiallizerDemo\\UserManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hina.j\\AppData\\Roaming\\NuGet\\NuGet.Config",
