@@ -10,6 +10,14 @@ using System.Security.Cryptography;
 
 namespace FinalDemo.BL
 {
+<<<<<<< HEAD
+    public class BLSecurity
+    {
+        private static readonly byte[] key = Convert.FromBase64String("U2VjcmV0S2V5MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA=="); // 256-bit key (32 bytes)
+        private static readonly byte[] iv = Convert.FromBase64String("Q3RjY3BvMTIzNDU2Nzg5MDEyMw==");  // 128-bit IV (16 bytes)
+        //private static readonly int blockSize = 128; // Block size for Rijndael
+
+=======
     /// <summary>
     /// Provides business logic related to member login and password validation.
     /// </summary>
@@ -20,6 +28,7 @@ namespace FinalDemo.BL
         /// </summary>
         /// <param name="email">The email of the member.</param>
         /// <returns>A member object if found, otherwise null.</returns>
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
         public YMM01 GetMemberByEmail(string email)
         {
             using (var db = DBConnection.OpenConnection())
@@ -29,12 +38,16 @@ namespace FinalDemo.BL
             }
         }
 
+<<<<<<< HEAD
+
+=======
         /// <summary>
         /// Validates the plain password by comparing it to the decrypted stored password.
         /// </summary>
         /// <param name="plainPassword">The plain text password provided by the user.</param>
         /// <param name="encryptedPassword">The encrypted password stored in the database.</param>
         /// <returns>True if the passwords match, otherwise false.</returns>
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
         public bool ValidatePassword(string plainPassword, string encryptedPassword)
         {
             // Decrypt the stored encrypted password
@@ -44,11 +57,15 @@ namespace FinalDemo.BL
             return plainPassword == decryptedPassword;
         }
 
+<<<<<<< HEAD
+
+=======
         /// <summary>
         /// Logs in a member by validating their email and password.
         /// </summary>
         /// <param name="loginDto">The login credentials (email and password).</param>
         /// <returns>A response indicating the login result.</returns>
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
         public Response Login(DTOLogin loginDto)
         {
             var member = GetMemberByEmail(loginDto.Email);

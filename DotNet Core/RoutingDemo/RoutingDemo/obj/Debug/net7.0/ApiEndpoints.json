@@ -1,0 +1,249 @@
+[
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByAlpha",
+    "RelativePath": "api/constraints/alpha/{word}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "word",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByCombinedConstraints",
+    "RelativePath": "api/constraints/combined/{id}/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetById",
+    "RelativePath": "api/constraints/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByLength",
+    "RelativePath": "api/constraints/length/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByMaxLength",
+    "RelativePath": "api/constraints/maxlength/{value}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByMinLength",
+    "RelativePath": "api/constraints/minlength/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByRange",
+    "RelativePath": "api/constraints/range/{number}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "number",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.RoutingConstraintsController",
+    "Method": "GetByRequired",
+    "RelativePath": "api/constraints/required/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "GetStudentByEducation",
+    "RelativePath": "api/education",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "educationInfo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "SearchStudents",
+    "RelativePath": "api/find",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "SearchStudents",
+    "RelativePath": "api/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "GetStudentByName",
+    "RelativePath": "api/student/{firstName}/{lastName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "firstName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "lastName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "GetStudentById",
+    "RelativePath": "api/student/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "TokenReplacement",
+    "RelativePath": "api/token/{action}/{controller}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "action",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "controller",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "WelcomeMessage",
+    "RelativePath": "api/welcome",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RoutingDemo.Controllers.StudentController",
+    "Method": "ShowAllStudents",
+    "RelativePath": "showAllStudents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

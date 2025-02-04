@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Basic_C__2
 {
@@ -63,7 +58,7 @@ namespace Basic_C__2
             {
                 Console.WriteLine("You are a senior citizen.");
             }
-            else if(age < 0 || age > 150)
+            else if (age < 0 || age > 150)
             {
                 Console.WriteLine("Invalid age entered.");
             }
@@ -113,7 +108,7 @@ namespace Basic_C__2
             Console.Write("How many times do you want to repeat it?: ");
             int loopCounter = int.Parse(Console.ReadLine());
 
-            if(loopCounter > 0)
+            if (loopCounter > 0)
             {
                 for (int i = 0; i < loopCounter; i++)
                 {

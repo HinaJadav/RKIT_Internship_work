@@ -11,6 +11,8 @@ namespace RoutingDemo.Controllers
         /// Accessed via: GET api/constraints/id/{id}
         /// </summary>
         [HttpGet("id/{id:int}")]
+        [HttpGet("id")]
+        // different routes can use for same action method 
         public IActionResult GetById(int id)
         {
             return Ok($"Received ID: {id}");

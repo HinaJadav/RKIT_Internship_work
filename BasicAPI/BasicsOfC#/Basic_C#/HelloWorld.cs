@@ -1,9 +1,4 @@
 ﻿using System; // Basic library (Ref)
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Basic_C_
 {
@@ -116,7 +111,7 @@ namespace Basic_C_
             Console.WriteLine("Converted int to string using Interpolation: " + string2);
 
             int intNum1 = 65;
-            char character = (char)intNum1; 
+            char character = (char)intNum1;
             Console.WriteLine("Converted int to char: " + character);
 
             int intIsCorrect = 1;
@@ -131,7 +126,7 @@ namespace Basic_C_
 
             // Unboxing: Reverse process of Boxing
             object stateObject = "Gujarat";
-            string stateName = (String) stateObject;
+            string stateName = (String)stateObject;
             Console.WriteLine($"Unboxing (object to string): {stateName}\n");
 
             //---------------------------------------------------------------------------------
@@ -160,7 +155,7 @@ namespace Basic_C_
 
             // ++, --
             n1++;
-            Console.WriteLine("After incrementing (n1++): " + n1); 
+            Console.WriteLine("After incrementing (n1++): " + n1);
 
             n1--;
             Console.WriteLine("After decrementing (n1--): " + n1);

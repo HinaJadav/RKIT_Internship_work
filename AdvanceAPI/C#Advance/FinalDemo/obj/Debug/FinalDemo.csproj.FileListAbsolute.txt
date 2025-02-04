@@ -124,6 +124,8 @@ D:\RKIT\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\bin\Microsoft.CodeDo
 D:\RKIT\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.csproj.Up2Date
 D:\RKIT\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.dll
 D:\RKIT\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.pdb
+<<<<<<< HEAD
+=======
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\bin\FinalDemo.dll.config
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\bin\FinalDemo.dll
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\bin\FinalDemo.pdb
@@ -250,3 +252,4 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.csproj.CopyComplete
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.dll
 C:\Users\hina.j\source\repos\RKIT_Internship_work\AdvanceAPI\C#Advance\FinalDemo\obj\Debug\FinalDemo.pdb
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a

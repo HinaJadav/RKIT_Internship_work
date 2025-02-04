@@ -68,6 +68,15 @@
       <HintPath>packages\MySql.Data.8.4.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+<<<<<<< HEAD
+      <HintPath>packages\ServiceStack.Common.8.5.2\lib\net472\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>packages\ServiceStack.Interfaces.8.5.2\lib\net472\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>packages\ServiceStack.OrmLite.8.5.2\lib\net472\ServiceStack.OrmLite.dll</HintPath>
+=======
       <HintPath>packages\ServiceStack.Common.8.4.0\lib\net472\ServiceStack.Common.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Interfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
@@ -75,6 +84,7 @@
     </Reference>
     <Reference Include="ServiceStack.OrmLite, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>packages\ServiceStack.OrmLite.8.4.0\lib\net472\ServiceStack.OrmLite.dll</HintPath>
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
     </Reference>
     <Reference Include="ServiceStack.OrmLite.MySql, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
       <HintPath>packages\ServiceStack.OrmLite.MySql.8.4.0\lib\net472\ServiceStack.OrmLite.MySql.dll</HintPath>
@@ -109,8 +119,13 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+=======
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Entity" />
@@ -227,7 +242,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\YMM01Controller.cs" />
+<<<<<<< HEAD
+    <Compile Include="DB\DBCOnnection.cs" />
+=======
     <Compile Include="DB\DBConnection.cs" />
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

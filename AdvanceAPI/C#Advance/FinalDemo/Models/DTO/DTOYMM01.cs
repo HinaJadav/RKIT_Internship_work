@@ -7,6 +7,18 @@ namespace FinalDemo.Models.DTO
     /// </summary>
     public class DTOYMM01
     {
+<<<<<<< HEAD
+        public int M01101 { get; set; } // id 
+        public string M01102 { get; set; } // member full name (fn + ln)
+        
+        public string M01103 { get; set; } // email
+        public string M01104 { get; set; } // contact number
+        
+        public DateTime M01107 { get; set; } // joining date
+        public int M01108 { get; set; } // isActive member or not
+
+        public string M01109 { get; set; } // member password
+=======
         /// <summary>
         /// Member ID.
         /// </summary>
@@ -41,5 +53,6 @@ namespace FinalDemo.Models.DTO
         /// Member's password.
         /// </summary>
         public string M01109 { get; set; }
+>>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
     }
 }
