@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<<< HEAD:DotNet Core/DIDemo/DIDemo.sln
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIDemo", "DIDemo\DIDemo.csproj", "{80B113B4-586A-4E38-A11C-5EA25D393F7E}"
+========
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionMethodDemo", "ActionMethodDemo\ActionMethodDemo.csproj", "{27C32044-0815-4BA8-8645-A37B805113BB}"
+>>>>>>>> 5069ff11e525920fb665643fd7786a55ddfb5c70:DotNet Core/ActionmethodDemo/ActionmethodDemo.sln
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +15,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<<< HEAD:DotNet Core/DIDemo/DIDemo.sln
 		{80B113B4-586A-4E38-A11C-5EA25D393F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80B113B4-586A-4E38-A11C-5EA25D393F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B113B4-586A-4E38-A11C-5EA25D393F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B113B4-586A-4E38-A11C-5EA25D393F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+========
+		{27C32044-0815-4BA8-8645-A37B805113BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C32044-0815-4BA8-8645-A37B805113BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C32044-0815-4BA8-8645-A37B805113BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C32044-0815-4BA8-8645-A37B805113BB}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>>> 5069ff11e525920fb665643fd7786a55ddfb5c70:DotNet Core/ActionmethodDemo/ActionmethodDemo.sln
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<<< HEAD:DotNet Core/DIDemo/DIDemo.sln
 		SolutionGuid = {183A0618-F4F8-4221-BC6B-795AC639E116}
+========
+		SolutionGuid = {236BEDD1-3D71-4691-AB6F-73C9492B1F9E}
+>>>>>>>> 5069ff11e525920fb665643fd7786a55ddfb5c70:DotNet Core/ActionmethodDemo/ActionmethodDemo.sln
 	EndGlobalSection
 EndGlobal
