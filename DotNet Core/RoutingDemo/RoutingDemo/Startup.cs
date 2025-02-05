@@ -41,9 +41,14 @@
 
             // Routing : 
 
+            
+
+           
+
             app.UseEndpoints(endpoints =>
             {
-                // 1) Conventional routing 
+                // 1) Conventional routing :
+                // use: Into controller based app with multiple action methods
                 // # Enable comments for Conventional routing  
 
 
@@ -63,9 +68,59 @@
 
                 // # Disable below line during Conventional routing
 
-                // 2) Attribute routing 
+                // 2) Attribute routing:
+                // use: Need more control over individual routes and routes don't follow a common pattern
+
                 endpoints.MapControllers();
+
+
+
+                // # route handlers(Minimal API routing) : here use as endpoint methods 
+                // we can also use them as middleware 
+                // Use: lightweight APIs without controllers, for MicroServices and for Minimal APIs
+                // work as Simple endpoints for apis
+
+
+                // a) Simple GET request
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Hello, World!");
+                });
+
+                // b) Route with parameter
+                endpoints.MapGet("/hello/{name}", async context =>
+                {
+                    var name = context.Request.RouteValues["name"]?.ToString();
+                    await context.Response.WriteAsync($"Hello, {name}!");
+                });
+
+                // c) Route with query parameters
+                endpoints.MapGet("/add", async context =>
+                {
+                    var query = context.Request.Query;
+                    if (query.ContainsKey("a") && query.ContainsKey("b"))
+                    {
+                        int a = int.Parse(query["a"]);
+                        int b = int.Parse(query["b"]);
+                        await context.Response.WriteAsync($"Sum: {a + b}");
+                    }
+                    else
+                    {
+                        context.Response.StatusCode = 400;
+                        await context.Response.WriteAsync("Please provide 'a' and 'b' as query parameters.");
+                    }
+                });
+
+                // d) POST request handling
+                endpoints.MapPost("/submit", async context =>
+                {
+                    using var reader = new StreamReader(context.Request.Body);
+                    var content = await reader.ReadToEndAsync();
+                    await context.Response.WriteAsync($"Received: {content}");
+                });
             });
+
+      
         }
     }
 }

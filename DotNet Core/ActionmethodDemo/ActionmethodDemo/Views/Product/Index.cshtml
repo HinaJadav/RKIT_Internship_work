@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ActionMethodDemo.Models.Product>
+
+<h1>Product List</h1>
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td><a href="@Url.Action("Details", "Product", new { id = product.Id })">View Details</a></td>
+        </tr>
+    }
+</table>

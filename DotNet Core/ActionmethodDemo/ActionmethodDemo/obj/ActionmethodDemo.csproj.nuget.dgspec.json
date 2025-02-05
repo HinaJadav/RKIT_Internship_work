@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionmethodDemo\\ActionmethodDemo\\ActionmethodDemo.csproj": {}
+    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionMethodDemo\\ActionMethodDemo\\ActionMethodDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionmethodDemo\\ActionmethodDemo\\ActionmethodDemo.csproj": {
+    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionMethodDemo\\ActionMethodDemo\\ActionMethodDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionmethodDemo\\ActionmethodDemo\\ActionmethodDemo.csproj",
-        "projectName": "ActionmethodDemo",
-        "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionmethodDemo\\ActionmethodDemo\\ActionmethodDemo.csproj",
+        "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionMethodDemo\\ActionMethodDemo\\ActionMethodDemo.csproj",
+        "projectName": "ActionMethodDemo",
+        "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionMethodDemo\\ActionMethodDemo\\ActionMethodDemo.csproj",
         "packagesPath": "C:\\Users\\hina.j\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionmethodDemo\\ActionmethodDemo\\obj\\",
+        "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\ActionMethodDemo\\ActionMethodDemo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hina.j\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.12, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
