@@ -106,8 +106,8 @@ namespace LambdaExpression
             /// </summary>
             List<User> sortedUsersByTheirName = users.OrderByDescending(user => user.Name[0]).ToList();
 
-            /// <summary>
             /// Display the sorted list of users.
+            /// <summary>
             /// </summary>
             Console.WriteLine("\nUsers sorted by the first letter of their name (descending):");
             foreach (User user in sortedUsersByTheirName)
@@ -117,15 +117,29 @@ namespace LambdaExpression
 
             // A
 
-            /// <summary>
-            /// Using the 'new' keyword to create a new object (anonymous type) inside the lambda expression.
-            /// </summary>
-            var person = new { Name = "Anu", Email = "annu@gmail.com", Password = "anu@123" };
+            // use "new" keyword with lambda expression 
+           
+            // creating and initializing objects:
+            // Using lambda expression with 'new' to create a new User object
+            List<User> updatedUsers = users.Select(u => new User(u.Name.ToUpper(), u.Email, u.Password)).ToList();
 
-            Console.WriteLine("\nName: " + person.Name);
-            Console.WriteLine("Email: " + person.Email);
-            Console.WriteLine("Password: " + person.Password);
+            Console.WriteLine("Updated user names:");
+            foreach (User user in updatedUsers)
+            {
+                Console.WriteLine($"Name: {user.Name}, Email: {user.Email}, Password: {user.Password}");
+            }
 
+            // Creating Collections of Objects
+            //  create a dictionary using lambda expression --> in this we can use "new" to combine multiple fields 
+            var userDictionary = users.ToDictionary(user1 => user1.Name, user1 => new { user1.Email, user1.Password });
+            // return type
+            Console.WriteLine("User Dictionary:");
+            foreach (var user in userDictionary)
+            {
+                Console.WriteLine($"Name: {user.Key}, Email: {user.Value.Email}, Password: {user.Value.Password}");
+            }
+
+            
             Console.ReadKey();
         }
     }

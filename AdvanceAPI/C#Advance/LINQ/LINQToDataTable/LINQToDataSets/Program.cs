@@ -151,6 +151,33 @@ namespace LINQToDataSets
                                                     }).ToList()
                                                 };
 
+            /// <summary>
+            /// Calculating the Average Package of Placed Students Per Department
+            /// </summary>
+            var averagePackagePerDepartment = students.AsEnumerable()
+                .Where(stu => stu.Field<bool>("isPlaced")) // Consider only placed students
+                .GroupBy(stu => stu.Field<int>("DepartmentId")) // Group by DepartmentId
+                .Select(group => new
+                {
+                    DepartmentId = group.Key,
+                    AveragePackage = group.Average(stu => stu.Field<int>("Package"))
+                })
+                .Join(departments.AsEnumerable(),
+                      deptGroup => deptGroup.DepartmentId,
+                      dept => dept.Field<int>("DepartmentId"),
+                      (deptGroup, dept) => new
+                      {
+                          DepartmentName = dept.Field<string>("DepartmentName"),
+                          AveragePackage = deptGroup.AveragePackage
+                      });
+
+            Console.WriteLine("\nAverage Package of Placed Students Per Department:");
+            foreach (var item in averagePackagePerDepartment)
+            {
+                Console.WriteLine($"Department: {item.DepartmentName}, Average Package: {item.AveragePackage}");
+            }
+
+
             Console.ReadKey();
         }
     }

@@ -10,7 +10,7 @@ namespace ORMDemo.Models.POCO
             /// <summary>
             /// Gets or sets the primary key with auto-increment.
             /// </summary>
-            [PrimaryKey, AutoIncrement]
+            [PrimaryKey]
             public int G01F01 { get; set; }
 
             /// <summary>

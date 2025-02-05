@@ -21,6 +21,7 @@ namespace ORMDemo.BL
                 G01F02 = dtoGame.G01102,  // Mapping DTO field to POCO property
                 G01F03 = dtoGame.G01103   // Mapping DTO field to POCO property
             };
+            // common method 
 
             return game;  // Return the mapped POCO object
         }
@@ -31,6 +32,10 @@ namespace ORMDemo.BL
         /// </summary>
         public (bool IsValid, string Message) ValidateOnSaveGame(YMG01 game)
         {
+            // move to dto basic validation
+
+            // internal db check : like check for id is exists or not 
+
             // Check if the game name is empty
             if (string.IsNullOrEmpty(game.G01F02))
                 return (false, "Game name cannot be empty.");
@@ -55,11 +60,12 @@ namespace ORMDemo.BL
             {
                 // Open a database connection and start a transaction
                 using (var db = DBConnection.OpenConnection())
-                using (var trans = db.OpenTransaction())
+                //using (var trans = db.OpenTransaction())
                 {
                     // Save the game, if it exists it will update, otherwise insert a new record
                     db.Save(game);
-                    trans.Commit();  // Commit the transaction to save changes
+                    //trans.Commit();  // Commit the transaction to save changes
+                    // why transaction use: 2 table dependency
                 }
 
                 // Set the success message in the response
@@ -113,15 +119,15 @@ namespace ORMDemo.BL
             try
             {
                 using (var db = DBConnection.OpenConnection())
-                using (var trans = db.OpenTransaction())
+                //using (var trans = db.OpenTransaction())
                 {
                     // Fetch the game record by ID
-                    var game = db.SingleById<YMG01>(id);
+                    var game = db.SingleById<YMG01>(id); //--> global var --> into predelete // 
                     if (game != null)
                     {
                         // If game exists, delete it from the database
                         db.Delete(game);
-                        trans.Commit();  // Commit the transaction to save changes
+                        //trans.Commit();  // Commit the transaction to save changes
                         // Set the success message
                         response.Message = $"Game {game.G01F02} successfully deleted.";
                     }

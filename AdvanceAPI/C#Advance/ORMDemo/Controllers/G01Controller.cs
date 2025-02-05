@@ -38,7 +38,7 @@ namespace ORM.Controllers
         [Route("update/{id}")] // PUT api/game/update/{id}
         public IHttpActionResult UpdateGame(int id, DTOYMG01 gameDto)
         {
-            YMG01 editGameModel = gameService.preDeleteGame(id);
+            YMG01 editGameModel = gameService.preDeleteGame(id); // change method name
             if (editGameModel != null)
             {
                 editGameModel.G01F02 = gameDto.G01102;
@@ -75,3 +75,4 @@ namespace ORM.Controllers
         }
     }
 }
+// update , updateonly, insert, insertonly, select with join, scalar 

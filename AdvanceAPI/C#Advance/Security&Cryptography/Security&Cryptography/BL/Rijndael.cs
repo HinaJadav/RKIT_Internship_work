@@ -22,10 +22,10 @@ namespace Security_Cryptography.BL
             // Initialize Rijndael encryption
             using (RijndaelManaged rijndael = new RijndaelManaged())
             {
-                rijndael.KeySize = key.Length * 8; // Set key size in bits
-                rijndael.BlockSize = blockSize;    // Set block size in bits
+                rijndael.KeySize = key.Length * 8; // Set encryption key size in bits
+                rijndael.BlockSize = blockSize;    // Set block size(Amount of data the encryption algorithm process at a time) in bits
                 rijndael.Key = key;                // Set encryption key
-                rijndael.IV = iv;                  // Set initialization vector
+                rijndael.IV = iv;                  // Set initialization vector(Use for introduce randomness into encryption process)
 
                 // Create an encryptor
                 ICryptoTransform encryptor = rijndael.CreateEncryptor(rijndael.Key, rijndael.IV);

@@ -13,11 +13,11 @@ namespace Security_Cryptography
         {
             // Prompt the user to enter a username
             Console.Write("Please enter a username: ");
-            string userName = Console.ReadLine() ?? string.Empty;  
+            string userName = Console.ReadLine() ?? string.Empty;
 
             // Prompt the user to enter a password
             Console.Write("Please enter a password: ");
-            string password = Console.ReadLine() ?? string.Empty;  
+            string password = Console.ReadLine() ?? string.Empty;
 
             // Check if the password is empty, display a message and exit if it is
             if (string.IsNullOrEmpty(password))

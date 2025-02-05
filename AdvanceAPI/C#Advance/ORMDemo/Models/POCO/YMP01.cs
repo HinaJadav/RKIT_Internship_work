@@ -10,13 +10,13 @@ namespace ORMDemo.Models.POCO
         /// <summary>
         /// Gets or sets the primary key (auto-incremented).
         /// </summary>
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int P01F01 { get; set; }
 
         /// <summary>
         /// Gets or sets the A02F02 field.
         /// </summary>
-        [StringLength(50)]
+        [StringLength(50)] // dto
         public string P01F02 { get; set; }
 
         /// <summary>

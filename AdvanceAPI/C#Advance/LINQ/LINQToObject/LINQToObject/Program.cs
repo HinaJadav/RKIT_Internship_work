@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Xml.Schema;
 
 // linq to link of objects
 namespace LINQToObject
@@ -25,7 +23,7 @@ namespace LINQToObject
                 new Student(9, "Aditya Roy", 9.1, 116000, 780000, true, "Male", 3),
                 new Student(10, "Riya Jain", 6.0, 122000, 0, false, "Female", 1)
             };
-            // cpi highest, 
+            // female -> max cpi -> max package 
             Student ans = students.Where(stu => stu.Gender == "Female").OrderByDescending(stu => stu.CPI).ThenByDescending(stu => stu.Package).FirstOrDefault();
 
             Console.WriteLine(ans.Name);
