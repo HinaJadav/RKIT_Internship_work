@@ -1,0 +1,36 @@
+2025-02-05 11:54:40.501 +05:30 [INF] Application has started successfully.
+2025-02-05 11:54:42.448 +05:30 [INF] Now listening on: https://localhost:7163
+2025-02-05 11:54:42.457 +05:30 [INF] Now listening on: http://localhost:5096
+2025-02-05 11:54:42.481 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-05 11:54:42.669 +05:30 [INF] Hosting environment: Development
+2025-02-05 11:54:42.799 +05:30 [INF] Content root path: C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\LoggingDemo\LoggingDemo
+2025-02-05 11:54:46.426 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7163/swagger - -
+2025-02-05 11:54:46.759 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7163/swagger - - - 404 0 - 336.3753ms
+2025-02-05 11:55:27.951 +05:30 [INF] Application has started successfully.
+2025-02-05 11:55:28.292 +05:30 [INF] Now listening on: https://localhost:7163
+2025-02-05 11:55:28.296 +05:30 [INF] Now listening on: http://localhost:5096
+2025-02-05 11:55:28.300 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-05 11:55:28.303 +05:30 [INF] Hosting environment: Development
+2025-02-05 11:55:28.306 +05:30 [INF] Content root path: C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\LoggingDemo\LoggingDemo
+2025-02-05 11:55:29.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7163/swagger - -
+2025-02-05 11:55:29.937 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7163/swagger - - - 404 0 - 172.0982ms
+2025-02-05 11:55:56.235 +05:30 [INF] Application has started successfully.
+2025-02-05 11:55:56.923 +05:30 [INF] Now listening on: https://localhost:7163
+2025-02-05 11:55:56.928 +05:30 [INF] Now listening on: http://localhost:5096
+2025-02-05 11:55:56.945 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-05 11:55:56.954 +05:30 [INF] Hosting environment: Development
+2025-02-05 11:55:56.966 +05:30 [INF] Content root path: C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\LoggingDemo\LoggingDemo
+2025-02-05 11:55:58.125 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7163/ - -
+2025-02-05 11:55:58.223 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7163/ - - - 404 0 - 96.3978ms
+2025-02-05 11:56:03.132 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7163/Home - -
+2025-02-05 11:56:03.152 +05:30 [INF] Executing endpoint 'LoggingDemo.Controllers.HomeController.Get (LoggingDemo)'
+2025-02-05 11:56:03.198 +05:30 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller LoggingDemo.Controllers.HomeController (LoggingDemo).
+2025-02-05 11:56:03.208 +05:30 [INF] Executing Get method in HomeController.
+2025-02-05 11:56:03.212 +05:30 [WRN] This is a warning message.
+2025-02-05 11:56:03.215 +05:30 [ERR] An error occurred while executing Get method.
+2025-02-05 11:56:03.227 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-02-05 11:56:03.244 +05:30 [INF] Executed action LoggingDemo.Controllers.HomeController.Get (LoggingDemo) in 36.7074ms
+2025-02-05 11:56:03.246 +05:30 [INF] Executed endpoint 'LoggingDemo.Controllers.HomeController.Get (LoggingDemo)'
+2025-02-05 11:56:03.247 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7163/Home - - - 200 - text/plain;+charset=utf-8 115.0281ms
+2025-02-05 11:56:03.296 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7163/favicon.ico - -
+2025-02-05 11:56:03.298 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7163/favicon.ico - - - 404 0 - 2.4429ms
