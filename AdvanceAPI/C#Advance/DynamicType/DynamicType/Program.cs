@@ -76,6 +76,8 @@ namespace DynamicType
             Console.WriteLine($"Implicit Person2 Name: {person2Name}");
             Console.WriteLine($"Implicit Person2 ID: {person2Id}");
 
+            // A reference type object
+
             Console.ReadKey();
         }
     }

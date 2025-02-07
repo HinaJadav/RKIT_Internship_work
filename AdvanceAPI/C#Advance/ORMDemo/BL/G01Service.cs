@@ -1,152 +1,191 @@
 ﻿using ORMDemo.DB;
+using ORMDemo.Extension;
 using ORMDemo.Models;
 using ORMDemo.Models.DTO;
+using ORMDemo.Models.Enums;
 using ORMDemo.Models.POCO;
 using ServiceStack.OrmLite;
 using System;
+using System.Collections.Generic;
 
 namespace ORMDemo.BL
 {
+    /// <summary>
+    /// Service class for handling Game-related operations, including CRUD operations and validation.
+    /// </summary>
     public class G01Service
     {
-        // PreSaveGame() : Convert Game DTO to Game POCO
+        private YMG01 _g01Obj;
+        private int _gameId;
+        private Response _response;
+
+        public OperationType Type { get; set; }
+
+        public G01Service()
+        {
+            _response = new Response();
+        }
+
         /// <summary>
         /// Converts a Game DTO to a Game POCO for database operations.
         /// </summary>
-        public YMG01 PreSaveGame(DTOYMG01 dtoGame)
+        /// <param name="dtoGame">Game DTO object</param>
+        public void PreSave(DTOYMG01 dtoGame)
         {
-            // Create a new instance of GAM01 POCO and map DTO values
-            YMG01 game = new YMG01
+            _g01Obj = dtoGame.Convert<YMG01>();
+            if (Type == OperationType.E || Type == OperationType.D)
             {
-                G01F02 = dtoGame.G01102,  // Mapping DTO field to POCO property
-                G01F03 = dtoGame.G01103   // Mapping DTO field to POCO property
-            };
-            // common method 
-
-            return game;  // Return the mapped POCO object
-        }
-
-        // ValidateOnSaveGame(): Validates game POCO before saving
-        /// <summary>
-        /// Validates the Game POCO to ensure it is valid before saving to the database.
-        /// </summary>
-        public (bool IsValid, string Message) ValidateOnSaveGame(YMG01 game)
-        {
-            // move to dto basic validation
-
-            // internal db check : like check for id is exists or not 
-
-            // Check if the game name is empty
-            if (string.IsNullOrEmpty(game.G01F02))
-                return (false, "Game name cannot be empty.");
-
-            // Check if the number of players is greater than zero
-            if (game.G01F03 <= 0)
-                return (false, "Number of player in team must be greater than zero.");
-
-            // If both conditions are satisfied, return success message
-            return (true, "Game data validation passed.");
-        }
-
-        // Save(): Save Game POCO to the Database
-        /// <summary>
-        /// Saves the Game POCO to the database and returns a response with the result.
-        /// </summary>
-        public Response SaveGame(YMG01 game)
-        {
-            Response response = new Response();
-
-            try
-            {
-                // Open a database connection and start a transaction
-                using (var db = DBConnection.OpenConnection())
-                //using (var trans = db.OpenTransaction())
+                if (dtoGame.G01101 > 0)
                 {
-                    // Save the game, if it exists it will update, otherwise insert a new record
-                    db.Save(game);
-                    //trans.Commit();  // Commit the transaction to save changes
-                    // why transaction use: 2 table dependency
+                    _gameId = dtoGame.G01101;
                 }
-
-                // Set the success message in the response
-                response.Message = $"Successfully saved game {game.G01F02}.";
             }
-            catch (Exception ex)
-            {
-                // In case of error, set IsError flag and message
-                response.IsError = true;
-                response.Message = $"Error: {ex.Message}";
-            }
-
-            return response;  // Return the response object with result
         }
 
-        // PreDeleteGame(): Prepare Game record for deletion
         /// <summary>
-        /// Prepares the Game record by fetching it before deletion.
+        /// Checks if a game exists in the database.
         /// </summary>
-        public YMG01 preDeleteGame(int id)
+        /// <param name="gameId">Game ID</param>
+        /// <returns>True if the game exists, otherwise false</returns>
+        private bool IsGameExist(int gameId)
         {
             using (var db = DBConnection.OpenConnection())
             {
-                // Fetch the game record by its ID
-                return db.SingleById<YMG01>(id);
+                return db.Exists<YMG01>(gameId);
             }
         }
 
-        // ValidateOnDeleteGame(): Validate game record before deletion
         /// <summary>
-        /// Validates if the Game record can be deleted.
+        /// Validates the game data before performing save or delete operations.
         /// </summary>
-        public (bool IsValid, string Message) ValidateOnDeleteGame(YMG01 game)
+        /// <returns>Response object indicating validation status</returns>
+        public Response Validation()
         {
-            // If the game is null, it means it can't be deleted
-            if (game == null)
-                return (false, "Game not found.");
-
-            // Otherwise, the game can be deleted
-            return (true, "Game can be deleted.");
+            if (Type == OperationType.E || Type == OperationType.D)
+            {
+                if (_gameId <= 0)
+                {
+                    _response.IsError = true;
+                    _response.Message = "Enter a valid Game ID.";
+                }
+                else if (!IsGameExist(_gameId))
+                {
+                    _response.IsError = true;
+                    _response.Message = "Game does not exist.";
+                }
+            }
+            return _response;
         }
 
-        // Delete(): Delete Game from Database and return responses
         /// <summary>
-        /// Deletes a Game from the database and returns a response indicating success or failure.
+        /// Saves or updates a game record in the database.
         /// </summary>
-        public Response DeleteGame(int id)
+        /// <returns>Response object with operation result</returns>
+        public Response Save()
         {
-            Response response = new Response();
-
             try
             {
                 using (var db = DBConnection.OpenConnection())
-                //using (var trans = db.OpenTransaction())
                 {
-                    // Fetch the game record by ID
-                    var game = db.SingleById<YMG01>(id); //--> global var --> into predelete // 
-                    if (game != null)
+                    if (Type == OperationType.A)
                     {
-                        // If game exists, delete it from the database
-                        db.Delete(game);
-                        //trans.Commit();  // Commit the transaction to save changes
-                        // Set the success message
-                        response.Message = $"Game {game.G01F02} successfully deleted.";
+                        db.Insert(_g01Obj);
+                        _response.Message = $"Successfully saved game {_g01Obj.G01F02}.";
                     }
-                    else
+                    else if (Type == OperationType.E)
                     {
-                        // If game not found, set error message
-                        response.IsError = true;
-                        response.Message = "Game not found.";
+                        db.Update(_g01Obj);
+                        _response.Message = $"Successfully updated game {_g01Obj.G01F02}.";
                     }
                 }
             }
             catch (Exception ex)
             {
-                // In case of an error, set error flag and message
-                response.IsError = true;
-                response.Message = $"Error: {ex.Message}";
+                _response.IsError = true;
+                _response.Message = $"Error: {ex.Message}";
             }
+            return _response;
+        }
 
-            return response;  // Return the response object with result
+        /// <summary>
+        /// Deletes a game record from the database.
+        /// </summary>
+        /// <param name="gameId">Game ID</param>
+        /// <returns>Response object indicating the deletion status</returns>
+        public Response Delete(int gameId)
+        {
+            try
+            {
+                using (var db = DBConnection.OpenConnection())
+                {
+                    db.DeleteById<YMG01>(gameId);
+                }
+                _response.Message = "Game is deleted!";
+            }
+            catch (Exception ex)
+            {
+                _response.IsError = true;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
+        /// <summary>
+        /// Retrieves all game records from the database.
+        /// </summary>
+        /// <returns>List of games</returns>
+        public List<YMG01> GetAll()
+        {
+            using (var db = DBConnection.OpenConnection())
+            {
+                return db.Select<YMG01>();
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a specific game by its ID.
+        /// </summary>
+        /// <param name="gameId">Game ID</param>
+        /// <returns>Game object if found, otherwise null</returns>
+        public YMG01 GetGameById(int gameId)
+        {
+            using (var db = DBConnection.OpenConnection())
+            {
+                return db.SingleById<YMG01>(gameId);
+            }
+        }
+
+        /// <summary>
+        /// Retrieves the total number of games stored in the database.
+        /// </summary>
+        /// <returns>Count of games</returns>
+        public int GetTotalGamesCount()
+        {
+            using (var db = DBConnection.OpenConnection())
+            {
+                return db.Scalar<int>(db.From<YMG01>().Select(x => Sql.Count("*")));
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a list of games along with their associated players.
+        /// </summary>
+        /// <returns>List of game-player objects</returns>
+        public List<object> GetGamesWithPlayers()
+        {
+            using (var db = DBConnection.OpenConnection())
+            {
+                var query = db.From<YMG01>()
+                    .Join<YMG01, YMP01>((game, player) => game.G01F01 == player.P01F05)
+                    .Select<YMG01, YMP01>((game, player) => new
+                    {
+                        game.G01F01,
+                        game.G01F02,
+                        player.P01F01,
+                        player.P01F02
+                    });
+                return db.Select<object>(query);
+            }
         }
     }
 }

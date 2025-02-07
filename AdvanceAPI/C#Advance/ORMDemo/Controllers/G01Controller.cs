@@ -1,7 +1,8 @@
 ﻿using ORMDemo.BL;
 using ORMDemo.Models;
 using ORMDemo.Models.DTO;
-using ORMDemo.Models.POCO;
+using ORMDemo.Models.Enums;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace ORM.Controllers
@@ -9,70 +10,108 @@ namespace ORM.Controllers
     [RoutePrefix("api/game")] // Base route for the GameController
     public class G01Controller : ApiController
     {
-        private readonly G01Service gameService;
+        private G01Service _gameService;
+        private Response _response;
 
         public G01Controller()
         {
-            gameService = new G01Service();
+            _gameService = new G01Service();
         }
 
-        // Add Game
+        /// <summary>
+        /// Adds a new game.
+        /// </summary>
+        /// <param name="gameDto">Game DTO object.</param>
+        /// <returns>Response indicating success or failure.</returns>
         [HttpPost]
         [Route("add")] // POST api/game/add
-        public IHttpActionResult AddGame(DTOYMG01 gameDto)
+        public Response AddGame(DTOYMG01 gameDto)
         {
-            YMG01 gameModel = gameService.PreSaveGame(gameDto);
-            var (isValidGame, gameValidationMessage) = gameService.ValidateOnSaveGame(gameModel);
-
-            if (isValidGame)
+            _gameService.Type = OperationType.A;
+            _gameService.PreSave(gameDto);
+            _response = _gameService.Validation();
+            if (!_response.IsError)
             {
-                Response response = gameService.SaveGame(gameModel);
-                return Ok(response.Message);
+                _response = _gameService.Save();
             }
-
-            return BadRequest(gameValidationMessage);
+            return _response;
         }
 
-        // Update Game
+        /// <summary>
+        /// Updates an existing game.
+        /// </summary>
+        /// <param name="gameDto">Game DTO object.</param>
+        /// <returns>Response indicating success or failure.</returns>
         [HttpPut]
-        [Route("update/{id}")] // PUT api/game/update/{id}
-        public IHttpActionResult UpdateGame(int id, DTOYMG01 gameDto)
+        [Route("update")] // PUT api/game/update/{id}
+        public Response UpdateGame(DTOYMG01 gameDto)
         {
-            YMG01 editGameModel = gameService.preDeleteGame(id); // change method name
-            if (editGameModel != null)
+            _gameService.Type = OperationType.E;
+            _gameService.PreSave(gameDto);
+            _response = _gameService.Validation();
+            if (!_response.IsError)
             {
-                editGameModel.G01F02 = gameDto.G01102;
-                editGameModel.G01F03 = gameDto.G01103;
-                var (isValidUpdateGame, updateGameValidationMessage) = gameService.ValidateOnSaveGame(editGameModel);
-
-                if (isValidUpdateGame)
-                {
-                    Response response = gameService.SaveGame(editGameModel);
-                    return Ok(response.Message);
-                }
-
-                return BadRequest(updateGameValidationMessage);
+                _response = _gameService.Save();
             }
-
-            return NotFound();
+            return _response;
         }
 
-        // Delete Game
+        /// <summary>
+        /// Deletes a game by ID.
+        /// </summary>
+        /// <param name="id">Game ID.</param>
+        /// <returns>Response indicating success or failure.</returns>
         [HttpDelete]
         [Route("delete/{id}")] // DELETE api/game/delete/{id}
-        public IHttpActionResult DeleteGame(int id)
+        public Response DeleteGame(int id)
         {
-            YMG01 preDeleteGameModel = gameService.preDeleteGame(id);
-            var (isValidDeleteGame, deleteGameValidationMessage) = gameService.ValidateOnDeleteGame(preDeleteGameModel);
+            return _gameService.Delete(id);
+        }
 
-            if (isValidDeleteGame)
-            {
-                Response response = gameService.DeleteGame(id);
-                return Ok(response.Message);
-            }
+        /// <summary>
+        /// Retrieves all games.
+        /// </summary>
+        /// <returns>List of all games.</returns>
+        [HttpGet]
+        [Route("getAll")]
+        public IHttpActionResult GetAll()
+        {
+            return Ok(_gameService.GetAll());
+        }
 
-            return BadRequest(deleteGameValidationMessage);
+        /// <summary>
+        /// Retrieves a game by its ID.
+        /// </summary>
+        /// <param name="id">Game ID.</param>
+        /// <returns>Game object.</returns>
+        [HttpGet]
+        [Route("getOneById/{id}")]
+        public IHttpActionResult GetById(int id)
+        {
+            return Ok(_gameService.GetGameById(id));
+        }
+
+        /// <summary>
+        /// Gets the total count of games.
+        /// </summary>
+        /// <returns>Total count of games.</returns>
+        [HttpGet]
+        [Route("getCount")]
+        public IHttpActionResult GetGameCount()
+        {
+            return Ok(_gameService.GetTotalGamesCount());
+        }
+
+        /// <summary>
+        /// Retrieves all games along with their associated players.
+        /// </summary>
+        /// <returns>List of games with player details.</returns>
+        [HttpGet]
+        [Route("with-players")]
+        public IHttpActionResult GetGamesWithPlayers()
+        {
+            List<object> result = _gameService.GetGamesWithPlayers();
+            return Ok(result);
         }
     }
 }
-// update , updateonly, insert, insertonly, select with join, scalar 

@@ -4,13 +4,9 @@ namespace ORMDemo.Models.POCO
 {
     public class YMG01
     {
-        
-
-       
             /// <summary>
             /// Gets or sets the primary key with auto-increment.
             /// </summary>
-            [PrimaryKey]
             public int G01F01 { get; set; }
 
             /// <summary>
@@ -22,7 +18,6 @@ namespace ORMDemo.Models.POCO
             /// <summary>
             /// Gets or sets the M03F03 field (integer).
             /// </summary>
-            [Range(0, 20)]
             public int G01F03 { get; set; }
         
     }

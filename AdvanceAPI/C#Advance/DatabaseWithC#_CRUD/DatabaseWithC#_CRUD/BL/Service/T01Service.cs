@@ -71,7 +71,7 @@ namespace DatabaseWithC__CRUD.BL.Service
         {
             try
             {
-                string query = "SELECT * FROM YMT01;";
+                string query = "SELECT * FROM YMT01;"; // remove *
 
                 List<YMT01> ymt01DataList = new List<YMT01>();
 

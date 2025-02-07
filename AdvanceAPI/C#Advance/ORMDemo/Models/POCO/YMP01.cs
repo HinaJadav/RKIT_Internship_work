@@ -10,31 +10,26 @@ namespace ORMDemo.Models.POCO
         /// <summary>
         /// Gets or sets the primary key (auto-incremented).
         /// </summary>
-        [PrimaryKey]
         public int P01F01 { get; set; }
 
         /// <summary>
         /// Gets or sets the A02F02 field.
         /// </summary>
-        [StringLength(50)] // dto
         public string P01F02 { get; set; }
 
         /// <summary>
         /// Gets or sets the A03F03 field.
         /// </summary>
-        [StringLength(50)]
         public string P01F03 { get; set; }
 
         /// <summary>
         /// Gets or sets the A04F04 field.
-        /// </summary>
-        [StringLength(50)]
+        /// </summary>  
         public string P01F04 { get; set; }
 
         /// <summary>
         /// Gets or sets the foreign key linking to the GAM01 entity.
         /// </summary>
-        [ForeignKey(typeof(YMG01))]
         public int P01F05 { get; set; }
 
         /// <summary>

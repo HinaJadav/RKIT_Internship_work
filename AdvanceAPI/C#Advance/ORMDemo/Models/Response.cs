@@ -11,5 +11,6 @@
         /// A flag indicating if the operation resulted in an error.
         /// </summary>
         public bool IsError { get; set; } = false;
+        // datatable into final demo
     }
 }

@@ -1,4 +1,4 @@
-﻿using ORMDemo.BL;
+﻿/*using ORMDemo.BL;
 using ORMDemo.Models;
 using ORMDemo.Models.DTO;
 using ORMDemo.Models.POCO;
@@ -78,3 +78,4 @@ namespace ORM.Controllers
         }
     }
 }
+*/

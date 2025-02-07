@@ -8,16 +8,16 @@
         /// <summary>
         /// Add operation.
         /// </summary>
-        Add = 1,
+        A,
 
         /// <summary>
         /// Update operation.
         /// </summary>
-        Update = 2,
+        E,
 
         /// <summary>
         /// Delete operation.
         /// </summary>
-        Delete = 3
+        D
     }
 }
