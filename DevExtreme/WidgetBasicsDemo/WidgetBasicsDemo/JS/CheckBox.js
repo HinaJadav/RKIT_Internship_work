@@ -1,84 +1,134 @@
 ﻿$(function () {
-    // Initialize the CheckBox UI component
-    let checkBox = $("#checkBoxContainer").dxCheckBox({
-
-        // Accessibility: Set a keyboard shortcut key to focus on the UI component.
+    // Initialize the first CheckBox with various configurations
+    let checkBox1 = $("#robotCheckBox").dxCheckBox({
+        text: "Understanding Business Needs",
+        value: true,
         accessKey: 'h',
-
-        // Enables the active state when the user interacts with the checkbox (e.g., clicking).
-        activeStateEnabled: true,
-
-        // Determines whether the checkbox is disabled or not.
+        activeStateEnabled: true, // ?
         disabled: false,
+        focusStateEnabled: true, // ?
+        hoverStateEnabled: true,
+        isValid: true, // if we do "false" here then we can see RED color boundries which show that checkbox is not validate 
+        name: "acceptTerms",
+        readOnly: false,
+        rtlEnabled: false, // about location
+        tabIndex: 3,
+        validationMessagePosition: 'right',
+        validationStatus: 'valid',
+        width: "300px", // ?
+        onInitialized: function () {
+            console.log("CheckBox1 Initialized");
+        },
+        onValueChanged: function (e) {
+            console.log("CheckBox1 Value Changed: ", e.value);
+        }
+    }).dxCheckBox("instance");
 
-        // Used to set global attributes like `id`, `class`, `data-*` attributes, etc.
+    // Initialize the second CheckBox with a different set of features
+    let checkBox2 = $("#activitiesContainer").dxCheckBox({
+        text: "Identifying User Requirements",
+        value: false,
+        //hint: "Receive updates via email",
+        onValueChanged: function (e) {
+            console.log("CheckBox2 Toggled: ", e.value);
+        }
+    }).dxCheckBox("instance");
+
+    // Initialize the third CheckBox with validation and styling
+    let checkBox3 = $("#studyHabitContainer").dxCheckBox({
+        text: "Assessing Technical Feasibility",
+        value: false,
+        validationStatus: "pending",
+        validationMessagePosition: "bottom",
+        onValueChanged: function (e) {
+            console.log("CheckBox3 Value: ", e.value);
+        }
+    }).dxCheckBox("instance");
+
+    let checkBox4 = $("#extraCheckBox").dxCheckBox({
+        text: "Ensuring Stakeholder Buy-In",
+        value: false,
         elementAttr: {
             id: "checkbox1-container",
             class: "checkbox1-class",
-            // You can add other attributes like:
-            // "data-custom": "customValue",
-            // "aria-label": "Custom Checkbox"
+            "aria-label": "Robot Verification"
         },
-
-        // Allows the checkbox to be focused using keyboard navigation (e.g., Tab key). : 
-        focusStateEnabled: true,
-        // **How to see the effect?**  
-        // - Navigate using the Tab key and check if the checkbox gets focused.
-
-        // Sets the hint text that appears when hovering over the checkbox.
-        hint: "Verify yourself!",
-
-        // Enables the hover state (visual effect when hovering over the checkbox).
-        hoverStateEnabled: true,
-        // **How to see the effect?**  
-        // - Hover over the checkbox and observe if there is a slight color change or animation.
-
-        // Specifies whether the checkbox value is valid (can be used with validation rules).
-        isValid: true,
-
-        // Assigns a name attribute to the checkbox, useful when submitting forms.
-        name: "acceptTerms",
-        // **Where to see its value?**
-        // - If inside a form, it will appear in the form submission data.
-        // - Use browser dev tools (Inspect Element) to check the input element.
-
-        // function that is execute when the UI component is ready and each time content is changed.
-
-        onContentReady: function (e) {
-            Console.log("call onContentReady()");
+        validationError: "Your check box given first error1",
+        onContentReady: function () {
+            console.log("call onContentReady()");
         },
-
-        // function that is execute before the UI component is disposed of
-        onDisposing: function (e) {
-            Console.log("call onDisposing()");
+        onDisposing: function () {
+            console.log("call onDisposing()");
         },
-
-        // it will execute when checkbox is initialized
-        onInitialized: function (e) {
-            Console.log("call onInitialized");
-        },
-
-        // it will call when the UI component property is changed.
-        onOptionChanged: function (e) {
-            Console.log("call onOptionChanged()");
-        },
-
-        // it will execute after UI component's value is changed
-        onValueChanged: function (e) {
-            Console.log("call onValueChanged()");
-        },
-
-        // specifies that whether the editor is read-only.
-        readOnly: true,
-
-        // switches UI component to right-to-left representation
-        rtlEnabled: true,
-
-
-        // specify that on which number times of tan which component will be highlight --> when there are multipl
-        tabIndex: 3,
-
-        // specifies text display by checkbox
-        text: "You are validate!",
+        onOptionChanged: function () {
+            console.log("call onOptionChanged()");
+        }
     }).dxCheckBox("instance");
+    // Button to demonstrate a warning notification
+    $("#submit").dxButton({
+        text: "Submit Servey",
+        onClick: function () {
+            if (!checkBox2.option('value') || !checkBox3.option('value')|| !checkBox4.option('value')) {
+                DevExpress.ui.notify("Please accept the Terms", "warning", 500);
+            } else {
+                DevExpress.ui.notify("Submission successful!", "success", 200);
+            }
+        }
+    });
+
+    checkBox1.beginUpdate();
+
+    setTimeout(function () {
+        checkBox1.element().blur();
+        console.log("blur() method triggered for CheckBox1");
+    }, 1000);
+
+    $("#reset").dxButton({
+        onClick: function () {
+            checkBox1.reset();
+            checkBox2.reset();
+            checkBox3.reset();
+            checkBox4.reset();
+
+            resetOption("value");
+            console.log("Reset checkBox1 value");
+
+        }
+
+    });
+
+    // defaultOptions(rule) ? check this hjow to use with checkbocx and why we are using this
+
+    // Dispose of CheckBox1 (Frees Resources)
+    setTimeout(function () {
+        checkBox1.dispose();
+        console.log("CheckBox1 disposed.");
+    }, 5000);
+    // this dispose all the allocated resources to that checkBox instance (After calling this method it will return the DOM element associated with that UI component) // use this method if UI component only build using pure JS and jQuery
+
+    let checkBoxInstance = DevExpress.ui.dxCheckBox.getInstance($("#robotCheckBox"));
+    console.log("Retrieved instance using getInstance():", checkBoxInstance);
+
+    checkBox1.focus();
+
+    
+    // Event Handling (on & off)
+    function checkBoxEventHandler(e) {
+        console.log("Event Triggered: ", e.value);
+    }
+
+    // on(eventName, eventHandler)
+    checkBox1.on("valueChanged", checkBoxEventHandler);
+
+    setTimeout(function () {
+        // off(eventName, eventHandler)
+        checkBox1.off("valueChanged", checkBoxEventHandler);
+        console.log("Detached valueChanged event from CheckBox1");
+    }, 3000);
+
+    // raised when the UI component is rendered 
+   
+    checkBox1.endUpdate();
 });
+
+

@@ -224,8 +224,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="HTML\CheckBox.html" />
+    <Content Include="HTML\temp.html" />
     <Content Include="HTML\WidgetBasics.html" />
     <Content Include="JS\CheckBox.js" />
+    <Content Include="JS\temp.js" />
     <Content Include="JS\WidgetBasics.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
