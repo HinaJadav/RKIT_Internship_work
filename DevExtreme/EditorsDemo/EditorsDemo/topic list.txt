@@ -1,0 +1,98 @@
+﻿
+
+--
+
+calendarOptions
+
+cancelButton --> add(button location, name, 
+type:Date
+text:BirthDate,
+placeholder: <add something> --> what is difference between this and "text" properties
+displayFormat --> add this 
+dateSerializationFormat
+pickerType: <4 diff types> --> use this all with diff ex
+stylingMode: Underlined,
+spellcheck:true
+tabIndex:1
+showClearButton: true,
+rtlEnabled:true,
+readonly: true,-- another ex
+todayButtonText
+useMaskBehavior,
+openOnFieldClick: true,
+open:true-->ex
+onValueChanged: --> call proper function in which one alert box display after this --> ex
+onPlate --> check how this will work
+
+onOptionChanged--> ?
+
+onOpen --> print simple console text
+onKeyUp --> console message
+onKeyDown 
+onKeyPress--> check this
+onInput: redirect to the next UI component
+onInitialized --> welcome message popup
+onFocusOut, onFocusIn --> console message
+onEnterKey --> pop("user starrt interaction with application")
+onCut --> popUp ("cut input")
+onCopy --> popUp("Copy intput")
+onContentReady --> popUp("Now user can intercat with page)
+
+name --> add it 
+min
+max
+isvalidDatemessage
+hoverSateEnabled: true,
+hint: "Enter your DOB"
+
+disabledDates --> add into another example
+dateOutOfRangeMessage --> add into DOB --> display message if user add date after today --> it will show error message and not allows that intput 
+
+interval --> add intp another date ex
+
+--?--- how this all works
+deferRendering
+onDisposing
+showAnalogClock
+showDropDown
+valuechangeevent
+
+
+-----------Methods
+beginUpdate()
+dispose()
+focus()
+getInstance() --> difference between --> instance()
+off(eventName, eventHandler)
+on(eventName, eventHandler)
+open()
+option(optionName, optionValue)
+registerKeyHandler(key, Handler)
+reset()
+
+
+
+------events
+change
+contentReady
+copy
+cut
+disposing
+enterkey --> with different ex
+foucusIn 
+focusOut
+input
+optionChanged
+paste
+valueChanged
+keyDown
+keypress-----------
+
+
+
+
+
+
+
+Use text when you want to set a predefined value in an input field.
+Use placeholder when you want to guide users about what to enter.
