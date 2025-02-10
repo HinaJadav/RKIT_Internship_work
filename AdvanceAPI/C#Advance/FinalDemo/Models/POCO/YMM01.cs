@@ -9,23 +9,20 @@ namespace FinalDemo.Models.POCO
     public class YMM01
     {
 <<<<<<< HEAD
-        [PrimaryKey]
-        [AutoIncrement]
+       
         public int M01F01 { get; set; } // id
 =======
         /// <summary>
         /// Primary key - Unique member ID.
         /// </summary>
-        [PrimaryKey]
-        [AutoIncrement]
+        
         public int M01F01 { get; set; }
 >>>>>>> 0f8054d594a105dfd50cdea410e51bb1e01a5a1a
 
         /// <summary>
         /// Full name of the member.
         /// </summary>
-        [Required] // add into dto 
-        [StringLength(50)]
+        
 <<<<<<< HEAD
         public string M01F02 { get; set; } // full name
 
@@ -33,7 +30,7 @@ namespace FinalDemo.Models.POCO
         [Unique]
         public string M01F03 { get; set; } // email
 
-        [DecimalLength(10, 0)] // Precision 10, Scale 0 (whole numbers)
+        
         public decimal M01F04 { get; set; } // contact number
 
       
