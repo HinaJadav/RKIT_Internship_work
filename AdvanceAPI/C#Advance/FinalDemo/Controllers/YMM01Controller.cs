@@ -17,12 +17,14 @@ namespace FinalDemo.Controllers
     {
         private readonly BLYMM01 _memberService;
         private readonly BLSecurity _loginService;
+        private Response _response;
 
         // Constructor to initialize services
         public YMM01Controller()
         {
             _memberService = new BLYMM01();
             _loginService = new BLSecurity();
+            _response = new Response();
         }
 
         /// <summary>
@@ -32,11 +34,11 @@ namespace FinalDemo.Controllers
         [Route("login")]
         public IHttpActionResult Login(DTOLogin loginDto)
         {
-            Response response = _loginService.Login(loginDto);
-            if (response.IsError)
-                return BadRequest(response.Message);
+            _response = _loginService.Login(loginDto);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
 
-            return Ok(response.Message);
+            return Ok(_response.Message);
         }
 
         /// <summary>
@@ -44,33 +46,39 @@ namespace FinalDemo.Controllers
         /// </summary>
         [HttpPost]
         [Route("add")] // POST api/member/add
-        public Response AddMember(DTOYMM01 memberDto)
+        public IHttpActionResult AddMember(DTOYMM01 memberDto)
         {
             _memberService.Type = OperationType.A;
-            _memberService.PreSave(gameDto);
+            _memberService.PreSave(memberDto);
             _response = _memberService.Validation();
-            if (!_response.IsError)
+
+            if (_response.IsError)
             {
-                _response = _memberService.Save();
+                return BadRequest(_response.Message);
             }
-            return _response;
+
+            _response = _memberService.Save();
+            return Ok(_response);
         }
 
         /// <summary>
         /// Updates an existing member's information.
         /// </summary>
         [HttpPut]
-        [Route("update")] // PUT api/member/update
-        public Response UpdateMember(int id, DTOYMM01 memberDto)
+        [Route("update/{id}")] // PUT api/member/update/{id}
+        public IHttpActionResult UpdateMember(int id, DTOYMM01 memberDto)
         {
             _memberService.Type = OperationType.E;
-            _memberService.PreSave(gameDto);
+            _memberService.PreSave(memberDto);
             _response = _memberService.Validation();
-            if (!_response.IsError)
+
+            if (_response.IsError)
             {
-                _response = _memberService.Save();
+                return BadRequest(_response.Message);
             }
-            return _response;
+
+            _response = _memberService.Save();
+            return Ok(_response);
         }
 
         /// <summary>
@@ -78,10 +86,18 @@ namespace FinalDemo.Controllers
         /// </summary>
         [HttpDelete]
         [Route("delete/{id}")] // DELETE api/member/delete/{id}
-        public Response DeleteMember(int id)
+        public IHttpActionResult DeleteMember(int id)
         {
-            return _memberService.Delete(id);
+            var response = _memberService.Delete(id);
+
+            if (response.IsError)
+            {
+                return BadRequest(response.Message);
+            }
+
+            return Ok(response);
         }
+
 
         /// <summary>
         /// Downloads all member data as a JSON file.
@@ -130,10 +146,10 @@ namespace FinalDemo.Controllers
         [Route("insert-multiple")] // POST api/member/insert-multiple
         public IHttpActionResult InsertMultipleMembers(List<YMM01> members)
         {
-            Response response = additionalService.InsertAllMembers(members);
-            if (response.IsError)
-                return BadRequest(response.Message);
-            return Ok(response.Message);
+             _response = additionalService.InsertAllMembers(members);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+            return Ok(_response.Message);
         }
 
         /// <summary>
@@ -143,10 +159,10 @@ namespace FinalDemo.Controllers
         [Route("insert-selective")] // POST api/member/insert-selective
         public IHttpActionResult InsertSelectiveFields(YMM01 member)
         {
-            Response response = additionalService.InsertSelectiveFields(member);
-            if (response.IsError)
-                return BadRequest(response.Message);
-            return Ok(response.Message);
+             _response = additionalService.InsertSelectiveFields(member);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+            return Ok(_response.Message);
         }
 
         /// <summary>
@@ -156,10 +172,10 @@ namespace FinalDemo.Controllers
         [Route("update-selective")] // PUT api/member/update-selective
         public IHttpActionResult UpdateSelectiveFields(YMM01 member)
         {
-            Response response = additionalService.UpdateSelectiveFields(member);
-            if (response.IsError)
-                return BadRequest(response.Message);
-            return Ok(response.Message);
+             _response = additionalService.UpdateSelectiveFields(member);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+            return Ok(_response.Message);
         }
 
         /// <summary>
@@ -169,10 +185,10 @@ namespace FinalDemo.Controllers
         [Route("update-by-dictionary/{id}")] // PUT api/member/update-by-dictionary/{id}
         public IHttpActionResult UpdateByDictionary(int id, Dictionary<string, object> updateFields)
         {
-            Response response = additionalService.UpdateByDictionary(id, updateFields);
-            if (response.IsError)
-                return BadRequest(response.Message);
-            return Ok(response.Message);
+             _response = additionalService.UpdateByDictionary(id, updateFields);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+            return Ok(_response.Message);
         }
 
         /// <summary>
@@ -182,10 +198,10 @@ namespace FinalDemo.Controllers
         [Route("update-with-condition")] // PUT api/member/update-with-condition
         public IHttpActionResult UpdateWithCondition(Dictionary<string, object> updateFields, string oldValue)
         {
-            Response response = additionalService.UpdateWithCondition(updateFields, oldValue);
-            if (response.IsError)
-                return BadRequest(response.Message);
-            return Ok(response.Message);
+             _response = additionalService.UpdateWithCondition(updateFields, oldValue);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+            return Ok(_response.Message);
         }
 
         /// <summary>
@@ -195,11 +211,72 @@ namespace FinalDemo.Controllers
         [Route("update-non-defaults/{id}")]
         public IHttpActionResult UpdateNonDefaults(int id, DTOYMM01 memberDto)
         {
-            Response response = memberService.UpdateNonDefaults(id, memberDto);
-            if (response.IsError)
-                return BadRequest(response.Message);
+             _response = memberService.UpdateNonDefaults(id, memberDto);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
 
-            return Ok(response.Message);
+            return Ok(_response.Message);
+        }
+
+        /// <summary>
+        /// Counts the total number of active members.
+        /// </summary>
+        [HttpGet]
+        [Route("count-active-members")]
+        public IHttpActionResult CountActiveMembers()
+        {
+            int count = _memberService.CountActiveMembers();
+            return Ok(count);
+        }
+
+        /// <summary>
+        /// Retrieves a list of all member email addresses.
+        /// </summary>
+        [HttpGet]
+        [Route("all-emails")]
+        public IHttpActionResult GetAllEmails()
+        {
+            List<string> emails = _memberService.GetAllEmails();
+            return Ok(emails);
+        }
+
+        /// <summary>
+        /// Retrieves a dictionary of the number of members who joined in specified years.
+        /// </summary>
+        [HttpPost]
+        [Route("members-by-year")]
+        public IHttpActionResult GetMembersByJoiningYear([FromBody] int[] years)
+        {
+            Dictionary<int, int> result = _memberService.GetMembersByJoiningYear(years);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Deletes all inactive members from the database.
+        /// </summary>
+        [HttpDelete]
+        [Route("delete-inactive-members")]
+        public IHttpActionResult DeleteInactiveMembers()
+        {
+            _response = _memberService.DeleteInactiveMembers();
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+
+            return Ok(_response.Message);
+        }
+
+        /// <summary>
+        /// Updates member details by adding or modifying existing values.
+        /// </summary>
+        [HttpPatch]
+        [Route("update-member-score/{memberId}/{scoreIncrease}")]
+        public IHttpActionResult UpdateMemberScore(int memberId, int scoreIncrease)
+        {
+            _response = _memberService.UpdateMemberScore(memberId, scoreIncrease);
+            if (_response.IsError)
+                return BadRequest(_response.Message);
+
+            return Ok(_response.Message);
         }
     }
 }

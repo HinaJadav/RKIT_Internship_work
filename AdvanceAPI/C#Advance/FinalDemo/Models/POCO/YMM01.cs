@@ -12,7 +12,7 @@ namespace FinalDemo.Models.POCO
         /// <summary>
         /// Primary key - Unique member ID.
         /// </summary>
-        
+        [PrimaryKey]
         public int M01F01 { get; set; }
 
        

@@ -64,7 +64,7 @@ namespace FinalDemo.BL
         /// <param name="member">The member object to validate.</param>
         /// <returns>A tuple containing a boolean indicating validity and a message.</returns>
 
-        public Response Validation()
+        public _response Validation()
         {
             if (Type == OperationType.E || Type == OperationType.D)
             {
@@ -86,9 +86,9 @@ namespace FinalDemo.BL
         /// Saves a member to the database.
         /// </summary>
         /// <param name="member">The member object to save.</param>
-        /// <returns>A response indicating the result of the save operation.</returns>
+        /// <returns>A _response indicating the result of the save operation.</returns>
 
-        public Response Save()
+        public _response Save()
         {
             try
             {
@@ -132,7 +132,7 @@ namespace FinalDemo.BL
         }
 
 
-        public Response Delete(int memberId)
+        public _response Delete(int memberId)
         {
             try
             {
@@ -175,8 +175,8 @@ namespace FinalDemo.BL
         /// Inserts multiple members into the database at once.
         /// </summary>
         /// <param name="members">List of YMM01 members to insert.</param>
-        /// <returns>A response indicating the result of the insert operation.</returns>
-        public Response InsertAllMembers(List<YMM01> members)
+        /// <returns>A _response indicating the result of the insert operation.</returns>
+        public _response InsertAllMembers(List<YMM01> members)
         {
            
             try
@@ -199,8 +199,8 @@ namespace FinalDemo.BL
         /// Inserts only specific fields for a new member.
         /// </summary>
         /// <param name="member">The member object containing the data.</param>
-        /// <returns>A response indicating the result of the insert operation.</returns>
-        public Response InsertSelectiveFields(YMM01 member)
+        /// <returns>A _response indicating the result of the insert operation.</returns>
+        public _response InsertSelectiveFields(YMM01 member)
         {
             
             try
@@ -223,8 +223,8 @@ namespace FinalDemo.BL
         /// Updates only specific fields of a member.
         /// </summary>
         /// <param name="member">The member object with updated values.</param>
-        /// <returns>A response indicating the result of the update operation.</returns>
-        public Response UpdateSelectiveFields(YMM01 member)
+        /// <returns>A _response indicating the result of the update operation.</returns>
+        public _response UpdateSelectiveFields(YMM01 member)
         {
             
             try
@@ -248,8 +248,8 @@ namespace FinalDemo.BL
         /// </summary>
         /// <param name="memberId">The ID of the member to update.</param>
         /// <param name="updateFields">Dictionary containing field names and their new values.</param>
-        /// <returns>A response indicating the result of the update operation.</returns>
-        public Response UpdateByDictionary(int memberId, Dictionary<string, object> updateFields)
+        /// <returns>A _response indicating the result of the update operation.</returns>
+        public _response UpdateByDictionary(int memberId, Dictionary<string, object> updateFields)
         {
            
             try
@@ -274,8 +274,8 @@ namespace FinalDemo.BL
         /// </summary>
         /// <param name="updateFields">Dictionary containing field names and their new values.</param>
         /// <param name="oldValue">The condition value to match before updating.</param>
-        /// <returns>A response indicating the result of the update operation.</returns>
-        public Response UpdateWithCondition(Dictionary<string, object> updateFields, string oldValue)
+        /// <returns>A _response indicating the result of the update operation.</returns>
+        public _response UpdateWithCondition(Dictionary<string, object> updateFields, string oldValue)
         {
           
             try
@@ -298,11 +298,15 @@ namespace FinalDemo.BL
         /// <summary>
         /// Updates only the non-default (changed) fields of a member.
         /// </summary>
-        public Response UpdateNonDefaults(int id, DTOYMM01 memberDto)
+        public _response UpdateNonDefaults(int id, DTOYMM01 memberDto)
         {
             try
             {
-                YMM01 existingMember = db.SingleById<YMM01>(id);
+                using (var db = DBConnection.OpenConnection())
+                {
+                    YMM01 existingMember = db.ById<YMM01>(db, id);
+                }
+                    
                 if (existingMember == null)
                 { 
                     _response.IsError = true;
@@ -318,7 +322,7 @@ namespace FinalDemo.BL
                     M01F08 = memberDto.M01108 == 1 ? true : existingMember.M01F08
                 };
 
-                db.UpdateNonDefaults(updatedMember, x => x.M01F01 == id);
+                db.UpdateNonDefaults(updatedMember, member1 => member1.M01F01 == id);
 
                 _response.Message = "Member updated successfully." ;
             }
@@ -331,5 +335,88 @@ namespace FinalDemo.BL
             return _response;
         }
 
+        /// <summary>
+        /// Counts the total number of active members.
+        /// </summary>
+        public int CountActiveMembers()
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                return db.Scalar<int>(db.From<YMM01>()
+                    .Where(member1 => member1.M01F08 == 1)
+                    .Select(Sql.Count("*")));
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a list of all member email addresses.
+        /// </summary>
+        public List<string> GetAllEmails()
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                return db.Column<string>(db.From<YMM01>().Select(member1 => member1.M01F03));
+            }
+        }
+
+        /// <summary>
+        /// Retrieves a dictionary of the number of members who joined in specified years.
+        /// </summary>
+        public Dictionary<int, int> GetMembersByJoiningYear(int[] years)
+        {
+            using (var db = _dbFactory.OpenDbConnection())
+            {
+                return db.Dictionary<int, int>(db.From<YMM01>()
+                    .Where(member1 => Sql.In(member1.M01F07.Year, years))
+                    .GroupBy(member1 => member1.M01F07.Year)
+                    .Select(member1 => new { member1.M01F07.Year, Total = Sql.Count("*") }));
+            }
+        }
+
+        /// <summary>
+        /// Deletes all inactive members from the database.
+        /// </summary>
+        public _response DeleteInactiveMembers()
+        {
+            
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    var inactiveMembersQuery = db.From<YMM01>().Where(member1 => member1.M01F08 == 0);
+                    db.Delete(inactiveMembersQuery);
+                }
+                _response.Message = "Inactive members have been deleted.";
+            }
+            catch (Exception ex)
+            {
+                _response.IsError = true;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+
+        /// <summary>
+        /// Updates member details by adding or modifying existing values.
+        /// </summary>
+        public _response UpdateMemberScore(int memberId, int scoreIncrease)
+        {
+            try
+            {
+                using (var db = _dbFactory.OpenDbConnection())
+                {
+                    db.UpdateAdd(() => new YMM01 { M01F08 = scoreIncrease }, where: member1 => member1.M01F01 == memberId);
+                }
+                _response.Message = "Member score updated successfully.";
+            }
+            catch (Exception ex)
+            {
+                _response.IsError = true;
+                _response.Message = ex.Message;
+            }
+            return _response;
+        }
+        
+        
     }
 }

@@ -23,7 +23,8 @@ namespace FinalDemo.BL
         {
             using (var db = DBConnection.OpenConnection())
             {
-                const string query = "SELECT * FROM YMM01 WHERE M01F03 = @Email";
+                const string query = string.Format("SELECT M01F01, M01F03, M01F04, M01F07, M01F08, M01F09 FROM YMM01 WHERE M01F03 = '{0}'", email);
+
                 return db.SqlList<YMM01>(query, new { Email = email }).FirstOrDefault();
             }
         }
@@ -61,7 +62,7 @@ namespace FinalDemo.BL
         {
             try
             {
-                var member = GetMemberByEmail(loginDto.Email);
+                YMM01 member = GetMemberByEmail(loginDto.Email);
                 if (member == null)
                 {
                     return new Response { IsError = true, Message = "Member not found." };
@@ -79,5 +80,7 @@ namespace FinalDemo.BL
                 return new Response { IsError = true, Message = "An error occurred during login." };
             }
         }
+
+
     }
 }
