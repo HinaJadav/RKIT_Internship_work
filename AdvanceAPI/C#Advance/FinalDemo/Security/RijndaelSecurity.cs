@@ -32,7 +32,7 @@ namespace FinalDemo.Security
         /// <returns>Base64 encoded encrypted string.</returns>
         public static string Encrypt(string plainText)
         {
-            using (var rijndael = new RijndaelManaged())
+            using (RijndaelManaged rijndael = new RijndaelManaged())
             {
                 rijndael.KeySize = 256;
                 rijndael.BlockSize = blockSize;
@@ -41,10 +41,10 @@ namespace FinalDemo.Security
                 rijndael.Key = key;
                 rijndael.IV = iv;
 
-                using (var encryptor = rijndael.CreateEncryptor())
-                using (var ms = new MemoryStream())
-                using (var cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
-                using (var writer = new StreamWriter(cs))
+                using (CreateEncryptor encryptor = rijndael.CreateEncryptor())
+                using (MemoryStream ms = new MemoryStream())
+                using (CryptoStream cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
+                using (StreamReader writer = new StreamWriter(cs))
                 {
                     writer.Write(plainText);
                     writer.Flush();
@@ -63,7 +63,7 @@ namespace FinalDemo.Security
         {
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
 
-            using (var rijndael = new RijndaelManaged())
+            using (RijndaelManaged rijndael = new RijndaelManaged())
             {
                 rijndael.KeySize = 256;
                 rijndael.BlockSize = blockSize;
@@ -72,10 +72,10 @@ namespace FinalDemo.Security
                 rijndael.Key = key;
                 rijndael.IV = iv;
 
-                using (var decryptor = rijndael.CreateDecryptor())
-                using (var ms = new MemoryStream(cipherBytes))
-                using (var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
-                using (var reader = new StreamReader(cs))
+                using (CreateDecryptor decryptor = rijndael.CreateDecryptor())
+                using (MemoryStream ms = new MemoryStream(cipherBytes))
+                using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+                using (StreamReader reader = new StreamReader(cs))
                 {
                     return reader.ReadToEnd();
                 }

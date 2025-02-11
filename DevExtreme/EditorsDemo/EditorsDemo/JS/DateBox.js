@@ -60,7 +60,9 @@
         disabledDates: function (data) {
             return data.value > new Date();
         },
-        dateOutOfRangeMessage: "Future dates are not allowed" // when this msg comes
+        dateOutOfRangeMessage: "Future dates are not allowed", // when this msg comes
+        width: "500px"
+
     });
 
     $("#graduationDate").dxDateBox({
@@ -69,9 +71,9 @@
         placeholder: "Graduation Date",
         pickerType: "rollers",
         displayFormat: "MM/yyyy",
-        showDropDown: true
+        showDropDown: true,
         
-        
+         width: "500px"
     });
 
     $("#exam10thDate").dxDateBox({
@@ -79,8 +81,8 @@
         pickerType: "calendar",
         placeholder: "10th Exam Date",
         displayFormat: 'EEEE, MMM dd',
-        useMaskBehavior: true
-        
+        useMaskBehavior: true,
+         
     });
 
 
@@ -88,7 +90,7 @@
         type: "date",
         pickerType: "list",
         placeholder: "12th Exam Date",
-
+        
         
     }).dxDateBox("instance"); // Get the instance using instance()
 

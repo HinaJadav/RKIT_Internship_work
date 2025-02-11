@@ -221,10 +221,13 @@
     <Content Include="Content\dx.material.teal.light.css" />
     <Content Include="Content\dx.softblue.compact.css" />
     <Content Include="Content\dx.softblue.css" />
+    <Content Include="Doc\dxDropDown.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="HTML\DateBox.html" />
+    <Content Include="HTML\DropDownBox.html" />
     <Content Include="JS\DateBox.js" />
+    <Content Include="JS\DropDownBox.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

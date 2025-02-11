@@ -19,19 +19,19 @@ namespace FinalDemo.Models.POCO
         /// <summary>
         /// Unique email address of the member.
         /// </summary>
-        [Unique]
+        // [Unique]
         public string M01F03 { get; set; }
 
         /// <summary>
         /// Contact number with a precision of 10 digits.
         /// </summary>
-        [DecimalLength(10, 0)]
+        // [DecimalLength(10, 0)]
         public decimal M01F04 { get; set; }
 
         /// <summary>
         /// Date when the member joined. Cannot be updated.
         /// </summary>
-        [IgnoreOnUpdate]
+        [IgnoreOnUpdate] 
         public DateTime M01F07 { get; set; }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace FinalDemo.Models.POCO
         /// Member's password (Required).
         /// </summary>
        
-
+// dummy field : case check ( dto to poco) 
         public string M01F09 { get; set; } // member password
 
     }

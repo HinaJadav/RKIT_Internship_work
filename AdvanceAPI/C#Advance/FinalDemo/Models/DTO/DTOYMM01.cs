@@ -38,14 +38,14 @@ public class Member
     /// <summary>
     /// Date when the member joined.
     /// </summary>
-    [JsonPropertyName("joined_date")]
+    /*[JsonPropertyName("joined_date")]
     [Required(ErrorMessage = "Joined date is required.")]
-    public DateTime M01107 { get; set; }
+    public DateTime M01107 { get; set; } */
 
     /// <summary>
     /// Indicates if the member is active (1 = Active, 0 = Inactive).
     /// </summary>
-    [JsonPropertyName("is_active")]
+    [JsonPropertyName("is_active")] // change name of props
     [Required(ErrorMessage = "Status is required.")]
     [Range(0, 1, ErrorMessage = "Invalid status. Use 1 for Active and 0 for Inactive.")]
     public int M01108 { get; set; }

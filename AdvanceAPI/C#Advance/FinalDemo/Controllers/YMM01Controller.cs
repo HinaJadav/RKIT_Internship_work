@@ -178,18 +178,7 @@ namespace FinalDemo.Controllers
             return Ok(_response.Message);
         }
 
-        /// <summary>
-        /// Updates a member using a dictionary of field values.
-        /// </summary>
-        [HttpPut]
-        [Route("update-by-dictionary/{id}")] // PUT api/member/update-by-dictionary/{id}
-        public IHttpActionResult UpdateByDictionary(int id, Dictionary<string, object> updateFields)
-        {
-             _response = additionalService.UpdateByDictionary(id, updateFields);
-            if (_response.IsError)
-                return BadRequest(_response.Message);
-            return Ok(_response.Message);
-        }
+        
 
         /// <summary>
         /// Updates members based on a custom condition.
@@ -200,7 +189,7 @@ namespace FinalDemo.Controllers
         {
              _response = additionalService.UpdateWithCondition(updateFields, oldValue);
             if (_response.IsError)
-                return BadRequest(_response.Message);
+                return BadRequest(_response.Message); // not use every time
             return Ok(_response.Message);
         }
 
@@ -269,10 +258,10 @@ namespace FinalDemo.Controllers
         /// Updates member details by adding or modifying existing values.
         /// </summary>
         [HttpPatch]
-        [Route("update-member-score/{memberId}/{scoreIncrease}")]
-        public IHttpActionResult UpdateMemberScore(int memberId, int scoreIncrease)
+        [Route("update-member-activityStatus/{memberId}/{activityStatus}")]
+        public IHttpActionResult UpdateMemberScore(int memberId, int activityStatus)
         {
-            _response = _memberService.UpdateMemberScore(memberId, scoreIncrease);
+            _response = _memberService.UpdateMemberScore(memberId, activityStatus);
             if (_response.IsError)
                 return BadRequest(_response.Message);
 

@@ -18,7 +18,7 @@ namespace FinalDemo.BL
     public class BLYMM01
     {
         private YMM01 _m01Obj;
-        private int _memberId;
+        private int _memberId; // don't make global
         private Response _response;
         public OperationType Type { get; set; }
 
@@ -131,8 +131,8 @@ namespace FinalDemo.BL
             return encryptedPassword;
         }
 
-
-        public _response Delete(int memberId)
+        // add comment
+        public Response Delete(int memberId)
         {
             try
             {
@@ -167,7 +167,7 @@ namespace FinalDemo.BL
         {
             using (var db = DBConnection.OpenConnection())
             {
-                return db.SingleById<YMM01>(id);
+                return db.SingleById<YMM01>(id); // entire model data
             }
         }
 
@@ -176,7 +176,7 @@ namespace FinalDemo.BL
         /// </summary>
         /// <param name="members">List of YMM01 members to insert.</param>
         /// <returns>A _response indicating the result of the insert operation.</returns>
-        public _response InsertAllMembers(List<YMM01> members)
+        public Response InsertAllMembers(List<YMM01> members)
         {
            
             try
@@ -200,7 +200,7 @@ namespace FinalDemo.BL
         /// </summary>
         /// <param name="member">The member object containing the data.</param>
         /// <returns>A _response indicating the result of the insert operation.</returns>
-        public _response InsertSelectiveFields(YMM01 member)
+        public Response InsertSelectiveFields(YMM01 member)
         {
             
             try
@@ -224,7 +224,7 @@ namespace FinalDemo.BL
         /// </summary>
         /// <param name="member">The member object with updated values.</param>
         /// <returns>A _response indicating the result of the update operation.</returns>
-        public _response UpdateSelectiveFields(YMM01 member)
+        public Response UpdateSelectiveFields(YMM01 member)
         {
             
             try
@@ -243,39 +243,14 @@ namespace FinalDemo.BL
             return _response;
         }
 
-        /// <summary>
-        /// Updates member details using a dictionary.
-        /// </summary>
-        /// <param name="memberId">The ID of the member to update.</param>
-        /// <param name="updateFields">Dictionary containing field names and their new values.</param>
-        /// <returns>A _response indicating the result of the update operation.</returns>
-        public _response UpdateByDictionary(int memberId, Dictionary<string, object> updateFields)
-        {
-           
-            try
-            {
-                using (var db = DBConnection.OpenConnection())
-                {
-                    updateFields[nameof(YMM01.M01F01)] = memberId;
-                    db.UpdateOnly<YMM01>(updateFields);
-                }
-                _response.Message = "Member updated successfully using dictionary.";
-            }
-            catch (Exception ex)
-            {
-                _response.IsError = true;
-                _response.Message = $"Error: {ex.Message}";
-            }
-            return _response;
-        }
-
+        //char  34   
         /// <summary>
         /// Updates members based on a custom condition.
         /// </summary>
         /// <param name="updateFields">Dictionary containing field names and their new values.</param>
         /// <param name="oldValue">The condition value to match before updating.</param>
         /// <returns>A _response indicating the result of the update operation.</returns>
-        public _response UpdateWithCondition(Dictionary<string, object> updateFields, string oldValue)
+        public Response UpdateWithCondition(Dictionary<string, object> updateFields, string oldValue)
         {
           
             try
@@ -298,7 +273,7 @@ namespace FinalDemo.BL
         /// <summary>
         /// Updates only the non-default (changed) fields of a member.
         /// </summary>
-        public _response UpdateNonDefaults(int id, DTOYMM01 memberDto)
+        public Response UpdateNonDefaults(int id, DTOYMM01 memberDto)
         {
             try
             {
@@ -320,7 +295,7 @@ namespace FinalDemo.BL
                     M01F03 = memberDto.M01103 ?? existingMember.M01F03,
                     M01F04 = memberDto.M01104 != null ? decimal.Parse(memberDto.M01104) : existingMember.M01F04,
                     M01F08 = memberDto.M01108 == 1 ? true : existingMember.M01F08
-                };
+                }; // obj init separate
 
                 db.UpdateNonDefaults(updatedMember, member1 => member1.M01F01 == id);
 
@@ -340,7 +315,7 @@ namespace FinalDemo.BL
         /// </summary>
         public int CountActiveMembers()
         {
-            using (var db = _dbFactory.OpenDbConnection())
+            using (var db = DBConnection.OpenDbConnection())
             {
                 return db.Scalar<int>(db.From<YMM01>()
                     .Where(member1 => member1.M01F08 == 1)
@@ -353,7 +328,7 @@ namespace FinalDemo.BL
         /// </summary>
         public List<string> GetAllEmails()
         {
-            using (var db = _dbFactory.OpenDbConnection())
+            using (var db = DBConnection.OpenDbConnection())
             {
                 return db.Column<string>(db.From<YMM01>().Select(member1 => member1.M01F03));
             }
@@ -364,7 +339,7 @@ namespace FinalDemo.BL
         /// </summary>
         public Dictionary<int, int> GetMembersByJoiningYear(int[] years)
         {
-            using (var db = _dbFactory.OpenDbConnection())
+            using (var db = DBConnection.OpenDbConnection())
             {
                 return db.Dictionary<int, int>(db.From<YMM01>()
                     .Where(member1 => Sql.In(member1.M01F07.Year, years))
@@ -381,9 +356,9 @@ namespace FinalDemo.BL
             
             try
             {
-                using (var db = _dbFactory.OpenDbConnection())
+                using (var db = DBConnection.OpenDbConnection())
                 {
-                    var inactiveMembersQuery = db.From<YMM01>().Where(member1 => member1.M01F08 == 0);
+                    YMM01 inactiveMembersQuery = db.From<YMM01>().Where(member1 => member1.M01F08 == 0);
                     db.Delete(inactiveMembersQuery);
                 }
                 _response.Message = "Inactive members have been deleted.";
@@ -399,13 +374,13 @@ namespace FinalDemo.BL
         /// <summary>
         /// Updates member details by adding or modifying existing values.
         /// </summary>
-        public _response UpdateMemberScore(int memberId, int scoreIncrease)
+        public _response UpdateMemberScore(int memberId, int activityStatus)
         {
             try
             {
-                using (var db = _dbFactory.OpenDbConnection())
+                using (var db = DBConnection.OpenDbConnection())
                 {
-                    db.UpdateAdd(() => new YMM01 { M01F08 = scoreIncrease }, where: member1 => member1.M01F01 == memberId);
+                    db.UpdateAdd(() => new YMM01 { M01F08 = activityStatus }, where: member1 => member1.M01F01 == memberId);
                 }
                 _response.Message = "Member score updated successfully.";
             }

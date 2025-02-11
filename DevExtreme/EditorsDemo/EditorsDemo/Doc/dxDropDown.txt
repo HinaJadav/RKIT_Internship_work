@@ -1,0 +1,41 @@
+﻿1. Options (Properties)
+These are configuration properties that define the behavior and appearance of the dxDropDownBox.
+
+Property	Description
+value	The selected value of the dropdown.
+valueExpr	Specifies the data field used as the component's value.
+displayExpr	Defines which field from the data source will be displayed.
+dataSource	The data source (array, store, or API) for the dropdown content.
+contentTemplate	Custom template for rendering the drop-down content.
+acceptCustomValue	Allows users to enter values not present in the data source.
+dropDownOptions	Configures settings like width, height, and other modal properties.
+searchEnabled	Enables the search functionality within the drop-down.
+openOnFieldClick	Opens the drop-down when the input field is clicked.
+placeholder	Placeholder text when no value is selected.
+readOnly	Disables the component if set to true.
+disabled	Disables the component.
+showClearButton	Displays a button to clear the selected value.
+2. Methods
+Methods allow you to programmatically control the dxDropDownBox.
+
+Method	Description
+open()	Opens the dropdown manually.
+close()	Closes the dropdown.
+toggle()	Toggles between open and closed states.
+getDataSource()	Retrieves the data source of the dropdown.
+reset()	Resets the dropdown to its initial state.
+focus()	Sets focus on the component.
+blur()	Removes focus from the component.
+option(optionName, value)	Gets or sets a component option dynamically.
+dispose()	Destroys the component instance and releases resources.
+3. Events
+Events help capture user interactions and execute custom logic.
+
+Event	Description
+onOpened	Triggered when the dropdown is opened.
+onClosed	Triggered when the dropdown is closed.
+onValueChanged	Triggered when the value changes.
+onContentReady	Fired when the drop-down content is fully loaded.
+onSelectionChanged	Fired when the selection changes.
+onDisposing	Fired before the component is destroyed.
+onInitialized	Fired when the component is initialized.
