@@ -4,19 +4,19 @@
         text: "Birth Date",
         placeholder: "Select your birth date",
         displayFormat: "dd/MM/yyyy",
-        dateSerializationFormat: "yyyy-MM-dd", // use?
+        // dateSerializationFormat: "yyyy-MM-dd",
+            // Used when the date value needs to be serialized for sending to a server or processing. If not needed for data binding or API calls,
         pickerType: "calendar",
         stylingMode: "underlined",
-        // spellcheck: true, --> not useful 
+       
         tabIndex: 1,
-        showClearButton: true, // ui ?
+        showClearButton: true, 
         rtlEnabled: false,
         readonly: false,
-        todayButtonText: "Today", // ?
-        useMaskBehavior: true, // ?
+       
         openOnFieldClick: true,
-        open: false, // ?
-        cancelButtonText: 'Cancel', // no effect
+       
+       
         onValueChanged: function (e) {
             alert("Date selected: " + e.value);
         },
@@ -29,9 +29,7 @@
         onKeyDown: function () {
             console.log("Key down event");
         },
-        //onKeyPress: function () {
-           // console.log("Key press event");
-        //},// ?
+        
         onInput: function () {
             console.log("Input event - move to next field");
         },
@@ -71,9 +69,8 @@
         placeholder: "Graduation Date",
         pickerType: "rollers",
         displayFormat: "MM/yyyy",
-        showAnalogClock: true, // ?
-        showDropDown: true,
-        interval: 30 // ?
+        showDropDown: true
+        
         
     });
 
@@ -81,20 +78,51 @@
         type: "date",
         pickerType: "calendar",
         placeholder: "10th Exam Date",
+        displayFormat: 'EEEE, MMM dd',
+        useMaskBehavior: true
+        
     });
 
-    $("#exam12thDate").dxDateBox({
+
+    var dateBoxInstance = $("#exam12thDate").dxDateBox({
         type: "date",
         pickerType: "list",
         placeholder: "12th Exam Date",
-        onEnterKey: function () {
-            alert("12th exam date entered");
-        } // why not working
+
+        
+    }).dxDateBox("instance"); // Get the instance using instance()
+
+    // Begin update (stops UI updates to optimize performance)
+    dateBoxInstance.beginUpdate();
+
+    // Set an option dynamically
+    dateBoxInstance.option("displayFormat", "EEEE, MMMM d, yyyy hh: mm a");
+
+    // Open the date picker manually
+    dateBoxInstance.open();
+
+    // Focus on the input field
+    dateBoxInstance.focus();
+
+    // Register a custom key handler (e.g., when user presses "Enter")
+    dateBoxInstance.registerKeyHandler("enter", function () {
+        alert("Enter key pressed!");
     });
 
-    $("#collegeEnrollmentDate").dxDateBox({
-        type: "date",
-        pickerType: "native",
-        placeholder: ""
-    });
+    
+
+    
+
+    // Reset the date selection
+    dateBoxInstance.reset();
+
+    // Dispose of the instance (removes from DOM)
+    // dateBoxInstance.dispose(); // Uncomment if you want to remove it
+
+    // Get instance using getInstance() (pure JavaScript)
+    var instanceViaGet = DevExpress.ui.dxDateBox.getInstance($("#exam12thDate")[0]);
+    console.log("Instance using getInstance():", instanceViaGet);
+
+    // End update (resume UI updates)
+    dateBoxInstance.endUpdate();
 });

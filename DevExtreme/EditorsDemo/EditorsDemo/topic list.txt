@@ -96,3 +96,7 @@ keypress-----------
 
 Use text when you want to set a predefined value in an input field.
 Use placeholder when you want to guide users about what to enter.
+
+if you use jQuery, instance() is simpler and preferred.
+If you work with vanilla JavaScript, getInstance() is more flexible.
+beginUpdate() and endUpdate() should be used when making multiple changes to avoid UI lag.
