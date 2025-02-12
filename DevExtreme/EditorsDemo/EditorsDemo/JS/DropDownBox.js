@@ -48,7 +48,7 @@
         validationError: { message: "Invalid address format!" },
         validationMessageMode: "always",
         onEnterKey: function () {
-            $("#currentAddress").dxDropDownBox("instance").focus(); // Move focus to current address
+            $("#currentAddress").dxDropDownBox("instance").focus(); 
         },
     });
 
@@ -73,7 +73,7 @@
                 selectionMode: "multiple",
                 onSelectionChanged: function (arg) {
                     if (arg.addedItems.length) {
-                        e.component.option("value", arg.addedItems[0].address); // Fix: Ensure selected address is properly assigned
+                        e.component.option("value", arg.addedItems[0].address); 
                         e.component.close();
                     }
                 }

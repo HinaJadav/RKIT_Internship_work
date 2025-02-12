@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "v6okk0cy54z1WrRbKyL+ZxtdhkgqY90RoaQ/DEF+DVY=",
+  "Hash": "o/TB63KP3to8ba8gkgVOH2l0Uo0zLWYO/Naj2D1lr1A=",
   "Source": "MiddlewareDemo",
   "BasePath": "_content/MiddlewareDemo",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MiddlewareDemo\\wwwroot",
+      "Source": "MiddlewareDemo",
+      "ContentRoot": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\MiddlewareDemo\\MiddlewareDemo\\wwwroot\\",
+      "BasePath": "_content/MiddlewareDemo",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

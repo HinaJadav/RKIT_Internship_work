@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Customwwwroot\css\style.css" />
+    <None Remove="Customwwwroot\html\home.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Customwwwroot\css\style.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Customwwwroot\html\home.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />

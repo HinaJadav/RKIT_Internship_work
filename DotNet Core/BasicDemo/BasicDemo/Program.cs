@@ -1,37 +1,22 @@
-using System;
+// program.cs:
+// It contains entry point for the application
 
-namespace BasicDemo
-{
-    class Program
-    {
-        // application entry point
-        // it will invoked when application start and initializes the host for the application
+using BasicDemo;
 
-        static void Main(string[] args)
-        {
-            // build and run host 
-            CreateHostBuilder(args).Build().Run();
-        }
+// builder: instance of web application builder
+// args: used to pass CL-args(inputs) into project
+var builder = WebApplication.CreateBuilder(args);
 
-        /// <summary>
-        /// Method for set up host builder
-        /// It creates default host for the application
-        /// It will includes configuration, logging etc for hosting application.
-        /// </summary>
-        /// <param name="args">it take values as argument parameters which we give as input into CLI</param>
-        /// <returns></returns>
-        public static IHostBuilder CreateHostBuilder(string[] args)
-        {
-            
-            return Host.CreateDefaultBuilder 
-            (args).ConfigureWebHostDefaults(webHost =>
-            {
-                webHost.UseStartup<Startup>();
-            });
-        }
-    }
-}
+// Initialize Startup
+var startup = new Startup(builder.Configuration);
 
-// ConfigureWebHostDefaults: Configure the web host with default settings(this configuration from appsettings.json)
+// Configure services
+startup.ConfigureServices(builder.Services);
 
-// startup class: Use to configure the application's services and middleware. Also it defines that how the app will respond to HTTp requests.
+var app = builder.Build();
+
+// Configure middleware
+startup.Configure(app, app.Environment);
+
+// Run the application
+app.Run();

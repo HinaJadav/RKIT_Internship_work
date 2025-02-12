@@ -31,3 +31,4 @@ C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\MiddlewareDemo\Mid
 C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\MiddlewareDemo\MiddlewareDemo\obj\Debug\net7.0\MiddlewareDemo.pdb
 C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\MiddlewareDemo\MiddlewareDemo\obj\Debug\net7.0\MiddlewareDemo.genruntimeconfig.cache
 C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\MiddlewareDemo\MiddlewareDemo\obj\Debug\net7.0\ref\MiddlewareDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\MiddlewareDemo\MiddlewareDemo\bin\Debug\net7.0\MiddlewareDemo.staticwebassets.runtime.json

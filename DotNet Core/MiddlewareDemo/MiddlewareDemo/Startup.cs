@@ -8,7 +8,7 @@ namespace MiddlewareDemo
 
         public Startup(IConfiguration configuration)
         {
-            _configuration = configuration;
+            _configuration = configuration; // Injecting configuration
         }
 
         /// <summary>
@@ -17,6 +17,10 @@ namespace MiddlewareDemo
         /// <param name="services">The service collection to configure services.</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            // Registers response compression services
+            services.AddResponseCompression();
+
+
             // Registers support for controllers in the application.
             services.AddControllers();
 
@@ -56,7 +60,7 @@ namespace MiddlewareDemo
 
                 /// <summary>
                 /// Enforces HTTP Strict Transport Security (HSTS) to enhance security.
-                /// Enforces strict HTTPS on;y connections.
+                /// Enforces strict HTTPS only connections.
                 /// </summary>
                 app.UseHsts();
             }
@@ -104,6 +108,8 @@ namespace MiddlewareDemo
 
             /// <summary>
             /// Adds custom rate limiting middleware for API request throttling.
+            /// This middleware limits the number of API requests a client can make within a specific time period.
+            /// It helps prevent abuse, control traffic, and enhance security against DDoS attacks.
             /// </summary>
             app.UseRateLimiter();
 
@@ -125,7 +131,7 @@ namespace MiddlewareDemo
             /// <summary>
             /// Enables session management in the application.
             /// </summary>
-            app.UseSession();
+            //app.UseSession();
 
 
             // Custom middleware
@@ -143,9 +149,6 @@ namespace MiddlewareDemo
                 endpoints.MapControllers();
             });
 
-            // Use(), next() method use into middleware
-            // short-circuiting into middleware pipeline
-            // middleware chaining
 
             /// <summary>
             /// Middleware example to demonstrate the use of Use(), next(), and short-circuiting.

@@ -1,4 +1,6 @@
-﻿namespace BasicDemo
+﻿using Microsoft.Extensions.FileProviders;
+
+namespace BasicDemo
 {
     /// <summary>
     /// This is main configure class of application for configure services or middleware
@@ -6,12 +8,26 @@
     public class Startup
     {
         /// <summary>
+        /// IConfiguration is an interface in ASP.NET Core used for managing configuration settings.
+        /// It allows accessing key-value pairs from various configuration sources, such as:
+        /// - appsettings.json
+        /// - Environment Variables
+        /// - Command-Line Arguments
+        /// </summary>
+        private readonly IConfiguration _configuration;
+
+        public Startup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        /// <summary>
         /// Registers services required by the application into the Dependency Injection(DI) container.
         /// After this we can use all these services throughout the application.
-        /// Itwill be use for configure services like controllers, database connections or authentication.
+        /// It will be use for configure services like controllers, database connections or authentication.
         /// </summary>
         /// <param name="services"></param>
-        public void configureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             // Adds support for controllers in the application
             // It allows the app to handle incoming HTTP requests via controller actions
@@ -29,28 +45,31 @@
         /// <param name="app">Used to configure the middleware pipeline</param>
         /// <param name="env">Provides information about the hosting environment</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        { 
+        {
             // Checks weather the application is running in the Development environment(like development, staging, production)
-            if(env.IsDevelopment()) {
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
             }
 
             // Enable static file access from the wwwroot folder
             app.UseStaticFiles();
 
+            // Enables serving static files from custom static files folder
+            // FileProvider : responsible for handling file system access
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "Customwwwroot")),
+                RequestPath = ""
+            });
+
             // Enable swagger middleware
-            // Generate the OpenAI documentation in JSON format
             app.UseSwagger();
 
             // Enable swagger UI
             // Displays the openAI documentation using a browser-based UI
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Basic demo API");
-                c.RoutePrefix = string.Empty;
-            });
-
-            
+            app.UseSwaggerUI();
 
             // Add routing middleware to the pipeline.
             // It matches incoming requests to the appropriate route and prepares it for endpoint execution
