@@ -227,9 +227,11 @@
     <Content Include="HTML\DateBox.html" />
     <Content Include="HTML\DropDownBox.html" />
     <Content Include="HTML\NumberBox.html" />
+    <Content Include="HTML\SelectBox.html" />
     <Content Include="JS\DateBox.js" />
     <Content Include="JS\DropDownBox.js" />
     <Content Include="JS\NumberBox.js" />
+    <Content Include="JS\SelectBox.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
