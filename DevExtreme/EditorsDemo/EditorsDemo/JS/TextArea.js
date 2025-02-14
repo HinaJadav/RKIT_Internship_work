@@ -38,27 +38,20 @@
         autoResizeEnabled: true,
         minHeight: 40,
         maxHeight: 200,
+        focusStateEnabled: true,
+        hoverStateEnabled: true
 
-        // event
-        onValueChanged: function (e) {
-            let wordCount = e.value.trim().split(/\s+).filter(Boolean).length;
-            // split(/\s+/) splits the string into an array of words, using one or more whitespace characters (\s+) as the delimiter.
-            // filter(Boolean) removes any empty strings from the array.
-
-            $("#wordCount").text("Word Count: " + wordCount);
-
-        }
     });
 
-    $("<div id='wordCount'>Word Count: 0</div>").insertAfter("#feedback");
+    //$("<div id='wordCount'>Word Count: 0</div>").insertAfter("#feedback");
 
-    $("reset").dxButton({
+    $("#reset").dxButton({
         text: "Reset",
-        onClick: function() {
+        onClick: function () {
             let fullName = $("#fullName").dxTextArea("instance");
 
             fullName.blur(); // remove focus and make it blur
-            fullName.option("disabled", true); // disable the text are withput chnaging its value
+            fullName.option("readOnly", true); // disable the text are withput chnaging its value
 
             // Reset all text areas
             $("#fullName").dxTextArea("instance").option("value", "");
@@ -71,12 +64,12 @@
 // inputAtte:
    // 1) target : <input> inside the component
    // 2) common use cases: maxlength, readonly, autocomplete, aria-label
-   // 3) ex: maxLength: 10 --> it will limit input length
+   // 3) ex: maxLength: 10 (it will limit input length)
    // 4) use to manage or modify input nehaviours and accessibility
 // elementAttr:
     // 1) target: <outer <div> wrapper of the component
     // 2) common use cases: id, class etc.
-    // 3) ex: c;ass: "myClass" --> now we ca use this call name for add CSS effect into this component
+    // 3) ex: class: "myClass" (now we ca use this call name for add CSS effect into this component)
     // 4) use for styling and metadata
 
 

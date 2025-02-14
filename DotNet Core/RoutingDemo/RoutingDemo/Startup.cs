@@ -74,7 +74,7 @@
                 endpoints.MapControllers();
 
 
-
+ 
                 // # route handlers(Minimal API routing) : here use as endpoint methods 
                 // we can also use them as middleware 
                 // Use: lightweight APIs without controllers, for MicroServices and for Minimal APIs
@@ -124,3 +124,11 @@
         }
     }
 }
+// what is differenct between filter and middleware 
+/*.NET Core Routing
+
+Uses Microsoft.AspNetCore.Routing.
+Middleware-based (UseRouting, UseEndpoints).
+Attribute routing is primary.
+More performant and flexible.
+Supports advanced route constraints and endpoint filters.*/
