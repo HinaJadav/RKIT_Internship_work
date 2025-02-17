@@ -224,12 +224,14 @@
     <Content Include="Doc\dxDropDown.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="HTML\Button.html" />
     <Content Include="HTML\DateBox.html" />
     <Content Include="HTML\DropDownBox.html" />
     <Content Include="HTML\NumberBox.html" />
     <Content Include="HTML\SelectBox.html" />
     <Content Include="HTML\TextArea.html" />
     <Content Include="HTML\TextBox.html" />
+    <Content Include="JS\Button.js" />
     <Content Include="JS\DateBox.js" />
     <Content Include="JS\DropDownBox.js" />
     <Content Include="JS\NumberBox.js" />
