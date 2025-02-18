@@ -19,8 +19,34 @@
 </head>
 <body>
     <h1>Student Basic Documents</h1>
+    <div id="drop-area" style="border: 2px dashed #ccc; padding: 20px;">
+        Drag files here
+    </div>
 
+    <div id="readyMessage" style="display: none;"></div>
     <div id="aadharCard"></div>
+    <!-- Progress Bar -->
+    <div id="progressBar" style="width: 100%; background: lightgray;">
+        <div id="progress" style="height: 20px; width: 0%; background: green;"></div>
+    </div>
+
+    <!-- Hint Message -->
+    <div id="hintMessage" style="display: none;">Drop your file here to upload!</div>
+
+    <!-- Success Popup -->
+    <div id="successPopup"></div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" style="display: none;"></div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" style="display: none;">Loading...</div>
+
+    <!-- File Preview -->
+    <div id="filePreview"></div>
+
+    <div id="upload"></div>
+    <div id="cancelUpload"></div>
     <div id="reset"></div>
     <div id="submit"></div>
 </body>
