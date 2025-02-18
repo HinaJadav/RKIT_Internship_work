@@ -228,7 +228,9 @@
     <Content Include="HTML\DateBox.html" />
     <Content Include="HTML\DropDownBox.html" />
     <Content Include="HTML\FileUploader.html" />
+    <Content Include="HTML\FINALDEMO.html" />
     <Content Include="HTML\NumberBox.html" />
+    <Content Include="HTML\RadioGroup.html" />
     <Content Include="HTML\SelectBox.html" />
     <Content Include="HTML\TextArea.html" />
     <Content Include="HTML\TextBox.html" />
@@ -237,7 +239,9 @@
     <Content Include="JS\DateBox.js" />
     <Content Include="JS\DropDownBox.js" />
     <Content Include="JS\FileUploader.js" />
+    <Content Include="JS\FINALDEMO.js" />
     <Content Include="JS\NumberBox.js" />
+    <Content Include="JS\RadioGroup.js" />
     <Content Include="JS\SelectBox.js" />
     <Content Include="JS\temp.js" />
     <Content Include="JS\TextArea.js" />
