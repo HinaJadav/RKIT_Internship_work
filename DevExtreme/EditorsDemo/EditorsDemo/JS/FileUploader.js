@@ -3,6 +3,9 @@
         accessKey: 'a',
         allowCanceling: true,
         allowdFileExtention: [".png", ".txt", ".pdf"],
+        // what is difference between this and allowedFileExtention
+        // Specifies the file types that can be uploaded 
+        accept: ".png, .jpg, .jpeg, .gif",
         // use "elementAttr" in logical and effective sence
         focusStateEnabled: true,
         hint: "Enter your AadharCard.",
@@ -18,6 +21,9 @@
         labelText: "Select your AadharCard from Here!",
         multiple: false,
         name: "aadharCardFileUploader",
+
+        // chunkSize: 1024 * 512, // 512 KB chuncks
+        // Default chunkSize = 0 means entire file will be upload in one request
 
         // event 
         onBeforeSend: function () {
@@ -100,7 +106,7 @@
     });
 });
 // abortUpload
-// accept
+// accept: Specifies the file types that can be uploaded 
 // chunlSize, which parameter take as default
 // dialogTrigger
 // dropZone
