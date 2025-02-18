@@ -232,6 +232,7 @@
     <Content Include="HTML\SelectBox.html" />
     <Content Include="HTML\TextArea.html" />
     <Content Include="HTML\TextBox.html" />
+    <Content Include="HTML\Validation.html" />
     <Content Include="JS\Button.js" />
     <Content Include="JS\DateBox.js" />
     <Content Include="JS\DropDownBox.js" />
@@ -241,6 +242,7 @@
     <Content Include="JS\temp.js" />
     <Content Include="JS\TextArea.js" />
     <Content Include="JS\TextBox.js" />
+    <Content Include="JS\Validation.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
