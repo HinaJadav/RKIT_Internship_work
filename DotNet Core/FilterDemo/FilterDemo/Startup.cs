@@ -28,11 +28,11 @@ namespace FilterDemo
             services.AddControllers(options =>
             {
                 // Apply filters globally
-                options.Filters.AddService<CustomAuthorizationFilter>(); // JWT Authorization
-                options.Filters.AddService<CustomResourceFilter>(); // Resource Execution
-                options.Filters.AddService<CustomActionFilter>(); // Action Execution
-                options.Filters.AddService<CustomExceptionFilter>(); // Global Exception Handling
-                options.Filters.AddService<CustomResultFilter>(); // Result Execution
+                options.Filters.AddService<CustomAuthorizationFilter>(); 
+                options.Filters.AddService<CustomResourceFilter>(); 
+                options.Filters.AddService<CustomActionFilter>(); 
+                options.Filters.AddService<CustomExceptionFilter>(); 
+                options.Filters.AddService<CustomResultFilter>(); 
             });
 
             // Enable Swagger with JWT authentication support

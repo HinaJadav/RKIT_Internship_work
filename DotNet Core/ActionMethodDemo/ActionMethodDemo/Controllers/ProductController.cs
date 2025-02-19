@@ -25,7 +25,7 @@ namespace ActionMethodDemo.Controllers
         /// </summary>
         public ActionResult Index()
         {
-            return View(products);
+            return Ok(products);
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace ActionMethodDemo.Controllers
             {
                 return NotFound();  // Return 404 if product not found
             }
-            return View(product);
+            return Ok(product);
         }
 
         /// <summary>
@@ -71,32 +71,6 @@ namespace ActionMethodDemo.Controllers
                 return Json(new { message = "Product not found" });
             }
             return Json(product);
-        }
-
-        /// <summary>
-        /// Returns a partial view showing a summary of the product.
-        /// If the product is found, it returns the product summary; otherwise, it returns a "not found" partial view.
-        /// https://localhost:7202/Product/GetProductSummary/5
-        /// </summary>
-        public PartialViewResult GetProductSummary(int id)
-        {
-            var product = products.Find(p => p.Id == id);
-            if (product == null)
-            {
-                return PartialView("_ProductNotFound");
-            }
-            return PartialView("_ProductSummary", product);
-        }
-
-        /// <summary>
-        /// Returns a full view displaying the product's name and price.
-        /// This example uses dynamic data for a single product.
-        /// https://localhost:7202/Product/GetProductView/5
-        /// </summary>
-        public ViewResult GetProductView()
-        {
-            var product = new Product { Name = "Headphones", Price = 129.99 };
-            return View("ProductDetails", product);
         }
 
 

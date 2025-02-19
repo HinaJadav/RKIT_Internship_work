@@ -50,11 +50,11 @@ namespace RoutingDemo
             /// - Helps keep the middleware pipeline clean by only applying logic where necessary.
             /// 
             /// Middleware Details:
-            /// - This middleware activates when the request path starts with "/api/student".
-            /// - Logs an informational message when the student route is accessed.
-            /// - Returns a response: "Student based Middleware Executed!".
+            /// - This middleware activates when the request path starts with "/api/useWhen".
+            /// - Logs an informational message when the route is accessed.
+            /// - Returns a response: "UseWhen Middleware Executed".
             /// </summary>
-            app.UseWhen(context => context.Request.Path.StartsWithSegments("/api/usewhen"), appBuilder =>
+            app.UseWhen(context => context.Request.Path.StartsWithSegments("/api/useWhen"), appBuilder =>
             {
                 appBuilder.Use(async (context, next) =>
                 {
@@ -69,9 +69,9 @@ namespace RoutingDemo
             /// MapWhen() Middleware:
             /// - Executes middleware only if the request path matches the condition.
             /// - If the request matches, it does NOT continue to other middlewares or routing.
-            /// - Example: A request to "/api/mapwhen" triggers this middleware, and further processing stops.
+            /// - Example: A request to "/api/mapWhen" triggers this middleware, and further processing stops.
             /// </summary>
-            app.MapWhen(context => context.Request.Path.StartsWithSegments("/api/mapwhen"), appBuilder =>
+            app.MapWhen(context => context.Request.Path.StartsWithSegments("/api/mapWhen"), appBuilder =>
             {
                 appBuilder.Run(async context =>
                 {

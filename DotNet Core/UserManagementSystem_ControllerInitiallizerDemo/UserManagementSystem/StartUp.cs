@@ -1,4 +1,7 @@
 ﻿using ControllerInitializationDemo.BL;
+using ControllerInitializationDemo.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace ControllerInitializationDemo
 {
@@ -22,6 +25,9 @@ namespace ControllerInitializationDemo
             services.AddSwaggerGen();
 
             services.AddScoped<BLIUser, BLUser>();
+
+            // Register Custom Controller Activator
+            services.Replace(ServiceDescriptor.Transient<IControllerActivator, CustomControllerActivator>());
 
         }
 

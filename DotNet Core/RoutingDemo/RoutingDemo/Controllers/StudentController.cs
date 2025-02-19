@@ -10,8 +10,8 @@ namespace RoutingDemo.Controllers
         // In-memory student list to simulate a simple student management system
         private static List<Student> Students = new List<Student>
         {
-            new Student { Id = 1, FirstName = "John", LastName = "Doe", EducationInfo = "BSc Computer Science" },
-            new Student { Id = 2, FirstName = "Jane", LastName = "Smith", EducationInfo = "BA Economics" }
+            new Student { Id = 1, FirstName = "Jadav", LastName = "Hina", EducationInfo = "BSc Computer Science" },
+            new Student { Id = 2, FirstName = "Koriya", LastName = "Smith", EducationInfo = "BA Economics" }
         };
 
         // Route name: use to generate a URL based on a specific route
@@ -20,6 +20,9 @@ namespace RoutingDemo.Controllers
         /// Simple route that returns a welcome message.
         /// Accessed via: GET api/welcome
         /// Name : used to assign a route name to the endpoint. 
+        /// Name Attribute Benefits:
+        /// 1) Makes route references independent of URL structure
+        /// 2) Enhances maintainability when URLs change
         /// </summary>
         [HttpGet("welcome", Name = "GetWelcomeMessage")]
         public IActionResult WelcomeMessage()
