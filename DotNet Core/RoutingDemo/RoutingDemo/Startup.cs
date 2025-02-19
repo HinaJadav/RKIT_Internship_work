@@ -124,7 +124,7 @@
         }
     }
 }
-// what is differenct between filter and middleware 
+// what is difference between filter and middleware 
 /*.NET Core Routing
 
 Uses Microsoft.AspNetCore.Routing.
