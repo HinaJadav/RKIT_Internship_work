@@ -13,5 +13,6 @@ var app = builder.Build();
 // Configure middleware
 startup.Configure(app, app.Environment);
 
+
 // Run the application
 app.Run();

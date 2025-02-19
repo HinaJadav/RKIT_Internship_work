@@ -1,4 +1,9 @@
-﻿namespace RoutingDemo
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics.Metrics;
+using System.Net;
+
+namespace RoutingDemo
 {
     public class Startup
     {
@@ -36,15 +41,72 @@
             // Enable Swagger UI middleware
             app.UseSwaggerUI();
 
-            
+            var logger = app.ApplicationServices.GetRequiredService<ILogger<Startup>>();
+
+            /// <summary>
+            /// UseWhen Middleware:
+            /// - A middleware branching method that conditionally executes middleware based on a specific condition.
+            /// - Useful for selectively applying middleware logic based on the request.
+            /// - Helps keep the middleware pipeline clean by only applying logic where necessary.
+            /// 
+            /// Middleware Details:
+            /// - This middleware activates when the request path starts with "/api/student".
+            /// - Logs an informational message when the student route is accessed.
+            /// - Returns a response: "Student based Middleware Executed!".
+            /// </summary>
+            app.UseWhen(context => context.Request.Path.StartsWithSegments("/api/usewhen"), appBuilder =>
+            {
+                appBuilder.Use(async (context, next) =>
+                {
+                    logger.LogInformation("UseWhen Middleware Executed");
+                    context.Response.ContentType = "application/json";
+                    await context.Response.WriteAsync("{ \"message\": \"UseWhen Middleware Executed!\" }");
+                    await next(); // Allows request to continue
+                });
+            });
+
+            /// <summary>
+            /// MapWhen() Middleware:
+            /// - Executes middleware only if the request path matches the condition.
+            /// - If the request matches, it does NOT continue to other middlewares or routing.
+            /// - Example: A request to "/api/mapwhen" triggers this middleware, and further processing stops.
+            /// </summary>
+            app.MapWhen(context => context.Request.Path.StartsWithSegments("/api/mapwhen"), appBuilder =>
+            {
+                appBuilder.Run(async context =>
+                {
+                    logger.LogInformation("MapWhen Middleware Executed");
+
+                    // Set response type to JSON (for Swagger visibility)
+                    context.Response.ContentType = "application/json";
+
+                    // Responds with a message and stops request processing
+                    await context.Response.WriteAsync("{ \"message\": \"MapWhen Middleware Executed!\" }");
+
+                    // No `next()` call, so request processing stops here
+                });
+            });
+
+            /// <summary>
+            /// Global Middleware:
+            /// - Runs for all requests that are NOT handled by MapWhen().
+            /// - Logs request information before and after processing.
+            /// - Calls 'next()' to allow the request to continue.
+            /// </summary>
+            app.Use(async (context, next) =>
+            {
+                logger.LogInformation($"Request received: {context.Request.Path}");
+
+                await next(); // Allows the request to move to the next middleware
+
+                logger.LogInformation($"Response sent: {context.Request.Path}");
+            });
+
+
+
             app.UseRouting();
 
             // Routing : 
-
-            
-
-           
-
             app.UseEndpoints(endpoints =>
             {
                 // 1) Conventional routing :
@@ -118,9 +180,22 @@
                     var content = await reader.ReadToEndAsync();
                     await context.Response.WriteAsync($"Received: {content}");
                 });
+            
+
+                endpoints.MapGet("/api/useWhen/test", async context =>
+                {
+                    context.Response.ContentType = "application/json";
+                    await context.Response.WriteAsync("{ \"message\": \"Final Response for UseWhen!\" }");
+                });
+
+                endpoints.MapGet("/api/mapWhen/test", async context =>
+                {
+                    context.Response.ContentType = "application/json";
+                    await context.Response.WriteAsync("{ \"message\": \"Final Response for MapWhen!\" }");
+                });
+
             });
 
-      
         }
     }
 }
