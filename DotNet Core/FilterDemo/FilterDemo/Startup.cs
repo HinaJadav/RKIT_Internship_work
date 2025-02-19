@@ -1,6 +1,4 @@
-﻿
-using FilterDemo.BL;
-using FilterDemo.Filters;
+﻿using FilterDemo.Filters;
 using Microsoft.OpenApi.Models;
 
 namespace FilterDemo
@@ -19,39 +17,38 @@ namespace FilterDemo
         /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
-
-            // Add scoped custom filters
+            // Register custom filters as services for dependency injection
             services.AddScoped<CustomAuthorizationFilter>();
             services.AddScoped<CustomResourceFilter>();
             services.AddScoped<CustomActionFilter>();
+            services.AddScoped<CustomExceptionFilter>();
+            services.AddScoped<CustomResultFilter>();
 
-            // Register other services as needed
+            // Add MVC services and configure filters globally if needed
             services.AddControllers(options =>
             {
-                // Add filters globally if needed
-                options.Filters.AddService<CustomAuthorizationFilter>();
-                options.Filters.AddService<CustomResourceFilter>();
-                options.Filters.AddService<CustomActionFilter>();
+                // Apply filters globally
+                options.Filters.AddService<CustomAuthorizationFilter>(); // JWT Authorization
+                options.Filters.AddService<CustomResourceFilter>(); // Resource Execution
+                options.Filters.AddService<CustomActionFilter>(); // Action Execution
+                options.Filters.AddService<CustomExceptionFilter>(); // Global Exception Handling
+                options.Filters.AddService<CustomResultFilter>(); // Result Execution
             });
 
-            /*services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
-                };
-            });*/
-            // Add Swagger services
-            // Register Swagger with JWT Bearer authentication
+            // Enable Swagger with JWT authentication support
+            ConfigureSwagger(services);
+        }
+
+        /// <summary>
+        /// Configures Swagger for API documentation with JWT authentication support.
+        /// </summary>
+        private void ConfigureSwagger(IServiceCollection services)
+        {
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FilterDemo API", Version = "v1" });
 
-                // Define the security scheme
+                // Define the JWT Bearer authentication scheme
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -62,7 +59,7 @@ namespace FilterDemo
                     Description = "Enter 'Bearer' followed by a space and your JWT token. Example: Bearer your_token_here"
                 });
 
-                // Add the security requirement to all operations
+                // Apply the JWT security requirement to all API endpoints
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -74,7 +71,7 @@ namespace FilterDemo
                                 Id = "Bearer"
                             }
                         },
-                        new string[] {}
+                        Array.Empty<string>()
                     }
                 });
             });
@@ -87,21 +84,28 @@ namespace FilterDemo
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage(); // Enables detailed error pages in development
             }
 
-            // Enable Swagger middleware
+            // Enable global exception handling middleware (If you create a middleware-based exception handler)
+            app.UseMiddleware<CustomExceptionFilter>();
+
+            // Enable Swagger for API documentation
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "FilterDemo API V1");
-                c.RoutePrefix = "swagger"; // Swagger will be available at root URL
+                c.RoutePrefix = "swagger"; // Swagger UI will be available at "/swagger"
             });
 
-
-
+            // Enable routing
             app.UseRouting();
 
+            // Enable authentication and authorization
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            // Configure endpoint routing
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
