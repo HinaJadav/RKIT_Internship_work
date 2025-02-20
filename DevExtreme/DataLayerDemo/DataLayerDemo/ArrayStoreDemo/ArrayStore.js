@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿$(function () {
     var studentsData = [
         { id: 1, name: "ABC", branch: "CE" },
         { id: 2, name: "ZXC", branch: "EC" },
@@ -20,15 +20,21 @@
 
 
 
-        onInserting: function (e) {
-            // Get existing data from the store
-            var existingData = studentArrayStores._array;
+        /*onInserting: function (e) {
+            // Ensure e.data exists before accessing its properties
+            if (!e.data) {
+                e.cancel = true;
+                throw new Error("Insert operation requires a valid data object.");
+            }
 
-            // Ensure Required Fields are Present
+            // Ensure required fields are present
             if (!e.data.name || !e.data.branch) {
                 e.cancel = true;
                 throw new Error("Name and Branch are required fields!");
             }
+
+            // Get existing data from the store
+            var existingData = studentArrayStores._array || [];
 
             // Auto-generate ID if not provided
             if (!e.data.id) {
@@ -37,7 +43,10 @@
 
             // Normalize Name Format
             e.data.name = e.data.name.trim().toUpperCase();
-        },
+
+            console.log("New Student Data:", e.data);
+        },*/
+
 
 
         onInserted: function (e) {
@@ -47,25 +56,20 @@
         onLoading: function (e) {
             console.log("Before loading, Load Options:", e.loadOptions);
 
+            // Ensure `loadOptions` exists before modifying it
+            e.loadOptions = e.loadOptions || {};
+
             // Apply a default filter 
-            if (!e.loadOptions.filter) {
-                e.loadOptions.filter = ["branch", "=", "IT"];
-            }
+            e.loadOptions.filter = e.loadOptions.filter || ["branch", "=", "IT"];
 
             // Sort data 
-            if (!e.loadOptions.sort) {
-                e.loadOptions.sort = [{ selector: "name", desc: true }];
-            }
+            e.loadOptions.sort = e.loadOptions.sort || [{ selector: "name", desc: true }];
 
             // Limit the number of records 
-            if (!e.loadOptions.take) {
-                e.loadOptions.take = 2;
-            }
+            e.loadOptions.take = e.loadOptions.take || 2;
 
-            // Skip first record 
-            if (!e.loadOptions.skip) {
-                e.loadOptions.skip = 1;
-            }
+            // Skip the first record 
+            e.loadOptions.skip = e.loadOptions.skip || 1;
 
             console.log("Modified Load Options:", e.loadOptions);
         },
@@ -76,17 +80,7 @@
 
 
         onModifying: function (e) {
-            console.log("Modifying Event Triggered:", e);
-
-            if (e.type === "update") {
-                console.log("Updating Record:", e.key, "With Data:", e.data);
-            }
-            else if (e.type === "insert") {
-                console.log("Inserting New Record:", e.data);
-            }
-            else if (e.type === "remove") {
-                console.log("Deleting Record:", e.key);
-            }
+            console.log("Modifying Event Triggered:", e);   
         },
 
         onModified: function (e) {
@@ -114,10 +108,10 @@
         onUpdating: function (e) {
             console.log("Before Updating Record:", e);
 
-            if (e.data.id === 2) {
+            /*if (e.data.id === 2) {
                 e.cancel = true;
                 throw new Error("Update prevented on 2nd id!");
-            }
+            }*/
         },
 
         onUpdated: function (e) {
@@ -130,50 +124,58 @@
 
 
     // load data
-    studentStore.load().done(function (data) {
+    studentArrayStores.load().done(function (data) {
         console.log("Final Loaded Data:", data);
     }).fail(function (error) {
         throw new Error("Error:", error.message);
     });
 
     // insert
-    studentStore.insert({ id: 3, name: "ERT", branch: "IT" }).done(() => {
-        console.log("Record Inserted");
+    // Insert a new record with a unique ID
+    studentArrayStores.insert({ id: 22, name: "SSS", branch: "IT" }).done(() => {
+        console.log("New record inserted successfully");
+    }).fail((error) => {
+        console.error("Insert failed:", error.message);
     });
 
+
     // update
-    studentStore.update(5, { name: "AAA" }).done(() => {
+    studentArrayStores.update(5, { name: "AAA" }).done(() => {
         console.log("Record Updated");
     });
 
     // delete
-    studentStore.remove(2).done(() => {
+    studentArrayStores.remove(2).done(() => {
         console.log("Record Deleted");
     });
 
     // Simulating real-time data update
     setTimeout(() => {
-        studentStore.push([
-            { type: "insert", data: { id: 3, name: "QWE", branch: "IT" } },
+        if (!studentsData.some(s => s.id === 10)) {
+            studentArrayStores.push([{ type: "insert", data: { id: 10, name: "QWE", branch: "IT" } }]);
+        }
+        studentArrayStores.push([
+            { type: "insert", data: { id: 10, name: "QWE", branch: "IT" } }, // Unique ID
             { type: "remove", key: 2 }
         ]);
     }, 2000);
 
-    // Removing students
-    studentStore.remove(1).done(() => {
-        console.log("Student 1 Removed");
-    }).
 
-    studentStore.remove(2).done(() => {
+    // Removing students
+    studentArrayStores.remove(1).done(() => {
+        console.log("Student 1 Removed");
+    });
+
+    studentArrayStores.remove(2).done(() => {
         console.log("Student 2 Removed");
     });
 
     // Updating students
-    studentStore.update(1, { name: "LLL" }).done(() => {
+    studentArrayStores.update(1, { name: "LLL" }).done(() => {
         console.log("Student 1 Updated");
     });
 
-    studentStore.update(2, { name: "ZXC" }).done(() => {
+    studentArrayStores.update(2, { name: "ZXC" }).done(() => {
         console.log("Student 2 Updated");
     });
 
@@ -184,19 +186,22 @@
     studentArrayStores.byKey(1).done(function (data) {
         console.log("Data fetch byKey(1): ", data);
     }).fail(function (error) {
-        throw new Error("Error: ", error.message);
+        console.log("Error fetching data by key:", error.message);
     });
+
 
 
     // createQuery(): in "QueryDemo"
 
     // key() : get key property
+    
     var studentArrayStoreKey = studentArrayStores.key();
     console.log("Key property of student data store: ", studentArrayStoreKey);
 
-    // keyOf(obj): find key based on data value
-    var dataKey = studentArrayStoreKey.keyOf({ name: "ABC", branch: "CE" })
+    // Find key based on data object
+    var dataKey = studentArrayStores.keyOf({ id: 2, name: "ZXC", branch: "EC" });
     console.log("Key of given data store: ", dataKey);
+
 
     // load() : load entire arraystore data without apply any filter etc.
     studentArrayStores.load().done(function (data) {
@@ -206,7 +211,7 @@
     // totalCount(): get the total count of items returns from load() function
     var totalLoadedItems = studentArrayStores.totalCount().done(() => {
         console.log("Number of data loaded: ", totalLoadedItems);
-    }).faile(() => {
+    }).fail(() => {
         console.log("Error : totalCount() method has some error.");
     })
 
@@ -222,17 +227,21 @@
 
     // on() and off() : use to trigger events dynamically
 
+    function onUpdating(e) {
+        console.log("Updating event triggered:", e);
+    }
+
     studentArrayStores.on("updating", onUpdating);
 
     // it will work because event is on
-    studentStore.update(2, { name: "CCC" }).done(() => {
+    studentArrayStores.update(2, { name: "CCC" }).done(() => {
         console.log("Student 2 Updated");
     });
 
     studentArrayStores.off("updating", onUpdating);
 
     // not work because event is off now
-    studentStore.update(2, { name: "EEE" }).done(() => {
+    studentArrayStores.update(2, { name: "EEE" }).done(() => {
         console.log("Student 2 Updated");
     });
 
