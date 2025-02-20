@@ -225,8 +225,14 @@
     <Content Include="Content\dx.softblue.css" />
     <Content Include="CustomStoreDemo\CustomStore.html" />
     <Content Include="CustomStoreDemo\CustomStore.js" />
+    <Content Include="DataSourceDemo\DataSource.html" />
+    <Content Include="DataSourceDemo\DataSource.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="LocalStoreDemo\LocalStore.html" />
+    <Content Include="LocalStoreDemo\LocalStore.js" />
+    <Content Include="QueryDemo\Query.html" />
+    <Content Include="QueryDemo\Query.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
