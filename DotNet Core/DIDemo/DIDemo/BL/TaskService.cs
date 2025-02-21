@@ -10,6 +10,12 @@ namespace DIDemo.BL
         private readonly List<TaskModel> _tasks = new List<TaskModel>();
         private readonly string _filePath = "Data/tasks.json";
 
+        /// <summary>
+        /// 5. Constructor Injection
+        /// 
+        /// TaskService depends on ILoggerService
+        /// </summary>
+        /// <param name="loggerService"></param>
         public TaskService(ILoggerService loggerService)
         {
             _loggerService = loggerService;

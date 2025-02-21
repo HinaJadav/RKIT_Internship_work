@@ -4,12 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DIDemo.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
+    
     public class TaskController : Controller
     {
         private readonly ITaskService _taskService;
 
+        /// <summary>
+        ///  5. Constructor Injection
+        ///  Services are injected via the constructor, ensuring that the controller has access to these dependencies.
+        /// TaskController depends on ITaskService
+        /// </summary>
+        /// <param name="taskService"></param>
         public TaskController(ITaskService taskService)
         {
             _taskService = taskService;
