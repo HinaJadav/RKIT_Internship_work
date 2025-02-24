@@ -224,6 +224,9 @@
     <Content Include="DataGridDemo\DataBinding\DataBinding.html" />
     <Content Include="DataGridDemo\DataBinding\DataBinding.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.html" />
+    <Content Include="DataGridDemo\Paging_Scrolling\Paging.js" />
+    <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.html" />
+    <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
