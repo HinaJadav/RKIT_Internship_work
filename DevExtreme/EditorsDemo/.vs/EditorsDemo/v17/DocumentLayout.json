@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{83C166D2-24F1-4BD1-8B5E-E80765F2AEDC}|EditorsDemo\\EditorsDemo.csproj|d:\\officework\\rkit_internship_work\\devextreme\\editorsdemo\\editorsdemo\\html\\finaldemo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83C166D2-24F1-4BD1-8B5E-E80765F2AEDC}|EditorsDemo\\EditorsDemo.csproj|solutionrelative:editorsdemo\\html\\finaldemo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83C166D2-24F1-4BD1-8B5E-E80765F2AEDC}|EditorsDemo\\EditorsDemo.csproj|d:\\officework\\rkit_internship_work\\devextreme\\editorsdemo\\editorsdemo\\js\\numberbox.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{83C166D2-24F1-4BD1-8B5E-E80765F2AEDC}|EditorsDemo\\EditorsDemo.csproj|solutionrelative:editorsdemo\\js\\numberbox.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -59,6 +63,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FINALDEMO.html",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\HTML\\FINALDEMO.html",
+              "RelativeDocumentMoniker": "EditorsDemo\\HTML\\FINALDEMO.html",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\HTML\\FINALDEMO.html",
+              "RelativeToolTip": "EditorsDemo\\HTML\\FINALDEMO.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-19T18:17:40.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "NumberBox.js",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\JS\\NumberBox.js",
               "RelativeDocumentMoniker": "EditorsDemo\\JS\\NumberBox.js",
@@ -71,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TextArea.js",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\JS\\TextArea.js",
               "RelativeDocumentMoniker": "EditorsDemo\\JS\\TextArea.js",
@@ -83,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RadioGroup.js",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\JS\\RadioGroup.js",
               "RelativeDocumentMoniker": "EditorsDemo\\JS\\RadioGroup.js",
@@ -95,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DateBox.js",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\JS\\DateBox.js",
               "RelativeDocumentMoniker": "EditorsDemo\\JS\\DateBox.js",
@@ -107,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TextBox.js",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\JS\\TextBox.js",
               "RelativeDocumentMoniker": "EditorsDemo\\JS\\TextBox.js",
@@ -119,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FileUploader.html",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\HTML\\FileUploader.html",
               "RelativeDocumentMoniker": "EditorsDemo\\HTML\\FileUploader.html",
@@ -130,12 +151,8 @@
               "WhenOpened": "2025-02-18T03:17:22.913Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FileUploader.js",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\EditorsDemo\\EditorsDemo\\JS\\FileUploader.js",
               "RelativeDocumentMoniker": "EditorsDemo\\JS\\FileUploader.js",
