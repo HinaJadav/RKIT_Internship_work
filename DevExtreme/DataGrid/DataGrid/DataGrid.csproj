@@ -223,6 +223,10 @@
     <Content Include="Content\dx.softblue.css" />
     <Content Include="DataGridDemo\DataBinding\DataBinding.html" />
     <Content Include="DataGridDemo\DataBinding\DataBinding.js" />
+    <Content Include="DataGridDemo\Editing\BatchEditing.html" />
+    <Content Include="DataGridDemo\Editing\BatchEditing.js" />
+    <Content Include="DataGridDemo\Editing\RowEditing&amp;EditingEvents.html" />
+    <Content Include="DataGridDemo\Editing\RowEditing&amp;EditingEvents.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.html" />
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.html" />
