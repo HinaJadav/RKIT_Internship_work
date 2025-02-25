@@ -225,6 +225,16 @@
     <Content Include="DataGridDemo\DataBinding\DataBinding.js" />
     <Content Include="DataGridDemo\Editing\BatchEditing.html" />
     <Content Include="DataGridDemo\Editing\BatchEditing.js" />
+    <Content Include="DataGridDemo\Editing\CascadingLookups.html" />
+    <Content Include="DataGridDemo\Editing\CascadingLookups.js" />
+    <Content Include="DataGridDemo\Editing\CellEditing.html" />
+    <Content Include="DataGridDemo\Editing\CellEditing.js" />
+    <Content Include="DataGridDemo\Editing\DataValidation.html" />
+    <Content Include="DataGridDemo\Editing\DataValidation.js" />
+    <Content Include="DataGridDemo\Editing\FormEditing.html" />
+    <Content Include="DataGridDemo\Editing\FormEditing.js" />
+    <Content Include="DataGridDemo\Editing\PopupEditing.html" />
+    <Content Include="DataGridDemo\Editing\PopupEditing.js" />
     <Content Include="DataGridDemo\Editing\RowEditing&amp;EditingEvents.html" />
     <Content Include="DataGridDemo\Editing\RowEditing&amp;EditingEvents.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.html" />
