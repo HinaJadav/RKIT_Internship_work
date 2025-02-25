@@ -245,6 +245,8 @@
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.html" />
     <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.js" />
+    <Content Include="DataGridDemo\Selection\Selection.html" />
+    <Content Include="DataGridDemo\Selection\Selection.js" />
     <Content Include="DataGridDemo\Sorting\Sorting.html" />
     <Content Include="DataGridDemo\Sorting\Sorting.js" />
     <Content Include="DataGridDemo\userData.js" />
