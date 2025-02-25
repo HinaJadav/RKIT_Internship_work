@@ -237,10 +237,13 @@
     <Content Include="DataGridDemo\Editing\PopupEditing.js" />
     <Content Include="DataGridDemo\Editing\RowEditing&amp;EditingEvents.html" />
     <Content Include="DataGridDemo\Editing\RowEditing&amp;EditingEvents.js" />
+    <Content Include="DataGridDemo\Grouping\Grouping.html" />
+    <Content Include="DataGridDemo\Grouping\Grouping.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.html" />
     <Content Include="DataGridDemo\Paging_Scrolling\Paging.js" />
     <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.html" />
     <Content Include="DataGridDemo\Paging_Scrolling\Scrolling.js" />
+    <Content Include="DataGridDemo\userData.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />

@@ -1,5 +1,4 @@
-﻿/// <reference path="../../scripts/bootstrap.esm.js" />
-$(function () {
+﻿$(function () {
     const apiUrl = "https://jsonplaceholder.typicode.com/users";
 
     let dataStore = new DevExpress.data.CustomStore({
