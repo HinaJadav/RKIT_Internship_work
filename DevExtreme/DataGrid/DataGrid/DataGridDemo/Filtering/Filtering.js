@@ -79,7 +79,7 @@ $(function () {
                 caption: "Name",
                 dataType: "string", // Specify data type
                 filterOperations: ["contains", "="],
-                selectedFilterOperation: "contains", // Fix typo
+                selectedFilterOperation: "contains", 
             },
             {
                 dataField: "CountryID",
