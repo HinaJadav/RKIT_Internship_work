@@ -221,6 +221,8 @@
     <Content Include="Content\dx.material.teal.light.css" />
     <Content Include="Content\dx.softblue.compact.css" />
     <Content Include="Content\dx.softblue.css" />
+    <Content Include="DataGridDemo\Columns\Columns.html" />
+    <Content Include="DataGridDemo\Columns\Columns.js" />
     <Content Include="DataGridDemo\DataBinding\DataBinding.html" />
     <Content Include="DataGridDemo\DataBinding\DataBinding.js" />
     <Content Include="DataGridDemo\Editing\BatchEditing.html" />
@@ -249,6 +251,8 @@
     <Content Include="DataGridDemo\Selection\Selection.js" />
     <Content Include="DataGridDemo\Sorting\Sorting.html" />
     <Content Include="DataGridDemo\Sorting\Sorting.js" />
+    <Content Include="DataGridDemo\StatePersistence\StatePersistence.html" />
+    <Content Include="DataGridDemo\StatePersistence\StatePersistence.js" />
     <Content Include="DataGridDemo\userData.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
