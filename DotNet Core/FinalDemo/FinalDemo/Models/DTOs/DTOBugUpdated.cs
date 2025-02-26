@@ -17,6 +17,6 @@ namespace FinalDemo.Models.DTOs
         /// </summary>
         [Required(ErrorMessage = "B01F04 (Status) is required.")]
         [JsonProperty("B01F04")]
-        public string B01104 { get; set; }
+        public string B01104 { get; set; } = string.Empty;
     }
 }
