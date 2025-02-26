@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\bl\\blsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\bl\\blsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\bl\\bllogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\bl\\bllogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\models\\pocos\\ymu01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\models\\pocos\\ymu01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\finaldemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\finaldemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\models\\dtos\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\models\\dtos\\dtologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|d:\\officework\\rkit_internship_work\\dotnet core\\finaldemo\\finaldemo\\models\\dtos\\dtosignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F7FC178-DBF6-4DD3-BAD7-F370CBBF9A77}|FinalDemo\\FinalDemo.csproj|solutionrelative:finaldemo\\models\\dtos\\dtosignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\appsettings.json",
+              "RelativeDocumentMoniker": "FinalDemo\\appsettings.json",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\appsettings.json",
+              "RelativeToolTip": "FinalDemo\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-25T16:11:36.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BLSignUp.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\BL\\BLSignUp.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\BL\\BLSignUp.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\BL\\BLSignUp.cs",
+              "RelativeToolTip": "FinalDemo\\BL\\BLSignUp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:36.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BLLogin.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\BL\\BLLogin.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\BL\\BLLogin.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\BL\\BLLogin.cs",
+              "RelativeToolTip": "FinalDemo\\BL\\BLLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:36.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FinalDemo.csproj",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
+              "RelativeDocumentMoniker": "FinalDemo\\FinalDemo.csproj",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
+              "RelativeToolTip": "FinalDemo\\FinalDemo.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-25T16:11:36.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DTOSignUp.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Models\\DTOs\\DTOSignUp.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\Models\\DTOs\\DTOSignUp.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Models\\DTOs\\DTOSignUp.cs",
+              "RelativeToolTip": "FinalDemo\\Models\\DTOs\\DTOSignUp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:37.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DTOLogin.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Models\\DTOs\\DTOLogin.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\Models\\DTOs\\DTOLogin.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Models\\DTOs\\DTOLogin.cs",
+              "RelativeToolTip": "FinalDemo\\Models\\DTOs\\DTOLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:37.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "YMU01.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Models\\POCOs\\YMU01.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\Models\\POCOs\\YMU01.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Models\\POCOs\\YMU01.cs",
+              "RelativeToolTip": "FinalDemo\\Models\\POCOs\\YMU01.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:37.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Program.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\Program.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Program.cs",
+              "RelativeToolTip": "FinalDemo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:37.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Startup.cs",
+              "RelativeDocumentMoniker": "FinalDemo\\Startup.cs",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\Startup.cs",
+              "RelativeToolTip": "FinalDemo\\Startup.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T16:11:37.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

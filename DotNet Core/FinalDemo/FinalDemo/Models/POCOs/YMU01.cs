@@ -1,20 +1,31 @@
-﻿namespace FinalDemo.Models.POCOs
+﻿using FinalDemo.Models.POCOs;
+using ServiceStack.DataAnnotations;
+
+public class YMU01
 {
-    public class YMU01
-    {
-        // AUTO INCREMENTED
-        // PRIMARY KEY
-        public int U01F01 { get; set; } // userid
+    /// <summary>
+    /// Primary Key - Unique Identifier for the user
+    /// </summary>
+    [PrimaryKey]
+    public int U01F01 { get; set; }
 
-        // STRING LENGTH = 20
-        public string U01F02 { get; set; } = string.Empty; // user name
+    /// <summary>
+    /// Username of the user
+    /// </summary>
+    public string U01F02 { get; set; }
 
-        // UNIQUE
-        public string U01F03 { get; set; } = string.Empty; // email
+    /// <summary>
+    /// Hashed password storage
+    /// </summary>
+    public string U01F03 { get; set; }
 
-        public string U01F04 { get; set; } = string.Empty; // password with length = 8
+    /// <summary>
+    /// Role of the user: Admin, Developer, Tester
+    /// </summary>
+    public string U01F04 { get; set; }
 
-        // this date will be not update for any CRUD operation
-        public DateTime U01F05 { get; set; } = DateTime.Now; // date when user is register 
-    }
+    /// <summary>
+    /// Navigation property - List of assigned bugs
+    /// </summary>
+    public List<YMB01> U01F05 { get; set; }
 }

@@ -22,6 +22,21 @@ namespace FinalDemo
         /// <param name="services">Service collection to add dependencies.</param>
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // Add logging
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.ClearProviders();  // Remove default providers
+
+                // check into Console Window 
+                loggingBuilder.AddConsole();     // Enable Console logging
+                // check into Debug window
+                loggingBuilder.AddDebug();       // Enable Debug logging
+
+
+            });
+            // -----------
+
             // Add support for controllers in the application.
             services.AddControllers();
 

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {}
+    "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {
+    "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
+        "projectUniqueName": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
         "projectName": "FinalDemo",
-        "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
-        "packagesPath": "C:\\Users\\hina.j\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\obj\\",
+        "projectPath": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
+        "packagesPath": "C:\\Users\\hina2\\.nuget\\packages\\",
+        "outputPath": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hina.j\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hina2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -43,6 +53,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "ServiceStack.OrmLite": {
               "target": "Package",
@@ -80,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
