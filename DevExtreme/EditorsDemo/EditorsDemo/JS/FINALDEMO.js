@@ -1,162 +1,183 @@
 ﻿$(function () {
-    let nameInstance = $("#name").dxTextBox({
-        accessKey: 'n',
-        hint: "Enter your full name",
-        placeholder: "Full name",
+    let name = $("#name").dxTextBox({
+        accessKey: "n",
+        hint: "Full Name",
+        placeholder: "Enter Full Name",
         showClearButton: true,
-        inputAttr: { 'aria-label': 'FullName' },
-        width: 500,
-        maxLength: 20,
-        
-    }).dxTextBox("instance");
-    // validation: on length, required, only aphabats
-    // i want to apply this validation using validator
-    // on instance like event or method
-
-    let fatherNameInstance = $("#fatherName").dxTextBox({
-        accessKey: 'f',
-        hint: "Enter your full name",
-        placeholder: "Full name",
-        showClearButton: true,
-        inputAttr: { 'aria-label': 'FullName' },
-        width: 500,
-        maxLength: 20,
+        stylingMode: "outlined",
+        spellcheck: false,
+        inputAttr: { 'aria-label': "Full Name" },
+        maxLength: 50,
+        width: 600,
+        validationRules: [{ type: "required", message: "Full Name is required!" }],
     }).dxTextBox("instance");
 
-    let motherNameInstance = $("#motherName").dxTextBox({
-        accessKey: 'n',
-        hint: "Enter your full name",
-        placeholder: "Full name",
+    let fatherName = $("#fatherName").dxTextBox({
+        accessKey: "f",
+        hint: "Father's Name",
+        placeholder: "Enter Father's Name",
         showClearButton: true,
-        inputAttr: { 'aria-label': 'FullName' },
-        width: 500,
-        maxLength: 20,
+        stylingMode: "outlined",
+        spellcheck: false,
+        inputAttr: { 'aria-label': "Father's Name" },
+        maxLength: 50,
+        width: 300,
+        validationRules: [{ type: "required", message: "Father's Name is required!" }],
     }).dxTextBox("instance");
 
-    let dob = $("#dateOfBirth").dxDateBox({
+    let motherName = $("#motherName").dxTextBox({
+        accessKey: "m",
+        hint: "Mother's Name",
+        placeholder: "Enter Mother's Name",
+        showClearButton: true,
+        stylingMode: "outlined",
+        spellcheck: false,
+        inputAttr: { 'aria-label': "Mother's Name" },
+        maxLength: 50,
+        width: 300,
+        validationRules: [{ type: "required", message: "Mother's Name is required!" }],
+    }).dxTextBox("instance");
+
+    let email = $("#email").dxTextBox({
+        hint: "Email",
+        placeholder: "example@gmail.com",
+        showClearButton: true,
+        stylingMode: "outlined",
+        spellcheck: false,
+        maxLength: 50,
+        width: 300,
+        validationRules: [
+            { type: "required", message: "Email is required!" },
+            { type: "pattern", pattern: "^[^\s@]+@[^\s@]+\.[^\s@]+$", message: "Enter a valid email address!" }
+        ],
+        valueChangeEvent: "blur",
+        onValueChanged: function (e) {
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(e.value)) {
+                DevExpress.ui.notify("Invalid Email Format", "error", 2000);
+            }
+        }
+    }).dxTextBox("instance");
+
+    let dateOfBirth = $("#dateOfBirth").dxDateBox({
         type: "date",
-        text: "Birth Date",
         placeholder: "Select your birth date",
         displayFormat: "dd/MM/yyyy",
         pickerType: "calendar",
-        stylingMode: "underlined",
-        showClearButton: true, 
-        openOnFieldClick: true,
+        showClearButton: true,
         min: new Date(1900, 0, 1),
         max: new Date(),
-        hoverStateEnabled: true,
-        hint: "Enter your DOB",
-        dateOutOfRangeMessage: "Future dates are not allowed", // when this msg comes
+        dateOutOfRangeMessage: "Future dates are not allowed",
         width: "500px",
+        onValueChanged: function (e) {
+            console.log("Date selected: " + e.value);
+        }
     }).dxDateBox("instance");
 
-    const genders = ['Male', 'Female', 'Other'];
+    let genderData = ['Male', 'Female', 'Other'];
 
-    let genderInstance = $("#gender").dxRadioGroup({
-        items: genders,
-        value: genders[0], // Default value
-        layout: 'horizontal',
-        itemTemplate(itemData, _, itemElement) {
-            itemElement.text(itemData).addClass('gender-radio-item');
-        },
-        focusStateEnabled: true, // Enable focus state
-        showClearButton: true,
-    }).dxRadioGroup("instance");
-
-    const marriageStatuses = ['Single', 'Married', 'Divorced'];
-
-    let maritalStatusInstance = $("maritalStatus").dxRadioGroup({
-        items: marriageStatuses,
-        value: marriageStatuses[0], // Default value
-        layout: 'vertical',
-        itemTemplate(itemData, _, itemElement) {
-            itemElement.text(itemData).addClass('marriage-status-item');
-        },
-        focusStateEnabled: true, // Enable focus state
-        showClearButton: true,
-    }).dxRadioGroup("instance");
-
-    let presentAddressInstance = $("presentAddress").dxTextArea({
-        accessKey: '',
-        placeholder: "Present Address",
-        autoSizeEnabled: true,
-        minHeight: 40, // default parameter = px
-        maxHeight: 100,
-        focusStateEnabled: true,
-        hint: "Enter your present address.",
-        inputAttr: {
-            maxLength: 100,
-        },
-        spellcheck: true,
-        hoverStateEnabled: true,
-    }).dxTextArea("instance");
-
-    let permanentAddressInstance = $("permanentAddress").dxTextArea({
-        accessKey: '',
-        placeholder: "Permanent Address",
-        autoSizeEnabled: true,
-        minHeight: 40, // default parameter = px
-        maxHeight: 100,
-        focusStateEnabled: true,
-        hint: "Enter your permanent address.",
-        inputAttr: {
-            maxLength: 100,
-        },
-        spellcheck: true,
-        hoverStateEnabled: true,
-    }).dxTextArea("instance");
-
-    let contactNoInstance = $("contactNo").dxNumberBox({
-
-    }).dxNumberBox("instance");
-
-    let tenthResultInstance = $("tenthResult").dxNumberBox({
-        type: "number",
-        min: 0.35,  // 35%
-        max: 1.00,  // 100%
-
-        placeholder: "Enter 10th result",
-        hoverStateEnabled: true,
-        mode: 'number',
-        placeholder: "10th result in percentage!",
-        stylingMode: "filled",
-        tabIndex: 1,
-        validationStatus: 'pending',
-        validationMessageMode: 'auto',
-        value: null,
-        width: "500px",
-    }).dxNumberBox("instance");
-
-    let twelthResultInstance = $("twelthResult").dxNumberBox({
-        // do as above tenthInstance
-    }).dxNumberBox("instance");
-
-    let emailInstance = $("email").dxTextBox({
-        // use basic textBox instance
-        // mainly do eamil validation using : pattern rule into validator etc other rules like required also if requierd use custom validation also 
-    }).dxTextBox("instance");
-
-    let departmentInstance = $("department").dxSelectBox({
-
-    }).dxSelectBox("instance");
-
-    let courseInstance = $("#course").dxDropDownBox({
-
-    }).dxDropDownBox("instance");
-
-    $("#profilePhoto").dxFileUploader({
-
+    // RadioGroup for Gender
+    $('#gender').dxRadioGroup({
+        items: genderData,
+        layout: 'horizontal'
     });
 
-    $("#validateMe").dxCheckBox({
+    let maritalStatusData = ["Single", "Married", "Divorced"]
 
+    let maritalStatus = $("#maritalStatus").dxSelectBox({
+        items: maritalStatusData,
+        placeholder: "Select Marital Status",
+        showClearButton: true,
+        searchEnabled: true,
+        width: 300,
+        labelMode: "floating",
+        onValueChanged: function (e) {
+            console.log("Marital Status Selected: " + e.value);
+        }
+    }).dxSelectBox("instance");
+
+    name.registerKeyHandler("enter", function () { fatherName.focus(); });
+    fatherName.registerKeyHandler("enter", function () { motherName.focus(); });
+    motherName.registerKeyHandler("enter", function () { email.focus(); });
+    email.registerKeyHandler("enter", function () { $("#submit").dxButton("instance").option("onClick")(); });
+
+
+    
+    
+    //-----------------
+    
+
+    // TextArea for Addresses
+    $('#presentAddress').dxTextArea({ placeholder: 'Enter Present Address' });
+    $('#permanentAddress').dxTextArea({ placeholder: 'Enter Permanent Address' });
+
+    // NumberBox for Contact Number
+    $('#contactNo').dxNumberBox({
+        placeholder: 'Enter Contact Number',
+        showSpinButtons: true
+    });
+
+    // NumberBox for Academic Results
+    $('#tenthResult').dxNumberBox({ placeholder: 'Enter 10th Percentage' });
+    $('#twelthResult').dxNumberBox({ placeholder: 'Enter 12th Percentage' });
+
+    
+
+    // SelectBox for Department & Course
+    $('#department').dxSelectBox({
+        items: ['Science', 'Commerce', 'Arts'],
+        placeholder: 'Select Department'
+    });
+    $('#course').dxSelectBox({
+        items: ['B.Tech', 'BBA', 'BA', 'B.Com'],
+        placeholder: 'Select Course'
+    });
+
+    // FileUploader for Profile Photo
+    $('#profilePhoto').dxFileUploader({
+        selectButtonText: 'Upload Profile Photo',
+        labelText: '',
+        accept: 'image/*',
+        uploadMode: 'useForm'
+    });
+
+    // CheckBox for Validation Agreement
+    $('#validateMe').dxCheckBox({
+        text: 'I agree to the terms and conditions',
+        value: false
     });
 
     $("#reset").dxButton({
-
+        text: "Reset",
+        type: "normal",
+        onClick: function () {
+            sessionStorage.clear();
+            location.reload();
+        }
     });
 
     $("#submit").dxButton({
-
+        text: "Submit",
+        type: "success",
+        onClick: function () {
+            let formData = {
+                name: $("#name").dxTextBox("instance").option("value"),
+                fatherName: $("#fatherName").dxTextBox("instance").option("value"),
+                motherName: $("#motherName").dxTextBox("instance").option("value"),
+                dateOfBirth: $("#dateOfBirth").dxDateBox("instance").option("value"),
+                gender: $("#gender").dxRadioGroup("instance").option("value"),
+                maritalStatus: $("#maritalStatus").dxSelectBox("instance").option("value"),
+                email: $("#email").dxTextBox("instance").option("value"),
+                contactNo: $("#contactNo").dxNumberBox("instance").option("value"),
+                presentAddress: $("#presentAddress").dxTextArea("instance").option("value"),
+                permanentAddress: $("#permanentAddress").dxTextArea("instance").option("value"),
+                tenthResult: $("#tenthResult").dxNumberBox("instance").option("value"),
+                twelthResult: $("#twelthResult").dxNumberBox("instance").option("value"),
+                department: $("#department").dxSelectBox("instance").option("value"),
+                course: $("#course").dxSelectBox("instance").option("value")
+            };
+            sessionStorage.setItem("admissionForm", JSON.stringify(formData));
+            DevExpress.ui.notify("Form submitted and data saved to session storage!", "success", 2000);
+        }
     });
 });

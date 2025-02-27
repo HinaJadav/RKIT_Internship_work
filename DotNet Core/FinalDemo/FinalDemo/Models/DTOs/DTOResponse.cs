@@ -18,7 +18,7 @@ namespace FinalDemo.Models.DTOs
         [Required(ErrorMessage = "U01F02 (Username) is required.")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "U01F02 (Username) must be between 3 and 50 characters.")]
         [JsonProperty("U01F02")]
-        public string U01102 { get; set; }
+        public string U01102 { get; set; } = string.Empty;
 
         /// <summary>
         /// Role of the user: Admin, Developer, Tester
@@ -26,6 +26,6 @@ namespace FinalDemo.Models.DTOs
         [Required(ErrorMessage = "U01F04 (Role) is required.")]
         [RegularExpression("^(Admin|Developer|Tester)$", ErrorMessage = "U01F04 (Role) must be either Admin, Developer, or Tester.")]
         [JsonProperty("U01F04")]
-        public string U01104 { get; set; }
+        public string U01104 { get; set; } = string.Empty;
     }
 }

@@ -25,18 +25,25 @@ namespace FinalDemo.Extension
 
             foreach (var dtoProp in dtoProperties)
             {
-                PropertyInfo pocoProp = pocoProperties.FirstOrDefault(p => p.Name == dtoProp.Name && p.PropertyType == dtoProp.PropertyType);
+                PropertyInfo pocoProp = pocoProperties.FirstOrDefault(p => p.Name == dtoProp.Name);
+
                 if (pocoProp != null)
                 {
                     try
                     {
-                        pocoProp.SetValue(poco, dtoProp.GetValue(dto));
+                        object value = dtoProp.GetValue(dto);
+                        if (value != null && pocoProp.PropertyType != dtoProp.PropertyType)
+                        {
+                            value = Convert.ChangeType(value, pocoProp.PropertyType);
+                        }
+                        pocoProp.SetValue(poco, value);
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine($"Error mapping property {dtoProp.Name}: {ex.Message}");
                     }
                 }
+
             }
             return poco;
         }

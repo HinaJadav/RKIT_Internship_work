@@ -13,17 +13,17 @@ namespace FinalDemo.Models.POCOs
         /// <summary>
         /// Title of the bug or issue
         /// </summary>
-        public string B01F02 { get; set; }
+        public string B01F02 { get; set; } = string.Empty;
 
         /// <summary>
         /// Detailed description of the bug or issue
         /// </summary>
-        public string B01F03 { get; set; }
+        public string B01F03 { get; set; } = string.Empty;
 
         /// <summary>
         /// Status of the issue: Open, In Progress, Resolved, Closed
         /// </summary>
-        public string B01F04 { get; set; }
+        public string B01F04 { get; set; } = string.Empty;
 
         /// <summary>
         /// Timestamp when the issue was created (UTC format)
@@ -33,8 +33,7 @@ namespace FinalDemo.Models.POCOs
         /// <summary>
         /// Foreign Key - ID of the user assigned to this issue (nullable)
         /// </summary>
-        [ForeignKey(typeof(YMU01))]
-        public int? B01F06 { get; set; }
+        public int B01F06 { get; set; }
 
         /// <summary>
         /// Navigation property - The user assigned to this issue

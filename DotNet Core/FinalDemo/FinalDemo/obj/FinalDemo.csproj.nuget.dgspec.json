@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {}
+    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {}
   },
   "projects": {
-    "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {
+    "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
+        "projectUniqueName": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
         "projectName": "FinalDemo",
-        "projectPath": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
-        "packagesPath": "C:\\Users\\hina2\\.nuget\\packages\\",
-        "outputPath": "D:\\officeWork\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\obj\\",
+        "projectPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\FinalDemo.csproj",
+        "packagesPath": "C:\\Users\\hina.j\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hina.j\\source\\repos\\RKIT_Internship_work\\DotNet Core\\FinalDemo\\FinalDemo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hina2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\hina.j\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,18 +34,20 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AspNetCoreRateLimit": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -60,15 +58,19 @@
             },
             "ServiceStack.OrmLite": {
               "target": "Package",
-              "version": "[8.5.2, )"
+              "version": "[8.6.0, )"
             },
             "ServiceStack.OrmLite.Core": {
               "target": "Package",
-              "version": "[8.5.2, )"
+              "version": "[8.6.0, )"
+            },
+            "ServiceStack.OrmLite.MySql": {
+              "target": "Package",
+              "version": "[8.6.0, )"
             },
             "ServiceStack.OrmLite.SqlServer": {
               "target": "Package",
-              "version": "[8.5.2, )"
+              "version": "[8.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -94,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
