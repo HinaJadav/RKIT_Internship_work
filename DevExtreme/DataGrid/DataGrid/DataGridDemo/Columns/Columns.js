@@ -23,7 +23,11 @@ $(function () {
             {
                 dataField: "Name",
                 caption: "Name",
-                validationRules: [{ type: "required" }] // Name is required
+                validationRules: [{ type: "required" }], // Name is required
+                cellTemplate: function (element, info) {
+                    element.append("<div>" + info.text + "</div>")
+                        .css("color", "blue");
+                }
             },
             {
                 caption: "Contacts",

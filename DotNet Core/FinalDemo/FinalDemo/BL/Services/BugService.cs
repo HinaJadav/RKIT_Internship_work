@@ -1,131 +1,182 @@
 ﻿using FinalDemo.BL.Interfaces;
 using FinalDemo.Extension;
+using FinalDemo.Models;
 using FinalDemo.Models.DTOs;
+using FinalDemo.Models.Enums;
 using FinalDemo.Models.POCOs;
-using ServiceStack.OrmLite;
 using ServiceStack.Data;
+using ServiceStack.OrmLite;
 using System.Data;
 
 namespace FinalDemo.BL.Services
 {
-    /// <summary>
-    /// Service for managing bugs with role-based access control.
-    /// </summary>
     public class BugService : IBugService
     {
         private readonly IDbConnectionFactory _dbFactory;
         private readonly IUserService _userService;
         private readonly ILogger<BugService> _logger;
+        private YMB01 _bugObj;
+        private int _bugId;
+        private Response _response;
+        public OperationType Type { get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BugService"/> class.
-        /// </summary>
         public BugService(IDbConnectionFactory dbFactory, IUserService userService, ILogger<BugService> logger)
         {
             _dbFactory = dbFactory;
             _userService = userService;
             _logger = logger;
+            _response = new Response();
         }
 
         /// <summary>
-        /// Creates a new bug.
+        /// Prepares the bug object for saving or updating based on the provided data.
         /// </summary>
-        public DTOBugResponse CreateBug(DTOBugCreated bugDto, int userId)
+        public void PreSaveBug(DTOBugCreated bugDto, int? bugId = null)
         {
-            var user = _userService.GetUserById(userId);
-            if (user == null)
-                throw new UnauthorizedAccessException("User is not authenticated.");
+            if (bugId.HasValue)
+            {
+                _bugId = bugId.Value;
+                using IDbConnection db = _dbFactory.Open();
+                YMB01 existingBug = db.SingleById<YMB01>(_bugId);
 
-            var newBug = bugDto.ToPoco<YMB01>();
-            newBug.B01F05 = DateTime.UtcNow;
-            newBug.B01F06 = user.U01101; // Assigning to user who created it
+                if (existingBug == null)
+                    throw new KeyNotFoundException("Bug not found.");
 
-            using var db = _dbFactory.OpenDbConnection();
-            newBug.B01F01 = (int)db.Insert(newBug, selectIdentity: true);
-
-            _logger.LogInformation("Bug {BugId} created successfully by user {UserId}.", newBug.B01F01, userId);
-            return newBug.ToDto<DTOBugResponse>();
+                _bugObj = existingBug;
+                _bugObj.B01F02 = bugDto.B01102 ?? _bugObj.B01F02;
+                _bugObj.B01F03 = bugDto.B01103 ?? _bugObj.B01F03;
+                _bugObj.B01F04 = bugDto.B01104 ?? _bugObj.B01F04;
+            }
+            else
+            {
+                _bugObj = bugDto.ToPoco<YMB01>();
+                _bugObj.B01F05 = DateTime.UtcNow;
+            }
         }
 
         /// <summary>
-        /// Updates the status of an existing bug.
+        /// Validates the bug data based on the current operation type (Add, Edit, Delete).
         /// </summary>
-        public DTOBugResponse UpdateBugStatus(DTOBugUpdated bugDto, int userId)
+        public Response ValidateBug()
         {
-            var user = _userService.GetUserById(userId);
-            if (user == null)
-                throw new UnauthorizedAccessException("User is not authenticated.");
-            if (user.U01104 != "Admin" && user.U01104 != "Developer")
-                throw new UnauthorizedAccessException("You do not have permission to update bug status.");
+            if (Type == OperationType.E || Type == OperationType.D)
+            {
+                using IDbConnection db = _dbFactory.Open();
+                if (!db.Exists<YMB01>(_bugId))
+                {
+                    _response.IsError = true;
+                    _response.Message = "Bug does not exist.";
+                }
+            }
+            return _response;
+        }
 
-            using var db = _dbFactory.OpenDbConnection();
-            var bug = db.SingleById<YMB01>(bugDto.B01101);
-            if (bug == null)
-                throw new KeyNotFoundException("Bug not found.");
-
-            bug.B01F04 = bugDto.B01104;
-            db.Update(bug);
-
-            _logger.LogInformation("Bug {BugId} updated by user {UserId}.", bug.B01F01, userId);
-            return bug.ToDto<DTOBugResponse>();
+        /// <summary>
+        /// Saves the bug data based on the operation type (Add, Edit, Delete).
+        /// </summary>
+        public Response SaveBug()
+        {
+            try
+            {
+                using IDbConnection db = _dbFactory.Open();
+                if (Type == OperationType.A)
+                {
+                    db.Insert(_bugObj);
+                    _response.Message = "Bug created successfully.";
+                }
+                else if (Type == OperationType.E)
+                {
+                    db.Update(_bugObj);
+                    _response.Message = "Bug updated successfully.";
+                }
+                else if (Type == OperationType.D)
+                {
+                    db.DeleteById<YMB01>(_bugId);
+                    _response.Message = "Bug deleted successfully.";
+                }
+            }
+            catch (Exception ex)
+            {
+                _response.IsError = true;
+                _response.Message = ex.Message;
+            }
+            return _response;
         }
 
         /// <summary>
         /// Retrieves a bug by its ID.
         /// </summary>
-        public DTOBugResponse GetBugById(int bugId, int userId)
+        public Response GetBugById(int bugId, int userId)
         {
-            var user = _userService.GetUserById(userId);
-            if (user == null)
-                throw new UnauthorizedAccessException("User is not authenticated.");
-
-            using var db = _dbFactory.OpenDbConnection();
-            var bug = db.SingleById<YMB01>(bugId);
+            using IDbConnection db = _dbFactory.Open();
+            YMB01 bug = db.SingleById<YMB01>(bugId);
             if (bug == null)
-                throw new KeyNotFoundException("Bug not found.");
-
-            if (user.U01104 != "Admin" && bug.B01F06 != user.U01101)
-                throw new UnauthorizedAccessException("You do not have permission to view this bug.");
-
-            return bug.ToDto<DTOBugResponse>();
+            {
+                _response.IsError = true;
+                _response.Message = "Bug not found.";
+            }
+            else
+            {
+                _response.Data = bug.ToDto<DTOBugResponse>();
+                _response.Message = "Bug retrieved successfully.";
+            }
+            return _response;
         }
 
         /// <summary>
-        /// Deletes a bug (Admin only).
+        /// Retrieves all bugs, depending on user permissions.
         /// </summary>
-        public void DeleteBug(int bugId, int userId)
+        public Response GetAllBugs(int userId)
         {
-            var user = _userService.GetUserById(userId);
-            if (user == null)
-                throw new UnauthorizedAccessException("User is not authenticated.");
-            if (user.U01104 != "Admin")
-                throw new UnauthorizedAccessException("You do not have permission to delete bugs.");
+            using IDbConnection db = _dbFactory.Open();
+            var bugs = db.Select<YMB01>().Select(b => b.ToDto<DTOBugResponse>());
+            _response.Data = bugs;
+            _response.Message = "Bugs retrieved successfully.";
+            return _response;
+        }
 
-            using var db = _dbFactory.OpenDbConnection();
-            var bug = db.SingleById<YMB01>(bugId);
+        /// <summary>
+        /// Deletes a bug based on its ID, only accessible by Admin.
+        /// </summary>
+        public Response DeleteBug(int bugId, int userId, string role)
+        {
+            if (role != "Admin")
+            {
+                return new Response { IsError = true, Message = "Only Admin can delete a bug." };
+            }
+
+            using IDbConnection db = _dbFactory.Open();
+            YMB01 bug = db.SingleById<YMB01>(bugId);
             if (bug == null)
-                throw new KeyNotFoundException("Bug not found.");
+            {
+                return new Response { IsError = true, Message = "Bug not found." };
+            }
 
             db.DeleteById<YMB01>(bugId);
-            _logger.LogInformation("Bug {BugId} deleted by admin {UserId}.", bugId, userId);
+            return new Response { Message = "Bug deleted successfully." };
         }
 
         /// <summary>
-        /// Retrieves all bugs (Admin sees all, others see only their own).
+        /// Updates the status of a bug based on role (Admin or Developer).
         /// </summary>
-        public IEnumerable<DTOBugResponse> GetAllBugs(int userId)
+        public Response UpdateBugStatus(int bugId, BugStatus newStatus, string role)
         {
-            var user = _userService.GetUserById(userId);
-            if (user == null)
-                throw new UnauthorizedAccessException("User is not authenticated.");
+            if (role != "Admin" && role != "Developer")
+            {
+                return new Response { IsError = true, Message = "Only Admin and Developer can update the bug status." };
+            }
 
-            using var db = _dbFactory.OpenDbConnection();
-            var bugs = user.U01104 == "Admin"
-                ? db.Select<YMB01>()
-                : db.Select<YMB01>(b => b.B01F06 == user.U01101);
+            using IDbConnection db = _dbFactory.Open();
+            YMB01 bug = db.SingleById<YMB01>(bugId);
+            if (bug == null)
+            {
+                return new Response { IsError = true, Message = "Bug not found." };
+            }
 
-            return bugs.Select(b => b.ToDto<DTOBugResponse>());
+            bug.B01F04 = newStatus;
+            db.Update(bug);
+
+            return new Response { Message = "Bug status updated successfully." };
         }
     }
 }
-// presave frmate

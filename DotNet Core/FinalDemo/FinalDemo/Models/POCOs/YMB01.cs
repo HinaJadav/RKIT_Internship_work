@@ -1,4 +1,5 @@
-﻿using ServiceStack.DataAnnotations;
+﻿using FinalDemo.Models.Enums;
+using ServiceStack.DataAnnotations;
 
 namespace FinalDemo.Models.POCOs
 {
@@ -23,8 +24,7 @@ namespace FinalDemo.Models.POCOs
         /// <summary>
         /// Status of the issue: Open, In Progress, Resolved, Closed
         /// </summary>
-        public string B01F04 { get; set; } = string.Empty;
-
+        public BugStatus B01F04 { get; set; }
         /// <summary>
         /// Timestamp when the issue was created (UTC format)
         /// </summary>

@@ -1,8 +1,8 @@
 ﻿using FinalDemo.BL.Interfaces;
-using FinalDemo.Models.DTOs;
 using FinalDemo.Filter;
+using FinalDemo.Models;
+using FinalDemo.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace FinalDemo.Controllers
 {
@@ -14,68 +14,55 @@ namespace FinalDemo.Controllers
     {
         private readonly IBugService _bugService;
         private readonly ILogger<BugController> _logger;
+        private Response _response;
 
         public BugController(IBugService bugService, ILogger<BugController> logger)
         {
             _bugService = bugService;
             _logger = logger;
+            _response = new Response();
         }
 
         /// <summary>
-        /// Creates a new bug (Any authenticated user).
+        /// Creates or updates a bug.
+        /// This endpoint is responsible for saving a new bug or updating an existing one based on the provided bug ID.
         /// </summary>
         [HttpPost]
-        public IActionResult CreateBug([FromBody] DTOBugCreated bugDto)
+        public IActionResult SaveBug([FromBody] DTOBugCreated bugDto, int? bugId = null)
         {
-            _logger.LogInformation("Creating a new bug with title: {Title}", bugDto.B01102);
             int userId = (int)HttpContext.Items["UserId"];
-            var bug = _bugService.CreateBug(bugDto, userId);
-            _logger.LogInformation("Bug created successfully with ID: {BugId}", bug.B01101);
-            return CreatedAtAction(nameof(GetBugById), new { bugId = bug.B01101 }, bug);
+            _bugService.PreSaveBug(bugDto, bugId);
+            Response validationResponse = _bugService.ValidateBug();
+            if (validationResponse.IsError)
+                return BadRequest(validationResponse);
+
+            _response = _bugService.SaveBug();
+            return _response.IsError ? BadRequest(_response) : Ok(_response);
         }
 
         /// <summary>
-        /// Updates a bug's status (Only Admin & Developer).
-        /// </summary>
-        [HttpPut]
-        public IActionResult UpdateBugStatus([FromBody] DTOBugUpdated bugDto)
-        {
-            int userId = (int)HttpContext.Items["UserId"];
-            var role = HttpContext.Items["Role"] as string;
-
-            if (role != "Admin" && role != "Developer")
-            {
-                _logger.LogWarning("Unauthorized attempt to update bug {BugId} by user {UserId}", bugDto.B01101, userId);
-                return Unauthorized(new { Message = "You do not have permission to update bugs." });
-            }
-
-            _logger.LogInformation("User {UserId} updating bug {BugId}", userId, bugDto.B01101);
-            var updatedBug = _bugService.UpdateBugStatus(bugDto, userId);
-            _logger.LogInformation("Bug {BugId} updated successfully", bugDto.B01101);
-            return Ok(updatedBug);
-        }
-
-        /// <summary>
-        /// Retrieves a bug by its ID (Admin sees all, others see their own).
+        /// Retrieves a bug by its ID.
+        /// Admin users can see all bugs, while other users can only see their own bugs.
         /// </summary>
         [HttpGet("{bugId}")]
         public IActionResult GetBugById(int bugId)
         {
             _logger.LogInformation("Fetching bug details for Bug ID: {BugId}", bugId);
             int userId = (int)HttpContext.Items["UserId"];
-            var bug = _bugService.GetBugById(bugId, userId);
-            _logger.LogInformation("Retrieved bug details for Bug ID: {BugId}", bugId);
-            return Ok(bug);
+            _response = _bugService.GetBugById(bugId, userId);
+            return _response.IsError ? NotFound(_response) : Ok(_response);
         }
 
         /// <summary>
-        /// Deletes a bug (Only Admin).
+        /// Deletes a bug.
+        /// Only Admin users are authorized to delete bugs.
         /// </summary>
         [HttpDelete("{bugId}")]
         public IActionResult DeleteBug(int bugId)
         {
             int userId = (int)HttpContext.Items["UserId"];
-            var role = HttpContext.Items["Role"] as string;
+            string userRole = (string)HttpContext.Items["Role"];
+            string role = HttpContext.Items["Role"] as string;
 
             if (role != "Admin")
             {
@@ -84,22 +71,42 @@ namespace FinalDemo.Controllers
             }
 
             _logger.LogInformation("User {UserId} deleting bug {BugId}", userId, bugId);
-            _bugService.DeleteBug(bugId, userId);
-            _logger.LogInformation("Bug {BugId} deleted successfully", bugId);
-            return NoContent();
+            _response = _bugService.DeleteBug(bugId, userId, userRole);
+            return _response.IsError ? NotFound(_response) : NoContent();
         }
 
         /// <summary>
-        /// Retrieves all bugs (Admin sees all, others see their own).
+        /// Retrieves all bugs.
+        /// Admin users can see all bugs, while other users can only see their own bugs.
         /// </summary>
         [HttpGet]
         public IActionResult GetAllBugs()
         {
             _logger.LogInformation("Fetching all bugs for the authenticated user.");
             int userId = (int)HttpContext.Items["UserId"];
-            var bugs = _bugService.GetAllBugs(userId);
-            _logger.LogInformation("Retrieved {Count} bugs.", bugs.Count());
-            return Ok(bugs);
+            _response = _bugService.GetAllBugs(userId);
+            return _response.IsError ? NotFound(_response) : Ok(_response);
+        }
+
+        /// <summary>
+        /// Updates the status of a bug.
+        /// Only Admin and Developer roles are authorized to update the status of a bug.
+        /// </summary>
+        [HttpPut("{bugId}/status")]
+        public IActionResult UpdateBugStatus(int bugId, [FromBody] DTOBugStatusUpdateRequest request)
+        {
+            int userId = (int)HttpContext.Items["UserId"];
+            string role = HttpContext.Items["Role"] as string;
+
+            if (role != "Admin" && role != "Developer")
+            {
+                _logger.LogWarning("Unauthorized status update attempt on Bug {BugId} by user {UserId}", bugId, userId);
+                return Unauthorized(new { Message = "Only Admins and Developers can update bug status." });
+            }
+
+            _logger.LogInformation("User {UserId} updating status of bug {BugId} to {Status}", userId, bugId, request.NewStatus);
+            _response = _bugService.UpdateBugStatus(bugId, request.NewStatus, role);
+            return _response.IsError ? BadRequest(_response) : Ok(_response);
         }
     }
 }

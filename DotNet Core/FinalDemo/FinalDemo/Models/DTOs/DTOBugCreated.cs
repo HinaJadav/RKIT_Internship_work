@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FinalDemo.Models.Enums;
+using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
 namespace FinalDemo.Models.DTOs
@@ -20,5 +21,13 @@ namespace FinalDemo.Models.DTOs
         [StringLength(500, MinimumLength = 10, ErrorMessage = "B01F03 (Description) must be between 10 and 500 characters.")]
         [JsonProperty("B01F03")]
         public string B01103 { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Status of the issue
+        /// </summary>
+        [Required(ErrorMessage = "B01F04 (Status) is required.")]
+        [JsonProperty("B01F04")]
+        [EnumDataType(typeof(BugStatus), ErrorMessage = "B01F04 (Status) must be one of the predefined values.")]
+        public BugStatus? B01104 { get; set; }
     }
 }

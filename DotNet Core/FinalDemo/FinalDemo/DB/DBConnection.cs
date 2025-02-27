@@ -1,8 +1,5 @@
 ﻿using FinalDemo.Models.POCOs;
-using Microsoft.Extensions.Configuration;
 using ServiceStack.OrmLite;
-using ServiceStack.OrmLite.MySql;
-using System;
 using System.Data;
 
 namespace FinalDemo.DB

@@ -1,11 +1,10 @@
 ﻿using FinalDemo.DB;
 using FinalDemo.Extension;
+using FinalDemo.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using ServiceStack.Data;
-using ServiceStack.OrmLite;
-using System.Configuration;
+using NLog.Extensions.Logging;
 using System.Data;
 using System.Text;
 
@@ -109,6 +108,9 @@ namespace FinalDemo
             app.UseHttpsRedirection();
             app.UseRouting();
 
+
+            // Enable Custom Logging Middleware with NLog
+            app.UseMiddleware<RequestLoggingMiddleware>();
             // Enable CORS
             app.UseCors("AllowAllOrigins");
 
