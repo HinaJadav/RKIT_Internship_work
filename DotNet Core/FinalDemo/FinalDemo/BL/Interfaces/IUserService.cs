@@ -1,6 +1,7 @@
 ﻿using FinalDemo.Models;
 using FinalDemo.Models.DTOs;
 using FinalDemo.Models.Enums;
+using FinalDemo.Models.POCOs;
 
 namespace FinalDemo.BL.Interfaces
 {
@@ -9,6 +10,9 @@ namespace FinalDemo.BL.Interfaces
     /// </summary>
     public interface IUserService
     {
+
+        YMU01 ToPocoUser(DTOYMU01 dtoUser);
+
         /// <summary>
         /// Prepares user data before saving, either for new creation or update.
         /// </summary>
@@ -53,7 +57,7 @@ namespace FinalDemo.BL.Interfaces
         /// </summary>
         /// <param name="id">User ID to fetch the details for.</param>
         /// <returns>DTO containing the user details.</returns>
-        DTOYMU01 GetById(int id);
+        DTOResponse GetById(int id);
 
         /// <summary>
         /// Authenticates a user based on provided login credentials and returns a JWT token if successful.

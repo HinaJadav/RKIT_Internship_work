@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NLog.Extensions.Logging;
+using ServiceStack;
 using System.Data;
 using System.Text;
 
@@ -22,8 +23,8 @@ namespace FinalDemo
         public void ConfigureServices(IServiceCollection services)
         {
             // Add database connection
-            services.AddSingleton<IDbConnection>(sp => DBConnection.OpenConnection(_configuration));
-
+            //services.AddSingleton<IDbConnection>(sp => DBConnection.OpenConnection(_configuration));
+            services.AddApplicationServices(_configuration);
 
             // Add logging
             services.AddLogging(loggingBuilder =>

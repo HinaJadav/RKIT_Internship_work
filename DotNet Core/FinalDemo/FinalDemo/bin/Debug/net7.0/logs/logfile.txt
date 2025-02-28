@@ -1,3 +1,145 @@
 2025-02-27 15:29:23.0473 | Info | Application starting... 
 2025-02-27 16:17:40.4099 | Info | Application starting... 
 2025-02-27 16:20:14.5941 | Info | Application starting... 
+2025-02-27 23:09:46.1725 | Info | Application starting... 
+2025-02-27 23:10:11.2340 | Info | Application starting... 
+2025-02-27 23:10:15.9852 | Error | Application stopped due to an unexpected exception. MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '127.0.0.1' for user 'Admin' using method 'sha256_password' failed with message: Access denied for user 'Admin'@'localhost' (using password: YES)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user 'Admin'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.InitializeAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPoolManager.GetPoolAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at ServiceStack.OrmLite.OrmLiteConnection.Open() in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnection.cs:line 129
+   at ServiceStack.OrmLite.OrmLiteConnectionFactory.OpenDbConnection() in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnectionFactory.cs:line 95
+   at ServiceStack.OrmLite.OrmLiteConnectionFactoryExtensions.Open(IDbConnectionFactory connectionFactory) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnectionFactory.cs:line 228
+   at FinalDemo.DB.DBConnection.OpenConnection(IConfiguration configuration) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\DB\DBConnection.cs:line 29
+   at FinalDemo.Extension.ServiceExtensions.<>c__DisplayClass0_0.<AddApplicationServices>b__0(IServiceProvider sp) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Extension\ServiceExtensions.cs:line 29
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at FinalDemo.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Startup.cs:line 138
+   at Program.<Main>$(String[] args) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Program.cs:line 25 Server Error Code: 1045
+2025-02-28 00:11:52.5203 | Info | Application starting... 
+2025-02-28 00:11:54.2330 | Error | Application stopped due to an unexpected exception. MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'rkitdatabase'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'rkitdatabase'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at ServiceStack.OrmLite.OrmLiteConnection.Open() in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnection.cs:line 129
+   at ServiceStack.OrmLite.OrmLiteConnectionFactory.OpenDbConnection() in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnectionFactory.cs:line 95
+   at ServiceStack.OrmLite.OrmLiteConnectionFactoryExtensions.Open(IDbConnectionFactory connectionFactory) in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnectionFactory.cs:line 228
+   at FinalDemo.DB.DBConnection.OpenConnection(IConfiguration configuration) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\DB\DBConnection.cs:line 29
+   at FinalDemo.Extension.ServiceExtensions.<>c__DisplayClass0_0.<AddApplicationServices>b__0(IServiceProvider sp) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Extension\ServiceExtensions.cs:line 29
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at FinalDemo.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Startup.cs:line 138
+   at Program.<Main>$(String[] args) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Program.cs:line 25 Server Error Code: 1049
+2025-02-28 00:14:14.8836 | Info | Application starting... 
+2025-02-28 00:14:17.1940 | Error | Application stopped due to an unexpected exception. MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'rkitdatabase'
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'rkitdatabase'
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at ServiceStack.OrmLite.OrmLiteConnection.Open() in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnection.cs:line 129
+   at ServiceStack.OrmLite.OrmLiteConnectionFactory.OpenDbConnection() in /home/runner/work/ServiceStack/ServiceStack/ServiceStack.OrmLite/src/ServiceStack.OrmLite/OrmLiteConnectionFactory.cs:line 95
+   at FinalDemo.DB.DBConnection.OpenConnection(IConfiguration configuration) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\DB\DBConnection.cs:line 25
+   at FinalDemo.Extension.ServiceExtensions.<>c__DisplayClass0_0.<AddApplicationServices>b__0(IServiceProvider sp) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Extension\ServiceExtensions.cs:line 29
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at FinalDemo.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Startup.cs:line 138
+   at Program.<Main>$(String[] args) in D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\Program.cs:line 25 Server Error Code: 1049
+2025-02-28 00:15:00.1620 | Info | Application starting... 
+2025-02-28 00:15:14.4384 | Info | Application starting... 
+2025-02-28 00:28:40.9506 | Info | Application starting... 
+2025-02-28 00:29:02.7079 | Info | Application starting... 
+2025-02-28 00:37:31.1170 | Info | Application starting... 
+2025-02-28 00:37:43.9444 | Info | Application starting... 
+2025-02-28 00:42:06.9878 | Info | Application starting... 
+2025-02-28 00:44:44.1276 | Info | Application starting... 
+2025-02-28 00:47:23.6700 | Info | Application starting... 
+2025-02-28 00:52:47.9809 | Info | Application starting... 
+2025-02-28 00:54:54.5775 | Info | Application starting... 
+2025-02-28 00:58:01.9321 | Info | Application starting... 
+2025-02-28 01:01:28.8833 | Info | Application starting... 
+2025-02-28 01:03:22.4994 | Info | Application starting... 
+2025-02-28 01:06:10.5561 | Info | Application starting... 
+2025-02-28 01:12:00.6332 | Info | Application starting... 
+2025-02-28 01:18:18.6571 | Info | Application starting... 
+2025-02-28 01:25:48.9881 | Info | Application starting... 
+2025-02-28 01:27:51.1303 | Info | Application starting... 
+2025-02-28 01:29:29.3103 | Info | Application starting... 
+2025-02-28 01:36:32.6088 | Info | Application starting... 
+2025-02-28 01:43:37.0484 | Info | Application starting... 
+2025-02-28 01:48:49.4741 | Info | Application starting... 
+2025-02-28 01:53:39.8356 | Info | Application starting... 
+2025-02-28 01:56:48.0381 | Info | Application starting... 
+2025-02-28 02:03:48.4457 | Info | Application starting... 

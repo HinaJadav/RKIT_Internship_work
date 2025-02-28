@@ -8,6 +8,7 @@ namespace FinalDemo.Models.POCOs
         /// Primary Key - Unique Identifier for the user
         /// </summary>
         [PrimaryKey]
+        [AutoIncrement]
         public int U01F01 { get; set; }
 
         /// <summary>

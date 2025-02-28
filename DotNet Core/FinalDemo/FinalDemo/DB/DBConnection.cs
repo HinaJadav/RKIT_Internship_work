@@ -6,9 +6,6 @@ namespace FinalDemo.DB
 {
     public class DBConnection
     {
-        private static IDbConnection _db;
-        private static OrmLiteConnectionFactory _dbFactory;
-
         /// <summary>
         /// Opens a connection to the database and creates necessary tables if they do not exist.
         /// </summary>
@@ -22,17 +19,14 @@ namespace FinalDemo.DB
                 // Fetch the connection string from appsettings.json
                 string connectionString = configuration.GetConnectionString("MyDbConnection");
 
-                // Create a new ORM Lite connection factory
-                _dbFactory = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider);
-
-                // Open a connection using the factory
-                _db = _dbFactory.Open();
+                // Open a new database connection using OrmLite
+                using var db = new OrmLiteConnectionFactory(connectionString, MySqlDialect.Provider).OpenDbConnection();
 
                 // Create the tables if they do not exist
-                CreateTables();
+                CreateTables(db);
 
                 // Return the established connection
-                return _db;
+                return db;
             }
             catch (Exception ex)
             {
@@ -45,12 +39,12 @@ namespace FinalDemo.DB
         /// <summary>
         /// Creates the necessary tables in the database if they do not already exist.
         /// </summary>
-        private static void CreateTables()
+        private static void CreateTables(IDbConnection db)
         {
             try
             {
-                _db.CreateTableIfNotExists<YMU01>();
-                _db.CreateTableIfNotExists<YMB01>();
+                db.CreateTableIfNotExists<YMU01>();
+                db.CreateTableIfNotExists<YMB01>();
             }
             catch (Exception ex)
             {

@@ -7,45 +7,33 @@ namespace FinalDemo.Extension
     /// </summary>
     public static class DtoToPocoExtensions
     {
-        /// <summary>
-        /// Converts a Data Transfer Object (DTO) to a Plain Old CLR Object (POCO) using reflection.
-        /// </summary>
-        /// <typeparam name="TPoco">The type of the POCO to which the DTO will be converted.</typeparam>
-        /// <param name="dto">The DTO object to be converted to a POCO.</param>
-        /// <returns>A new instance of the POCO with the properties mapped from the DTO.</returns>
-        /// <exception cref="ArgumentNullException">Thrown if the DTO is null.</exception>
-        public static TPoco ToPoco<TPoco>(this object dto) where TPoco : new()
+        public static POCO Convert<POCO>(this object dto)
         {
-            if (dto == null)
-                throw new ArgumentNullException(nameof(dto), "DTO cannot be null");
+            // Get the type of the POCO
+            Type pocoType = typeof(POCO);
+            // Create an instance of the POCO
+            POCO pocoInstance = (POCO)Activator.CreateInstance(pocoType);
 
-            TPoco poco = new TPoco();
-            PropertyInfo[] dtoProperties = dto.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
-            PropertyInfo[] pocoProperties = typeof(TPoco).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            // Get properties of the DTO
+            PropertyInfo[] dtoProperties = dto.GetType().GetProperties();
+            // Get properties of the POCO
+            PropertyInfo[] pocoProperties = pocoType.GetProperties();
 
-            foreach (var dtoProp in dtoProperties)
+            // Iterate through each property of the DTO
+            foreach (PropertyInfo dtoProperty in dtoProperties)
             {
-                PropertyInfo pocoProp = pocoProperties.FirstOrDefault(p => p.Name == dtoProp.Name);
+                // Find the corresponding property in the POCO with the same name
+                PropertyInfo pocoProperty = Array.Find(pocoProperties, p => p.Name == dtoProperty.Name);
 
-                if (pocoProp != null)
+                // If a matching property is found and types are compatible, copy the value
+                if (dtoProperty != null && dtoProperty.PropertyType == pocoProperty.PropertyType)
                 {
-                    try
-                    {
-                        object value = dtoProp.GetValue(dto);
-                        if (value != null && pocoProp.PropertyType != dtoProp.PropertyType)
-                        {
-                            value = Convert.ChangeType(value, pocoProp.PropertyType);
-                        }
-                        pocoProp.SetValue(poco, value);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Error mapping property {dtoProp.Name}: {ex.Message}");
-                    }
+                    object value = dtoProperty.GetValue(dto);
+                    pocoProperty.SetValue(pocoInstance, value);
                 }
-
             }
-            return poco;
+            // Return the converted POCO object
+            return pocoInstance;
         }
     }
 }

@@ -3,17 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FinalDemo.Models.DTOs
 {
-    /// <summary>
-    /// Data Transfer Object for YMU01 (User)
-    /// </summary>
-    public class DTOYMU01
+    public class DTOResponse
     {
-        /// <summary>
-        /// Unique Identifier for the user
-        /// </summary>
-        [JsonProperty("U01F01")]
-        [Key]
-        public int U01101 { get; set; }
+        
 
         /// <summary>
         /// Username of the user
@@ -23,13 +15,7 @@ namespace FinalDemo.Models.DTOs
         [JsonProperty("U01F02")]
         public string U01102 { get; set; } = string.Empty;
 
-        /// <summary>
-        /// Password of the user
-        /// </summary>
-        [Required(ErrorMessage = "U01F03 (Password) is required.")]
-        [StringLength(100, MinimumLength = 6, ErrorMessage = "U01F03 (Password) must be between 6 and 100 characters.")]
-        [JsonProperty("U01F03")]
-        public string U01103 { get; set; } = string.Empty;
+        
 
         /// <summary>
         /// Role of the user: Admin, Developer, Tester
@@ -40,3 +26,4 @@ namespace FinalDemo.Models.DTOs
         public string U01104 { get; set; } = string.Empty;
     }
 }
+

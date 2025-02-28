@@ -49,15 +49,19 @@ namespace FinalDemo.Controllers
             }
         }
 
-        /// <summary>
+        /*/// <summary>
         /// Handles user registration.
         /// Registers a new user and validates the provided details before saving the user.
         /// </summary>
         [HttpPost("signup")]
-        public IActionResult SignUp([FromBody] DTOYMU01 signUpDto)
+        public IActionResult SignUp(DTOYMU01 signUpDto)
         {
             try
             {
+                *//*if(signUpDto == null)
+                {
+                    _logger.LogInformation("aaaaaaaaaaaaaaa");
+                }*//*
                 _logger.LogInformation("New user signup attempt: {Username}", signUpDto.U01102);
 
                 _userService.PreSaveUser(signUpDto, OperationType.A);
@@ -82,7 +86,47 @@ namespace FinalDemo.Controllers
                 _logger.LogError(ex, "Signup failed for user {Username}", signUpDto.U01102);
                 return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later." });
             }
+        }*/
+
+        [HttpPost("signup")]
+        public IActionResult SignUp(DTOYMU01 signUpDto)
+        {
+            try
+            {
+                if (signUpDto == null)
+                {
+                    _logger.LogWarning("Received null DTO in signup request.");
+                    return BadRequest(new { Message = "Invalid request: DTO is null" });
+                }
+
+                // Log full DTO
+                _logger.LogInformation("Received SignUp DTO: {@SignUpDto}", signUpDto);
+                Console.WriteLine($"Received SignUp DTO: {Newtonsoft.Json.JsonConvert.SerializeObject(signUpDto)}");
+
+                _userService.PreSaveUser(signUpDto, OperationType.A);
+
+                Response validationResponse = _userService.Validation();
+                if (validationResponse.IsError)
+                {
+                    return BadRequest(new { Message = validationResponse.Message });
+                }
+
+                Response response = _userService.Save();
+                if (response.IsError)
+                {
+                    return BadRequest(new { Message = response.Message });
+                }
+
+                _logger.LogInformation("User {Username} signed up successfully.", signUpDto.U01102);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Signup failed for user {Username}", signUpDto?.U01102);
+                return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later." });
+            }
         }
+
 
         /// <summary>
         /// Retrieves user details by user ID.
@@ -95,7 +139,7 @@ namespace FinalDemo.Controllers
             try
             {
                 _logger.LogInformation("Fetching details for user ID: {UserId}", userId);
-                DTOYMU01 user = _userService.GetById(userId);
+                DTOResponse user = _userService.GetById(userId);
 
                 if (user == null)
                 {
@@ -109,7 +153,7 @@ namespace FinalDemo.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred while fetching user details for ID {UserId}", userId);
-                return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later." });
+                return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later."});
             }
         }
 
@@ -126,7 +170,7 @@ namespace FinalDemo.Controllers
                 _logger.LogInformation("Updating user ID: {UserId}", userId);
 
                 // Validate user existence
-                DTOYMU01 existingUser = _userService.GetById(userId);
+                DTOResponse existingUser = _userService.GetById(userId);
                 if (existingUser == null)
                 {
                     _logger.LogWarning("User not found for ID {UserId}", userId);

@@ -1,4 +1,5 @@
 ﻿using FinalDemo.BL.Interfaces;
+using FinalDemo.DB;
 using FinalDemo.Extension;
 using FinalDemo.Models;
 using FinalDemo.Models.DTOs;
@@ -6,7 +7,6 @@ using FinalDemo.Models.Enums;
 using FinalDemo.Models.POCOs;
 using Microsoft.IdentityModel.Tokens;
 using ServiceStack;
-using ServiceStack.Data;
 using ServiceStack.OrmLite;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
@@ -18,7 +18,7 @@ namespace FinalDemo.BL.Services
 {
     public class UserService : IUserService
     {
-        private readonly IDbConnectionFactory _dbFactory;
+        private readonly IDbConnection _db;
         private readonly ILogger<UserService> _logger;
         private YMU01 _userObj;
         private int _userId;
@@ -29,33 +29,59 @@ namespace FinalDemo.BL.Services
         private const int MAX_LOGIN_ATTEMPTS = 5;
         private static readonly TimeSpan LOGIN_ATTEMPT_RESET_TIME = TimeSpan.FromMinutes(1);
 
-        public UserService(IConfiguration configuration, IDbConnectionFactory dbFactory, ILogger<UserService> logger)
+        public UserService(IConfiguration configuration, IDbConnection db, ILogger<UserService> logger)
         {
-            _dbFactory = dbFactory;
+            _db = db;
             _logger = logger;
             _configuration = configuration;
             _response = new Response();
         }
 
-        /// <summary>
-        /// Prepares user object for saving or updating based on the provided data.
-        /// </summary>
+        private string HashPassword(string password)
+        {
+            using SHA256 sha256 = SHA256.Create();
+            byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+            return Convert.ToBase64String(hashedBytes);
+        }
+
+        public YMU01 ToPocoUser(DTOYMU01 dtoUser)
+        {
+            Console.WriteLine($"2Received SignUp DTO: {Newtonsoft.Json.JsonConvert.SerializeObject(dtoUser)}");
+
+            return new YMU01
+            {
+                U01F02 = dtoUser.U01102,
+                U01F03 = this.HashPassword(dtoUser.U01103),
+                U01F04 = dtoUser.U01104
+            };
+        }
+
+        private DTOResponse ToDTOUser(YMU01 user)
+        {
+            return new DTOResponse
+            {
+                U01102 = user.U01F02,
+                //U01103 = user.U01F03,
+                U01104 = user.U01F04,
+            };
+        }
         public void PreSaveUser(DTOYMU01 dtoUser, OperationType operationType, int? userId = null)
         {
             Type = operationType;
 
+            Console.WriteLine($"2Received SignUp DTO: {Newtonsoft.Json.JsonConvert.SerializeObject(dtoUser)}");
+
+
             if (userId.HasValue)
             {
-                _userId = userId.Value; // Set user ID for validation
-                using IDbConnection db = _dbFactory.Open();
-                YMU01 existingUser = db.SingleById<YMU01>(_userId);
+                _userId = userId.Value;
+                YMU01 existingUser = _db.SingleById<YMU01>(_userId);
 
                 if (existingUser == null)
                 {
                     throw new KeyNotFoundException("User not found.");
                 }
 
-                // Update existing user fields selectively (only update non-null properties)
                 _userObj = existingUser;
                 _userObj.U01F02 = dtoUser.U01102 ?? _userObj.U01F02;
                 _userObj.U01F03 = string.IsNullOrEmpty(dtoUser.U01103) ? _userObj.U01F03 : HashPassword(dtoUser.U01103);
@@ -63,41 +89,56 @@ namespace FinalDemo.BL.Services
             }
             else
             {
-                // New user creation
-                _userObj = dtoUser.ToPoco<YMU01>();
+                YMU01 newUser = ToPocoUser(dtoUser);
+                Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(newUser));
+
+                if (newUser == null)
+                {
+                    throw new ArgumentException("Conversion to POCO failed.");
+                }
+                _userObj = newUser;
             }
         }
 
-        /// <summary>
-        /// Prepares the user object for login by hashing the password.
-        /// </summary>
         public void PreLoginUser(DTOLogin dtoUser)
         {
             dtoUser.U01103 = HashPassword(dtoUser.U01103);
-            _userObj = dtoUser.ToPoco<YMU01>();
+            _userObj = dtoUser.ConvertTo<YMU01>();
         }
 
-        /// <summary>
-        /// Validates whether the user exists in the database.
-        /// </summary>
         private bool IsUserExist(int userId)
         {
-            using IDbConnection db = _dbFactory.Open();
-            return db.Exists<YMU01>(userId);
+            return _db.Exists<YMU01>(userId);
         }
 
-        /// <summary>
-        /// Prepares the user for deletion by setting the user ID and operation type.
-        /// </summary>
+        /*public void PreDeleteUser(int userId, OperationType operationType)
+        {
+            Type = operationType;
+            _userId = userId;
+        }*/
+
         public void PreDeleteUser(int userId, OperationType operationType)
         {
+            // Validate the ID
+            if (userId <= 0)
+            {
+                throw new ArgumentException("Invalid user ID. ID must be greater than 0.");
+            }
+
+            // Check if the user exists in the database
+            YMU01 existingUser = _db.SingleById<YMU01>(userId);
+
+            if (existingUser == null)
+            {
+                throw new KeyNotFoundException($"No user found with ID {userId}.");
+            }
+
+            // Assign values if validation passes
             Type = operationType;
             _userId = userId;
         }
 
-        /// <summary>
-        /// Validates the user data based on the operation type (Add, Edit, Delete).
-        /// </summary>
+
         public Response Validation()
         {
             if (Type == OperationType.E || Type == OperationType.D)
@@ -111,17 +152,16 @@ namespace FinalDemo.BL.Services
             return _response;
         }
 
-        /// <summary>
-        /// Saves the user data based on the operation type (Add, Edit).
-        /// </summary>
-        public Response Save()
+        /*public Response Save()
         {
             try
             {
-                using IDbConnection db = _dbFactory.Open();
                 if (Type == OperationType.A)
                 {
-                    db.Save(_userObj);
+                    _logger.LogInformation("Saving user: {@UserObj}", _userObj);
+
+                    _db.Insert(_userObj);
+                    
                     _response.Message = "User registered successfully.";
                 }
                 else if (Type == OperationType.E)
@@ -133,7 +173,9 @@ namespace FinalDemo.BL.Services
                         return _response;
                     }
 
-                    db.Update(_userObj);
+                    _logger.LogInformation("Saving user: {@UserObj}", _userObj);
+
+                    _db.Update(_userObj);
                     _response.Message = "User details updated successfully.";
                 }
             }
@@ -143,27 +185,63 @@ namespace FinalDemo.BL.Services
                 _response.Message = $"Error: {ex.Message}";
             }
             return _response;
-        }
+        }*/
 
-        /// <summary>
-        /// Hashes the user password using SHA256.
-        /// </summary>
-        private string HashPassword(string password)
+        public Response Save()
         {
-            using SHA256 sha256 = SHA256.Create();
-            byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(hashedBytes);
+            try
+            {
+                if (_userObj == null)
+                {
+                    _response.IsError = true;
+                    _response.Message = "User object is null before save.";
+                    _logger.LogError("User object is null before save.");
+                    return _response;
+                }
+
+                _logger.LogInformation("Preparing to save user: {@UserObj}", _userObj);
+
+                if (Type == OperationType.A)
+                {
+                    _logger.LogInformation("Attempting to insert user...");
+                    _db.Insert(_userObj);
+                    _logger.LogInformation("User inserted successfully: {@UserObj}", _userObj);
+                    _response.Message = "User registered successfully.";
+                    _response.Data = _userObj;
+                }
+                else if (Type == OperationType.E)
+                {
+                    if (!IsUserExist(_userId))
+                    {
+                        _response.IsError = true;
+                        _response.Message = "User not found.";
+                        _logger.LogError("User not found for update: UserID = {UserId}", _userId);
+                        return _response;
+                    }
+
+                    _logger.LogInformation("Updating user...");
+                    _db.Update(_userObj);
+                    _logger.LogInformation("User updated successfully.");
+                    _response.Message = "User details updated successfully.";
+                }
+            }
+            catch (Exception ex)
+            {
+                _response.IsError = true;
+                _response.Message = $"Error: {ex.Message}";
+                _logger.LogError(ex, "Error while saving user");
+            }
+            return _response;
         }
 
-        /// <summary>
-        /// Deletes the user based on user ID.
-        /// </summary>
+
+        
+
         public Response Delete()
         {
             try
             {
-                using IDbConnection db = _dbFactory.Open();
-                db.DeleteById<YMU01>(_userId);
+                _db.DeleteById<YMU01>(_userId);
                 _response.Message = "User deleted successfully.";
             }
             catch (Exception ex)
@@ -174,19 +252,35 @@ namespace FinalDemo.BL.Services
             return _response;
         }
 
-        /// <summary>
-        /// Retrieves a user by its ID.
-        /// </summary>
-        public DTOYMU01 GetById(int id)
+        /* public DTOResponse GetById(int id)
+         {
+             YMU01 user = _db.SingleById<YMU01>(id);
+             //return user.ToDto<DTOYMU01>();
+             return ToDTOUser(user);
+         }*/
+
+        public DTOResponse GetById(int id)
         {
-            using IDbConnection db = _dbFactory.Open();
-            YMU01 user = db.SingleById<YMU01>(id);
-            return user.ToDto<DTOYMU01>();
+            // Validate the ID
+            if (id <= 0)
+            {
+                throw new ArgumentException("Invalid ID. ID must be greater than 0.");
+            }
+
+            // Fetch the user from the database
+            YMU01 user = _db.SingleById<YMU01>(id);
+
+            // Check if the user exists
+            if (user == null)
+            {
+                throw new KeyNotFoundException($"No user found with ID {id}.");
+            }
+
+            // Convert to DTO and return
+            return ToDTOUser(user);
         }
 
-        /// <summary>
-        /// Handles user login by validating credentials and generating JWT token.
-        /// </summary>
+
         public Response Login(DTOLogin loginDto)
         {
             if (_loginAttempts.TryGetValue(loginDto.U01102, out var attempts))
@@ -199,8 +293,7 @@ namespace FinalDemo.BL.Services
                 }
             }
 
-            using IDbConnection db = _dbFactory.Open();
-            YMU01 user = db.Single<YMU01>(u => u.U01F02 == loginDto.U01102 && u.U01F03 == HashPassword(loginDto.U01103));
+            YMU01 user = _db.Single<YMU01>(u => u.U01F02 == loginDto.U01102 && u.U01F03 == HashPassword(loginDto.U01103));
 
             if (user == null)
             {
@@ -212,7 +305,6 @@ namespace FinalDemo.BL.Services
 
             _loginAttempts.Remove(loginDto.U01102);
 
-            // Generate JWT token here
             string token = GenerateJwtToken(user.U01F01, user.U01F04);
 
             _response.Message = "Login successful.";
@@ -226,9 +318,6 @@ namespace FinalDemo.BL.Services
             return _response;
         }
 
-        /// <summary>
-        /// Generates a JWT token for the authenticated user.
-        /// </summary>
         public string GenerateJwtToken(int userId, string role)
         {
             byte[] key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);

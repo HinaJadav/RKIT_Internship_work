@@ -1,7 +1,8 @@
 ﻿using FinalDemo.BL.Interfaces;
 using FinalDemo.BL.Services;
+using FinalDemo.DB;
 using FinalDemo.Filter;
-using FinalDemo.Middleware;
+using Microsoft.Extensions.DependencyInjection;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 using System.Data;
@@ -22,9 +23,12 @@ namespace FinalDemo.Extension
                 MySqlDialect.Provider
             );
 
-            // Register IDbConnectionFactory and IDbConnection for DB access
+            // Register IDbConnectionFactory as a Singleton (factory remains singleton)
             services.AddSingleton<IDbConnectionFactory>(dbFactory);
-            services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().OpenDbConnection());
+
+            // Register IDbConnection as Scoped (creates a new connection per request)
+            services.AddScoped<IDbConnection>(sp =>
+                sp.GetRequiredService<IDbConnectionFactory>().OpenDbConnection());
 
             // Register custom filters for authentication and exception handling
             services.AddScoped<CustomAuthenticationFilter>();
@@ -33,8 +37,6 @@ namespace FinalDemo.Extension
             // Register application services with dependency injection
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IBugService, BugService>();
-
-            
         }
     }
 }
