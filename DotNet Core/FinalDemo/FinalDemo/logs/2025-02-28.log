@@ -1,0 +1,408 @@
+2025-02-28 13:26:28.4149 | Info | Application starting... 
+2025-02-28 14:50:40.5278 | Info | Application starting... 
+2025-02-28 14:51:15.0687 | Info | Application starting... 
+2025-02-28 14:57:43.0930 | Info | Application starting... 
+2025-02-28 15:01:48.1218 | Info | Application starting... 
+2025-02-28 15:10:43.2064 | Info | Application starting... 
+2025-02-28 15:10:43.2543 | Trace | Trace log test 
+2025-02-28 15:10:43.2543 | Debug | Debug log test 
+2025-02-28 15:10:43.2543 | Info | Info log test 
+2025-02-28 15:10:43.2543 | Warn | Warning log test 
+2025-02-28 15:10:43.2543 | Error | Error log test 
+2025-02-28 15:10:43.2543 | Fatal | Fatal log test 
+2025-02-28 15:10:44.5414 | Debug | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-02-28 15:10:45.2711 | Debug | Hosting starting 
+2025-02-28 15:10:45.3108 | Info | User profile is available. Using 'C:\Users\hina.j\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-02-28 15:10:45.3108 | Debug | Reading data from file 'C:\Users\hina.j\AppData\Local\ASP.NET\DataProtection-Keys\key-3956d84f-cb83-4a3e-a618-fcacad57570d.xml'. 
+2025-02-28 15:10:45.3276 | Debug | Found key {3956d84f-cb83-4a3e-a618-fcacad57570d}. 
+2025-02-28 15:10:45.3276 | Debug | Considering key {3956d84f-cb83-4a3e-a618-fcacad57570d} with expiration date 2025-05-05 07:20:18Z as default key. 
+2025-02-28 15:10:45.3421 | Debug | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-02-28 15:10:45.3421 | Debug | Decrypting secret element using Windows DPAPI. 
+2025-02-28 15:10:45.3421 | Debug | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-02-28 15:10:45.3421 | Debug | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-02-28 15:10:45.3421 | Debug | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-02-28 15:10:45.3421 | Debug | Using key {3956d84f-cb83-4a3e-a618-fcacad57570d} as the default key. 
+2025-02-28 15:10:45.3421 | Debug | Key ring with default key {3956d84f-cb83-4a3e-a618-fcacad57570d} was loaded during application startup. 
+2025-02-28 15:10:45.4908 | Info | Now listening on: https://localhost:7149 
+2025-02-28 15:10:45.4908 | Info | Now listening on: http://localhost:5278 
+2025-02-28 15:10:45.4908 | Debug | Loaded hosting startup assembly FinalDemo 
+2025-02-28 15:10:45.4908 | Debug | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-02-28 15:10:45.4908 | Debug | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-02-28 15:10:45.4908 | Info | Application started. Press Ctrl+C to shut down. 
+2025-02-28 15:10:45.4908 | Info | Hosting environment: Development 
+2025-02-28 15:10:45.4908 | Info | Content root path: C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo 
+2025-02-28 15:10:45.4908 | Debug | Hosting started 
+2025-02-28 15:10:45.7231 | Debug | Connection id "0HNANRFST42P4" accepted. 
+2025-02-28 15:10:45.7231 | Debug | Connection id "0HNANRFST42P3" accepted. 
+2025-02-28 15:10:45.7231 | Debug | Connection id "0HNANRFST42P3" received FIN. 
+2025-02-28 15:10:45.7231 | Debug | Connection id "0HNANRFST42P4" received FIN. 
+2025-02-28 15:10:45.7231 | Debug | Connection id "0HNANRFST42P4" started. 
+2025-02-28 15:10:45.7544 | Debug | Connection id "0HNANRFST42P3" started. 
+2025-02-28 15:10:46.0302 | Debug | Connection id "0HNANRFST42P5" accepted. 
+2025-02-28 15:10:46.0302 | Debug | Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-02-28 15:10:46.0302 | Debug | Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-02-28 15:10:46.0302 | Debug | Connection id "0HNANRFST42P5" started. 
+2025-02-28 15:10:46.0753 | Debug | Connection id "0HNANRFST42P3" stopped. 
+2025-02-28 15:10:46.0753 | Debug | Connection id "0HNANRFST42P4" stopped. 
+2025-02-28 15:10:46.0793 | Debug | Connection id "0HNANRFST42P4" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-02-28 15:10:46.0793 | Debug | Connection id "0HNANRFST42P3" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-02-28 15:10:46.0929 | Debug | Connection 0HNANRFST42P5 established using the following protocol: Tls12 
+2025-02-28 15:10:46.1372 | Trace | Connection id "0HNANRFST42P5" sending SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-02-28 15:10:46.1401 | Trace | Connection id "0HNANRFST42P5" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-02-28 15:10:46.1401 | Trace | Connection id "0HNANRFST42P5" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-02-28 15:10:46.1401 | Trace | Connection id "0HNANRFST42P5" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-02-28 15:10:46.1401 | Trace | Connection id "0HNANRFST42P5" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-02-28 15:10:46.1401 | Trace | Connection id "0HNANRFST42P5" received HEADERS frame for stream ID 1 with length 470 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 15:10:46.1672 | Trace | Connection id "0HNANRFST42P5" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-02-28 15:10:46.1953 | Info | Request starting HTTP/2 GET https://localhost:7149/swagger/index.html - - 
+2025-02-28 15:10:46.2256 | Debug | Wildcard detected, all requests with hosts will be allowed. 
+2025-02-28 15:10:46.2256 | Trace | All hosts are allowed. 
+2025-02-28 15:10:46.2609 | Debug | No candidates found for the request path '/swagger/index.html' 
+2025-02-28 15:10:46.2609 | Debug | Request did not match any endpoints 
+2025-02-28 15:10:46.2654 | Info | [Request] GET /swagger/index.html 
+2025-02-28 15:10:46.3758 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-02-28 15:10:46.5446 | Debug | Response markup is scheduled to include browser refresh script injection. 
+2025-02-28 15:10:46.5498 | Trace | Connection id "0HNANRFST42P5" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS. 
+2025-02-28 15:10:46.6482 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2025-02-28 15:10:46.6482 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 1 with length 3072 and flags NONE. 
+2025-02-28 15:10:46.6731 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 1 with length 1087 and flags NONE. 
+2025-02-28 15:10:46.6731 | Info | [Response] 200 
+2025-02-28 15:10:46.6731 | Debug | Response markup was updated to include browser refresh script injection. 
+2025-02-28 15:10:46.6867 | Trace | Connection id "0HNANRFST42P5" received HEADERS frame for stream ID 3 with length 115 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 15:10:46.6867 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2025-02-28 15:10:46.6867 | Info | Request finished HTTP/2 GET https://localhost:7149/swagger/index.html - - - 200 - text/html;charset=utf-8 494.7601ms 
+2025-02-28 15:10:46.6867 | Trace | Connection id "0HNANRFST42P5" received HEADERS frame for stream ID 5 with length 57 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 15:10:46.6867 | Info | Request starting HTTP/2 GET https://localhost:7149/_framework/aspnetcore-browser-refresh.js - - 
+2025-02-28 15:10:46.6867 | Info | Request starting HTTP/2 GET https://localhost:7149/_vs/browserLink - - 
+2025-02-28 15:10:46.7096 | Trace | Connection id "0HNANRFST42P5" sending HEADERS frame for stream ID 3 with length 60 and flags END_HEADERS. 
+2025-02-28 15:10:46.7096 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 3 with length 11988 and flags NONE. 
+2025-02-28 15:10:46.7178 | Info | Request finished HTTP/2 GET https://localhost:7149/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 24.3431ms 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending HEADERS frame for stream ID 5 with length 119 and flags END_HEADERS. 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 9986 and flags NONE. 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7178 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7335 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7518 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7518 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7699 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7699 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7699 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7699 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7699 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7832 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7832 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.7832 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8149 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8262 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8437 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8578 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8737 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8737 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8737 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8737 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8737 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.8921 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.9052 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.9052 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.9052 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.9052 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-02-28 15:10:46.9052 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 9517 and flags NONE. 
+2025-02-28 15:10:46.9052 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2025-02-28 15:10:46.9052 | Info | Request finished HTTP/2 GET https://localhost:7149/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 220.9575ms 
+2025-02-28 15:10:46.9745 | Trace | Connection id "0HNANRFST42P5" received HEADERS frame for stream ID 7 with length 74 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 15:10:46.9745 | Info | Request starting HTTP/2 GET https://localhost:7149/swagger/v1/swagger.json - - 
+2025-02-28 15:10:46.9745 | Trace | All hosts are allowed. 
+2025-02-28 15:10:46.9863 | Debug | No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-02-28 15:10:46.9863 | Debug | Request did not match any endpoints 
+2025-02-28 15:10:46.9863 | Info | [Request] GET /swagger/v1/swagger.json 
+2025-02-28 15:10:46.9863 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-02-28 15:10:47.1934 | Trace | Connection id "0HNANRFST42P5" sending HEADERS frame for stream ID 7 with length 35 and flags END_HEADERS. 
+2025-02-28 15:10:47.1934 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 7 with length 9129 and flags NONE. 
+2025-02-28 15:10:47.1934 | Info | [Response] 200 
+2025-02-28 15:10:47.1934 | Info | Request finished HTTP/2 GET https://localhost:7149/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 219.0585ms 
+2025-02-28 15:10:47.1934 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM. 
+2025-02-28 15:10:53.9322 | Trace | Connection id "0HNANRFST42P5" received HEADERS frame for stream ID 9 with length 74 and flags END_HEADERS, PRIORITY. 
+2025-02-28 15:10:53.9322 | Trace | Connection id "0HNANRFST42P5" received DATA frame for stream ID 9 with length 46 and flags END_STREAM. 
+2025-02-28 15:10:53.9322 | Info | Request starting HTTP/2 POST https://localhost:7149/api/user/login application/json 46 
+2025-02-28 15:10:53.9386 | Trace | All hosts are allowed. 
+2025-02-28 15:10:53.9386 | Debug | 1 candidate(s) found for the request path '/api/user/login' 
+2025-02-28 15:10:53.9534 | Debug | Endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' with route pattern 'api/user/login' is valid for the request path '/api/user/login' 
+2025-02-28 15:10:53.9534 | Debug | Request matched endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' 
+2025-02-28 15:10:53.9534 | Info | [Request] POST /api/user/login 
+2025-02-28 15:10:53.9534 | Debug | The request has an origin header: 'https://localhost:7149'. 
+2025-02-28 15:10:53.9534 | Info | CORS policy execution successful. 
+2025-02-28 15:10:53.9534 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-02-28 15:10:53.9691 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-02-28 15:10:53.9691 | Info | Executing endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' 
+2025-02-28 15:10:53.9960 | Info | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(FinalDemo.Models.DTOs.DTOLogin) on controller FinalDemo.Controllers.UserController (FinalDemo). 
+2025-02-28 15:10:54.0003 | Debug | Execution plan of authorization filters (in the following order): None 
+2025-02-28 15:10:54.0003 | Debug | Execution plan of resource filters (in the following order): None 
+2025-02-28 15:10:54.0003 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-02-28 15:10:54.0003 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-02-28 15:10:54.0003 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-02-28 15:10:54.0003 | Debug | Executing controller factory for controller FinalDemo.Controllers.UserController (FinalDemo) 
+2025-02-28 15:10:54.0148 | Debug | Executed controller factory for controller FinalDemo.Controllers.UserController (FinalDemo) 
+2025-02-28 15:10:54.0418 | Debug | Attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin' ... 
+2025-02-28 15:10:54.0453 | Debug | Attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin' using the name '' in request data ... 
+2025-02-28 15:10:54.0453 | Debug | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-02-28 15:10:54.0453 | Debug | Connection id "0HNANRFST42P5", Request id "0HNANRFST42P5:00000009": started reading request body. 
+2025-02-28 15:10:54.0453 | Debug | Connection id "0HNANRFST42P5", Request id "0HNANRFST42P5:00000009": done reading request body. 
+2025-02-28 15:10:54.0709 | Debug | JSON input formatter succeeded, deserializing to type 'FinalDemo.Models.DTOs.DTOLogin' 
+2025-02-28 15:10:54.0709 | Debug | Done attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin'. 
+2025-02-28 15:10:54.0709 | Debug | Done attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin'. 
+2025-02-28 15:10:54.0709 | Debug | Attempting to validate the bound parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin' ... 
+2025-02-28 15:10:54.0876 | Debug | Done attempting to validate the bound parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin'. 
+2025-02-28 15:10:54.0876 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-02-28 15:10:54.0876 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-02-28 15:10:54.0876 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-02-28 15:10:54.0876 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-02-28 15:10:54.0959 | Info | Executing action method FinalDemo.Controllers.UserController.Login (FinalDemo) - Validation state: Valid 
+2025-02-28 15:10:54.0959 | Trace | Executing action method FinalDemo.Controllers.UserController.Login (FinalDemo) with arguments (FinalDemo.Models.DTOs.DTOLogin) 
+2025-02-28 15:10:54.0959 | Info | Login attempt for user: string 
+2025-02-28 15:10:54.2982 | Info | User string logged in successfully. 
+2025-02-28 15:10:54.2982 | Info | Executed action method FinalDemo.Controllers.UserController.Login (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 201.705ms. 
+2025-02-28 15:10:54.2982 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-02-28 15:10:54.2982 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-02-28 15:10:54.2982 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-02-28 15:10:54.2982 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-02-28 15:10:54.2982 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-02-28 15:10:54.2982 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-02-28 15:10:54.2982 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-02-28 15:10:54.3120 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-02-28 15:10:54.3120 | Debug | No information found on request to perform content negotiation. 
+2025-02-28 15:10:54.3120 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-02-28 15:10:54.3120 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-02-28 15:10:54.3120 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-02-28 15:10:54.3120 | Info | Executing OkObjectResult, writing value of type 'FinalDemo.Models.Response'. 
+2025-02-28 15:10:54.3439 | Trace | Connection id "0HNANRFST42P5" sending HEADERS frame for stream ID 9 with length 69 and flags END_HEADERS. 
+2025-02-28 15:10:54.3439 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-02-28 15:10:54.3439 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 9 with length 366 and flags NONE. 
+2025-02-28 15:10:54.3439 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-02-28 15:10:54.3439 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-02-28 15:10:54.3439 | Trace | Connection id "0HNANRFST42P5" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-02-28 15:10:54.3439 | Info | Executed action FinalDemo.Controllers.UserController.Login (FinalDemo) in 343.6033ms 
+2025-02-28 15:10:54.3439 | Info | Executed endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' 
+2025-02-28 15:10:54.3575 | Info | [Response] 200 
+2025-02-28 15:10:54.3575 | Info | Request finished HTTP/2 POST https://localhost:7149/api/user/login application/json 46 - 200 - application/json;+charset=utf-8 423.4960ms 
+2025-02-28 15:10:54.3575 | Trace | Connection id "0HNANRFST42P5" sending DATA frame for stream ID 9 with length 0 and flags END_STREAM. 
+2025-02-28 17:34:09.2690 | Info | Application starting... 
+2025-02-28 17:34:11.9855 | Debug | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-02-28 17:34:13.2190 | Debug | Hosting starting 
+2025-02-28 17:34:13.2613 | Info | User profile is available. Using 'C:\Users\hina.j\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-02-28 17:34:13.2613 | Debug | Reading data from file 'C:\Users\hina.j\AppData\Local\ASP.NET\DataProtection-Keys\key-3956d84f-cb83-4a3e-a618-fcacad57570d.xml'. 
+2025-02-28 17:34:13.2930 | Debug | Found key {3956d84f-cb83-4a3e-a618-fcacad57570d}. 
+2025-02-28 17:34:13.3042 | Debug | Considering key {3956d84f-cb83-4a3e-a618-fcacad57570d} with expiration date 2025-05-05 07:20:18Z as default key. 
+2025-02-28 17:34:13.3042 | Debug | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-02-28 17:34:13.3042 | Debug | Decrypting secret element using Windows DPAPI. 
+2025-02-28 17:34:13.3042 | Debug | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-02-28 17:34:13.3042 | Debug | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-02-28 17:34:13.3042 | Debug | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-02-28 17:34:13.3181 | Debug | Using key {3956d84f-cb83-4a3e-a618-fcacad57570d} as the default key. 
+2025-02-28 17:34:13.3181 | Debug | Key ring with default key {3956d84f-cb83-4a3e-a618-fcacad57570d} was loaded during application startup. 
+2025-02-28 17:34:13.4844 | Info | Now listening on: https://localhost:7149 
+2025-02-28 17:34:13.4844 | Info | Now listening on: http://localhost:5278 
+2025-02-28 17:34:13.4844 | Debug | Loaded hosting startup assembly FinalDemo 
+2025-02-28 17:34:13.4844 | Debug | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-02-28 17:34:13.4844 | Debug | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-02-28 17:34:13.4844 | Info | Application started. Press Ctrl+C to shut down. 
+2025-02-28 17:34:13.4844 | Info | Hosting environment: Development 
+2025-02-28 17:34:13.4894 | Info | Content root path: C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo 
+2025-02-28 17:34:13.4894 | Debug | Hosting started 
+2025-02-28 17:34:13.9610 | Debug | Connection id "0HNANU02BLO9D" accepted. 
+2025-02-28 17:34:13.9610 | Debug | Connection id "0HNANU02BLO9D" started. 
+2025-02-28 17:34:13.9816 | Debug | Connection id "0HNANU02BLO9E" accepted. 
+2025-02-28 17:34:13.9905 | Debug | Connection id "0HNANU02BLO9E" started. 
+2025-02-28 17:34:13.9905 | Debug | Connection id "0HNANU02BLO9E" received FIN. 
+2025-02-28 17:34:13.9905 | Debug | Connection id "0HNANU02BLO9D" received FIN. 
+2025-02-28 17:34:14.4355 | Debug | Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-02-28 17:34:14.4355 | Debug | Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-02-28 17:34:14.5675 | Debug | Connection id "0HNANU02BLO9E" stopped. 
+2025-02-28 17:34:14.5675 | Debug | Connection id "0HNANU02BLO9D" stopped. 
+2025-02-28 17:34:14.5675 | Debug | Connection id "0HNANU02BLO9E" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-02-28 17:34:14.5675 | Debug | Connection id "0HNANU02BLO9D" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-02-28 17:34:14.8321 | Debug | Connection id "0HNANU02BLO9F" accepted. 
+2025-02-28 17:34:14.8353 | Debug | Connection id "0HNANU02BLO9F" started. 
+2025-02-28 17:34:14.9570 | Debug | Connection 0HNANU02BLO9F established using the following protocol: Tls12 
+2025-02-28 17:34:15.0907 | Trace | Connection id "0HNANU02BLO9F" sending SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-02-28 17:34:15.0907 | Trace | Connection id "0HNANU02BLO9F" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-02-28 17:34:15.0984 | Trace | Connection id "0HNANU02BLO9F" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-02-28 17:34:15.0984 | Trace | Connection id "0HNANU02BLO9F" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-02-28 17:34:15.0984 | Trace | Connection id "0HNANU02BLO9F" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-02-28 17:34:15.0984 | Trace | Connection id "0HNANU02BLO9F" received HEADERS frame for stream ID 1 with length 470 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 17:34:15.1365 | Trace | Connection id "0HNANU02BLO9F" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-02-28 17:34:15.2027 | Info | Request starting HTTP/2 GET https://localhost:7149/swagger/index.html - - 
+2025-02-28 17:34:15.2745 | Debug | Wildcard detected, all requests with hosts will be allowed. 
+2025-02-28 17:34:15.2745 | Trace | All hosts are allowed. 
+2025-02-28 17:34:15.3294 | Debug | No candidates found for the request path '/swagger/index.html' 
+2025-02-28 17:34:15.3294 | Debug | Request did not match any endpoints 
+2025-02-28 17:34:15.3394 | Info | [Request] GET /swagger/index.html 
+2025-02-28 17:34:15.4547 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-02-28 17:34:15.6545 | Debug | Response markup is scheduled to include browser refresh script injection. 
+2025-02-28 17:34:15.6615 | Trace | Connection id "0HNANU02BLO9F" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS. 
+2025-02-28 17:34:15.7983 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2025-02-28 17:34:15.8040 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 1 with length 3072 and flags NONE. 
+2025-02-28 17:34:15.8265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 1 with length 1087 and flags NONE. 
+2025-02-28 17:34:15.8265 | Info | [Response] 200 
+2025-02-28 17:34:15.8383 | Debug | Response markup was updated to include browser refresh script injection. 
+2025-02-28 17:34:15.8383 | Trace | Connection id "0HNANU02BLO9F" received HEADERS frame for stream ID 3 with length 115 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 17:34:15.8383 | Info | Request finished HTTP/2 GET https://localhost:7149/swagger/index.html - - - 200 - text/html;charset=utf-8 643.0152ms 
+2025-02-28 17:34:15.8383 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2025-02-28 17:34:15.8383 | Trace | Connection id "0HNANU02BLO9F" received HEADERS frame for stream ID 5 with length 57 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 17:34:15.8510 | Info | Request starting HTTP/2 GET https://localhost:7149/_framework/aspnetcore-browser-refresh.js - - 
+2025-02-28 17:34:15.8510 | Info | Request starting HTTP/2 GET https://localhost:7149/_vs/browserLink - - 
+2025-02-28 17:34:15.8658 | Trace | Connection id "0HNANU02BLO9F" sending HEADERS frame for stream ID 5 with length 60 and flags END_HEADERS. 
+2025-02-28 17:34:15.8658 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 5 with length 11988 and flags NONE. 
+2025-02-28 17:34:15.8658 | Info | Request finished HTTP/2 GET https://localhost:7149/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 22.2172ms 
+2025-02-28 17:34:15.8658 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2025-02-28 17:34:15.8658 | Trace | Connection id "0HNANU02BLO9F" sending HEADERS frame for stream ID 3 with length 119 and flags END_HEADERS. 
+2025-02-28 17:34:15.8658 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 9986 and flags NONE. 
+2025-02-28 17:34:15.8658 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8807 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.8964 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9131 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9265 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9427 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9593 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9732 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 10240 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 9517 and flags NONE. 
+2025-02-28 17:34:15.9890 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2025-02-28 17:34:15.9890 | Info | Request finished HTTP/2 GET https://localhost:7149/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 148.5589ms 
+2025-02-28 17:34:16.0554 | Trace | Connection id "0HNANU02BLO9F" received HEADERS frame for stream ID 7 with length 74 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-02-28 17:34:16.0554 | Info | Request starting HTTP/2 GET https://localhost:7149/swagger/v1/swagger.json - - 
+2025-02-28 17:34:16.0554 | Trace | All hosts are allowed. 
+2025-02-28 17:34:16.0554 | Debug | No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-02-28 17:34:16.0554 | Debug | Request did not match any endpoints 
+2025-02-28 17:34:16.0554 | Info | [Request] GET /swagger/v1/swagger.json 
+2025-02-28 17:34:16.0554 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-02-28 17:34:16.2400 | Trace | Connection id "0HNANU02BLO9F" sending HEADERS frame for stream ID 7 with length 35 and flags END_HEADERS. 
+2025-02-28 17:34:16.2400 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 7 with length 9806 and flags NONE. 
+2025-02-28 17:34:16.2400 | Info | [Response] 200 
+2025-02-28 17:34:16.2400 | Trace | Connection id "0HNANU02BLO9F" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM. 
+2025-02-28 17:34:16.2400 | Info | Request finished HTTP/2 GET https://localhost:7149/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.1023ms 
+2025-02-28 17:34:16.2400 | Debug | Connection id "0HNANU02BLO9F" received FIN. 
+2025-02-28 17:34:16.2400 | Debug | The connection queue processing loop for 0HNANU02BLO9F completed. 
+2025-02-28 17:34:16.2400 | Debug | Connection id "0HNANU02BLO9F" is closed. The last processed stream ID was 7. 
+2025-02-28 17:34:16.2400 | Debug | Connection id "0HNANU02BLO9F" sending FIN because: "The client closed the connection." 
+2025-02-28 17:34:16.2400 | Debug | Connection id "0HNANU02BLO9F" stopped. 

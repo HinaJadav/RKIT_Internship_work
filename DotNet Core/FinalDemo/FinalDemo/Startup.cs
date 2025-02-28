@@ -4,7 +4,6 @@ using FinalDemo.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using NLog.Extensions.Logging;
 using ServiceStack;
 using System.Data;
 using System.Text;
@@ -27,12 +26,12 @@ namespace FinalDemo
             services.AddApplicationServices(_configuration);
 
             // Add logging
-            services.AddLogging(loggingBuilder =>
+            /*services.AddLogging(loggingBuilder =>
             {
                 loggingBuilder.ClearProviders();
                 loggingBuilder.AddConsole();
                 loggingBuilder.AddDebug();
-            });
+            });*/
 
             // Add controllers
             services.AddControllers();

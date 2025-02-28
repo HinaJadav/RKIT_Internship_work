@@ -9,6 +9,7 @@ namespace FinalDemo.Models.POCOs
         /// Primary Key - Unique Identifier for the entity
         /// </summary>
         [PrimaryKey]
+       
         public int B01F01 { get; set; }
 
         /// <summary>

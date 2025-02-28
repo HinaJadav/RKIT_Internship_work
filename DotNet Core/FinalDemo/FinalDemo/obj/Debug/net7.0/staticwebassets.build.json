@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "oy7nppgzCohS58I5plO45DwMMkJ7reKjnAjUujeJKcY=",
+  "Hash": "y6Q9p8muNCXBgTJq1qth2bqUZmnCZAcgFvmXQbwpjl0=",
   "Source": "FinalDemo",
   "BasePath": "_content/FinalDemo",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

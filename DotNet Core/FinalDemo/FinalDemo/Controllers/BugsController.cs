@@ -2,6 +2,7 @@
 using FinalDemo.Filter;
 using FinalDemo.Models;
 using FinalDemo.Models.DTOs;
+using FinalDemo.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinalDemo.Controllers
@@ -28,10 +29,10 @@ namespace FinalDemo.Controllers
         /// This endpoint is responsible for saving a new bug or updating an existing one based on the provided bug ID.
         /// </summary>
         [HttpPost]
-        public IActionResult SaveBug([FromBody] DTOBugCreated bugDto, int? bugId = null)
+        public IActionResult SaveBug([FromBody] DTOYMB01 bugDto)
         {
             int userId = (int)HttpContext.Items["UserId"];
-            _bugService.PreSaveBug(bugDto, bugId);
+            _bugService.PreSaveBug(bugDto, OperationType.A);
             Response validationResponse = _bugService.ValidateBug();
             if (validationResponse.IsError)
                 return BadRequest(validationResponse);
@@ -48,10 +49,19 @@ namespace FinalDemo.Controllers
         public IActionResult GetBugById(int bugId)
         {
             _logger.LogInformation("Fetching bug details for Bug ID: {BugId}", bugId);
-            int userId = (int)HttpContext.Items["UserId"];
-            _response = _bugService.GetBugById(bugId, userId);
-            return _response.IsError ? NotFound(_response) : Ok(_response);
+
+            int userId = (int)(HttpContext.Items["UserId"] ?? 0); // Ensure userId exists
+            var bug = _bugService.GetBugById(bugId, userId);
+
+            if (bug == null)
+            {
+                _logger.LogWarning("Bug with ID {BugId} not found or access denied.", bugId);
+                return NotFound(new { Message = "Bug not found or you do not have access to it." });
+            }
+
+            return Ok(bug);
         }
+
 
         /// <summary>
         /// Deletes a bug.
@@ -108,5 +118,62 @@ namespace FinalDemo.Controllers
             _response = _bugService.UpdateBugStatus(bugId, request.NewStatus, role);
             return _response.IsError ? BadRequest(_response) : Ok(_response);
         }
+
+
+        [HttpGet("logTest")]
+        /// <summary>
+        /// Logs a test message using NLog.
+        /// </summary>
+        /// <returns>Returns a success message if logging is successful.</returns>
+        public IActionResult LogTest()
+        {
+            // Get the logger for the current class
+            var logger = NLog.LogManager.GetCurrentClassLogger();
+
+            // Log an informational message
+            logger.Info("LogTest API was called.");
+
+            // Return a response indicating the log was recorded
+            return Ok(new { Message = "Log message recorded successfully." });
+        }
+
+        [HttpPost("changeLogFile/{newFileName}")]
+        /// <summary>
+        /// Changes the log output file name at runtime.
+        /// </summary>
+        /// <param name="newFileName">The new file name for the log file.</param>
+        /// <returns>Returns a response indicating whether the log file name was successfully changed.</returns>
+        public IActionResult ChangeLogFileName(string newFileName)
+        {
+            // Validate the new file name
+            if (string.IsNullOrWhiteSpace(newFileName))
+            {
+                return BadRequest(new { Message = "Invalid file name." });
+            }
+
+            // Get the current NLog configuration
+            var logConfig = NLog.LogManager.Configuration;
+            if (logConfig != null)
+            {
+                // Find the file target by its name (as defined in nlog.config)
+                var fileTarget = logConfig.FindTargetByName<NLog.Targets.FileTarget>("fileTarget");
+                if (fileTarget != null)
+                {
+                    // Set the new log file path
+                    string logFilePath = $"logs/{newFileName}.txt";
+                    fileTarget.FileName = logFilePath;
+
+                    // Apply the updated configuration at runtime
+                    NLog.LogManager.ReconfigExistingLoggers();
+
+                    return Ok(new { Message = $"Log file changed to {logFilePath}" });
+                }
+            }
+
+            // Return an error response if the log file change failed
+            return StatusCode(500, new { Message = "Failed to change log file." });
+        }
+
     }
+
 }

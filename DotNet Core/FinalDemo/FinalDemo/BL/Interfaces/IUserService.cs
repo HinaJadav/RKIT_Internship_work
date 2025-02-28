@@ -6,72 +6,75 @@ using FinalDemo.Models.POCOs;
 namespace FinalDemo.BL.Interfaces
 {
     /// <summary>
-    /// Defines methods for user authentication, management, and retrieval.
+    /// Provides methods for user authentication, management, and retrieval.
     /// </summary>
     public interface IUserService
     {
-
+        /// <summary>
+        /// Converts a user DTO to a POCO model for database operations.
+        /// </summary>
+        /// <param name="dtoUser">User DTO containing input data.</param>
+        /// <returns>POCO user model.</returns>
         YMU01 ToPocoUser(DTOYMU01 dtoUser);
 
         /// <summary>
-        /// Prepares user data before saving, either for new creation or update.
+        /// Prepares user data before saving, handling both creation and update scenarios.
         /// </summary>
-        /// <param name="dtoUser">DTO containing user data.</param>
-        /// <param name="operationType">The operation type (Add, Edit).</param>
-        /// <param name="userId">Optional user ID for update operation.</param>
-        void PreSaveUser(DTOYMU01 dtoUser, OperationType operationType, int? userId = null);
+        /// <param name="dtoUser">User details provided by the client.</param>
+        /// <param name="operationType">Specifies if the operation is an addition or an update.</param>
+        void PreSaveUser(DTOYMU01 dtoUser, OperationType operationType);
 
         /// <summary>
-        /// Prepares user data for login, including password hashing.
+        /// Prepares login data by processing the password for authentication.
         /// </summary>
-        /// <param name="dtoUser">DTO containing login data.</param>
+        /// <param name="dtoUser">User login details.</param>
         void PreLoginUser(DTOLogin dtoUser);
 
         /// <summary>
-        /// Prepares for user deletion, setting the appropriate operation type.
+        /// Handles necessary preparations before deleting a user.
         /// </summary>
-        /// <param name="userId">User ID to delete.</param>
-        /// <param name="operationType">The operation type (Delete).</param>
+        /// <param name="userId">ID of the user to be deleted.</param>
+        /// <param name="operationType">Specifies the delete operation.</param>
         void PreDeleteUser(int userId, OperationType operationType);
 
         /// <summary>
-        /// Validates the user data for operations like update or delete.
+        /// Validates user data before performing operations such as update or delete.
         /// </summary>
-        /// <returns>Response object indicating validation status.</returns>
+        /// <returns>Validation response indicating success or errors.</returns>
         Response Validation();
 
         /// <summary>
-        /// Saves the user data to the database, either for new users or updates.
+        /// Saves user data to the database for either new creation or updating existing records.
         /// </summary>
-        /// <returns>Response indicating the outcome of the save operation.</returns>
+        /// <returns>Result of the save operation.</returns>
         Response Save();
 
         /// <summary>
-        /// Deletes a user from the database.
+        /// Deletes a user from the system, ensuring necessary validations.
         /// </summary>
-        /// <returns>Response indicating the success or failure of the deletion.</returns>
+        /// <returns>Result of the delete operation.</returns>
         Response Delete();
 
         /// <summary>
-        /// Retrieves a user's details by ID.
+        /// Retrieves user details based on their ID.
         /// </summary>
-        /// <param name="id">User ID to fetch the details for.</param>
-        /// <returns>DTO containing the user details.</returns>
+        /// <param name="id">ID of the user to fetch details for.</param>
+        /// <returns>User details wrapped in a response DTO.</returns>
         DTOResponse GetById(int id);
 
         /// <summary>
-        /// Authenticates a user based on provided login credentials and returns a JWT token if successful.
+        /// Authenticates a user and returns a JWT token if login is successful.
         /// </summary>
-        /// <param name="loginDto">DTO containing the login credentials (username and password).</param>
-        /// <returns>Response containing the result of the login attempt, including the JWT token if successful.</returns>
+        /// <param name="loginDto">User credentials for authentication.</param>
+        /// <returns>Login result containing a JWT token if successful.</returns>
         Response Login(DTOLogin loginDto);
 
         /// <summary>
-        /// Generates a JWT token for a user, based on their user ID and role.
+        /// Generates a JWT token for a user based on their ID and role.
         /// </summary>
-        /// <param name="userId">User ID to include in the token.</param>
-        /// <param name="role">Role of the user (e.g., Admin, User) to include in the token.</param>
-        /// <returns>A JWT token as a string.</returns>
+        /// <param name="userId">User ID included in the token.</param>
+        /// <param name="role">User role (e.g., Admin, User) included in the token.</param>
+        /// <returns>Generated JWT token as a string.</returns>
         string GenerateJwtToken(int userId, string role);
     }
 }

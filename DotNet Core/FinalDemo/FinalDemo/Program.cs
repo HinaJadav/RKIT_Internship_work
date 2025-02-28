@@ -2,8 +2,26 @@ using FinalDemo;
 using NLog;
 using NLog.Web;
 
+var logPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
+NLog.GlobalDiagnosticsContext.Set("LogDirectory", logPath);
+
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
 logger.Info("Application starting...");
+
+/*logger.Trace("Trace log test");
+logger.Debug("Debug log test");
+logger.Info("Info log test");
+logger.Warn("Warning log test");
+logger.Error("Error log test");
+logger.Fatal("Fatal log test");
+*/
+/* log level :
+Trace
+Debug
+Info
+Warn
+Error
+Fatal*/
 
 try
 {

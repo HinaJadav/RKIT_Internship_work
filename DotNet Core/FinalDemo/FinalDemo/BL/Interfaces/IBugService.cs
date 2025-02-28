@@ -7,55 +7,55 @@ namespace FinalDemo.BL.Interfaces
     public interface IBugService
     {
         /// <summary>
-        /// Prepares bug data before saving, either for new creation or update.
+        /// Prepares bug data before saving, either for creating a new bug or updating an existing one.
         /// </summary>
-        /// <param name="bugDto">DTO containing bug creation data.</param>
-        /// <param name="bugId">Optional bug ID for updating an existing bug.</param>
-        void PreSaveBug(DTOBugCreated bugDto, int? bugId = null);
+        /// <param name="bugDto">Bug details provided by the user.</param>
+        /// <param name="operationType">Specifies whether the operation is a creation or an update.</param>
+        void PreSaveBug(DTOYMB01 bugDto, OperationType operationType);
 
         /// <summary>
-        /// Validates the bug data before performing save operations.
+        /// Checks if the bug data is valid before saving.
         /// </summary>
-        /// <returns>Response object indicating the result of the validation.</returns>
+        /// <returns>Validation result with success or error details.</returns>
         Response ValidateBug();
 
         /// <summary>
-        /// Saves the bug based on the operation type (Add, Edit).
+        /// Saves the bug data to the database, handling both new and existing bugs.
         /// </summary>
-        /// <returns>Response indicating the outcome of the save operation.</returns>
+        /// <returns>Outcome of the save operation.</returns>
         Response SaveBug();
 
         /// <summary>
-        /// Retrieves a bug by its ID, considering the user's role and permissions.
+        /// Fetches a specific bug by its ID, ensuring the user has the right permissions.
         /// </summary>
-        /// <param name="bugId">The ID of the bug to retrieve.</param>
-        /// <param name="userId">The ID of the user requesting the bug information.</param>
-        /// <returns>Response containing bug details if found, or an error message if not found.</returns>
-        Response GetBugById(int bugId, int userId);
+        /// <param name="bugId">ID of the bug to retrieve.</param>
+        /// <param name="userId">ID of the requesting user.</param>
+        /// <returns>Bug details if found, otherwise an error message.</returns>
+        DTOBugResponse GetBugById(int bugId, int userId);
 
         /// <summary>
-        /// Retrieves all bugs accessible to a given user, considering role-based access control.
+        /// Retrieves all bugs a user is allowed to access based on role-based permissions.
         /// </summary>
-        /// <param name="userId">The ID of the user requesting the list of bugs.</param>
-        /// <returns>Response with a list of bugs accessible to the user.</returns>
+        /// <param name="userId">ID of the requesting user.</param>
+        /// <returns>List of accessible bugs.</returns>
         Response GetAllBugs(int userId);
 
         /// <summary>
-        /// Deletes a bug by its ID, considering role-based access control for the user.
+        /// Deletes a bug if the user has the necessary permissions.
         /// </summary>
-        /// <param name="bugId">The ID of the bug to delete.</param>
-        /// <param name="userId">The ID of the user requesting the deletion.</param>
-        /// <param name="role">The role of the user, used to verify permission.</param>
-        /// <returns>Response indicating whether the deletion was successful or not.</returns>
+        /// <param name="bugId">ID of the bug to delete.</param>
+        /// <param name="userId">ID of the requesting user.</param>
+        /// <param name="role">User's role, used to verify delete permissions.</param>
+        /// <returns>Indicates whether the deletion was successful.</returns>
         Response DeleteBug(int bugId, int userId, string role);
 
         /// <summary>
-        /// Updates the status of a bug.
+        /// Updates a bug's status, ensuring the user has the necessary role to make changes.
         /// </summary>
-        /// <param name="bugId">The ID of the bug to update.</param>
-        /// <param name="newStatus">The new status to assign to the bug.</param>
-        /// <param name="role">The role of the user updating the status, used to verify permission.</param>
-        /// <returns>Response indicating the result of the status update operation.</returns>
+        /// <param name="bugId">ID of the bug to update.</param>
+        /// <param name="newStatus">New status to assign to the bug.</param>
+        /// <param name="role">User's role to check update permissions.</param>
+        /// <returns>Result of the status update operation.</returns>
         Response UpdateBugStatus(int bugId, BugStatus newStatus, string role);
     }
 }
