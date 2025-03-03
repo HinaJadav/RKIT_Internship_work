@@ -130,7 +130,7 @@
         }
     }).dxTextArea("instance");
 
-    let contactNo = $("#contactNo").dxTextBox({
+    let contactNo = $("#contactNo").dxTextBox(  {
         accessKey: "c",
         placeholder: "Enter Contact Number", // Visible placeholder
         stylingMode: "outlined",
@@ -151,6 +151,7 @@
 
 
     let tenthResult = $("#tenthResult").dxNumberBox({
+
         accessKey: "t",
         value: null,
         placeholder: "Enter 10th Percentage",
@@ -286,6 +287,7 @@
         onClick: function () {
             DevExpress.ui.dialog.confirm("Are you sure you want to reset the form?", "Reset Confirmation").done(function (result) {
                 if (result) {
+
                     name.reset();
                     fatherName.reset();
                     motherName.reset();
@@ -303,12 +305,15 @@
                     validate.reset(); 
 
                     sessionStorage.clear();
+                    
+                    
 
                     DevExpress.ui.notify("Form has been reset!", "info", 2000);
                 }
             });
         }
     });
+
 
 
     $("#submit").dxButton({
@@ -329,7 +334,9 @@
                         fatherName: fatherName.option("value"),
                         motherName: motherName.option("value"),
                         dateOfBirth: dateOfBirth.option("value"),
+
                         gender: gender.option("value"),
+
                         maritalStatus: maritalStatus.option("value"),
                         email: email.option("value"),
                         contactNo: contactNo.option("value"),
@@ -370,6 +377,7 @@
 
     dateOfBirth.registerKeyHandler("enter", function () { gender.focus(); });
 
+
     gender.registerKeyHandler("enter", function () { maritalStatus.focus(); });
 
     maritalStatus.registerKeyHandler("enter", function () { email.focus(); });
@@ -389,8 +397,8 @@
 
     course.registerKeyHandler("enter", function () { profilePhoto.focus(); });
 
+
     profile.registerKeyHandler("enter", function () { validate.focus(); });
 
     validate.registerKeyHandler("enter", function () { $("#submit").dxButton("instance").option("onClick")(); });
 });
-
