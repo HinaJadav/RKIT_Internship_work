@@ -163,8 +163,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Template\Template.html" />
-    <Content Include="Template\Template.js" />
+    <Content Include="DataGridDemo\Adaptability\Adaptability.html" />
+    <Content Include="DataGridDemo\Adaptability\Adaptability.js" />
+    <Content Include="DataGridDemo\DataSummaries\GridSummaries.html" />
+    <Content Include="DataGridDemo\DataSummaries\GridSummaries.js" />
+    <Content Include="DataGridDemo\Export\Export.html" />
+    <Content Include="DataGridDemo\Export\Export.js" />
+    <Content Include="DataGridDemo\MasterDetail\MasterDetailView.html" />
+    <Content Include="DataGridDemo\MasterDetail\MasterDetailView.js" />
+    <Content Include="DataGridDemo\StatePersistence_Appearance\StatePersistence_Appearance.html" />
+    <Content Include="DataGridDemo\StatePersistence_Appearance\StatePersistence_Appearance.js" />
+    <Content Include="DataGridDemo\Templates\ColumnTemplate_CellCustomization.html" />
+    <Content Include="DataGridDemo\Templates\ColumnTemplate_CellCustomization.js" />
+    <Content Include="DataGridDemo\Templates\RowTemplate.html" />
+    <Content Include="DataGridDemo\Templates\RowTemplate.js" />
+    <Content Include="DataGridDemo\Templates\ToolbarCustomization.html" />
+    <Content Include="DataGridDemo\Templates\ToolbarCustomization.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -253,8 +267,6 @@
     <Content Include="DataGridDemo\Selection\Selection.js" />
     <Content Include="DataGridDemo\Sorting\Sorting.html" />
     <Content Include="DataGridDemo\Sorting\Sorting.js" />
-    <Content Include="DataGridDemo\StatePersistence\StatePersistence.html" />
-    <Content Include="DataGridDemo\StatePersistence\StatePersistence.js" />
     <Content Include="DataGridDemo\userData.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -453,7 +465,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64004</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44382/</IISUrl>
+          <IISUrl>https://localhost:44377/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
