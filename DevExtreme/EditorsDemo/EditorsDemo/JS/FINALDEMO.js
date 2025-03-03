@@ -39,6 +39,7 @@
     }).dxTextBox("instance");
 
     let email = $("#email").dxTextBox({
+        accessKey: "e",
         hint: "Email",
         placeholder: "example@gmail.com",
         showClearButton: true,
@@ -60,6 +61,7 @@
     }).dxTextBox("instance");
 
     let dateOfBirth = $("#dateOfBirth").dxDateBox({
+        accessKey: "d",
         type: "date",
         placeholder: "Select your birth date",
         displayFormat: "dd/MM/yyyy",
@@ -77,14 +79,21 @@
     let genderData = ['Male', 'Female', 'Other'];
 
     // RadioGroup for Gender
-    $('#gender').dxRadioGroup({
+    let gender = $('#gender').dxRadioGroup({
+        accessKey: "g",
+        value: null,
         items: genderData,
-        layout: 'horizontal'
-    });
+        layout: 'horizontal',
+
+        onValueChanged: function (e) {
+            console.log("Selected Gender:", e.value);
+        }
+    }).dxRadioGroup("instance");
 
     let maritalStatusData = ["Single", "Married", "Divorced"]
 
     let maritalStatus = $("#maritalStatus").dxSelectBox({
+        accessKey: "M",
         items: maritalStatusData,
         placeholder: "Select Marital Status",
         showClearButton: true,
@@ -96,88 +105,292 @@
         }
     }).dxSelectBox("instance");
 
-    name.registerKeyHandler("enter", function () { fatherName.focus(); });
-    fatherName.registerKeyHandler("enter", function () { motherName.focus(); });
-    motherName.registerKeyHandler("enter", function () { email.focus(); });
-    email.registerKeyHandler("enter", function () { $("#submit").dxButton("instance").option("onClick")(); });
+    let address = $("#address").dxTextArea({
+        accessKey: 'A', // Alt + Shift + A
+        placeholder: "Enter Present Address",
+        activeStateEnabled: false,
+        autoResizeEnabled: true,
+        minHeight: 40,
+        maxHeight: 120,
+        focusStateEnabled: true,
+        hint: "Enter student's present address.",
+        hoverStateEnabled: true,
+        inputAttr: {
+            maxLength: 100
+        },
+        name: "address",
+        spellcheck: true,
+        stylingMode: "Outlined",
+        tabIndex: 2,
+        width: 500,
+        maxLength: 100,
+        onValueChanged: function (e) {
+            let remaining = 100 - e.value.length;
+            $("#addressCharCount").text(`Remaining Characters: ${remaining}`);
+        }
+    }).dxTextArea("instance");
+
+    let contactNo = $("#contactNo").dxTextBox({
+        accessKey: "c",
+        placeholder: "Enter Contact Number", // Visible placeholder
+        stylingMode: "outlined",
+        mode: "tel", // Opens numeric keypad on mobile
+        showClearButton: true,
+        maxLength: 10, // Restricts input to 10 characters
+        inputAttr: { pattern: "[0-9]*" }, // Allows only numbers
+        width: "300px",
+        onInput: function (e) {
+            let value = e.event.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+            if (value.length > 10) {
+                value = value.substring(0, 10); // Enforce 10-digit limit
+            }
+            e.component.option("value", value);
+        }
+    }).dxTextBox("instance");
 
 
-    
-    
-    //-----------------
-    
 
-    // TextArea for Addresses
-    $('#presentAddress').dxTextArea({ placeholder: 'Enter Present Address' });
-    $('#permanentAddress').dxTextArea({ placeholder: 'Enter Permanent Address' });
+    let tenthResult = $("#tenthResult").dxNumberBox({
+        accessKey: "t",
+        value: null,
+        placeholder: "Enter 10th Percentage",
+        showSpinButtons: true,
+        format: "#0.##",
+        min: 0,
+        max: 100,
+        width: 250,
+        onValueChanged: function (e) {
+            if (e.value === null || e.value === "") {
+                tenthResult.option("value", null); // Resets to show placeholder
+            }
+        }
+    }).dxNumberBox("instance");
 
-    // NumberBox for Contact Number
-    $('#contactNo').dxNumberBox({
-        placeholder: 'Enter Contact Number',
-        showSpinButtons: true
+    let twelthResult = $("#twelthResult").dxNumberBox({
+        accessKey: "T",
+        placeholder: "Enter 12th Percentage",
+        //showSpinButtons: true,
+        min: 0,
+        max: 100,
+        width: 250
+    }).dxNumberBox("instance");
+
+    // Department options
+    let departments = ["Engineering", "Medical", "Arts"];
+
+    // Courses mapped by department
+    let coursesByDepartment = {
+        "Engineering": ["Computer Science", "Mechanical", "Civil"],
+        "Medical": ["MBBS", "Nursing", "Pharmacy"],
+        "Arts": ["History", "Literature", "Fine Arts"]
+    };
+
+    // Initialize Department SelectBox
+    let department = $("#department").dxSelectBox({
+        accessKey: "D",
+        items: departments,
+        placeholder: "Select Department",
+        searchEnabled: true,
+        onValueChanged: function (e) {
+            let selectedDepartment = e.value;
+            let courses = coursesByDepartment[selectedDepartment] || [];
+
+            // Ensure Course SelectBox is updated properly
+            let courseSelectBox = $("#course").dxSelectBox("instance");
+            courseSelectBox.option("items", courses);
+            courseSelectBox.option("value", null); // Reset selection
+            courseSelectBox.repaint(); // Force UI update
+        }
+    }).dxSelectBox("instance");
+
+    // Initialize Course SelectBox
+    let course = $("#course").dxSelectBox({
+        accessKey: "C",
+        items: [],
+        placeholder: "Select Course",
+        searchEnabled: true,
+        disabled: true // Initially disabled
+    }).dxSelectBox("instance");
+
+    // Enable Course SelectBox only when Department is selected
+    $("#department").dxSelectBox("option", "onValueChanged", function (e) {
+        let selectedDepartment = e.value;
+        let courses = coursesByDepartment[selectedDepartment] || [];
+
+        let courseSelectBox = $("#course").dxSelectBox("instance");
+        courseSelectBox.option("items", courses);
+        courseSelectBox.option("value", null);
+        courseSelectBox.option("disabled", courses.length === 0 ? true : false);
+        courseSelectBox.repaint();
     });
 
-    // NumberBox for Academic Results
-    $('#tenthResult').dxNumberBox({ placeholder: 'Enter 10th Percentage' });
-    $('#twelthResult').dxNumberBox({ placeholder: 'Enter 12th Percentage' });
-
-    
-
-    // SelectBox for Department & Course
-    $('#department').dxSelectBox({
-        items: ['Science', 'Commerce', 'Arts'],
-        placeholder: 'Select Department'
-    });
-    $('#course').dxSelectBox({
-        items: ['B.Tech', 'BBA', 'BA', 'B.Com'],
-        placeholder: 'Select Course'
-    });
-
-    // FileUploader for Profile Photo
-    $('#profilePhoto').dxFileUploader({
+    let profile = $('#profilePhoto').dxFileUploader({
+        accessKey: "p",
         selectButtonText: 'Upload Profile Photo',
         labelText: '',
-        accept: 'image/*',
-        uploadMode: 'useForm'
-    });
+        accept: 'image/*', // Accepts only image files
+        uploadMode: 'useForm', // Uploads when form is submitted
+        multiple: false, // Allows only a single file
+        showFileList: true, // Displays selected file list
+        allowedFileExtensions: ['.png', '.jpg', '.jpeg'], // Restricts file types
+        maxFileSize: 2 * 1024 * 1024, // Max size: 2MB
+        minFileSize: 10 * 1024, // Min size: 10KB
+        invalidFileExtensionMessage: "Only PNG, JPG, and JPEG formats are allowed.",
+        invalidMaxFileSizeMessage: "File size should not exceed 2MB.",
+        invalidMinFileSizeMessage: "File size is too small.",
+        uploadUrl: "https://example.com/uploadProfile", // Replace with actual endpoint
+        uploadMethod: "POST", // Uses POST request for upload
+        uploadHeaders: {
+            "Authorization": "Bearer your_token",
+        },
+        onValueChanged: function (e) {
+            let file = e.value[0];
+            if (file) {
+                if (file.size > 2 * 1024 * 1024) {
+                    alert("File size should not exceed 2MB.");
+                    $('#profilePhoto').dxFileUploader("reset");
+                } else {
+                    $("#filePreview").text("Selected file: " + file.name);
+                }
+            } else {
+                $("#filePreview").text("");
+            }
+        },
+        onFileUploaded: function () {
+            alert("Profile photo uploaded successfully!");
+        },
+        onUploadError: function (e) {
+            alert("Upload failed: " + e.error.message);
+        },
+    }).dxFileUploader("instance");
 
-    // CheckBox for Validation Agreement
-    $('#validateMe').dxCheckBox({
+    let validate = $('#validateMe').dxCheckBox({
+        
         text: 'I agree to the terms and conditions',
-        value: false
-    });
+        value: false, // Default unchecked
+        hint: 'You must agree before proceeding',
+        accessKey: 'v', // Keyboard shortcut
+        focusStateEnabled: true, // Enables focus state
+        hoverStateEnabled: true, // Enables hover effect
+        width: 'auto', // Adjusts to content
+        onValueChanged: function (e) {
+            if (!e.value) {
+                alert('You must agree to continue.');
+            }
+        }
+    }).dxCheckBox("instance");
 
     $("#reset").dxButton({
         text: "Reset",
         type: "normal",
         onClick: function () {
-            sessionStorage.clear();
-            location.reload();
+            DevExpress.ui.dialog.confirm("Are you sure you want to reset the form?", "Reset Confirmation").done(function (result) {
+                if (result) {
+                    name.reset();
+                    fatherName.reset();
+                    motherName.reset();
+                    email.reset();
+                    dateOfBirth.reset();
+                    gender.reset();
+                    maritalStatus.reset(); 
+                    address.reset(); 
+                    contactNo.reset(); 
+                    tenthResult.reset();
+                    twelthResult.reset(); 
+                    department.reset(); 
+                    course.option("items", []).reset();
+                    profile.reset(); // check once for resetting it's value  
+                    validate.reset(); 
+
+                    sessionStorage.clear();
+
+                    DevExpress.ui.notify("Form has been reset!", "info", 2000);
+                }
+            });
         }
     });
+
 
     $("#submit").dxButton({
         text: "Submit",
         type: "success",
         onClick: function () {
-            let formData = {
-                name: $("#name").dxTextBox("instance").option("value"),
-                fatherName: $("#fatherName").dxTextBox("instance").option("value"),
-                motherName: $("#motherName").dxTextBox("instance").option("value"),
-                dateOfBirth: $("#dateOfBirth").dxDateBox("instance").option("value"),
-                gender: $("#gender").dxRadioGroup("instance").option("value"),
-                maritalStatus: $("#maritalStatus").dxSelectBox("instance").option("value"),
-                email: $("#email").dxTextBox("instance").option("value"),
-                contactNo: $("#contactNo").dxNumberBox("instance").option("value"),
-                presentAddress: $("#presentAddress").dxTextArea("instance").option("value"),
-                permanentAddress: $("#permanentAddress").dxTextArea("instance").option("value"),
-                tenthResult: $("#tenthResult").dxNumberBox("instance").option("value"),
-                twelthResult: $("#twelthResult").dxNumberBox("instance").option("value"),
-                department: $("#department").dxSelectBox("instance").option("value"),
-                course: $("#course").dxSelectBox("instance").option("value")
-            };
-            sessionStorage.setItem("admissionForm", JSON.stringify(formData));
-            DevExpress.ui.notify("Form submitted and data saved to session storage!", "success", 2000);
+            let selectedFiles = profile.option("value"); // Get selected files
+
+            if (selectedFiles && selectedFiles.length > 0) {
+                let file = selectedFiles[0]; // Get first selected file
+                let reader = new FileReader();
+
+                reader.onload = function (e) {
+                    let profilePhotoData = e.target.result; // Convert file to Base64
+
+                    let formData = {
+                        name: name.option("value"),
+                        fatherName: fatherName.option("value"),
+                        motherName: motherName.option("value"),
+                        dateOfBirth: dateOfBirth.option("value"),
+                        gender: gender.option("value"),
+                        maritalStatus: maritalStatus.option("value"),
+                        email: email.option("value"),
+                        contactNo: contactNo.option("value"),
+                        presentAddress: address.option("value"),
+                        tenthResult: tenthResult.option("value"),
+                        twelthResult: twelthResult.option("value"),
+                        department: department.option("value"),
+                        course: course.option("value"),
+                        profilePhoto: profilePhotoData, // Store Base64 Image
+                    };
+
+                    // Save to session storage
+                    sessionStorage.setItem("admissionForm", JSON.stringify(formData));
+
+                    // Show success message
+                    DevExpress.ui.notify("Form submitted successfully!", "success", 2000);
+
+                    // Reset form after submission
+                    setTimeout(() => {
+                        $("#reset").dxButton("instance").option("onClick")();
+                    }, 2000);
+                };
+
+                reader.readAsDataURL(file); // Convert file to Base64
+
+            } else {
+                DevExpress.ui.notify("Please upload a profile photo before submitting.", "warning", 2000);
+            }
         }
     });
+
+
+    name.registerKeyHandler("enter", function () { fatherName.focus(); });
+
+    fatherName.registerKeyHandler("enter", function () { motherName.focus(); });
+
+    motherName.registerKeyHandler("enter", function () { dateOfBirth.focus(); });
+
+    dateOfBirth.registerKeyHandler("enter", function () { gender.focus(); });
+
+    gender.registerKeyHandler("enter", function () { maritalStatus.focus(); });
+
+    maritalStatus.registerKeyHandler("enter", function () { email.focus(); });
+
+
+    email.registerKeyHandler("enter", function () { contactNo.focus(); });
+
+    contactNo.registerKeyHandler("enter", function () { address.focus(); });
+
+    address.registerKeyHandler("enter", function () { tenthResult.focus(); });
+
+    tenthResult.registerKeyHandler("enter", function () { twelthResult.focus(); });
+
+    twelthResult.registerKeyHandler("enter", function () { department.focus(); });
+
+    department.registerKeyHandler("enter", function () { course.focus(); });
+
+    course.registerKeyHandler("enter", function () { profilePhoto.focus(); });
+
+    profile.registerKeyHandler("enter", function () { validate.focus(); });
+
+    validate.registerKeyHandler("enter", function () { $("#submit").dxButton("instance").option("onClick")(); });
 });
+
