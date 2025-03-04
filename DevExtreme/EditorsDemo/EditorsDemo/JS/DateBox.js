@@ -1,9 +1,9 @@
 ﻿$(function () {
     $("#birthDate").dxDateBox({
-        type: "date",
+        type: "date", // or time or datetime
         text: "Birth Date",
         placeholder: "Select your birth date",
-        displayFormat: "dd/MM/yyyy",
+        displayFormat: "dd/MM/yyyy", // or shortdate or yearwise etc
         // dateSerializationFormat: "yyyy-MM-dd",
             // Used when the date value needs to be serialized for sending to a server or processing. If not needed for data binding or API calls,
         pickerType: "calendar",
@@ -11,7 +11,7 @@
        
         tabIndex: 1,
         showClearButton: true, 
-        rtlEnabled: false,
+        rtlEnabled: false, // Switches the UI component to a right-to-left representation.
         readonly: false,
        
         openOnFieldClick: true,
@@ -128,3 +128,8 @@
     // End update (resume UI updates)
     dateBoxInstance.endUpdate();
 });
+// validation
+// finatitial year dynamically change aas per year
+
+// selected date value send into api 
+// feild() method 

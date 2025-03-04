@@ -225,6 +225,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="HTML\Button.html" />
+    <Content Include="HTML\CheckBox.html" />
     <Content Include="HTML\DateBox.html" />
     <Content Include="HTML\DropDownBox.html" />
     <Content Include="HTML\FileUploader.html" />
@@ -236,6 +237,7 @@
     <Content Include="HTML\TextBox.html" />
     <Content Include="HTML\Validation.html" />
     <Content Include="JS\Button.js" />
+    <Content Include="JS\CheckBox.js" />
     <Content Include="JS\DateBox.js" />
     <Content Include="JS\DropDownBox.js" />
     <Content Include="JS\FileUploader.js" />

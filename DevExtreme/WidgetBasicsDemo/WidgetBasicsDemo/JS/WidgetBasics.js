@@ -1,4 +1,18 @@
-﻿$(function () {
+﻿// Install-Package DevExtreme.Web -Version 21.1.3
+
+/*Basics of Devextreme
+Introduction to DevExtreme
+Installation – NuGet Package
+Widget Basics - jQuery
+Create and Configure a Widget
+Get a Widget Instance
+Get and Set Options
+Call Methods
+Handle Events
+Destroy a Widget*/
+
+
+$(function () {
     $("#signUpForm").dxForm({
         formData: {
             UserName: "Priyank", // TextBox
@@ -54,33 +68,10 @@
     formInstance.endUpdate(); // Apply updates
 
     // Update a single field
-    formInstance.updateData("formData.UserName", "Suresh");
-    console.log("User name:", formInstance.option("formData.UserName"));
-
-    formInstance.repaint(); // Ensure that update is applied
-    console.log("User name after repaint:", formInstance.option("formData.UserName"));
-
+    formInstance.updateData("UserName", "Suresh");
+    console.log("User name:", formInstance.option("formData.UserName")); 
+   
     
-    // Example: Adding a validation rule
-    // # Remove when want to check for validation Demo
-
-    /*$("#signUpForm").dxForm({
-        formData: {
-            UserName: "Priyank",
-            Email: "priyank@gmail.com",
-            Education: "B.Tech - CE",
-            College: "DDU",
-            StudentId: 21,
-        },
-        items: [{
-            dataField: "UserName",
-            validationRules: [{
-                type: "required",
-                message: "User Name is required"
-            }]
-        }]
-    });*/
-
     // Validation
     var validationResult = formInstance.validate();
     console.log(validationResult.isValid); // It returns "true" if no validation rules are defined
@@ -112,23 +103,15 @@
         console.log("Warning: Clicking this will reset your data!");
     });
 
-    // Destroying the widget (be careful with destroying widgets that are in use)
-    // Ensure widgets are not in use before destroying them
-
-    // Destroying the form widget instance (uncomment if you want to destroy it)
-    $("#signUpForm").destroy();
-
-    // Using dxButton("dispose")
-    // Dispose the Login Button widget
-    $("#LoginButton").dxButton("dispose");
+    
 
     // Check if the widget is destroyed by trying to get the instance again
     var destroyedButtonInstance = $("#LoginButton").dxButton("instance");
     console.log("Button instance after destroy:", destroyedButtonInstance);
 
     // Dispose Reset Button widget
-    $("#ResetButton").dxButton("dispose");
+    // $("#ResetButton").dxButton("dispose");
 
     // Removing Reset Button from DOM after disposal (if necessary)
-    $("#ResetButton").remove();
+   
 });
