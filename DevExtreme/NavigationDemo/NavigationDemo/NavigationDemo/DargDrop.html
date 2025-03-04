@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tree View - Demo</title>
+
+    <!-- Include jQuery -->
+    <script src="/Scripts/jquery-3.5.1.min.js"></script>
+
+    <!-- Include DevExtreme Styles -->
+    <link rel="stylesheet" href="/Content/dx.common.css" />
+    <link rel="stylesheet" href="/Content/dx.light.css" />
+
+    <!-- Include DevExtreme Scripts -->
+    <script src="/Scripts/dx.all.js"></script>
+
+    <!-- Include JavaScript -->
+    <script type="module" src="/NavigationDemo/DragDrop.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #treeView {
+            width: 250px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .role {
+            padding: 5px;
+            margin: 5px 0;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            cursor: grab;
+        }
+
+        #dropZone {
+            width: 300px;
+            min-height: 300px;
+            border: 2px dashed #aaa;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Drag & Drop Tree View</h2>
+
+    <!-- Tree View (Roles) -->
+    <div id="treeView">
+        <div class="role" draggable="true" data-role="Admin">Admin</div>
+        <div class="role" draggable="true" data-role="Developer">Developer</div>
+        <div class="role" draggable="true" data-role="Tester">Tester</div>
+    </div>
+
+    <!-- Drop Zone -->
+    <h3>Drop Here</h3>
+    <div id="dropZone">Drop a role here</div>
+</body>
+</html>
