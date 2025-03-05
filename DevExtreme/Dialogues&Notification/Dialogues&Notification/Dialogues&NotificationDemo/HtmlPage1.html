@@ -1,0 +1,144 @@
+﻿$(function () {
+    // CustomStore for API interaction
+    let bugStore = new DevExpress.data.CustomStore({
+        key: "id",
+        load: function () {
+            return fetch("https://67c68a2f351c081993fdadd8.mockapi.io/Bug")
+                .then(response => response.json());
+        },
+        insert: function (values) {
+            return fetch("https://67c68a2f351c081993fdadd8.mockapi.io/Bug", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(values)
+            }).then(response => response.json());
+        },
+        update: function (key, values) {
+            return fetch(`https://67c68a2f351c081993fdadd8.mockapi.io/Bug/${key}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(values)
+            }).then(response => response.json());
+        },
+        remove: function (key) {
+            return fetch(`https://67c68a2f351c081993fdadd8.mockapi.io/Bug/${key}`, {
+                method: "DELETE"
+            }).then(response => response.json());
+        }
+    });
+
+    // Load Panel
+    let loadPanel = $("#loadPanel").dxLoadPanel({
+        message: "Processing...",
+        shadingColor: "rgba(0,0,0,0.4)",
+        visible: false
+    }).dxLoadPanel("instance");
+
+    // Bug List
+    function refreshBugList() {
+        bugStore.load().then(bugs => {
+            $("#bugList").empty();
+            bugs.forEach(bug => {
+                $("#bugList").append(`<li class='bug-title' data-id='${bug.id}'>${bug.title}</li>`);
+            });
+        });
+    }
+    refreshBugList();
+
+    // Popover for Bug Details
+    $("#bugList").on("mouseover", ".bug-title", function () {
+        let bugId = $(this).data("id");
+        bugStore.byKey(bugId).then(bug => {
+            $("#popover").dxPopover("instance").option({
+                contentTemplate: () => `<p>${bug.description}</p>`
+            }).show();
+        });
+    });
+
+    $("#popover").dxPopover({
+        target: ".bug-title",
+        position: "top"
+    });
+
+    // Popup for Adding Bug
+    let popup = $("#popup").dxPopup({
+        title: "Report a Bug",
+        width: 400,
+        height: 300,
+        visible: false,
+        contentTemplate: () => $("#bugForm").clone().show()
+    }).dxPopup("instance");
+
+    $("#addBugBtn").dxButton({
+        text: "Report Bug",
+        onClick: () => popup.show()
+    });
+
+    // Toast for Notifications
+    function showToast(message, type) {
+        $("#toast").dxToast({
+            message: message,
+            type: type,
+            displayTime: 2000
+        }).dxToast("show");
+    }
+
+    // Handle Form Submission
+    $("#bugForm").on("submit", function (e) {
+        e.preventDefault();
+        loadPanel.show();
+
+        let title = $("#bugTitle").val();
+        let desc = $("#bugDesc").val();
+
+        bugStore.insert({ title, description: desc, status: "Open" }).then(() => {
+            showToast("Bug reported successfully", "success");
+            popup.hide();
+            loadPanel.hide();
+            refreshBugList();
+        });
+    });
+});
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bug Tracker - Demo</title>
+
+    <!-- Include jQuery -->
+    <script src="/Scripts/jquery-3.5.1.min.js"></script>
+
+    <!-- Include DevExtreme Styles -->
+    <link rel="stylesheet" href="/Content/dx.common.css" />
+    <link rel="stylesheet" href="/Content/dx.light.css" />
+
+    <!-- Include DevExtreme Scripts -->
+    <script src="/Scripts/dx.all.js"></script>
+
+    <!-- Include JavaScript -->
+    <script type="module" src="/BugTrackerDemo/BugTracker.js"></script>
+</head>
+<body>
+    <h1>Bug Tracker - Demo</h1>
+
+    <div id="loadIndicator"></div>
+    <div id="loadPanel"></div>
+    <button id="addBugBtn"></button>
+
+    <ul id="bugList"></ul>
+
+    <div id="popover"></div>
+    <div id="popup"></div>
+    <div id="toast"></div>
+
+    <form id="bugForm" style="display:none;">
+        <label>Title:</label>
+        <input type="text" id="bugTitle" required />
+        <label>Description:</label>
+        <textarea id="bugDesc" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
