@@ -211,8 +211,8 @@
         readonly: false,
         openOnFieldClick: true,
         value: financialYearStart,
-        min: financialYearStart,
-        max: financialYearEnd,
+       /* min: financialYearStart,
+        max: financialYearEnd,*/
         isValidDateMessage: "Invalid date",
         hoverStateEnabled: true,
         hint: "Select start date of the financial year",

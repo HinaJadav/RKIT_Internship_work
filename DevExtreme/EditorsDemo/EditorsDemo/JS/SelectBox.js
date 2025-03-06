@@ -1,16 +1,24 @@
 ﻿$(function () {
   
     $("#informalPersonSelectBox").dxSelectBox({
-        dataSource: ["Student", "Employee", "Freelancer", "Entrepreneur", "Retired", "Intern"],
+        dataSource: ["Student", "Employee", "Freelancer", "Entrepreneur", "Retired", "Intern", "Employee of admin office head office representative"],
         valueExpr: (item) => item,
         displayExpr: (item) => item,
         value: "Student",
-        disabled: true, // Allows selection (set to `true` if it should remain disabled)
+        // disabled: true, // Allows selection (set to `true` if it should remain disabled)
         labelMode: "floating", // Label will float when user interacts
+
+
         searchEnabled: true, // Enables search functionality
+        searchMode: 'startswith',
+        searchTimeout: 1000, // in ms
+
+
+        //useItemTextAsTitle: true,
+
         showClearButton: true, // Allows clearing selection
         //placeholder: "Select your role", // User-friendly placeholder text
-        width:500,
+        width:200,
         onValueChanged: function (e) {
             console.log("Selected Role:", e.value);
         }
@@ -276,12 +284,14 @@
 
 // what is difference between option , method, event and where we need to use what
 
-// deferRendering: It determines whether the dropDown list shpuld be rendered immediately when the component is initialized or only when the user first open it
+// deferRendering: It determines whether the dropDown list should be rendered immediately when the component is initialized or only when the user first open it
+// it controls when the dropdown list is rendered
+// dropdown list items are not rendered until the user opens the dropdown
 
 // dropDownButtonTemplate :  allows customization of the dropdown button inside the select box.
 
     // dropDownOptions : configures the appearance and behavior of the dropdown list.
-// elementAttr  : alloes to add custom attribute  like class, id etc. to the HTML element of selectBox. --> use to enhance style etc part of that component
+// elementAttr  : allows to add custom attribute  like class, id etc. to the HTML element of selectBox. --> use to enhance style etc part of that component
 // fieldTemplate: allows customization of the apperance of the selected value inside the input box
 
 
@@ -322,3 +332,32 @@ onSelectionChanged: is useful when tracking clicks on items(even if the value st
 onInput: captures typing inside the field.
 onOpened: detects when the dropdown opens.*/
 
+
+
+// valueExpr: stores the value
+// defines that which property of data object is used as the actual value
+// useful during api call, internal logic etc
+
+// displayExpr: contols what the user sees
+// define which property of the data object is displayed in the dropdown
+// ex :  useful when the valueExpr is an ID but you want to show readable names.
+
+// displayValue : readonly property bcz it shows currently selected text
+// It automatically returns the displayed value based on displayExpr
+
+// searchExpr : Specifies the name of a data source item field or an expression whose value is compared to the search criterion.
+
+// useItemTextAsTitle: true   : The text of the selected item is used as the title attribute.
+/*
+
+<SelectBox 
+    dataSource={["Apple", "Banana", "Cherry with a very long name"]} 
+    useItemTextAsTitle={true} 
+    width={150} 
+/>
+
+Effect:
+If the selected value is "Cherry with a very long name", and it gets cut off,
+Hovering over it shows a tooltip with "Cherry with a very long name".
+
+*/

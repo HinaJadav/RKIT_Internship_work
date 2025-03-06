@@ -115,3 +115,33 @@
         },
     });
 });
+
+
+// onChange & onValueChange difference
+// onChange: fires only when the field loses focus (after selecting and clicking outside).
+// onValueChange: fires immediately when the selection changes.
+
+
+
+// content() : it is used to get the popup content inside a DropDownBox
+    //  Modify the popup content dynamically
+    //  Access or manipulate elements inside the popup
+    // Add custom logic or UI inside the dropdown
+
+
+
+// difference between reset() and repaint()
+// reset() clears the value.
+// repaint() just refreshes the UI but does not change the value.
+
+
+
+
+// difference between "elementAttr" & "inputAttr":
+// elementAttr : applies to outer container like <div> of component
+    // use for add extra style class id etc
+    // works on all DevExtreme components
+
+// inputAttr: applies on that input part or actual <input> field
+    // use to specifies attributes like : maxLength, placeholder, readonly
+    // works on only input-based components
