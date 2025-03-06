@@ -51,6 +51,7 @@
 
         onValueChanged: function (e) {
             console.log("call onValueChanged()");
+            validateCheckBox(e.value);
         },
 
         // Specifies whether the editor is read-only.
@@ -64,9 +65,6 @@
 
         // Specifies text displayed by the checkbox
         text: "You are validated!",
-
-        // Indication of the current validation status
-        validationStatus: 'pending', // try "valid" & "invalid"
 
         // Specifies the UI component state
         value: true,
@@ -84,4 +82,19 @@
         let currentValue = checkBox.option("value");
         checkBox.option("value", !currentValue);
     });
+
+    // Function to validate the checkbox
+    function validateCheckBox(value) {
+        if (!value) {
+            checkBox.option({
+                validationStatus: "invalid",
+                validationErrors: [{ message: "You must accept the terms!" }]
+            });
+        } else {
+            checkBox.option({
+                validationStatus: "valid",
+                validationErrors: null
+            });
+        }
+    }
 });

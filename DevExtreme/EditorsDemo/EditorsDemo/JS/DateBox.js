@@ -61,9 +61,25 @@
             return data.value > new Date();
         },
         dateOutOfRangeMessage: "Future dates are not allowed", // when this msg comes
-        width: "500px"
+        width: "500px",
+        
 
     });
+
+    function validateDateBox(value) {
+        let dateBox = $("#graduationDate").dxDateBox("instance");
+        if (!value || value > new Date()) {
+            dateBox.option({
+                validationStatus: "invalid",
+                validationErrors: [{ message: "Invalid or future dates are not allowed!" }]
+            });
+        } else {
+            dateBox.option({
+                validationStatus: "valid",
+                validationErrors: null
+            });
+        }
+    }
 
     $("#graduationDate").dxDateBox({
         type: "date",
@@ -72,8 +88,12 @@
         pickerType: "rollers",
         displayFormat: "MM/yyyy",
         showDropDown: true,
-        
-         width: "500px"
+        width: "500px",
+        validationStatus: "pending",
+        onValueChanged: function (e) {
+            alert("Date selected: " + e.value);
+            validateDateBox(e.value);
+        },
     });
 
     $("#exam10thDate").dxDateBox({
@@ -111,10 +131,6 @@
         alert("Enter key pressed!");
     });
 
-    
-
-    
-
     // Reset the date selection
     dateBoxInstance.reset();
 
@@ -127,9 +143,84 @@
 
     // End update (resume UI updates)
     dateBoxInstance.endUpdate();
-});
-// validation
-// finatitial year dynamically change aas per year
 
-// selected date value send into api 
-// feild() method 
+
+
+
+
+    //---------------------------------------------
+    // Que: Select Date from finaltial year wise
+
+    let currentYear = new Date().getFullYear();
+    let financialYearStart = new Date(currentYear, 3, 1); // 1st april of current year
+    let financialYearEnd = new Date(currentYear + 1, 2, 31); // 31st march of next year
+
+    function validateFinancialYear(value) {
+        let dateBox = financialYearInstance;
+        if (!value || value < financialYearStart || value > financialYearEnd) {
+            dateBox.option({
+                validationStatus: "invalid",
+                validationErrors: [{ message: "Date must be within the financial year range!" }]
+            });
+        } else {
+            dateBox.option({
+                validationStatus: "valid",
+                validationErrors: null
+            });
+        }
+    }
+
+    // Que: Select date input and send it through API
+    function sendDateToAPI(dateValue) {
+
+        // date formatting 
+        let day = dateValue.toString().padStart(2, '0');
+        let month = (dateValue.getMonth() + 1).toString().padStart(2, '0'); // ex. if month value = 3 it gives "03"
+        let year = dateValue.getFullYear();
+
+        let selectedFormattedDate = `${year}-${month}-${day}`; // format : YYY-MM-DD
+        console.log(selectedFormattedDate);
+
+        fetch("https://67c68a2f351c081993fdadd8.mockapi.io/Bug", { // bug api into mockApi 
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ selectedDate: selectedFormattedDate })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Date sent successfully:", data);
+            alert("Date successfully sent to API!");
+        })
+        .catch(error => {
+            console.error("Error sending date:", error);
+            alert("Failed to send date to API!");
+        });
+
+    }
+
+    let financialYearInstance = $("#financialYear").dxDateBox({
+        type: "date",
+        text: "Financial Year",
+        placeholder: "Select financial year start",
+        displayFormat: "dd/MM/yyyy",
+        pickerType: "calendar",
+        stylingMode: "underlined",
+        tabIndex: 2,
+        showClearButton: true,
+        rtlEnabled: false,
+        readonly: false,
+        openOnFieldClick: true,
+        value: financialYearStart,
+        min: financialYearStart,
+        max: financialYearEnd,
+        isValidDateMessage: "Invalid date",
+        hoverStateEnabled: true,
+        hint: "Select start date of the financial year",
+        dateOutOfRangeMessage: "Date must be within the financial year range",
+        validationStatus: "pending",
+        onValueChanged: function (e) {
+            validateFinancialYear(e.value);
+            sendDateToAPI(e.value);
+        }
+    }).dxDateBox("instance");
+});
