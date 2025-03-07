@@ -1,0 +1,437 @@
+﻿[
+  {
+    "id": 1,
+    "title": "Login API failing",
+    "description": "Issue with authentication token.",
+    "status": "Open",
+    "createdAt": "2025-03-04T10:15:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 1,
+      "name": "Authentication Issue"
+    },
+    "assignedUser": {
+      "id": "1",
+      "name": "Rohan Sharma",
+      "email": "rohan.sharma@example.com",
+      "role": "Admin"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Entity Framework not saving changes",
+    "description": "Database context is not committing transactions.",
+    "status": "In Progress",
+    "createdAt": "2025-03-04T11:00:00.000Z",
+    "priority": "Medium",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 2,
+      "name": "Database Issue"
+    },
+    "assignedUser": {
+      "id": "2",
+      "name": "Priya Iyer",
+      "email": "priya.iyer@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 3,
+    "title": "CORS issue in Web API",
+    "description": "Cross-Origin requests failing for frontend requests.",
+    "status": "Open",
+    "createdAt": "2025-03-04T12:30:00.000Z",
+    "priority": "High",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 3,
+      "name": "CORS/Network Issue"
+    },
+    "assignedUser": {
+      "id": "3",
+      "name": "Amit Patel",
+      "email": "amit.patel@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Session timeout not working",
+    "description": "User sessions are not expiring as expected.",
+    "status": "Resolved",
+    "createdAt": "2025-03-04T13:15:00.000Z",
+    "priority": "Low",
+    "severity": "Minor",
+    "bugCategory": {
+      "id": 4,
+      "name": "Session Management"
+    },
+    "assignedUser": {
+      "id": "4",
+      "name": "Neha Verma",
+      "email": "neha.verma@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 5,
+    "title": "JWT token not refreshing",
+    "description": "JWT token does not refresh on expiry.",
+    "status": "Open",
+    "createdAt": "2025-03-04T14:00:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 1,
+      "name": "Authentication Issue"
+    },
+    "assignedUser": {
+      "id": "5",
+      "name": "Arjun Reddy",
+      "email": "arjun.reddy@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Blazor component binding issue",
+    "description": "Data binding is not working correctly in Blazor components.",
+    "status": "In Progress",
+    "createdAt": "2025-03-04T14:45:00.000Z",
+    "priority": "Medium",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 5,
+      "name": "Frontend/UI"
+    },
+    "assignedUser": {
+      "id": "6",
+      "name": "Kavita Singh",
+      "email": "kavita.singh@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 7,
+    "title": "API returning 500 error",
+    "description": "Internal server error occurring on API requests.",
+    "status": "Open",
+    "createdAt": "2025-03-04T15:30:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 6,
+      "name": "Backend/API"
+    },
+    "assignedUser": {
+      "id": "7",
+      "name": "Rahul Das",
+      "email": "rahul.das@example.com",
+      "role": "Admin"
+    }
+  },
+  {
+    "id": 8,
+    "title": "SignalR connection dropping",
+    "description": "WebSocket connection drops unexpectedly in SignalR.",
+    "status": "Open",
+    "createdAt": "2025-03-04T16:15:00.000Z",
+    "priority": "Medium",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 7,
+      "name": "Real-Time Communication"
+    },
+    "assignedUser": {
+      "id": "8",
+      "name": "Meera Joshi",
+      "email": "meera.joshi@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Swagger UI not loading",
+    "description": "Swagger documentation is not accessible.",
+    "status": "Resolved",
+    "createdAt": "2025-03-04T17:00:00.000Z",
+    "priority": "Low",
+    "severity": "Minor",
+    "bugCategory": {
+      "id": 8,
+      "name": "Documentation"
+    },
+    "assignedUser": {
+      "id": "9",
+      "name": "Sanjay Kulkarni",
+      "email": "sanjay.kulkarni@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 10,
+    "title": "EF Core migrations failing",
+    "description": "Migrations are failing due to incorrect schema changes.",
+    "status": "Open",
+    "createdAt": "2025-03-04T17:45:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 2,
+      "name": "Database Issue"
+    },
+    "assignedUser": {
+      "id": "10",
+      "name": "Anjali Nair",
+      "email": "anjali.nair@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 11,
+    "title": "File upload failing",
+    "description": "Large file uploads are timing out.",
+    "status": "In Progress",
+    "createdAt": "2025-03-05T08:00:00.000Z",
+    "priority": "High",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 9,
+      "name": "File Handling"
+    },
+    "assignedUser": {
+      "id": "11",
+      "name": "Deepak Mehta",
+      "email": "deepak.mehta@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Email notifications not sending",
+    "description": "Emails are not being sent after user actions.",
+    "status": "Open",
+    "createdAt": "2025-03-05T08:45:00.000Z",
+    "priority": "Medium",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 10,
+      "name": "Notification System"
+    },
+    "assignedUser": {
+      "id": "12",
+      "name": "Sunita Rao",
+      "email": "sunita.rao@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 13,
+    "title": "Search functionality broken",
+    "description": "Search returns incorrect results or fails.",
+    "status": "Open",
+    "createdAt": "2025-03-05T09:15:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 11,
+      "name": "Search & Filtering"
+    },
+    "assignedUser": {
+      "id": "13",
+      "name": "Vikram Sinha",
+      "email": "vikram.sinha@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Memory leak in background services",
+    "description": "High memory usage causing performance issues.",
+    "status": "In Progress",
+    "createdAt": "2025-03-05T10:00:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 12,
+      "name": "Performance Issue"
+    },
+    "assignedUser": {
+      "id": "14",
+      "name": "Ravi Shankar",
+      "email": "ravi.shankar@example.com",
+      "role": "Admin"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Pagination not working",
+    "description": "Users cannot navigate between pages.",
+    "status": "Open",
+    "createdAt": "2025-03-05T10:30:00.000Z",
+    "priority": "Low",
+    "severity": "Minor",
+    "bugCategory": {
+      "id": 11,
+      "name": "Search & Filtering"
+    },
+    "assignedUser": {
+      "id": "15",
+      "name": "Mira Kapoor",
+      "email": "mira.kapoor@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Mobile responsiveness issues",
+    "description": "UI elements are breaking on smaller screens.",
+    "status": "Resolved",
+    "createdAt": "2025-03-05T11:15:00.000Z",
+    "priority": "Medium",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 5,
+      "name": "Frontend/UI"
+    },
+    "assignedUser": {
+      "id": "16",
+      "name": "Sonia Malik",
+      "email": "sonia.malik@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Date format inconsistency",
+    "description": "Dates are displaying in different formats across pages.",
+    "status": "Open",
+    "createdAt": "2025-03-05T12:00:00.000Z",
+    "priority": "Low",
+    "severity": "Minor",
+    "bugCategory": {
+      "id": 5,
+      "name": "Frontend/UI"
+    },
+    "assignedUser": {
+      "id": "17",
+      "name": "Aditi Gupta",
+      "email": "aditi.gupta@example.com",
+      "role": "Developer"
+    }
+  },
+  {
+    "id": 18,
+    "title": "WebSocket disconnection",
+    "description": "WebSocket disconnects after 1 minute of inactivity.",
+    "status": "Open",
+    "createdAt": "2025-03-05T12:45:00.000Z",
+    "priority": "High",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 7,
+      "name": "Real-Time Communication"
+    },
+    "assignedUser": {
+      "id": "18",
+      "name": "Rajesh Pillai",
+      "email": "rajesh.pillai@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 19,
+    "title": "Application crashes on startup",
+    "description": "The app crashes immediately upon launch.",
+    "status": "Open",
+    "createdAt": "2025-03-05T13:15:00.000Z",
+    "priority": "High",
+    "severity": "Critical",
+    "bugCategory": {
+      "id": 6,
+      "name": "Backend/API"
+    },
+    "assignedUser": {
+      "id": "19",
+      "name": "Saurabh Tiwari",
+      "email": "saurabh.tiwari@example.com",
+      "role": "Admin"
+    }
+  },
+  {
+    "id": 20,
+    "title": "Push notifications delayed",
+    "description": "Push notifications arrive after long delays.",
+    "status": "In Progress",
+    "createdAt": "2025-03-05T14:00:00.000Z",
+    "priority": "Medium",
+    "severity": "Major",
+    "bugCategory": {
+      "id": 10,
+      "name": "Notification System"
+    },
+    "assignedUser": {
+      "id": "20",
+      "name": "Pooja Sharma",
+      "email": "pooja.sharma@example.com",
+      "role": "Tester"
+    }
+  },
+  {
+    "id": 21,
+    "title": "asdasdasdasdasdasdasd",
+    "description": "asdasdaasdsadasdasdasdas",
+    "status": "In Progress",
+    "createdAt": "2025-03-05T18:30:00.000Z",
+    "assignedUserId": "compliance",
+    "__KEY__": "8f87b399-5e05-89e4-cdbe-c749c9a7363e",
+    "priority": "High",
+    "bugCategory": {
+      "id": 1
+    },
+    "assignedUser": {
+      "email": "adasd@gmail.com",
+      "name": "werwer",
+      "role": "Admin"
+    }
+  },
+  {
+    "title": "sdfdsfdsfdfds",
+    "description": "sdfdsdsd",
+    "status": "Open",
+    "createdAt": "2025-03-03T18:30:00.000Z",
+    "assignedUserId": "Director",
+    "id": "22",
+    "priority": "Medium",
+    "bugCategory[id]": "2",
+    "assignedUser[email]": "sdfs@gmail.com",
+    "assignedUser[name]": "dfgdfg",
+    "assignedUser[role]": "Admin",
+    "severity": "Minor"
+  },
+  {
+    "title": "xdvfsdgdgdf",
+    "description": "dfgdfgdfsg",
+    "status": "In Progress",
+    "createdAt": "2025-03-02T18:30:00.000Z",
+    "assignedUserId": "wireless",
+    "id": "23",
+    "priority": "Medium",
+    "bugCategory[id]": "2",
+    "assignedUser[email]": "sdgfds@gmail.com",
+    "assignedUser[name]": "sdfsdf",
+    "assignedUser[role]": "Admin",
+    "severity": "Major"
+  },
+  {
+    "title": "2025-03-06T02:43:00.642Z",
+    "description": "Omar Franecki",
+    "status": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/108.jpg",
+    "createdAt": "Shirt",
+    "assignedUserId": "lavender",
+    "id": "24",
+    "selectedDate": "2025-03-Sun Mar 30 2025 00:00:00 GMT+0530 (India Standard Time)"
+  }
+]

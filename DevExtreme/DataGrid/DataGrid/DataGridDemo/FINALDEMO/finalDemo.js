@@ -302,7 +302,7 @@
                     .appendTo(container);
             },
 
-            // Validation rule to restrict input
+            // Validation rule to restrict input -- custom data validation
             validationRules: [
                 {
                     type: "custom",
@@ -311,7 +311,10 @@
                         return ["Open", "In Progress", "Resolved"].includes(e.value);
                     }
                 }
-            ]
+            ],
+
+            //for grouping
+            // groupIndex: 0,
         },
         { dataField: "createdAt", caption: "Created At", dataType: "date" },
         {
@@ -330,7 +333,8 @@
                 dataSource: severityDataSource, // column based on data source
                 valueExpr: "id",
                 displayExpr: "name"
-            }
+            },
+           
         },
         {
             dataField: "bugCategory.id",
@@ -366,7 +370,18 @@
                     dataField: "assignedUser.role",
                     caption: "Role",
                     width: 150,
-                    allowResizing: true
+                    allowResizing: true,
+                    // custom data validation
+                    validationRules: [
+                        {
+                            type: "custom",
+                            validationCallback: function (e) {
+                                const allowedRoles = ["Admin", "Developer", "Tester"];
+                                return allowedRoles.includes(e.value);
+                            },
+                            message: "Role must be Admin, Developer, or Tester"
+                        }
+                    ] // check
                 }
             ]
         },
@@ -383,7 +398,9 @@
                     icon: 'trash'
                 }
             ]
-        }
+        },
+        
+
     ];
 
     let customPaging = {
@@ -428,7 +445,7 @@
         }
     };
 
-    $("#dataGrid").dxDataGrid({
+    /*$("#dataGrid").dxDataGrid({
         // data binding
         dataSource: dataStore,
         keyExpr: "id",
@@ -458,13 +475,19 @@
         // popup editing
         editing: customPopEditing,
 
-        
-
-        // data validation
-        // cascadng lookup
-
-
         // grouping
+        grouping: {
+            autoExpandAll : false, 
+        },
+
+        groupPanel: {
+            visible: true, 
+            allowColumnDragging: true,
+        },
+
+
+
+
 
         // filter - panel
 
@@ -474,26 +497,90 @@
 
         // events related to editing
         onRowUpdated: function (e) {
-            console.log("✅ Row Updated:", e);
+            console.log("Row Updated:", e);
             DevExpress.ui.notify("Record updated successfully!", "success", 2000);
         },
 
         onRowInserted: function (e) {
-            console.log("➕ Row Inserted:", e);
+            console.log("Row Inserted:", e);
             DevExpress.ui.notify("Record added successfully!", "success", 2000);
         },
 
         onRowRemoved: function (e) {
-            console.log("🗑️ Row Removed:", e);
+            console.log("Row Removed:", e);
             DevExpress.ui.notify("Record deleted successfully!", "warning", 2000);
         },
 
         onDataErrorOccurred: function (e) {
-            console.error("❌ Data Error:", e.error);
+            console.error("Data Error:", e.error);
             DevExpress.ui.notify("Error processing data: " + e.error.message, "error", 3000);
         }
 
 
 
+    });*/
+
+    $("#dataGrid").dxDataGrid({
+        dataSource: dataStore,
+        keyExpr: "id",
+        columnFixing: { enabled: true },
+        allowColumnReordering: true,
+        columnAutoWidth: true,
+        autoGenerateColumns: false,
+        allowColumnResizing: true,
+        columnResizingMode: "widget",
+
+        // Enable grouping
+        grouping: {
+            autoExpandAll: false // Set to true if you want all groups expanded initially
+        },
+
+        groupPanel: {
+            visible: true, // Shows the grouping panel above the grid
+            allowColumnDragging: true // Allows users to drag columns for grouping
+        },
+
+        columns: customizeColumns.map(column => ({
+            ...column,
+            allowGrouping: true // Enable grouping on all columns
+        })),
+
+        // Default grouping (example: Grouping by status)
+        columns: [
+            {
+                dataField: "status",
+                caption: "Status",
+                groupIndex: 0 // Automatically group by status at load time
+            },
+            ...customizeColumns
+        ],
+
+        // Enable row grouping UI
+        rowDragging: {
+            allowReordering: true,
+            showDragIcons: true
+        },
+
+        // Enable summary for grouped rows
+        summary: {
+            groupItems: [
+                {
+                    column: "id",
+                    summaryType: "count",
+                    displayFormat: "{0} Bugs"
+                }
+            ]
+        }
     });
+
+    $("#clearGroupingButton").dxButton({
+        text: "Clear Grouping",
+        icon: "clear",
+        onClick: function () {
+            var dataGrid = $("#dataGrid").dxDataGrid("instance");
+            dataGrid.clearGrouping();
+        }
+    });
+
+
 });
