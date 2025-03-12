@@ -228,6 +228,7 @@
     <Content Include="HTML\CheckBox.html" />
     <Content Include="HTML\DateBox.html" />
     <Content Include="HTML\DropDownBox.html" />
+    <Content Include="HTML\extraEx.html" />
     <Content Include="HTML\FileUploader.html" />
     <Content Include="HTML\FINALDEMO.html" />
     <Content Include="HTML\NumberBox.html" />
@@ -240,6 +241,7 @@
     <Content Include="JS\CheckBox.js" />
     <Content Include="JS\DateBox.js" />
     <Content Include="JS\DropDownBox.js" />
+    <Content Include="JS\extraEx.js" />
     <Content Include="JS\FileUploader.js" />
     <Content Include="JS\FINALDEMO.js" />
     <Content Include="JS\NumberBox.js" />

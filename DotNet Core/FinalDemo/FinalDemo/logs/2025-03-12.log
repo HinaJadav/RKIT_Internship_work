@@ -1,0 +1,617 @@
+2025-03-12 15:21:18.8971 | Info | Application starting... 
+2025-03-12 15:21:27.7110 | Debug | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2025-03-12 15:21:29.5494 | Debug | Hosting starting 
+2025-03-12 15:21:29.6121 | Info | User profile is available. Using 'C:\Users\hina.j\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-03-12 15:21:29.6201 | Debug | Reading data from file 'C:\Users\hina.j\AppData\Local\ASP.NET\DataProtection-Keys\key-3956d84f-cb83-4a3e-a618-fcacad57570d.xml'. 
+2025-03-12 15:21:29.6597 | Debug | Found key {3956d84f-cb83-4a3e-a618-fcacad57570d}. 
+2025-03-12 15:21:29.6793 | Debug | Considering key {3956d84f-cb83-4a3e-a618-fcacad57570d} with expiration date 2025-05-05 07:20:18Z as default key. 
+2025-03-12 15:21:29.6793 | Debug | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-03-12 15:21:29.6793 | Debug | Decrypting secret element using Windows DPAPI. 
+2025-03-12 15:21:29.6932 | Debug | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2025-03-12 15:21:29.6932 | Debug | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2025-03-12 15:21:29.6932 | Debug | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2025-03-12 15:21:29.6932 | Debug | Using key {3956d84f-cb83-4a3e-a618-fcacad57570d} as the default key. 
+2025-03-12 15:21:29.6932 | Debug | Key ring with default key {3956d84f-cb83-4a3e-a618-fcacad57570d} was loaded during application startup. 
+2025-03-12 15:21:30.3115 | Info | Now listening on: https://localhost:7149 
+2025-03-12 15:21:30.3115 | Info | Now listening on: http://localhost:5278 
+2025-03-12 15:21:30.3188 | Debug | Loaded hosting startup assembly FinalDemo 
+2025-03-12 15:21:30.3188 | Debug | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2025-03-12 15:21:30.3188 | Debug | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2025-03-12 15:21:30.3341 | Info | Application started. Press Ctrl+C to shut down. 
+2025-03-12 15:21:30.3341 | Info | Hosting environment: Development 
+2025-03-12 15:21:30.3341 | Info | Content root path: C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo 
+2025-03-12 15:21:30.3341 | Debug | Hosting started 
+2025-03-12 15:21:30.5573 | Debug | Connection id "0HNB19DRI1SB2" accepted. 
+2025-03-12 15:21:30.5681 | Debug | Connection id "0HNB19DRI1SB2" started. 
+2025-03-12 15:21:30.6188 | Debug | Connection id "0HNB19DRI1SB3" accepted. 
+2025-03-12 15:21:30.6188 | Debug | Connection id "0HNB19DRI1SB3" started. 
+2025-03-12 15:21:31.3030 | Debug | Connection id "0HNB19DRI1SB4" accepted. 
+2025-03-12 15:21:31.3030 | Debug | Connection id "0HNB19DRI1SB4" started. 
+2025-03-12 15:21:31.3530 | Debug | Connection 0HNB19DRI1SB4 established using the following protocol: Tls12 
+2025-03-12 15:21:31.4002 | Trace | Connection id "0HNB19DRI1SB4" sending SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-03-12 15:21:31.4002 | Trace | Connection id "0HNB19DRI1SB4" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:21:31.4002 | Trace | Connection id "0HNB19DRI1SB4" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-03-12 15:21:31.4133 | Trace | Connection id "0HNB19DRI1SB4" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-03-12 15:21:31.4133 | Trace | Connection id "0HNB19DRI1SB4" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:21:31.4133 | Trace | Connection id "0HNB19DRI1SB4" received HEADERS frame for stream ID 1 with length 470 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:21:31.4430 | Trace | Connection id "0HNB19DRI1SB4" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-03-12 15:21:31.5376 | Info | Request starting HTTP/2 GET https://localhost:7149/swagger/index.html - - 
+2025-03-12 15:21:31.6083 | Debug | Wildcard detected, all requests with hosts will be allowed. 
+2025-03-12 15:21:31.6576 | Trace | All hosts are allowed. 
+2025-03-12 15:21:31.7080 | Debug | No candidates found for the request path '/swagger/index.html' 
+2025-03-12 15:21:31.7080 | Debug | Request did not match any endpoints 
+2025-03-12 15:21:31.7080 | Info | [Request] GET /swagger/index.html 
+2025-03-12 15:21:32.0702 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-03-12 15:21:32.4741 | Debug | Response markup is scheduled to include browser refresh script injection. 
+2025-03-12 15:21:32.4741 | Trace | Connection id "0HNB19DRI1SB4" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS. 
+2025-03-12 15:21:32.6358 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2025-03-12 15:21:32.6358 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 1 with length 3072 and flags NONE. 
+2025-03-12 15:21:32.7048 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 1 with length 1087 and flags NONE. 
+2025-03-12 15:21:32.7124 | Info | [Response] 200 
+2025-03-12 15:21:32.7124 | Debug | Response markup was updated to include browser refresh script injection. 
+2025-03-12 15:21:32.7124 | Trace | Connection id "0HNB19DRI1SB4" received HEADERS frame for stream ID 3 with length 115 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:21:32.7124 | Trace | Connection id "0HNB19DRI1SB4" received HEADERS frame for stream ID 5 with length 57 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:21:32.7124 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2025-03-12 15:21:32.7255 | Info | Request starting HTTP/2 GET https://localhost:7149/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-12 15:21:32.7255 | Info | Request starting HTTP/2 GET https://localhost:7149/_vs/browserLink - - 
+2025-03-12 15:21:32.7255 | Info | Request finished HTTP/2 GET https://localhost:7149/swagger/index.html - - - 200 - text/html;charset=utf-8 1187.6099ms 
+2025-03-12 15:21:32.7420 | Trace | Connection id "0HNB19DRI1SB4" sending HEADERS frame for stream ID 3 with length 60 and flags END_HEADERS. 
+2025-03-12 15:21:32.7420 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 3 with length 11988 and flags NONE. 
+2025-03-12 15:21:32.7632 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2025-03-12 15:21:32.7632 | Info | Request finished HTTP/2 GET https://localhost:7149/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 37.7387ms 
+2025-03-12 15:21:32.8196 | Trace | Connection id "0HNB19DRI1SB4" sending HEADERS frame for stream ID 5 with length 119 and flags END_HEADERS. 
+2025-03-12 15:21:32.8196 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 9986 and flags NONE. 
+2025-03-12 15:21:32.8196 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8196 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8196 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8196 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8331 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8486 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8653 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8800 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8965 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8965 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8965 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8965 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8965 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.8965 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9117 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9117 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9117 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9345 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9345 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9345 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9345 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9448 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9448 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9448 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9448 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9448 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9601 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 10240 and flags NONE. 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 9517 and flags NONE. 
+2025-03-12 15:21:32.9735 | Info | Request finished HTTP/2 GET https://localhost:7149/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 260.0877ms 
+2025-03-12 15:21:32.9735 | Trace | Connection id "0HNB19DRI1SB4" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2025-03-12 15:21:32.9900 | Debug | Connection id "0HNB19DRI1SB4" received FIN. 
+2025-03-12 15:21:32.9900 | Debug | The connection queue processing loop for 0HNB19DRI1SB4 completed. 
+2025-03-12 15:21:32.9900 | Debug | Connection id "0HNB19DRI1SB4" is closed. The last processed stream ID was 5. 
+2025-03-12 15:21:33.0065 | Debug | Connection id "0HNB19DRI1SB4" sending FIN because: "The client closed the connection." 
+2025-03-12 15:21:33.0065 | Debug | Connection id "0HNB19DRI1SB4" stopped. 
+2025-03-12 15:21:33.0978 | Debug | Connection id "0HNB19DRI1SB5" accepted. 
+2025-03-12 15:21:33.0978 | Debug | Connection id "0HNB19DRI1SB5" started. 
+2025-03-12 15:21:33.1023 | Debug | Connection 0HNB19DRI1SB5 established using the following protocol: Tls12 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" sending SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" received HEADERS frame for stream ID 1 with length 383 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:21:33.1023 | Trace | Connection id "0HNB19DRI1SB5" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-03-12 15:21:33.1023 | Info | Request starting HTTP/2 GET https://localhost:7149/swagger/v1/swagger.json - - 
+2025-03-12 15:21:33.1023 | Trace | All hosts are allowed. 
+2025-03-12 15:21:33.1023 | Debug | No candidates found for the request path '/swagger/v1/swagger.json' 
+2025-03-12 15:21:33.1023 | Debug | Request did not match any endpoints 
+2025-03-12 15:21:33.1023 | Info | [Request] GET /swagger/v1/swagger.json 
+2025-03-12 15:21:33.1023 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-03-12 15:21:33.4504 | Trace | Connection id "0HNB19DRI1SB5" sending HEADERS frame for stream ID 1 with length 73 and flags END_HEADERS. 
+2025-03-12 15:21:33.4504 | Trace | Connection id "0HNB19DRI1SB5" sending DATA frame for stream ID 1 with length 9806 and flags NONE. 
+2025-03-12 15:21:33.4504 | Info | [Response] 200 
+2025-03-12 15:21:33.6273 | Trace | Connection id "0HNB19DRI1SB5" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2025-03-12 15:21:33.6273 | Info | Request finished HTTP/2 GET https://localhost:7149/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 519.9194ms 
+2025-03-12 15:21:33.6886 | Debug | Connection id "0HNB19DRI1SB5" received FIN. 
+2025-03-12 15:21:33.7146 | Debug | Connection id "0HNB19DRI1SB5" is closed. The last processed stream ID was 1. 
+2025-03-12 15:21:33.7680 | Debug | Connection id "0HNB19DRI1SB5" sending FIN because: "The client closed the connection." 
+2025-03-12 15:21:33.9467 | Debug | The connection queue processing loop for 0HNB19DRI1SB5 completed. 
+2025-03-12 15:21:33.9609 | Debug | Connection id "0HNB19DRI1SB5" stopped. 
+2025-03-12 15:21:40.8895 | Debug | Authentication of the HTTPS connection timed out. 
+2025-03-12 15:21:40.9059 | Debug | Authentication of the HTTPS connection timed out. 
+2025-03-12 15:21:40.9059 | Debug | Connection id "0HNB19DRI1SB3" stopped. 
+2025-03-12 15:21:40.9059 | Debug | Connection id "0HNB19DRI1SB2" stopped. 
+2025-03-12 15:21:40.9059 | Debug | Connection id "0HNB19DRI1SB3" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-03-12 15:21:40.9059 | Debug | Connection id "0HNB19DRI1SB2" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2025-03-12 15:25:04.5261 | Debug | Connection id "0HNB19DRI1SB6" accepted. 
+2025-03-12 15:25:04.5261 | Debug | Connection id "0HNB19DRI1SB6" started. 
+2025-03-12 15:25:04.5261 | Debug | Connection 0HNB19DRI1SB6 established using the following protocol: Tls12 
+2025-03-12 15:25:04.5261 | Trace | Connection id "0HNB19DRI1SB6" sending SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-03-12 15:25:04.5261 | Trace | Connection id "0HNB19DRI1SB6" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:25:04.5261 | Trace | Connection id "0HNB19DRI1SB6" received SETTINGS frame for stream ID 0 with length 24 and flags NONE. 
+2025-03-12 15:25:04.5261 | Trace | Connection id "0HNB19DRI1SB6" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-03-12 15:25:04.5261 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:25:04.5261 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 1 with length 405 and flags END_HEADERS, PRIORITY. 
+2025-03-12 15:25:04.5430 | Trace | Connection id "0HNB19DRI1SB6" received DATA frame for stream ID 1 with length 46 and flags END_STREAM. 
+2025-03-12 15:25:04.5430 | Info | Request starting HTTP/2 POST https://localhost:7149/api/user/login application/json 46 
+2025-03-12 15:25:04.5430 | Trace | Connection id "0HNB19DRI1SB6" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2025-03-12 15:25:04.5430 | Trace | All hosts are allowed. 
+2025-03-12 15:25:04.5565 | Debug | 1 candidate(s) found for the request path '/api/user/login' 
+2025-03-12 15:25:04.5565 | Debug | Endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' with route pattern 'api/user/login' is valid for the request path '/api/user/login' 
+2025-03-12 15:25:04.5565 | Debug | Request matched endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' 
+2025-03-12 15:25:04.5565 | Info | [Request] POST /api/user/login 
+2025-03-12 15:25:04.5565 | Debug | The request has an origin header: 'https://localhost:7149'. 
+2025-03-12 15:25:04.5565 | Info | CORS policy execution successful. 
+2025-03-12 15:25:04.5565 | Debug | AuthenticationScheme: Bearer was not authenticated. 
+2025-03-12 15:25:04.5565 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:25:04.5565 | Info | Executing endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' 
+2025-03-12 15:25:04.5894 | Info | Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(FinalDemo.Models.DTOs.DTOLogin) on controller FinalDemo.Controllers.UserController (FinalDemo). 
+2025-03-12 15:25:04.5894 | Debug | Execution plan of authorization filters (in the following order): None 
+2025-03-12 15:25:04.5894 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:25:04.5894 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:25:04.5894 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:25:04.5894 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:25:04.5894 | Debug | Executing controller factory for controller FinalDemo.Controllers.UserController (FinalDemo) 
+2025-03-12 15:25:04.6326 | Debug | Executed controller factory for controller FinalDemo.Controllers.UserController (FinalDemo) 
+2025-03-12 15:25:04.6501 | Debug | Attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin' ... 
+2025-03-12 15:25:04.6501 | Debug | Attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin' using the name '' in request data ... 
+2025-03-12 15:25:04.6501 | Debug | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-03-12 15:25:04.6501 | Debug | Connection id "0HNB19DRI1SB6", Request id "0HNB19DRI1SB6:00000001": started reading request body. 
+2025-03-12 15:25:04.6650 | Debug | Connection id "0HNB19DRI1SB6", Request id "0HNB19DRI1SB6:00000001": done reading request body. 
+2025-03-12 15:25:04.6650 | Debug | JSON input formatter succeeded, deserializing to type 'FinalDemo.Models.DTOs.DTOLogin' 
+2025-03-12 15:25:04.6650 | Debug | Done attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin'. 
+2025-03-12 15:25:04.6650 | Debug | Done attempting to bind parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin'. 
+2025-03-12 15:25:04.6650 | Debug | Attempting to validate the bound parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin' ... 
+2025-03-12 15:25:04.6915 | Debug | Done attempting to validate the bound parameter 'loginDto' of type 'FinalDemo.Models.DTOs.DTOLogin'. 
+2025-03-12 15:25:04.6915 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:04.6915 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:04.6915 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:04.6961 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:04.6961 | Info | Executing action method FinalDemo.Controllers.UserController.Login (FinalDemo) - Validation state: Valid 
+2025-03-12 15:25:04.6961 | Trace | Executing action method FinalDemo.Controllers.UserController.Login (FinalDemo) with arguments (FinalDemo.Models.DTOs.DTOLogin) 
+2025-03-12 15:25:04.6961 | Info | Login attempt for user: string 
+2025-03-12 15:25:04.9212 | Info | User string logged in successfully. 
+2025-03-12 15:25:04.9212 | Info | Executed action method FinalDemo.Controllers.UserController.Login (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 220.528ms. 
+2025-03-12 15:25:04.9212 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:04.9212 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:04.9212 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:04.9212 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:04.9212 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:04.9212 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:04.9212 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:04.9314 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:25:04.9314 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:25:04.9314 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:25:04.9314 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:25:04.9314 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:25:04.9314 | Info | Executing OkObjectResult, writing value of type 'FinalDemo.Models.Response'. 
+2025-03-12 15:25:04.9523 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 1 with length 77 and flags END_HEADERS. 
+2025-03-12 15:25:04.9523 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:04.9523 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 1 with length 366 and flags NONE. 
+2025-03-12 15:25:04.9523 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:04.9523 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:04.9523 | Info | Executed action FinalDemo.Controllers.UserController.Login (FinalDemo) in 357.4459ms 
+2025-03-12 15:25:04.9523 | Info | Executed endpoint 'FinalDemo.Controllers.UserController.Login (FinalDemo)' 
+2025-03-12 15:25:04.9523 | Info | [Response] 200 
+2025-03-12 15:25:04.9523 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2025-03-12 15:25:04.9523 | Info | Request finished HTTP/2 POST https://localhost:7149/api/user/login application/json 46 - 200 - application/json;+charset=utf-8 415.8801ms 
+2025-03-12 15:25:30.5682 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 3 with length 242 and flags END_HEADERS, PRIORITY. 
+2025-03-12 15:25:30.5746 | Trace | Connection id "0HNB19DRI1SB6" received PING frame for stream ID 0 with length 8 and flags NONE. 
+2025-03-12 15:25:30.5746 | Trace | Connection id "0HNB19DRI1SB6" sending PING frame for stream ID 0 with length 8 and flags ACK. 
+2025-03-12 15:25:30.5746 | Info | Request starting HTTP/2 POST https://localhost:7149/api/bugs application/json 140 
+2025-03-12 15:25:30.5746 | Trace | Connection id "0HNB19DRI1SB6" received DATA frame for stream ID 3 with length 140 and flags END_STREAM. 
+2025-03-12 15:25:30.5746 | Trace | All hosts are allowed. 
+2025-03-12 15:25:30.5746 | Debug | 1 candidate(s) found for the request path '/api/bugs' 
+2025-03-12 15:25:30.5746 | Debug | Endpoint 'FinalDemo.Controllers.BugController.SaveBug (FinalDemo)' with route pattern 'api/bugs' is valid for the request path '/api/bugs' 
+2025-03-12 15:25:30.5746 | Debug | Request matched endpoint 'FinalDemo.Controllers.BugController.SaveBug (FinalDemo)' 
+2025-03-12 15:25:30.5746 | Info | [Request] POST /api/bugs 
+2025-03-12 15:25:30.5874 | Debug | The request has an origin header: 'https://localhost:7149'. 
+2025-03-12 15:25:30.5874 | Info | CORS policy execution successful. 
+2025-03-12 15:25:30.6373 | Debug | Successfully validated the token. 
+2025-03-12 15:25:30.6373 | Debug | AuthenticationScheme: Bearer was successfully authenticated. 
+2025-03-12 15:25:30.6373 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:25:30.6373 | Info | Executing endpoint 'FinalDemo.Controllers.BugController.SaveBug (FinalDemo)' 
+2025-03-12 15:25:30.6373 | Info | Route matched with {action = "SaveBug", controller = "Bug"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBug(FinalDemo.Models.DTOs.DTOYMB01) on controller FinalDemo.Controllers.BugController (FinalDemo). 
+2025-03-12 15:25:30.6373 | Debug | Execution plan of authorization filters (in the following order): FinalDemo.Filter.CustomAuthenticationFilter 
+2025-03-12 15:25:30.6373 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:25:30.6373 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:25:30.6373 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:25:30.6373 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:25:30.6373 | Trace | Authorization Filter: Before executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:25:30.6495 | Trace | Authorization Filter: After executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:25:30.6495 | Debug | Executing controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:25:30.6495 | Debug | Executed controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:25:30.6495 | Debug | Attempting to bind parameter 'bugDto' of type 'FinalDemo.Models.DTOs.DTOYMB01' ... 
+2025-03-12 15:25:30.6495 | Debug | Attempting to bind parameter 'bugDto' of type 'FinalDemo.Models.DTOs.DTOYMB01' using the name '' in request data ... 
+2025-03-12 15:25:30.6495 | Debug | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-03-12 15:25:30.6495 | Debug | Connection id "0HNB19DRI1SB6", Request id "0HNB19DRI1SB6:00000003": started reading request body. 
+2025-03-12 15:25:30.6495 | Debug | Connection id "0HNB19DRI1SB6", Request id "0HNB19DRI1SB6:00000003": done reading request body. 
+2025-03-12 15:25:30.6721 | Debug | JSON input formatter succeeded, deserializing to type 'FinalDemo.Models.DTOs.DTOYMB01' 
+2025-03-12 15:25:30.6721 | Debug | Done attempting to bind parameter 'bugDto' of type 'FinalDemo.Models.DTOs.DTOYMB01'. 
+2025-03-12 15:25:30.6721 | Debug | Done attempting to bind parameter 'bugDto' of type 'FinalDemo.Models.DTOs.DTOYMB01'. 
+2025-03-12 15:25:30.6721 | Debug | Attempting to validate the bound parameter 'bugDto' of type 'FinalDemo.Models.DTOs.DTOYMB01' ... 
+2025-03-12 15:25:30.6826 | Debug | Done attempting to validate the bound parameter 'bugDto' of type 'FinalDemo.Models.DTOs.DTOYMB01'. 
+2025-03-12 15:25:30.6826 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:30.6826 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:30.6826 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:30.6826 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:30.6826 | Info | Executing action method FinalDemo.Controllers.BugController.SaveBug (FinalDemo) - Validation state: Valid 
+2025-03-12 15:25:30.6826 | Trace | Executing action method FinalDemo.Controllers.BugController.SaveBug (FinalDemo) with arguments (FinalDemo.Models.DTOs.DTOYMB01) 
+2025-03-12 15:25:30.8210 | Info | Executed action method FinalDemo.Controllers.BugController.SaveBug (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 135.303ms. 
+2025-03-12 15:25:30.8216 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:30.8216 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:30.8216 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:30.8216 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:30.8216 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:30.8216 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:30.8216 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:30.8216 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:25:30.8216 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:25:30.8216 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:25:30.8216 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:25:30.8216 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:25:30.8216 | Info | Executing OkObjectResult, writing value of type 'FinalDemo.Models.Response'. 
+2025-03-12 15:25:30.8379 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:30.8379 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 3 with length 35 and flags END_HEADERS. 
+2025-03-12 15:25:30.8379 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:30.8379 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 3 with length 187 and flags NONE. 
+2025-03-12 15:25:30.8379 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:30.8379 | Info | Executed action FinalDemo.Controllers.BugController.SaveBug (FinalDemo) in 193.3883ms 
+2025-03-12 15:25:30.8379 | Info | Executed endpoint 'FinalDemo.Controllers.BugController.SaveBug (FinalDemo)' 
+2025-03-12 15:25:30.8379 | Info | [Response] 200 
+2025-03-12 15:25:30.8379 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM. 
+2025-03-12 15:25:30.8379 | Info | Request finished HTTP/2 POST https://localhost:7149/api/bugs application/json 140 - 200 - application/json;+charset=utf-8 265.2897ms 
+2025-03-12 15:25:30.8379 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:25:43.4696 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 5 with length 30 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:25:43.4696 | Trace | Connection id "0HNB19DRI1SB6" received PING frame for stream ID 0 with length 8 and flags NONE. 
+2025-03-12 15:25:43.4696 | Info | Request starting HTTP/2 GET https://localhost:7149/api/bugs - - 
+2025-03-12 15:25:43.4696 | Trace | Connection id "0HNB19DRI1SB6" sending PING frame for stream ID 0 with length 8 and flags ACK. 
+2025-03-12 15:25:43.4696 | Trace | All hosts are allowed. 
+2025-03-12 15:25:43.4696 | Debug | 1 candidate(s) found for the request path '/api/bugs' 
+2025-03-12 15:25:43.4696 | Debug | Endpoint 'FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo)' with route pattern 'api/bugs' is valid for the request path '/api/bugs' 
+2025-03-12 15:25:43.4696 | Debug | Request matched endpoint 'FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo)' 
+2025-03-12 15:25:43.4696 | Info | [Request] GET /api/bugs 
+2025-03-12 15:25:43.4696 | Debug | Successfully validated the token. 
+2025-03-12 15:25:43.4696 | Debug | AuthenticationScheme: Bearer was successfully authenticated. 
+2025-03-12 15:25:43.4696 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:25:43.4696 | Info | Executing endpoint 'FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo)' 
+2025-03-12 15:25:43.4807 | Info | Route matched with {action = "GetAllBugs", controller = "Bug"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBugs() on controller FinalDemo.Controllers.BugController (FinalDemo). 
+2025-03-12 15:25:43.4807 | Debug | Execution plan of authorization filters (in the following order): FinalDemo.Filter.CustomAuthenticationFilter 
+2025-03-12 15:25:43.4807 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:25:43.4807 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:25:43.4807 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:25:43.4807 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:25:43.4807 | Trace | Authorization Filter: Before executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:25:43.4807 | Trace | Authorization Filter: After executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:25:43.4807 | Debug | Executing controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:25:43.4807 | Debug | Executed controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:25:43.4807 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:43.4807 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:43.4807 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:43.4807 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:43.4807 | Info | Executing action method FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo) - Validation state: Valid 
+2025-03-12 15:25:43.4807 | Info | Fetching all bugs for the authenticated user. 
+2025-03-12 15:25:43.5018 | Info | Executed action method FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11.1295ms. 
+2025-03-12 15:25:43.5018 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:43.5018 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:43.5018 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:43.5018 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:43.5018 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:43.5018 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:43.5018 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:43.5018 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:25:43.5018 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:25:43.5018 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:25:43.5018 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:25:43.5018 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:25:43.5018 | Info | Executing OkObjectResult, writing value of type 'FinalDemo.Models.Response'. 
+2025-03-12 15:25:43.5125 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:43.5125 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 5 with length 34 and flags END_HEADERS. 
+2025-03-12 15:25:43.5125 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:43.5125 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 5 with length 299 and flags NONE. 
+2025-03-12 15:25:43.5125 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:43.5125 | Info | Executed action FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo) in 29.521ms 
+2025-03-12 15:25:43.5125 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:25:43.5125 | Info | Executed endpoint 'FinalDemo.Controllers.BugController.GetAllBugs (FinalDemo)' 
+2025-03-12 15:25:43.5125 | Info | [Response] 200 
+2025-03-12 15:25:43.5125 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM. 
+2025-03-12 15:25:43.5125 | Info | Request finished HTTP/2 GET https://localhost:7149/api/bugs - - - 200 - application/json;+charset=utf-8 47.4742ms 
+2025-03-12 15:25:57.2426 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 7 with length 31 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:25:57.2449 | Trace | Connection id "0HNB19DRI1SB6" received PING frame for stream ID 0 with length 8 and flags NONE. 
+2025-03-12 15:25:57.2449 | Info | Request starting HTTP/2 GET https://localhost:7149/api/bugs/0 - - 
+2025-03-12 15:25:57.2449 | Trace | Connection id "0HNB19DRI1SB6" sending PING frame for stream ID 0 with length 8 and flags ACK. 
+2025-03-12 15:25:57.2449 | Trace | All hosts are allowed. 
+2025-03-12 15:25:57.2449 | Debug | 1 candidate(s) found for the request path '/api/bugs/0' 
+2025-03-12 15:25:57.2449 | Debug | Endpoint 'FinalDemo.Controllers.BugController.GetBugById (FinalDemo)' with route pattern 'api/bugs/{bugId}' is valid for the request path '/api/bugs/0' 
+2025-03-12 15:25:57.2449 | Debug | Request matched endpoint 'FinalDemo.Controllers.BugController.GetBugById (FinalDemo)' 
+2025-03-12 15:25:57.2449 | Info | [Request] GET /api/bugs/0 
+2025-03-12 15:25:57.2449 | Debug | Successfully validated the token. 
+2025-03-12 15:25:57.2449 | Debug | AuthenticationScheme: Bearer was successfully authenticated. 
+2025-03-12 15:25:57.2449 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:25:57.2449 | Info | Executing endpoint 'FinalDemo.Controllers.BugController.GetBugById (FinalDemo)' 
+2025-03-12 15:25:57.2621 | Info | Route matched with {action = "GetBugById", controller = "Bug"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBugById(Int32) on controller FinalDemo.Controllers.BugController (FinalDemo). 
+2025-03-12 15:25:57.2621 | Debug | Execution plan of authorization filters (in the following order): FinalDemo.Filter.CustomAuthenticationFilter 
+2025-03-12 15:25:57.2621 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:25:57.2621 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:25:57.2621 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:25:57.2621 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:25:57.2621 | Trace | Authorization Filter: Before executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:25:57.2621 | Trace | Authorization Filter: After executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:25:57.2621 | Debug | Executing controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:25:57.2621 | Debug | Executed controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:25:57.2621 | Debug | Attempting to bind parameter 'bugId' of type 'System.Int32' ... 
+2025-03-12 15:25:57.2621 | Debug | Attempting to bind parameter 'bugId' of type 'System.Int32' using the name 'bugId' in request data ... 
+2025-03-12 15:25:57.2621 | Debug | Done attempting to bind parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:25:57.2621 | Debug | Done attempting to bind parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:25:57.2621 | Debug | Attempting to validate the bound parameter 'bugId' of type 'System.Int32' ... 
+2025-03-12 15:25:57.2621 | Debug | Done attempting to validate the bound parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:25:57.2621 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:57.2621 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:57.2621 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:57.2621 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:57.2621 | Info | Executing action method FinalDemo.Controllers.BugController.GetBugById (FinalDemo) - Validation state: Valid 
+2025-03-12 15:25:57.2621 | Trace | Executing action method FinalDemo.Controllers.BugController.GetBugById (FinalDemo) with arguments (0) 
+2025-03-12 15:25:57.2621 | Info | Fetching bug details for Bug ID: 0 
+2025-03-12 15:25:57.2799 | Info | Executed action method FinalDemo.Controllers.BugController.GetBugById (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.7676ms. 
+2025-03-12 15:25:57.2799 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:57.2799 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:25:57.2799 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:57.2799 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:25:57.2799 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:57.2799 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:57.2799 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:57.2799 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:25:57.2799 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:25:57.2799 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:25:57.2799 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:25:57.2799 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:25:57.2799 | Info | Executing OkObjectResult, writing value of type 'FinalDemo.Models.DTOs.DTOBugResponse'. 
+2025-03-12 15:25:57.2799 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:25:57.2799 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 7 with length 34 and flags END_HEADERS. 
+2025-03-12 15:25:57.2799 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:57.2799 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 7 with length 104 and flags NONE. 
+2025-03-12 15:25:57.2799 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:25:57.2902 | Info | Executed action FinalDemo.Controllers.BugController.GetBugById (FinalDemo) in 25.1751ms 
+2025-03-12 15:25:57.2902 | Info | Executed endpoint 'FinalDemo.Controllers.BugController.GetBugById (FinalDemo)' 
+2025-03-12 15:25:57.2902 | Info | [Response] 200 
+2025-03-12 15:25:57.2902 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:25:57.2902 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM. 
+2025-03-12 15:25:57.2902 | Info | Request finished HTTP/2 GET https://localhost:7149/api/bugs/0 - - - 200 - application/json;+charset=utf-8 46.1509ms 
+2025-03-12 15:26:06.4945 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 9 with length 39 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:26:06.4945 | Info | Request starting HTTP/2 DELETE https://localhost:7149/api/bugs/0 - - 
+2025-03-12 15:26:06.4945 | Trace | All hosts are allowed. 
+2025-03-12 15:26:06.4945 | Debug | 1 candidate(s) found for the request path '/api/bugs/0' 
+2025-03-12 15:26:06.4945 | Debug | Endpoint 'FinalDemo.Controllers.BugController.DeleteBug (FinalDemo)' with route pattern 'api/bugs/{bugId}' is valid for the request path '/api/bugs/0' 
+2025-03-12 15:26:06.4945 | Debug | Request matched endpoint 'FinalDemo.Controllers.BugController.DeleteBug (FinalDemo)' 
+2025-03-12 15:26:06.4945 | Info | [Request] DELETE /api/bugs/0 
+2025-03-12 15:26:06.5117 | Debug | The request has an origin header: 'https://localhost:7149'. 
+2025-03-12 15:26:06.5117 | Info | CORS policy execution successful. 
+2025-03-12 15:26:06.5117 | Debug | Successfully validated the token. 
+2025-03-12 15:26:06.5117 | Debug | AuthenticationScheme: Bearer was successfully authenticated. 
+2025-03-12 15:26:06.5117 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:26:06.5117 | Info | Executing endpoint 'FinalDemo.Controllers.BugController.DeleteBug (FinalDemo)' 
+2025-03-12 15:26:06.5117 | Info | Route matched with {action = "DeleteBug", controller = "Bug"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBug(Int32) on controller FinalDemo.Controllers.BugController (FinalDemo). 
+2025-03-12 15:26:06.5117 | Debug | Execution plan of authorization filters (in the following order): FinalDemo.Filter.CustomAuthenticationFilter 
+2025-03-12 15:26:06.5117 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:26:06.5117 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:26:06.5117 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:26:06.5117 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:26:06.5117 | Trace | Authorization Filter: Before executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:26:06.5117 | Trace | Authorization Filter: After executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:26:06.5117 | Debug | Executing controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:26:06.5263 | Debug | Executed controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:26:06.5263 | Debug | Attempting to bind parameter 'bugId' of type 'System.Int32' ... 
+2025-03-12 15:26:06.5263 | Debug | Attempting to bind parameter 'bugId' of type 'System.Int32' using the name 'bugId' in request data ... 
+2025-03-12 15:26:06.5263 | Debug | Done attempting to bind parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:26:06.5263 | Debug | Done attempting to bind parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:26:06.5263 | Debug | Attempting to validate the bound parameter 'bugId' of type 'System.Int32' ... 
+2025-03-12 15:26:06.5263 | Debug | Done attempting to validate the bound parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:06.5263 | Info | Executing action method FinalDemo.Controllers.BugController.DeleteBug (FinalDemo) - Validation state: Valid 
+2025-03-12 15:26:06.5263 | Trace | Executing action method FinalDemo.Controllers.BugController.DeleteBug (FinalDemo) with arguments (0) 
+2025-03-12 15:26:06.5263 | Warn | Unauthorized delete attempt on Bug 0 by user 4 
+2025-03-12 15:26:06.5263 | Info | Executed action method FinalDemo.Controllers.BugController.DeleteBug (FinalDemo), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 1.6211ms. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:06.5263 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:06.5263 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:06.5263 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:06.5263 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult. 
+2025-03-12 15:26:06.5263 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:26:06.5263 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:26:06.5263 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:26:06.5263 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:26:06.5263 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:26:06.5263 | Info | Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-12 15:26:06.5418 | Trace | After executing action result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult. 
+2025-03-12 15:26:06.5418 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 9 with length 39 and flags END_HEADERS. 
+2025-03-12 15:26:06.5418 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:06.5418 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 9 with length 42 and flags NONE. 
+2025-03-12 15:26:06.5418 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:06.5418 | Info | Executed action FinalDemo.Controllers.BugController.DeleteBug (FinalDemo) in 20.8332ms 
+2025-03-12 15:26:06.5418 | Info | Executed endpoint 'FinalDemo.Controllers.BugController.DeleteBug (FinalDemo)' 
+2025-03-12 15:26:06.5418 | Info | [Response] 401 
+2025-03-12 15:26:06.5418 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 9 with length 0 and flags END_STREAM. 
+2025-03-12 15:26:06.5418 | Info | Request finished HTTP/2 DELETE https://localhost:7149/api/bugs/0 - - - 401 - application/json;+charset=utf-8 49.6614ms 
+2025-03-12 15:26:06.5418 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:26:47.9884 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 11 with length 46 and flags END_HEADERS, PRIORITY. 
+2025-03-12 15:26:48.0029 | Trace | Connection id "0HNB19DRI1SB6" received PING frame for stream ID 0 with length 8 and flags NONE. 
+2025-03-12 15:26:48.0124 | Info | Request starting HTTP/2 PUT https://localhost:7149/api/bugs/0/status application/json 19 
+2025-03-12 15:26:48.0349 | Trace | Connection id "0HNB19DRI1SB6" sending PING frame for stream ID 0 with length 8 and flags ACK. 
+2025-03-12 15:26:48.0349 | Trace | Connection id "0HNB19DRI1SB6" received DATA frame for stream ID 11 with length 19 and flags END_STREAM. 
+2025-03-12 15:26:48.0580 | Trace | All hosts are allowed. 
+2025-03-12 15:26:48.0580 | Debug | 1 candidate(s) found for the request path '/api/bugs/0/status' 
+2025-03-12 15:26:48.0742 | Debug | Endpoint 'FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo)' with route pattern 'api/bugs/{bugId}/status' is valid for the request path '/api/bugs/0/status' 
+2025-03-12 15:26:48.0742 | Debug | Request matched endpoint 'FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo)' 
+2025-03-12 15:26:48.0742 | Info | [Request] PUT /api/bugs/0/status 
+2025-03-12 15:26:48.0742 | Debug | The request has an origin header: 'https://localhost:7149'. 
+2025-03-12 15:26:48.0742 | Info | CORS policy execution successful. 
+2025-03-12 15:26:48.0742 | Debug | Successfully validated the token. 
+2025-03-12 15:26:48.0742 | Debug | AuthenticationScheme: Bearer was successfully authenticated. 
+2025-03-12 15:26:48.0742 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:26:48.0742 | Info | Executing endpoint 'FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo)' 
+2025-03-12 15:26:48.0887 | Info | Route matched with {action = "UpdateBugStatus", controller = "Bug"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateBugStatus(Int32, FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest) on controller FinalDemo.Controllers.BugController (FinalDemo). 
+2025-03-12 15:26:48.0887 | Debug | Execution plan of authorization filters (in the following order): FinalDemo.Filter.CustomAuthenticationFilter 
+2025-03-12 15:26:48.0887 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:26:48.0887 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:26:48.0887 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:26:48.0887 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:26:48.0887 | Trace | Authorization Filter: Before executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:26:48.0887 | Trace | Authorization Filter: After executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:26:48.1089 | Debug | Executing controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:26:48.1089 | Debug | Executed controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:26:48.1089 | Debug | Attempting to bind parameter 'bugId' of type 'System.Int32' ... 
+2025-03-12 15:26:48.1089 | Debug | Attempting to bind parameter 'bugId' of type 'System.Int32' using the name 'bugId' in request data ... 
+2025-03-12 15:26:48.1089 | Debug | Done attempting to bind parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:26:48.1089 | Debug | Done attempting to bind parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:26:48.1089 | Debug | Attempting to validate the bound parameter 'bugId' of type 'System.Int32' ... 
+2025-03-12 15:26:48.1089 | Debug | Done attempting to validate the bound parameter 'bugId' of type 'System.Int32'. 
+2025-03-12 15:26:48.1089 | Debug | Attempting to bind parameter 'request' of type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest' ... 
+2025-03-12 15:26:48.1089 | Debug | Attempting to bind parameter 'request' of type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest' using the name '' in request data ... 
+2025-03-12 15:26:48.1193 | Debug | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2025-03-12 15:26:48.1193 | Debug | Connection id "0HNB19DRI1SB6", Request id "0HNB19DRI1SB6:0000000B": started reading request body. 
+2025-03-12 15:26:48.1193 | Debug | Connection id "0HNB19DRI1SB6", Request id "0HNB19DRI1SB6:0000000B": done reading request body. 
+2025-03-12 15:26:48.1193 | Debug | JSON input formatter succeeded, deserializing to type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest' 
+2025-03-12 15:26:48.1193 | Debug | Done attempting to bind parameter 'request' of type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest'. 
+2025-03-12 15:26:48.1193 | Debug | Done attempting to bind parameter 'request' of type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest'. 
+2025-03-12 15:26:48.1351 | Debug | Attempting to validate the bound parameter 'request' of type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest' ... 
+2025-03-12 15:26:48.1351 | Debug | Done attempting to validate the bound parameter 'request' of type 'FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest'. 
+2025-03-12 15:26:48.1351 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:48.1351 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:48.1351 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:48.1351 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:48.1351 | Info | Executing action method FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo) - Validation state: Valid 
+2025-03-12 15:26:48.1351 | Trace | Executing action method FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo) with arguments (0, FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest) 
+2025-03-12 15:26:48.1351 | Info | User 4 updating status of bug 0 to Resolved 
+2025-03-12 15:26:48.1616 | Info | Executed action method FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14.623ms. 
+2025-03-12 15:26:48.1616 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:48.1616 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:48.1616 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:48.1662 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:48.1662 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:48.1662 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:48.1662 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:26:48.1662 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:26:48.1662 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:26:48.1662 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:26:48.1858 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:26:48.1858 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:26:48.1858 | Info | Executing OkObjectResult, writing value of type 'FinalDemo.Models.Response'. 
+2025-03-12 15:26:48.1858 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:26:48.1858 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 11 with length 35 and flags END_HEADERS. 
+2025-03-12 15:26:48.1858 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:48.1858 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 11 with length 74 and flags NONE. 
+2025-03-12 15:26:48.1858 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:48.1858 | Info | Executed action FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo) in 92.9798ms 
+2025-03-12 15:26:48.1858 | Info | Executed endpoint 'FinalDemo.Controllers.BugController.UpdateBugStatus (FinalDemo)' 
+2025-03-12 15:26:48.1858 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:26:48.1968 | Info | [Response] 200 
+2025-03-12 15:26:48.1968 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 11 with length 0 and flags END_STREAM. 
+2025-03-12 15:26:48.1968 | Info | Request finished HTTP/2 PUT https://localhost:7149/api/bugs/0/status application/json 19 - 200 - application/json;+charset=utf-8 186.5112ms 
+2025-03-12 15:26:57.0926 | Trace | Connection id "0HNB19DRI1SB6" received HEADERS frame for stream ID 13 with length 35 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2025-03-12 15:26:57.0926 | Info | Request starting HTTP/2 GET https://localhost:7149/api/bugs/logTest - - 
+2025-03-12 15:26:57.1105 | Trace | All hosts are allowed. 
+2025-03-12 15:26:57.1105 | Debug | 2 candidate(s) found for the request path '/api/bugs/logTest' 
+2025-03-12 15:26:57.1105 | Debug | Endpoint 'FinalDemo.Controllers.BugController.LogTest (FinalDemo)' with route pattern 'api/bugs/logTest' is valid for the request path '/api/bugs/logTest' 
+2025-03-12 15:26:57.1193 | Debug | Endpoint 'FinalDemo.Controllers.BugController.GetBugById (FinalDemo)' with route pattern 'api/bugs/{bugId}' is valid for the request path '/api/bugs/logTest' 
+2025-03-12 15:26:57.1193 | Debug | Request matched endpoint 'FinalDemo.Controllers.BugController.LogTest (FinalDemo)' 
+2025-03-12 15:26:57.1193 | Info | [Request] GET /api/bugs/logTest 
+2025-03-12 15:26:57.1193 | Debug | Successfully validated the token. 
+2025-03-12 15:26:57.1193 | Debug | AuthenticationScheme: Bearer was successfully authenticated. 
+2025-03-12 15:26:57.1193 | Debug | Static files was skipped as the request already matched an endpoint. 
+2025-03-12 15:26:57.1193 | Info | Executing endpoint 'FinalDemo.Controllers.BugController.LogTest (FinalDemo)' 
+2025-03-12 15:26:57.1193 | Info | Route matched with {action = "LogTest", controller = "Bug"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogTest() on controller FinalDemo.Controllers.BugController (FinalDemo). 
+2025-03-12 15:26:57.1193 | Debug | Execution plan of authorization filters (in the following order): FinalDemo.Filter.CustomAuthenticationFilter 
+2025-03-12 15:26:57.1193 | Debug | Execution plan of resource filters (in the following order): None 
+2025-03-12 15:26:57.1193 | Debug | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2025-03-12 15:26:57.1193 | Debug | Execution plan of exception filters (in the following order): FinalDemo.Filter.CustomExceptionFilter 
+2025-03-12 15:26:57.1193 | Debug | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2025-03-12 15:26:57.1193 | Trace | Authorization Filter: Before executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:26:57.1353 | Trace | Authorization Filter: After executing OnAuthorization on filter FinalDemo.Filter.CustomAuthenticationFilter. 
+2025-03-12 15:26:57.1353 | Debug | Executing controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:26:57.1353 | Debug | Executed controller factory for controller FinalDemo.Controllers.BugController (FinalDemo) 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:57.1353 | Info | Executing action method FinalDemo.Controllers.BugController.LogTest (FinalDemo) - Validation state: Valid 
+2025-03-12 15:26:57.1353 | Info | LogTest API was called. 
+2025-03-12 15:26:57.1353 | Info | Executed action method FinalDemo.Controllers.BugController.LogTest (FinalDemo), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.6393ms. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:57.1353 | Trace | Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2025-03-12 15:26:57.1353 | Trace | Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:57.1353 | Trace | Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:57.1353 | Trace | Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:26:57.1353 | Debug | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2025-03-12 15:26:57.1518 | Debug | No information found on request to perform content negotiation. 
+2025-03-12 15:26:57.1518 | Debug | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2025-03-12 15:26:57.1518 | Debug | Attempting to select the first formatter in the output formatters list which can write the result. 
+2025-03-12 15:26:57.1518 | Debug | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2025-03-12 15:26:57.1518 | Info | Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-12 15:26:57.1518 | Trace | After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2025-03-12 15:26:57.1518 | Trace | Connection id "0HNB19DRI1SB6" sending HEADERS frame for stream ID 13 with length 34 and flags END_HEADERS. 
+2025-03-12 15:26:57.1518 | Trace | Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:57.1518 | Trace | Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2025-03-12 15:26:57.1518 | Info | Executed action FinalDemo.Controllers.BugController.LogTest (FinalDemo) in 22.3359ms 
+2025-03-12 15:26:57.1518 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 13 with length 48 and flags NONE. 
+2025-03-12 15:26:57.1518 | Info | Executed endpoint 'FinalDemo.Controllers.BugController.LogTest (FinalDemo)' 
+2025-03-12 15:26:57.1518 | Info | [Response] 200 
+2025-03-12 15:26:57.1518 | Info | Request finished HTTP/2 GET https://localhost:7149/api/bugs/logTest - - - 200 - application/json;+charset=utf-8 60.1882ms 
+2025-03-12 15:26:57.1518 | Trace | Connection id "0HNB19DRI1SB6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2025-03-12 15:26:57.1518 | Trace | Connection id "0HNB19DRI1SB6" sending DATA frame for stream ID 13 with length 0 and flags END_STREAM. 

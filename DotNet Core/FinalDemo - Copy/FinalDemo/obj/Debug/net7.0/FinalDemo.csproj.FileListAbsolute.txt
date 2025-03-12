@@ -1,0 +1,257 @@
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.AssemblyInfoInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.AssemblyInfo.cs
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\appsettings.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.deps.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.runtimeconfig.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\AspNetCoreRateLimit.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.Common.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.Interfaces.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.SqlServer.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.Text.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Data.SqlClient.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Data.SqlClient.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.FinalDemo.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.build.FinalDemo.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.FinalDemo.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.FinalDemo.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\scopedcss\bundle\FinalDemo.styles.css
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.CopyComplete
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\refint\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.genruntimeconfig.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\ref\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\K4os.Compression.LZ4.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\K4os.Hash.xxHash.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\MySql.Data.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.MySql.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Text.Encoding.CodePages.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Text.Json.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ZstdSharp.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Text.Encoding.CodePages.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\nlog.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\NLog.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.AssemblyReference.cache
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.AssemblyInfoInputs.cache
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.AssemblyInfo.cs
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.CoreCompileInputs.cache
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.MvcApplicationPartsAssemblyInfo.cs
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.MvcApplicationPartsAssemblyInfo.cache
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.sourcelink.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\refint\FinalDemo.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.pdb
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\appsettings.Development.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\appsettings.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\nlog.config
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.staticwebassets.endpoints.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.exe
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.deps.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.runtimeconfig.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\FinalDemo.pdb
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\AspNetCoreRateLimit.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Google.Protobuf.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\K4os.Compression.LZ4.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\K4os.Hash.xxHash.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\MySql.Data.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\NLog.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.Common.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.Interfaces.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.MySql.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.SqlServer.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ServiceStack.Text.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Data.SqlClient.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Diagnostics.DiagnosticSource.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Text.Encoding.CodePages.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Text.Json.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\ZstdSharp.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\comerr64.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\gssapi64.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\k5sprt64.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\krb5_64.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\krbcc64.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Data.SqlClient.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Data.SqlClient.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.Messages.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Text.Encoding.CodePages.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\scopedcss\bundle\FinalDemo.styles.css
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.build.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.development.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.FinalDemo.Microsoft.AspNetCore.StaticWebAssets.props
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.FinalDemo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.build.FinalDemo.props
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.FinalDemo.props
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.FinalDemo.props
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.pack.json
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.Up2Date
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\FinalDemo.genruntimeconfig.cache
+D:\officeWork\RKIT_Internship_work\DotNet Core\FinalDemo\FinalDemo\obj\Debug\net7.0\ref\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.AssemblyReference.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.AssemblyInfoInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.AssemblyInfo.cs
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.CoreCompileInputs.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\refint\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\nlog.config
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\appsettings.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\FinalDemo.exe
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\FinalDemo.deps.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\FinalDemo.runtimeconfig.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\FinalDemo.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\FinalDemo.pdb
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\AspNetCoreRateLimit.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\K4os.Compression.LZ4.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\K4os.Hash.xxHash.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\MySql.Data.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\NLog.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ServiceStack.Common.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ServiceStack.Interfaces.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.MySql.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ServiceStack.OrmLite.SqlServer.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ServiceStack.Text.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Text.Encoding.CodePages.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Text.Json.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\ZstdSharp.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Data.SqlClient.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Data.SqlClient.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Diagnostics.EventLog.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Text.Encoding.CodePages.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.FinalDemo.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.build.FinalDemo.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.FinalDemo.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.FinalDemo.props
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\scopedcss\bundle\FinalDemo.styles.css
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.csproj.CopyComplete
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\FinalDemo.genruntimeconfig.cache
+C:\Users\hina.j\source\repos\RKIT_Internship_work\DotNet Core\FinalDemo - Copy\FinalDemo\obj\Debug\net7.0\ref\FinalDemo.dll

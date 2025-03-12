@@ -13,9 +13,6 @@
         searchMode: 'startswith',
         searchTimeout: 1000, // in ms
 
-
-        //useItemTextAsTitle: true,
-
         showClearButton: true, // Allows clearing selection
         //placeholder: "Select your role", // User-friendly placeholder text
         width:200,
@@ -192,7 +189,7 @@
         searchEnabled: true, // Allows searching
         showClearButton: true, // Allows clearing selection
         placeholder: "Select a sports skill",
-        labelMode: "floating",
+        
 
         // Optional: Custom template to format group headers
         groupTemplate: function (data) {
@@ -275,6 +272,11 @@
         }
     });
 
+
+
+
+
+
 });
 
 
@@ -299,7 +301,7 @@
 // why? :
 // 1) It gives many other options which are not directly avialable into dxSelectBox options
 // 2) Handles multiple Attributes together
-// 3) Allows extra customization for ccessibility and Data Handling (ex. aria-label(useful for screen reader), data-Info(use for jquery / Js referrence))
+// 3) Allows extra customization for accessibility and Data Handling (ex. aria-label(useful for screen reader), data-Info(use for jquery / Js referrence))
 
 
 // items: allows for define list of values that users can select from as input of select box

@@ -6,7 +6,6 @@
        
        
 
-        // use "elementAttr" in logical and effective sence
         focusStateEnabled: true,
         hint: "Enter your AadharCard.",
         hoverStateEnable: true,
@@ -47,14 +46,9 @@
         uploadUrl: "https://example.com/upload", // cheange this as per your requirement
 
         // uploadMethod: specifies the HTTp method to use when uploading files (input type: POST(default), PUT)
-        uploadMethod: "PUT", // test?
+        uploadMethod: "PUT", 
 
-        // uploadHeaders: Specifies custom header to send with upload request
-        uploadHeaders: {
-            "Authorization": "Bearer your_token",
-            "Custom-Header": "custom_value"
-        }, // how to test this
-
+        
         
         // value: get or set the selected files
         value: [], // Bind the selected files  
@@ -127,7 +121,7 @@
         },
 
         onUploaded: function () {
-            $("#submit").focus(); // ?
+            $("#submit").focus();
         },
 
         onUploadError: function (e) {
@@ -139,21 +133,7 @@
             $("#loadingSpinner").show();
         },
 
-        /*onValueChanged: function (e) {
-            var file = e.value[0];
-            if (file) {
-                if (file.size > 1024 * 1024 * 2) {
-                    alert("File size should not exceed 2MB.");
-                    $("#aadharCard").dxFileUploader("reset");
-
-                    $("#readyMessage").text("Now you can upload your AadharCard.");
-                    $("#readyMessage").show(); // Show the message
-                } else {
-                    $("#filePreview").text("Selected file: " + file.name);
-                    $("#readyMessage").hide(); // Hide if no file is selected
-                }
-            }
-        },*/
+       
 
         onValueChanged: function (e) {
             var file = e.value[0];
@@ -221,7 +201,6 @@
         }
     });
 
-    // perform different ttype methods into above instance
 
 
     $("#reset").dxButton({

@@ -1,0 +1,171 @@
+[
+  {
+    "ContainingType": "FinalDemo.Controllers.BugController",
+    "Method": "SaveBug",
+    "RelativePath": "api/bugs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bugDto",
+        "Type": "FinalDemo.Models.DTOs.DTOBugCreated",
+        "IsRequired": true
+      },
+      {
+        "Name": "bugId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.BugController",
+    "Method": "GetAllBugs",
+    "RelativePath": "api/bugs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.BugController",
+    "Method": "GetBugById",
+    "RelativePath": "api/bugs/{bugId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bugId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.BugController",
+    "Method": "DeleteBug",
+    "RelativePath": "api/bugs/{bugId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bugId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.BugController",
+    "Method": "UpdateBugStatus",
+    "RelativePath": "api/bugs/{bugId}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bugId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FinalDemo.Models.DTOs.DTOBugStatusUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/user/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/user/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "FinalDemo.Models.DTOs.DTOLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.UserController",
+    "Method": "SignUp",
+    "RelativePath": "api/user/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signUpDto",
+        "Type": "FinalDemo.Models.DTOs.DTOYMU01",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinalDemo.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/user/update/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "FinalDemo.Models.DTOs.DTOYMU01",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -37,6 +37,7 @@
 
     let email = $("#email").dxTextBox({
         accessKey: 'e',
+        // mode: 'email',
         hint: "Enter your email",
         placeholder: "example@gmail.com",
         showClearButton: true,

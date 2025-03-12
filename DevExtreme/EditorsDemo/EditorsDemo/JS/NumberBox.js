@@ -100,7 +100,7 @@ $(function () {
         mode: "number",
         buttons: ["clear", "spins"],
         placeholder: "College result in percentage!",
-        placeholder: "College result in percentage!",
+        // placeholder: "College result in percentage!",
         stylingMode: "filled",
         tabIndex: 3,
         validationStatus: "pending",
