@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\datagrid\\datagriddemo\\paging_scrolling\\paging.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|d:\\officework\\rkit_internship_work\\devextreme\\datagrid\\datagrid\\datagriddemo\\finaldemo\\finaldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|solutionrelative:datagrid\\datagriddemo\\finaldemo\\finaldemo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|d:\\officework\\rkit_internship_work\\devextreme\\datagrid\\datagrid\\datagriddemo\\finaldemo\\finaldemo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|solutionrelative:datagrid\\datagriddemo\\finaldemo\\finaldemo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|d:\\officework\\rkit_internship_work\\devextreme\\datagrid\\datagrid\\datagriddemo\\paging_scrolling\\paging.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{284B264A-354C-4596-89A5-32E06F3AEF57}|DataGrid\\DataGrid.csproj|solutionrelative:datagrid\\datagriddemo\\paging_scrolling\\paging.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,15 +46,41 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "finalDemo.html",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.html",
+              "RelativeDocumentMoniker": "DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.html",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.html",
+              "RelativeToolTip": "DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-15T20:30:26.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "finalDemo.js",
+              "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.js",
+              "RelativeDocumentMoniker": "DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.js",
+              "ToolTip": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.js",
+              "RelativeToolTip": "DataGrid\\DataGridDemo\\FINALDEMO\\finalDemo.js",
+              "ViewState": "AgIAACABAAAAAAAAAAAAADwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-15T19:33:49.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Paging.html",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\DataGrid\\DataGridDemo\\Paging_Scrolling\\Paging.html",
               "RelativeDocumentMoniker": "DataGrid\\DataGridDemo\\Paging_Scrolling\\Paging.html",
@@ -59,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DataBinding.html",
               "DocumentMoniker": "D:\\officeWork\\RKIT_Internship_work\\DevExtreme\\DataGrid\\DataGrid\\DataGridDemo\\DataBinding\\DataBinding.html",
               "RelativeDocumentMoniker": "DataGrid\\DataGridDemo\\DataBinding\\DataBinding.html",
