@@ -3,6 +3,7 @@ using FinalDemo.Models;
 using FinalDemo.Models.DTOs;
 using FinalDemo.Models.Enums;
 using FinalDemo.Models.POCOs;
+using Microsoft.Extensions.Caching.Memory; // for IMemoryCache
 using Microsoft.IdentityModel.Tokens;
 using ServiceStack;
 using ServiceStack.OrmLite;
@@ -19,6 +20,7 @@ namespace FinalDemo.BL.Services
     /// </summary>
     public class UserService : IUserService
     {
+        
         private readonly IDbConnection _db;
         private readonly ILogger<UserService> _logger;
         private YMU01 _userObj;
@@ -30,15 +32,27 @@ namespace FinalDemo.BL.Services
         private const int MAX_LOGIN_ATTEMPTS = 5;
         private static readonly TimeSpan LOGIN_ATTEMPT_RESET_TIME = TimeSpan.FromMinutes(1);
 
+
+
+        // Caching using IMemoryCache -- use for single server application
+        private readonly IMemoryCache _memorycache;
+
+        private readonly TimeSpan _cacheDuration = TimeSpan.FromMinutes(2);
+
+        private readonly string _cachekey = "userListCache";
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserService"/> class.
         /// </summary>
-        public UserService(IConfiguration configuration, IDbConnection db, ILogger<UserService> logger)
+        public UserService(IConfiguration configuration, IDbConnection db, ILogger<UserService> logger, IMemoryCache memoryCache)
         {
             _db = db;
             _logger = logger;
             _configuration = configuration;
             _response = new Response();
+
+            _memorycache = memoryCache;
         }
 
         /// <summary>
@@ -184,6 +198,16 @@ namespace FinalDemo.BL.Services
         }
 
 
+        private void CacheUserList()
+        {
+            _logger.LogInformation("Updating cache with latest user data ....");
+
+            List<YMU01> users = _db.Select<YMU01>().ToList();
+            _memorycache.Set(_cachekey, users, _cacheDuration);
+
+            _logger.LogInformation("User list cached successfully.");
+        }
+
         /// <summary>
         /// Saves the user object to the database.
         /// </summary>
@@ -208,6 +232,9 @@ namespace FinalDemo.BL.Services
                     _logger.LogInformation("User inserted successfully: {@UserObj}", _userObj);
                     _response.Message = "User registered successfully.";
                     _response.Data = _userObj;
+
+
+                    _memorycache.Remove(_cachekey); // Invalidate cache after Insert
                 }
                 else if (Type == OperationType.E)
                 {
@@ -223,7 +250,11 @@ namespace FinalDemo.BL.Services
                     _db.Update(_userObj);
                     _logger.LogInformation("User updated successfully.");
                     _response.Message = "User details updated successfully.";
+
+                    _memorycache.Remove(_cachekey); // Invalidate cache after update
                 }
+
+                CacheUserList(); // method for implement cache 
             }
             catch (Exception ex)
             {
@@ -236,6 +267,8 @@ namespace FinalDemo.BL.Services
 
 
 
+
+
         /// <summary>
         /// Deletes the user object to the database.
         /// </summary>
@@ -245,14 +278,21 @@ namespace FinalDemo.BL.Services
             {
                 _db.DeleteById<YMU01>(_userId);
                 _response.Message = "User deleted successfully.";
+
+                // Invalidate cache to remove stale data
+                _memorycache.Remove("userList");
+
+                _logger.LogInformation("User deleted and cache invalidated.");
             }
             catch (Exception ex)
             {
                 _response.IsError = true;
                 _response.Message = ex.Message;
+                _logger.LogError(ex, "Error while deleting user");
             }
             return _response;
         }
+
 
         /// <summary>
         /// Retrieves a user by their unique identifier.

@@ -90,6 +90,9 @@ namespace FinalDemo
                     }
                 });
             });
+
+
+            services.AddMemoryCache(); // use for implement IMemoryCache 
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

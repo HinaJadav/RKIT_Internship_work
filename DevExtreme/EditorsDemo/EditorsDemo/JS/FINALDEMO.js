@@ -225,9 +225,9 @@
         courseSelectBox.repaint();
     });
 
-    let profile = $('#profilePhoto').dxFileUploader({
+    let profilePhoto = $('#profilePhoto').dxFileUploader({
         accessKey: "p",
-        selectButtonText: 'Upload Profile Photo',
+        selectButtonText: 'Upload profilePhoto Photo',
         labelText: '',
         accept: 'image/*', // Accepts only image files
         uploadMode: 'useForm', // Uploads when form is submitted
@@ -258,7 +258,7 @@
             }
         },
         onFileUploaded: function () {
-            alert("Profile photo uploaded successfully!");
+            alert("profilePhoto photo uploaded successfully!");
         },
         onUploadError: function (e) {
             alert("Upload failed: " + e.error.message);
@@ -301,7 +301,7 @@
                     twelthResult.reset(); 
                     department.reset(); 
                     course.option("items", []).reset();
-                    profile.reset(); // check once for resetting it's value  
+                    profilePhoto.reset(); // check once for resetting it's value  
                     validate.reset(); 
 
                     sessionStorage.clear();
@@ -320,7 +320,7 @@
         text: "Submit",
         type: "success",
         onClick: function () {
-            let selectedFiles = profile.option("value"); // Get selected files
+            let selectedFiles = profilePhoto.option("value"); // Get selected files
 
             if (selectedFiles && selectedFiles.length > 0) {
                 let file = selectedFiles[0]; // Get first selected file
@@ -363,7 +363,7 @@
                 reader.readAsDataURL(file); // Convert file to Base64
 
             } else {
-                DevExpress.ui.notify("Please upload a profile photo before submitting.", "warning", 2000);
+                DevExpress.ui.notify("Please upload a profilePhoto photo before submitting.", "warning", 2000);
             }
         }
     });
@@ -395,10 +395,12 @@
 
     department.registerKeyHandler("enter", function () { course.focus(); });
 
-    course.registerKeyHandler("enter", function () { profilePhoto.focus(); });
+
+    course.registerKeyHandler("enter", function () {
+        alert("Select profile photo!");
+    });
 
 
-    profile.registerKeyHandler("enter", function () { validate.focus(); });
 
     validate.registerKeyHandler("enter", function () { $("#submit").dxButton("instance").option("onClick")(); });
 });

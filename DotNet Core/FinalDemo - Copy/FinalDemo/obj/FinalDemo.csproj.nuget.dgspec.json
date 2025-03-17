@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[7.0.4, )"
             },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[5.4.0, )"
