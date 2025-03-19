@@ -115,9 +115,9 @@
         focusStateEnabled: true,
         hint: "Enter student's present address.",
         hoverStateEnabled: true,
-        inputAttr: {
-            maxLength: 100
-        },
+        /*inputAttr: {
+            // maxLength: 50
+        },*/
         name: "address",
         spellcheck: true,
         stylingMode: "Outlined",
@@ -148,7 +148,7 @@
         }
     }).dxTextBox("instance");
 
-
+    // init event -- refresh and repaint event 
 
     let tenthResult = $("#tenthResult").dxNumberBox({
 
