@@ -38,7 +38,7 @@ $(function () {
 
         // filter panel : Display all applied filter expressions
         filterPanel: {
-            visible: true
+            visible: false
         },
 
         filterSyncEnabled: true, // disables automatuc synchronization between row and filter panel

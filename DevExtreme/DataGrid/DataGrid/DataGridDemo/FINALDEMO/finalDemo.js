@@ -5,7 +5,7 @@
         key: "id",
 
         load: function () {
-            let d = $.Deferred();
+            let d = $.Deferred(); // use to  handle asynchronous operations in jQuery
 
             $.ajax({
                 url: apiUrl,
@@ -80,6 +80,7 @@
                 fixed: true,
                 dataType: "number",
                 validationRules: [{ type: "required" }]
+                // other types: async(server side validation), compare, custom, email, numeric, pattern range, required, stringLength
             },
             {
                 dataField: "title",
@@ -149,12 +150,13 @@
             visible: true
         },
 
+        //  grouping is enabled by default
         groupPanel: {
             visible: true
         },
 
         editing: {
-            mode: "popup",  
+            mode: "popup",  // row = default, cell, batch, form
             allowUpdating: true,
             allowDeleting: true,
             allowAdding: true,
@@ -261,7 +263,7 @@
         },
 
         selection: {
-            mode: "multiple",
+            mode: "multiple", // none = default, single
             selectAllMode: "page",
             allowSelectAll: true,
             showCheckBoxesMode: "always"

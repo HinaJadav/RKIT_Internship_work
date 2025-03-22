@@ -8,7 +8,13 @@
     let customStore = new DevExpress.data.CustomStore({
         key: "id",
 
-        loadMode: "raw", // other loadMode = "processed"
+        loadMode: "processed", // default // other loadMode = "row"
+        // processed: entire dataset is fetched once and processed on the client side
+        // sorting, filtering, grouping etc handle by devextreme internally
+
+        // row:  retrieved per row instead of loading the full dataset at once
+        // server is responsible for sorting, filtering, grouping, and paging
+
 
         load: function (loadOptions) {
             console.log("Load process is started.");
@@ -200,17 +206,7 @@
         }
     });
 
-/*
-    Binary filter :
-    Supported operators: "=", "<>", ">", ">=", "<", "<=", "startswith", "endswith", "contains", "notcontains".
 
-    Unary filter
-    Supported operators: binary operators, "!".
-
-    Complex filter
-    Supported operators: binary and unary operators, "and", "or".
-
-*/
     $("#filterButton").dxButton({
         text: "Filter Users (Contains 'a')",
         onClick: function () {          

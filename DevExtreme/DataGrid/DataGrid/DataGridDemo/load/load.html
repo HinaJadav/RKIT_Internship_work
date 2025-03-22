@@ -1,0 +1,135 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- DevExtreme theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.1.3/css/dx.light.css">
+
+    <!-- DevExtreme library -->
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.3/js/dx.all.js"></script>
+
+    <title>Load Options</title>
+</head>
+
+<body>
+    <div class="demo-container">
+        <div id="gridContainer"></div>
+    </div>
+</body>
+
+<script>
+    $(() => {
+        function isNotEmpty(value) {
+            return value !== undefined && value !== null && value !== '';
+        }
+        const store = new DevExpress.data.CustomStore({
+            key: 'OrderNumber',
+            load(loadOptions) {
+                console.log("here: ", loadOptions);
+
+                const deferred = $.Deferred();
+
+                const paramNames = [
+                    'skip', 'take', 'requireTotalCount', 'requireGroupCount',
+                    'sort', 'filter', 'totalSummary', 'group', 'groupSummary',
+                ];
+
+                const args = {};
+
+                paramNames
+                    .filter((paramName) => isNotEmpty(loadOptions[paramName]))
+                    .forEach((paramName) => { args[paramName] = JSON.stringify(loadOptions[paramName]); });
+
+                $.ajax({
+                    url: 'https://js.devexpress.com/Demos/WidgetsGalleryDataService/api/orders',
+                    dataType: 'json',
+                    data: args,
+                    success(result) {
+
+                        console.log("args: ", args);
+                        console.log("result: ", result);
+                        deferred.resolve(result.data, {
+                            totalCount: result.totalCount,
+                            summary: result.summary,
+                            groupCount: result.groupCount,
+                        });
+                    },
+                    error() {
+                        deferred.reject('Data Loading Error');
+                    },
+                    timeout: 5000,
+                });
+
+                return deferred.promise();
+            },
+        });
+
+        $('#gridContainer').dxDataGrid({
+            dataSource: store,
+            showBorders: true,
+            remoteOperations: true,
+            paging: {
+                pageSize: 10,
+            },
+            pager: {
+                visible: true,
+                showPageSizeSelector: true,
+                allowedPageSizes: [5, 12, 20],
+            },
+            columns: [{
+                dataField: 'OrderNumber',
+                dataType: 'number',
+            }, {
+                dataField: 'OrderDate',
+                dataType: 'date',
+            }, {
+                dataField: 'StoreCity',
+                dataType: 'string',
+            }, {
+                dataField: 'StoreState',
+                dataType: 'string',
+            }, {
+                dataField: 'Employee',
+                dataType: 'string',
+            }, {
+                dataField: 'SaleAmount',
+                dataType: 'number',
+                format: 'currency',
+            }],
+            summary: {
+                totalItems: [
+                    {
+                        summaryType: "avg",  // sum, min, max, avg
+                        column: "SaleAmount",
+                        alignment: "center"
+                    },
+                    
+                ],
+                
+            },
+            filterRow: { visible: true }, 
+            grouping: {
+
+                contextMenuEnabled: true,
+                expandMode: "rowClick",  
+                autoExpandAll: false  
+            },
+            groupPanel: {
+                visible: true,
+            },
+
+            sorting: {
+                mode: "multiple"
+            }
+        }).dxDataGrid('instance');
+    });
+
+</script>
+
+</html>

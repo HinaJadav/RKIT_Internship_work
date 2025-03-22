@@ -171,6 +171,7 @@
     <Content Include="DataGridDemo\Export\Export.js" />
     <Content Include="DataGridDemo\FINALDEMO\finalDemo.html" />
     <Content Include="DataGridDemo\FINALDEMO\finalDemo.js" />
+    <Content Include="DataGridDemo\loadMode.html" />
     <Content Include="DataGridDemo\MasterDetail\MasterDetailView.html" />
     <Content Include="DataGridDemo\MasterDetail\MasterDetailView.js" />
     <Content Include="DataGridDemo\StatePersistence_Appearance\StatePersistence_Appearance.html" />

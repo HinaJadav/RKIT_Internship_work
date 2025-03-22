@@ -17,12 +17,17 @@ $(function () {
         },
 
         grouping: {
-            contextMenuEnabled: true, // Enable grouping commands in the context menu
+            expandMode: "rowClick",  // or "buttonClick"
         },
 
         groupPanel: {
             visible: true, // Show group panel
         },
+
+        // to prevent users from grouping data
+        /*groupPanel: { visible: false },
+        allowGrouping: false*/
+
 
         columns: [
             { dataField: "ID", caption: "ID", allowGrouping: false },
