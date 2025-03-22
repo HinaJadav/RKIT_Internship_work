@@ -9,8 +9,22 @@
         inputAttr: { 'aria-label': "Full Name" },
         maxLength: 50,
         width: 600,
-        validationRules: [{ type: "required", message: "Full Name is required!" }],
+        validationRules: [{ type: "required", message: "Full Name is required!" }], // this rules automatically applies when
+        // 1) user submit form
+        // 2) field loses the focus
+        // 3) validate() manually called
+
     }).dxTextBox("instance");
+
+   /* name.registerKeyHandler("enter", function () {
+        var nameValidator = $("#name").dxValidator("instance");
+        if (nameValidator) {
+            nameValidator.validate();
+        }
+        else {
+            console.log("Validation error!");
+        }
+    });*/
 
     let fatherName = $("#fatherName").dxTextBox({
         accessKey: "f",
@@ -52,12 +66,7 @@
             { type: "pattern", pattern: "^[^\s@]+@[^\s@]+\.[^\s@]+$", message: "Enter a valid email address!" }
         ],
         valueChangeEvent: "blur",
-        onValueChanged: function (e) {
-            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(e.value)) {
-                DevExpress.ui.notify("Invalid Email Format", "error", 2000);
-            }
-        }
+        
     }).dxTextBox("instance");
 
     let dateOfBirth = $("#dateOfBirth").dxDateBox({
@@ -368,8 +377,8 @@
         }
     });
 
-
-    name.registerKeyHandler("enter", function () { fatherName.focus(); });
+    
+    
 
     fatherName.registerKeyHandler("enter", function () { motherName.focus(); });
 

@@ -8,11 +8,14 @@
     ];
 
     var studentArrayStores = new DevExpress.data.ArrayStore({
+
+        // specify the data store accociated with array
+        data: studentsData, 
+
         key: "id",
-        data: studentsData,
 
         // events
-
+        // the function that is executed when the datastore throws an error
         errorHandler: function (error) {
             console.log(error.message);
         },
@@ -20,34 +23,7 @@
 
 
 
-        /*onInserting: function (e) {
-            // Ensure e.data exists before accessing its properties
-            if (!e.data) {
-                e.cancel = true;
-                throw new Error("Insert operation requires a valid data object.");
-            }
-
-            // Ensure required fields are present
-            if (!e.data.name || !e.data.branch) {
-                e.cancel = true;
-                throw new Error("Name and Branch are required fields!");
-            }
-
-            // Get existing data from the store
-            var existingData = studentArrayStores._array || [];
-
-            // Auto-generate ID if not provided
-            if (!e.data.id) {
-                e.data.id = existingData.length ? Math.max(...existingData.map(s => s.id)) + 1 : 1;
-            }
-
-            // Normalize Name Format
-            e.data.name = e.data.name.trim().toUpperCase();
-
-            console.log("New Student Data:", e.data);
-        },*/
-
-
+        
 
         onInserted: function (e) {
             console.log("New student inserted:", e.data);
